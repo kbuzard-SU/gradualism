@@ -12,7 +12,7 @@ output: word_document
 Three issue has to be settled. 
 
 * First, the interaction process has to be defined.Three possibilities can be evaluated: pull request, use of Wikis and the Issue function.The choice regarding of the different options will depend of the use of GitHub and my state of learning.
-* There is a new book that I should read on the history of the WTO.
+* I should read _The GATT Legal System and World Trade Diplomacy by Robert E. Hudec_ on the history of the WTO.
 * The objective has to be clarified. Once the work of the WTO repertory is done, it is important to find the detail agenda of the tariff modification, the cause of settling this agenda and finally the result of it, which is the nature of gradualism.
 
 2. GitHub issue: it is necessary that I keep learning about using Git and GitHub in order to have a nice and professional work.
