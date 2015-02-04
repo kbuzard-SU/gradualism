@@ -1,0 +1,53 @@
+---
+title: "Industry list"
+author: "Benjamin Heyries"
+date: "Wednesday, February 04, 2015"
+output: word_document
+---
+
+The following documents indicate the industries that have benefited of political support. They are classified alphabetically. The information related to these industries are:
+
+* the time of the action
+* the actors that brought their support
+* the description of the suggested protection with its implementation
+
+The sub-section indicates an action where only a fraction of the industry is particularly targeted by a protection measure.
+
+Agriculture
+============
+  * 1934, when voting the TAA for the first time;at the initiative of the Republicans, in House and by Senator Overton, supported by a minority of Democrats. Concern the production stipulated in the AAA: __sugar__, __coconut oil__, __sesame__ __oil__, __laces__, __braids__, __wool__ and __wheat__. The amendments aim applying the cost-production calculus for these particular product and spare them from tariff cuts. The amendment is defeated even if followed by some Democrats. 
+  * 1937, when voting the first extension of the TAA, introduced in the Senate by the Republicans and followed by a lot of Democrats (20 in Senate). The amendments aim applying the cost-production calculus for agricultural products and spare them from tariff cuts.The amendment is first adopted then rejected in the final vote.
+  * 1953, when voting an extension of the TAA, brought by Senator Magnuson (D), Cordon (R) and Representative Simpson modified for the House Ways and Means Committee under the presidency of Chairman Reed. The amendments forbid new tariff cuts on agricultural product (especially __wool__), enable rising tariffs by use of the the Section 22 of the AAA on the TAA. Adopted.
+  * 1955, when voting an extension of the TAA, brought in the Cooper (Representative R) bill amended by the House Ways and means committee. It sets the preeminence of the Section 22 of the AAA on the TAA. Adopted. 
+
+Defense
+============
+  * 1954, when voting an extension of the TAA. Brought by Senator Symington (Democrat). It stipulates that no action should be taken in the decrease of a tariff if it appears to threaten meeting the defense requirements. 
+
+Fishing
+============
+  * 1949 when voting an extension of the TAA ; Senator Milliken, senior Republican in charge of the foreign policy in the opposition;raising tariffs in order to protect the new importation. The amendment failed in the Senate by a partisan vote. 
+
+Fur
+============
+  * 1949 when voting an extension of the TAA ; Senator Milliken, senior Republican in charge of the foreign policy in the opposition;raising tariffs in order to protect the new importation. The amendment failed in the Senate by a partisan vote.
+
+Mining
+============
+  * 1949 when voting an extension of the TAA ; Senator Milliken, senior Republican in charge of the foreign policy in the opposition;raising tariffs in order to protect the new importation. The amendment failed in the Senate by a partisan vote.
+  * 1953, when voting an extension of the TAA, brought by Representative Simpson modified for the House Ways and Means Committee under the presidency of Chairman Reed.Implement higher duties on lead and zinc. Adopted.  
+
+Oil industry
+============
+  * 1949 when voting an extension of the TAA ; Senator Milliken, senior Republican in charge of the foreign policy in the opposition;raising tariffs in order to protect the new importation. The amendment failed in the Senate by a partisan vote.
+  * 1953, when voting an extension of the TAA, brought by Representative Simpson modified for the House Ways and Means Committee under the presidency of Chairman Reed. implementation of quotas on crude oil and residual fuel oil. 
+  * 1955, when voting an extension of the TAA, brought by Senator Neely. It implements a 10% quota on oil and residual fuel. It is not accepted but amended into a amendment regarding national security industry that enable the President to raise the level of tariff. This one is adopted. 
+  
+Textile
+============
+  * 1955, when voting an extension of the TAA, brought by Senator George (D) and supported by Senator Johnson. Limit the tariff cut on 300 Japanese products including textile. Adopted
+
+Watches
+============
+  * 1949 when voting an extension of the TAA ; Senator Milliken, senior Republican in charge of the foreign policy in the opposition;raising tariffs in order to protect the new importation. The amendment failed in the Senate by a partisan vote.
+  * 1953, when voting an extension of the TAA, brought by Representative Simpson modified for the House Ways and Means Committee under the presidency of Chairman Reed. Implement higher tariffs on Swiss watches. Adopted.
