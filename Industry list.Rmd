@@ -5,11 +5,12 @@ date: "Wednesday, February 04, 2015"
 output: word_document
 ---
 
-The following documents indicate the industries that have benefited of political support. They are classified alphabetically. The information related to these industries are:
+The following document indicates the industries that have benefited of political support. They are classified alphabetically. The information related to these industries are:
 
-* the time of the action
-* the actors that brought their support
-* the description of the suggested protection with its implementation
+* the time of the political action
+* the actors who supported the action
+* the description of the suggested protection 
+* the implementation of the measure
 
 The sub-section indicates an action where only a fraction of the industry is particularly targeted by a protection measure.
 
