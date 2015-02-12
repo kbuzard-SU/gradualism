@@ -14,7 +14,7 @@ output: word_document
   * Key questions about the background of tariff negotiation: what is the pattern in the adoption of the TAA? How does the opposition of the TAA change through time? Do we see some sectors put out of the tariff negotiation?
   * Practical problems: research on how to make tables under markdown
 
-##work for the weeek
+## Work for the weeek
   * start reading the second book, _Traders and diplomats_ and the third book _The GATT legal system and World Trade Diplomacy_ by Robert Hudec
   * some questions need to answered in order to define the  role of the TAA in the definition of the background of the model:
       * Is the TAA relevant in multilateral negotiations like the GATT? Is the extension of the TAA linked to the negotiation at the GATT? If yes, how? 
