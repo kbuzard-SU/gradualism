@@ -1,0 +1,82 @@
+---
+title: "Summary of The GATT legal system and the world trade diplomacy by Hudec"
+author: "Benjamin Heyries"
+date: "Tuesday, February 10, 2015"
+output: word_document
+---
+
+_The GATT legal system and the world trade diplomacy_ by R. Hudec relates the mechanisms of the General Agreement on Tariffs and  Trade (GATT) through its legacy with the International Trade Organization (ITO) and its different modifications from its creation in 1947  to the Tokyo round ended in 1979.In this summary, I will try to report the principal features regarding taxes as well as the links that can be drawn between the GATT transformations and the US domestic policy as describes in _Politics and trade Policy_ by Joe Wilkinson.
+This summary is divided in two different sections. First, I present the creation of the GATT as an organ that grows because of the empty space left by the failure of the International Trade Organization. Then, I describe the modifications of the GATT following the disturbances linked to the creation of the EEC. 
+
+The failure of the ITO and the creation of the GATT
+===================================================
+
+### The GATT as a first step to the ITO
+
+The negotiations of the ITO that first starts unofficially in 1943 are led by two major actors: the UK and the USA, both shaping according to their own interests the organization. This is at that critical time that the interaction between domestic policy and the international organization can be drawn. For example, the ITO charter in 1945 bears the same limitation as the Trade Agreement Act extended in 1948 about the escape clause which limits considerably the negotiations as it entails that the trade partner may not keep his commitments. Moreover, the inclusion of the most favored nation included in the TAA since its very creation enters in conflict in the existence of the Commonwealth which forced the British to step back after stiff negotiations. 
+
+The ITO legal system aims at establishing trade agreements in mutually beneficial situations that would reduce tariffs by bilateral concessions. The tariffs are established as only trade instrument: the others being prohibited (to the exception of some special situations that would lead to residual restrictions). The ITO power resides in its entitlement to authorize a damaged economy to retaliate by protectionist measures that would be recommended by the organization. The damage are defined in the nullification and impairment clause (article 35 of the trade policy chapter and article 23 of the GATT).
+
+The GATT is the product of the pragmatic will of the members to start the negotiations on trade before the creation of the formal ITO. Therefore, the GATT seems to be dependent organization that should be merged with the ITO once it will be ratified. Moreover, the GATT is modified after the refinement of the ITO, like after the conference of the Havana. As a draft of organization, it is however limited compared to the ITO. First, it is accepted as provisional. Therefore, it is the embryo of an organization without any structure to support it as the ITO was seen to be soon adopted. Second, the GATT has no supremacy on national law: features previous to GATT are not subjected  to the GATT rules and the new resolution of the GATT has no superiority compare to national law. From the very beginning the GATT encounters problem of enforcement: without the structure of the ITO, the possibilities left to the organization to constrain the participants are very limited.
+
+The ITO fades away between 1949 and 1950. It is withdrawn of the political agenda of the United States and it appears that the GATT, the temporary structure, is the only structure that is left.
+
+### The development of the GATT as a permanent but fragile organization
+
+In this paragraph,  I focus on the action of the GATT as a dispute settler. I present first the evolution of the mechanism of resolution of the conflicts. Then I sum up the results obtained by the GATT in its early years (until 1958).
+
+  1. The evolution of the dispute settling process
+  
+The GATT is in 1949 the first step to the ITO. With the failure of the latter, the 
+GATT has to fill the empty institutional space. From 1949 to 1958, the GATT relies on different type of mechanism to settle disputes. The general trend is the formation of a third party whose judgment would be acceptable for both involved contracting parties. 
+
+The GATT first relies on the decision of the Chairman. It is only used for the first session in 1948. I think it may be in order to present the international organizations as efficient at its very beginning. All along this period, some initiatives led at the GATT are made in order to promote the use of the organization itself (as the first dispute between Cuba and the Netherlands in 1948 or the action of the United States in the 1960s and the 1970s in order to maintain the procedures alive). 
+
+The role of the chairman is quickly put into question and a new system, which relies on "Working parties", is formed. The working parties includes the members involved in the dispute and some neutral agents. Once formed, the working party tries to conciliate the two sides. Little by little, the neutral members take more and more importance in the decision of the working parties. They become the third party that decides whether the complaints is legitimate and recommend the sanctions that should be employed. This mechanism does not prevent the multiplication of related complaints (regarding a institutional subject) as well as the gridlocks that can arise in the settlement of the complaints. 
+
+As a consequence, a new form of dispute settlement appears in the GATT: the panel form. They are a group of countries that exclude the parties involved in the conflict. They are created for a particular topic, which means that they can settle several complaints regarding the same topic (like the application of the article 23 which defines the conditions of impairments and nullification). The panel grows from neutral countries to the status of expert: they are making the decision. This institutionalization is well embodied by the new spatial organization that is linked to the creation of the panel. The conciliation process look more and more like a court. The panel becomes the privileged form to settle complaints that could not have been settled through the normal conciliation process involving the working parties. The panel will be replaced in 1971 by the "Group of Three" (the chairmans of the contracting parties, the GATT council and the Committee on Trade and Development), which is deemed more flexible and more efficient.
+
+The GATT develops a legal process made of two phases in order to provide to the parties involved the recommendation that would solve their conflicts. Until 1958, the system seems to work well and a important number of complaints are settled. However, it does not entail that the system of the GATT is perfect or even solid. I point out in the next point why the GATT success is fragile.
+
+  2. The uncertain success of the new institution
+
+In the process of the game, there are few players. Indeed, 7 countries represents 75% of all the parties involved in the complaints. There are 6 major complainers (the United states, Denmark, Italy, the UK, West Germany and Greece) and 5 major defendants (the United States, Italy, France, Greece and West Germany).
+
+The objective are heavily centered on product issues. Out of the 40 complaints, 28 are product based. The other possible cause of complaints concern a restriction without mention of a particular product. Most of the latter aim at preserving the system from flagrant deviance from the GATT regulations.
+More than the commercial interest, nearly all the commercial complaints target anti-import policies, the complainer filing a complaint because he saw his exports decrease in a domestic market or on a third market. 
+
+What are the results for the complaints filed to the GATT? There is certainly some marks of success. First it seems that the GATT is heavily supported by its members that use this new international organization. Indeed, 40 new complaints are filed from 1948  to 1958 and the major economic powers (the USA, the UK, France and the rising West Germany) represent roughly 50% of the parties involved in conflicts. 
+If the GATT is widely used, its action is very limited. It stands on the compliance of the contracting. Once the entity runs out of declaration and reach a deadlock in the conciliation process, there is very few to do. 
+
+In the next period, I present how the decrease of this support leads to a fall in the complaints to the GATT as well as the development of skepticism toward the international organization.
+
+The tough years: 1958-1975
+===================================================
+
+With the creation of the UFO EEC as a first breach in the already old GATT legal system, the infractions to the general principles of the GATT crowd out. As the "legal" infringements become diffuse, a need for reform arise among the contracting parties. 
+
+### The first hardships
+
+The creation of the EEC, although legal and covered by the article 24 on the custom unions, completely destabilized the working process of the GATT. Indeed, two major players, West Germany and France, with smaller but active members, like the Benelux and Italy, are gathered under only one entity. Complementary to this new feature, the rise of Japan, as an economic superpower and non-founding major power, puts into question the GATT. Finally, the transformation of the ad hoc entity into a very institutionalized dispute settling reveals in plain sight the insufficient tools at the disposal of the GATT. Indeed, the compliance of the first period is not there anymore. Japan needs new order on industrial product, the EEC prefers it self-preservation to general liberalization and developing countries do not want of a Western-only order. At the end of the period, there is a shared will for reform.
+
+  1. The EEC challenge
+
+The ECC tariff rules enter in contradiction. The article 24 for custom unions was put in place in order to help small countries that do not have divergent interests to gather. However, the EEC gathers very diverse countries that have different commercial policies. The harmonization of the tariff level for the infra-zone and extra-zone trade takes time and few is done to make it smooth. The GATT is tied by the fact that the EEC is seen as too important to weaken it through complaints. Moreover, the EEC has a vicious effect: instead of having one country pursuing insidious protectionist trade, it is now a whole zone that enforces it. The emblematic example is the relation between France and its former colonies, which was barely accepted when it only concerned France. With the EEC, the generalized situation is outrageous for the competitors. 
+
+The EEC has some side effects. First with the acceptance of the EEC, different custom regional agreements, like the EFTA or the LAFTA, appear. The GATT fosters this approach in order to decrease tariff but it creates a messy order of wild discrimination. As a consequence, it empties the notion of most-favored nation. Second, it has a tremendous influence in the discredit of the GATT. Its agricultural policy (the CAP) and its excessive protectionist character cast a shadow on the negotiations of lower tariffs. The fact that the GATT is unable to solve this issue put into question its role.
+
+  2. The new pool of players
+
+The GATT is heavily affected by the change of its members. Between 1958 and 1975, the founding members are re-shaped by the creation of the EEC. They are joined by a new rising power in Asia, Japan. The entry of Japan creates conflict. For example, France first refuses to treat Japan as a GATT member under the provision of article 35. The Japan case is particularly itchy as most of the complaints of this period target textile products.
+Finally, the developed countries now have to count with the developing countries. They have clustered in order to weight into the decision of the GATT and usually, a representative of this group of interest take part in an decision. Even if the results are limited, their presence weaken the consensus and the comportment of compliance that prevailed in the preceding period. 
+
+### The need of re-invent itself
+
+The GATT between 1948 and 1958 did a good job in reducing tariff level. As a consequence, most of the "easy" gains have been collected and what is left may ask much more work. The GATT has three main targets: the touchy industrial product (like textile), agriculture and it has some concerns about the new forms of protectionism. 
+
+The tariffs on industrial product were negotiated in a quite smooth and consensual atmosphere during the previous period. There were conflicts and gridlocks but a big chunk of all the complaints targeted obvious infraction to the GATT. Between 1958 and 1970, the negotiation environment is completely modified and the entry of new players make it harder to negotiate new tariff caps. First, the industrialization of developing countries entails a new competition on traditional industries. In particular, developed countries' textile manufactures are particularly affected by the rise of Japan. The problem of the textile is settled by its exclusion of the negotiation in 1962 for the cotton and in 1971 for any type of textile (through LTA = Long term agreements). Other product are also targeted under the same regime: meat in 1961 and steel in 1967.
+These measures, whose the first one aimed at limiting the legal infringement to the GATT system, have the opposite effect of constituting exceptions to the legal regime. As a consequence, with the general differentiation of product and members' status, the shared spirit of compliance broke down leaving the GATT with a weak and diminished power of arbitrage.
+
+Besides touchy industrial product facing new competition, the GATT faces one of its biggest challenge in agriculture. Some problems already appeared in the dairy quotas case of 1955, but, with the creation of the EEC and the CAP, the confrontations grew exponentially. Agriculture represents more than 50% of the few complaints filed between 1958 and 1971 (for a total of 9). Moreover, it is the sector where the opposition were the stiffer, as in the example of the "Chicken War". The opposition of the two poles in the GATT, the United States and the EEC, in a fierce and barren fight undermines the adhesion to the system.
+
+Finally, the GATT faces protectionist innovation. The question of the non-formal barriers appears as soon as the beginning of the 1960s. Another topic is the presence of residual restrictions. Residual restrictions are waivers given to countries that allows them to not respect the GATT rules. As they last through time and conflict results from their release, they constitute on another point disagreement as well as another breach to the GATT system. Finally, tariff innovation, like the variable levy created by the EEC on agricultural products under the CAP, confront the GATT with its absence of tool to deal with that kind of restriction. Indeed, it is impossible to compute the impact of such measure as it is variable. The incompetence of the GATT and its refusal to step up is another wound to the system.
