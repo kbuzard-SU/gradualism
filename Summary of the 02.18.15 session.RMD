@@ -1,0 +1,24 @@
+---
+title: "Summary of the 02.18.15 session"
+author: "Benjamin Heyries"
+date: "Thursday, February 19, 2015"
+output: word_document
+---
+
+## Work done this week
+
+  * Finish the summary on Read _The GATT legal system and World Trade Diplomacy_ by Robert Hudec
+  * Find the WTO data on the tariff agreement per country and per conference
+  * Start reading _Traders and diplomats_
+  
+## Content of the session
+
+  * Discussion on the GitHub problem about notification of merging modification
+  * Some leads to research on: the major supplier rule associated with the most favored nation status against bilateral negotiations; the transition of the EEC from separated contracting parties to a single one; the Schelling prize speech on the effect of the executive negotiating; 
+  * The procedure for gathering the data: take the concession of the US toward a developed country and a developing country that would be present during the different round without the least noise. Two possibilities: Brazil and Australia. This will be a one-way concession in order to keep the model simple. 
+
+## Work for the next week
+
+  * Finish reading _Traders and diplomats_ 
+  * Start gathering the data 
+  * Make some quick research about the leads in order to clarify the general model
