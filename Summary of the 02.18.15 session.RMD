@@ -15,7 +15,7 @@ output: word_document
 
   * Discussion on the GitHub problem about notification of merging modification
   * Some leads to research on: the major supplier rule associated with the most favored nation status against bilateral negotiations; the transition of the EEC from separated contracting parties to a single one; the Schelling prize speech on the effect of the executive negotiating; 
-  * The procedure for gathering the data: take the concession of the US toward a developed country and a developing country that would be present during the different round without the least noise. Two possibilities: Brazil and Australia. This will be a one-way concession in order to keep the model simple. 
+  * The procedure for gathering the data: take the concession of the US toward a developed country and a developing country that would be present during the different round. Two possibilities: Brazil and Australia. This will be a one-way concession in order to keep the model simple. 
 
 ## Work for the next week
 
