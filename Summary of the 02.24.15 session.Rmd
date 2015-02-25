@@ -1,0 +1,27 @@
+---
+title: "Summary of the 02.24.15 session"
+author: "Benjamin Heyries"
+date: "Wednesday, February 25, 2015"
+output: html_document
+---
+
+## Work done this week
+
+  * Made some research on some important details: the major supplier rule associated with the most favored nation status against bilateral negotiations; the transition of the EEC from separated contracting parties to a single one; the Schelling prize speech on the effect of the executive negotiating.
+The "principal supplier rule" is a way to prevent free riding by giving to members the possibility to ask for tariff concessions on their exports. It is also applied when contracting parties can revise their concessions (every three years starting in 1958).
+The EEC members negotiate as a single entity as soon as the Dillon round. Meanwhile, the ECSC also negotiates as a single entity at the Geneva Round, the Dillon Round and the Kennedy Round. The links between the two are nebulous as the same countries participate in the two institutions. Apparently, the ECSC only negotiates tariff concessions on products in relation with mining and steel industries whereas the EEC negotiates for other types of product. However, it is not clear if the EEC can supersedes the ECSC authority and negotiates tariff concessions on mining and steel industries products.
+Finally the Schelling bargaining theory on executive power is a conjecture about the interactions between domestic policies and international negotiations. It assumes that if the domestic legislator does not renounce to its power of amendment, the foreign negotiator may walk out of the negotiation table.
+  * Worked on the data: gathered the tariff concessions of the United States for Australia, Brazil and Haiti.
+  
+## Content of the session
+
+  * Discussion on the leads and the other necessary research: it may be useful to look at Putnam theory on "two-level" games. 
+  * Discussion on the data: how to better gather it and how to better organize it. It is necessary to define the nature of the general concession of the United States. Is it a document that gathers all the tariff concession done to the different countries or is it the result of independent multilateral negotiations? It is also necessary to add the absolute value to the table and to construct a data frame in order to have a centralized table.
+
+## Work for the next week
+
+In order of priority:
+  * Define the nature of the document "Consolidated List of Tariff concession offers"
+  * Correct the documents reporting the bilateral tariff concessions
+  * Make some quick research about the leads in order to clarify the general model
+  * Finish reading _Traders and diplomats_ 
