@@ -8,7 +8,7 @@ output: html_document
 ## Work done this week
 
   * Define the nature of the document "Consolidated List of Tariff concession offers": the consolidated list gathers the obligation of a country under MFN taken at a certain round. 
-  * Make some quick research about the leads in order to clarify the general model: reading of the article of Bagwell and Staiger.  
+  * Make some quick research about the leads in order to clarify the general model: reading of the article of Bagwell, Staiger and Yurukoglu.  
   * Started to add products that are the object of complaints during the GATT session in the industry list.
   
 ## Content of the session
