@@ -1,0 +1,24 @@
+---
+title: "Summary of the 03.04.15 session"
+author: "Benjamin Heyries"
+date: "Thursday, March 05, 2015"
+output: html_document
+---
+
+## Work done this week
+
+  * Define the nature of the document "Consolidated List of Tariff concession offers": the consolidated list gathers the obligation of a country under MFN taken at a certain round. 
+  * Make some quick research about the leads in order to clarify the general model: reading of the article of Bagwell and Staiger.  
+  * Started to add products that are the object of complaints during the GATT session in the industry list.
+  
+## Content of the session
+
+  * The problem of the consolidated lists: it is unclear if the actual list matches the different bilateral agreements. The mention of preferential agreements in the WTO documents does not allow us to conclude that they exactly match. Further work is needed.
+  * Discussion on the article of Bagwell and Staiger: more study is necessary to explain how reciprocity interact with the MFN status in order to limit bargaining externalities.
+
+## Work for the next week
+
+  * Correct the documents reporting the bilateral tariff concessions.
+  * Add the products that are the object of complaints during the GATT session in the industry list.
+  * Finish reading _Traders and diplomats_.
+  * Compare the consolidated tariff list with the bilateral agreements in order to draw conclusion about their nature. 
