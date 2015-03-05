@@ -21,7 +21,9 @@ Finally the Schelling bargaining theory on executive power is a conjecture about
 ## Work for the next week
 
 In order of priority:
+
   * Define the nature of the document "Consolidated List of Tariff concession offers"
   * Correct the documents reporting the bilateral tariff concessions
   * Make some quick research about the leads in order to clarify the general model
   * Finish reading _Traders and diplomats_ 
+  * Add the products that are the object of complaints during the GATT session in the industry list.
