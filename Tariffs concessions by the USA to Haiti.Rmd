@@ -15,21 +15,19 @@ Annecy
 tariffs <- matrix(c(2290, 50, 40, 16.6, 4280, 0, 36.2, 21.6, 133071, 0, 0, 50, 133040,50, 40, 16.6, 1309, 0, 0, 50, 1329, 42, 20, 37.5, 133082, 50, 22.9, 35.2, 133810, 20, 14.3, 41.7, 1714, 50, 10, 22.2, 3421, 0, 50, 0, 3390, 0, 44, 10, 3963, 0, 22.2, 35.7, 03695, 50, 0, 0, 03699, 0, 0, 50, 2302, 0, 0, 0, 2274, 0, 0, 0, 2320, 0, 0, 0), ncol=4, byrow=TRUE)
 colnames(tariffs) <- c("Code tariff", "Concession 1945", "Concession to present", "Present concession")
 rownames(tariffs) <- c(seq(1, 14), "Bind", 16, 17)
-tariffs
-tariffscode <- matrix(c(2290, "Vetivert oil", 4280, "Trays, Bowls, platters", 133071, "Orange peel", 133040, "Mangoes", 1309, "Pineanples candy", 1329, "Jellies", 133082, "Guavas", 133081,"Mango paste and pulp", 1714, "Rum", 3421, "Manufactured non-cotton vegetal fiber", 3390, "Braids of non-cotton vegetal fiber", 3963, "articles made of non-cotton VF", 03695, "Alpargatas", 03699, "Boots with non-cotton VF", 2302, "Logwood", 2274, "Lemon-grass", 2320, "Turmeric"), ncol=2, byrow=TRUE)
-colnames(tariffscode) <- c("Tariffs code 1954", "Description article")
-tariffscode
+tariffscode <- matrix(c("1.25%", "Vetivert oil", "0.83%", "Trays, Bowls, platters", "1 ct per lb", "Orange peel", "0.75 ct per lb", "Mangoes", "17.5%", "Pineanples candy", "6%", "Jellies", "4.75%", "Guavas", "10%","Mango paste and pulp", "0.5$ per gal.", "Rum", "0", "Manufactured non-cotton vegetal fiber", "5%", "Braids of non-cotton vegetal fiber", "45%", "Articles made of non-cotton VF", "0", "Alpargatas", "17.5%", "Boots with non-cotton VF", "Bind", "Logwood", "Bing", "Lemon-grass", "Bind", "Turmeric"), ncol=2, byrow=TRUE)
+colnames(tariffscode) <- c("Present concession abs", "Description article")
+data.frame(tariffs, tariffscode)
 ```
 
 Geneva II
 ================
 
 ```{r}
-tariffs <- matrix(c(2290, 20, 8, 4, 8, 4280, 16, 7, 3, 6, 1101), ncol=5, byrow=TRUE)
+tariffs <- matrix(c(2290, 20, 8, 4, 8, 4280, 16, 7, 3, 6), ncol=5, byrow=TRUE)
 colnames(tariffs) <- c("Code 1954", "Total Percentage of concession", "Stage 1", "Stage 2", "Stage 3")
-tariffs
-tariffscode <- matrix(c(2290, "Vetivert oil", "Yes", NA, 4280, "Forks, spoon, tray, bowl...", "No", "4280490 instead of 4280990, irrelevant"), ncol=4, byrow=TRUE)
-colnames(tariffscode) <- c("Tariffs code 1954", "Description article", "Correspondance code 1946", "Change")
-tariffscode
+tariffscode <- matrix(c("1.25%", "Vetivert oil", "Yes", "No", "1.66%", "Forks, spoon, tray, bowl...", "No", "Too Small"), ncol=4, byrow=TRUE)
+colnames(tariffscode) <- c("Tariffs code 1954", "Description", "Code 1946", "Change")
+data.frame(tariffs, tariffscode)
 ```
 
