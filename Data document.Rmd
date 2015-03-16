@@ -1,0 +1,29 @@
+---
+title: "Data Document"
+author: "Benjamin Heyries"
+date: "Monday, March 16, 2015"
+output: html_document
+---
+
+The following document give details on the exploited documents in the study. The title of every rubric refers to a type of document. They present the provenance of the document and the treatment that was applied to the data.
+
+The bilateral tariff concessions 
+===============================
+
+They are list found on the WTO website. The next links present the documents either by round or by contracting party. They are treated in document called __"Tariff concession by [contracting party 1] to [contracting party 2].Rmd"__.
+https://www.wto.org/english/docs_e/gattbilaterals_e/indexbyround_e.htm 
+https://www.wto.org/english/docs_e/gattbilaterals_e/indexbycountry_e.htm
+
+So far, only the last pages of each document were used. They recap the concessions the two parties agreed on. This entails that there is a letter in the document signed by the two delegations that presents the last part of the document as the final outcome of the negotiations. They are far from definitive. They are subject to other bilateral negotiations. They sometimes have to be ratified by the legislative body of the contracting party (like for the USA).
+
+Each report of the data must contain the codes affected to the products, the final concessions in percentage and in absolute terms and the descriptions of the products. Will be added to this mandatory factors when they are available: the changes affecting the code attributed to a product and the gradual stages of tariff liberalization.
+
+The GATT complaint documents
+===============================
+
+They are list found on worldtradelaw.net. They are treated in documents called __"Industry list"__. The following link gives the table that contain them all. They are usually divided in 6 parts: introduction, facts, arguments, findings and conclusion.
+http://www.worldtradelaw.net/databases/gattpanels.php
+
+So far, only parts that were treated in the industry list were the introduction, facts and conclusion. They give a description of the dispute and all the decision of the panel gathered for the issue. The source may be incomplete. Some disputes disappear without leaving a trace.
+
+Each report of data must contain the name of the product, the contracting parties involved, a brief description of the issue and finally the outcome of the dispute. 
