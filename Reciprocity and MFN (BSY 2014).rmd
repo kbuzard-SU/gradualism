@@ -1,0 +1,24 @@
+---
+title: "Reciprocity and MFN (BSY 2014)"
+author: "Kristy Buzard"
+date: "Monday, March 16, 2015"
+output: html_document
+---
+
+## The Question
+
+  * According to Bagwell, Staiger and Yurukoglu (2014), what is the impact of reciprocity and MFN (most favored nation) on multilateral bargaining under the auspices of the GATT?
+    
+## The Context and more specifics
+
+  * Section 6 of "Multilateral Trade Bargaining: A First Peek at the GATT Bargaining Records" explains that the combination of reciprocity and MFN eliminates bargaining externalities, but that it is still possible that the full information efficiency frontier cannot be reached.
+  * The questions are why this happens, and whether it is reciprocity or MFN that leads to the result.
+
+## The Details and Answer
+
+  * The real problem comes from asymmetry. If countries were perfectly symmetric (in the sense that their politically optimal trade agreement tariffs were the same), it should be easy to show that bargaining externalities disappear and the full information efficiency frontier can be reached.
+  * What is this full information efficiency frontier about? It is assumed that governments do not necessarily know the preferred tariff levels of their negotiating partners. If everyone knew what everyone else wanted, we would be in a case of full information. When there is instead private information, we have to worry about governments lying for several reasons I won't go into here.
+  * The reciprocity result says that, with reciprocity, the externality associated with this lying can be internalized and governments will truthfully reveal their preferences--they will propose the tariffs that they really prefer to have (think of this in the two-country case).
+  * HOWEVER, even in the two-country case (where MFN is not relevant), if the countries are asymmetric, they will not be able to agree on a trade agreement tariff pair. View it this way: whichever country prefers to have higher tariffs innately has a stronger preference for protection. This country will not want to cut tariffs as much as its trading partner. The tariff pair that maximizes the joint payoffs of the two countries and also satisfies reciprocity will not be agreeable to both parties: we would need to let the more protectionist country cut tariffs less, and this would violate reciprocity. We can't have both reciprocity and joint government efficiency satisfied at the same time (See Figure 6 on page 36).
+  * This issue with reciprocity is the crucial one. MFN, in concert with reciprocity, will internalize the bargaining externaliies (see the last paragraph on p. 39). But the inefficiency from reciprocity remains.
+  * Bottom line: we can't have the internalization of bargaining externalities and full efficiency at the same time unless government preferences for protection are symmetric.
