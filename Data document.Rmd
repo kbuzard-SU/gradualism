@@ -5,25 +5,31 @@ date: "Monday, March 16, 2015"
 output: html_document
 ---
 
-The following document give details on the exploited documents in the study. The title of every rubric refers to a type of document. They present the provenance of the document and the treatment that was applied to the data.
+The following document give details on the exploited documents in the study. The title of each section refers to a type of document. They present the provenance of the document and the treatment that was applied to the data.
 
-The bilateral tariff concessions 
+Tariff concessions by [contracting party 1] to [contracting party 2].Rmd
 ===============================
 
-They are list found on the WTO website. The next links present the documents either by round or by contracting party. They are treated in document called __"Tariff concession by [contracting party 1] to [contracting party 2].Rmd"__.
+The data comes from documents called __"Outcomes of the bilateral negotiation between [contracting party 1] and [contracting party 2] at [GATT round]"__ accessible on the WTO website. The next links present the documents either by round or by contracting party.
+
 https://www.wto.org/english/docs_e/gattbilaterals_e/indexbyround_e.htm 
+
 https://www.wto.org/english/docs_e/gattbilaterals_e/indexbycountry_e.htm
 
-So far, only the last pages of each document were used. They recap the concessions the two parties agreed on. This entails that there is a letter in the document signed by the two delegations that presents the last part of the document as the final outcome of the negotiations. They are far from definitive. They are subject to other bilateral negotiations. They sometimes have to be ratified by the legislative body of the contracting party (like for the USA).
+So far, only the last pages of each source document were used. They recap the concessions the two parties agreed on. This entails that there is a letter in the document signed by the two delegations that presents the last part of the document as the final outcome of the negotiations. They are far from definitive. They may not be the tariffs applied under MFN if other contracting parties have negotiated the tariff line of the same item at the same round. They sometimes have to be ratified by the legislative body of the contracting party (like for the USA).
 
-Each report of the data must contain the codes affected to the products, the final concessions in percentage and in absolute terms and the descriptions of the products. Will be added to this mandatory factors when they are available: the changes affecting the code attributed to a product and the gradual stages of tariff liberalization.
+Every data set contains the tariff codes, the final concessions in percentage and in absolute terms and the descriptions of the products. When available, several optional variables are included: the changes affecting the code attributed to a product and the gradual stages of tariff liberalization.
 
-The GATT complaint documents
+The Industry List
 ===============================
 
-They are list found on worldtradelaw.net. They are treated in documents called __"Industry list"__. The following link gives the table that contain them all. They are usually divided in 6 parts: introduction, facts, arguments, findings and conclusion.
+It is a list of products that were subject to trade battle, either domestically or internationally. 
+
+Internationally, they appear in a complaint at the GATT. The conclusion of the panel that ruled the dispute can be found on worldtradelaw.net. The following link gives the source of panel conclusion. They are usually divided in 6 parts: introduction, facts, arguments, findings and conclusion.
+
 http://www.worldtradelaw.net/databases/gattpanels.php
 
-So far, only parts that were treated in the industry list were the introduction, facts and conclusion. They give a description of the dispute and all the decision of the panel gathered for the issue. The source may be incomplete. Some disputes disappear without leaving a trace.
+So far, the only parts that were treated in the industry list were the introduction, facts and conclusion. They give a description of the dispute and the decision of the panel. The source may be incomplete as some disputes disappear without leaving a trace.
+Every data set contains the name of the product, the contracting parties involved, a brief description of the issue and finally the outcome of the dispute. 
 
-Each report of data must contain the name of the product, the contracting parties involved, a brief description of the issue and finally the outcome of the dispute. 
+Domestically, they have been spotted in qualitative research: in __Politics and Trade politics__. So far, the treatment of this type of data only consists in a mention of the circumstances, the form of the protective measure, its supporters and the outcome of their initiative.
