@@ -13,11 +13,10 @@ The Geneva I round
 
 ```{r}
 tariffs <- matrix(c(8220, 50, 8130, 50, 8380,50, 8140, 25, 8130, 50, 2345, 50, 2290, 50, 4209, 50, 4225, 50, 0018, 50, 0019, 50, 0815, 8.3, 0021, 50, 0022, -7, 0023, 50, 0044, 50, 1330, 50, 2410, 50, 1197, 60, 3520, 25, 3541, 37.5, 0734500, 20, 0734520, 37.5, 0751400, 0, 0751420, 45, 0759, 50, 0207, 0, 0208, 0, 0990130, 50, 5954, 0, 0231, 0, 0703, 0,  0719, 0, 0729, 0, 6270, 0, 0961, 0, 0962, 0, 0034, 0, 0979, 0, 0234, 0, 0291, 0, 4033, 0), ncol=2, byrow=TRUE)
-colnames(tariffs) <- c("Code 1946", "Percentage of concession")
-rownames(tariffs) <- c(seq(1, 29), "Bind free item", seq(31,42))
+colnames(tariffs) <- c("Code 1946", "Percentage concession 1946")
 
-tariffscode <- matrix(c("2.5 ct per lb", "Tannic acid", "12.5 %", "Medical preparations", "12.5 %", "Chimical product: Eucalyptol", "12.5%", "Prepration in pills: Eucalyptol", "17.5%", "Thymol from eucalyptus", "7.5%", "Taning extracts", "7.5%", "Essential oil of E", "10%", "Veneers" , "16.33% and 10%", "Tennis racket frame", "3 ct per lb", "Beef", "3 ct per lb", "Veal", "0", "Beef and mutton tallow", "2.5 ct per lb", "Mutton", "3.5 ct per lb", "Lamb", "3 ct per lb", "Game", "1.5 ct per lb or min 7.5 %", "Butter", "7 ct per lb", "Other fruit paste", "1 ct per lb", "Grass and crop seeds", "87.5 ct per lb", "Peas", "Between 9.25 and 8 ct per lb", "Clothing wool", "9.25 ct per lb and 6.25%", "Carbonized wool", "2.5%", "Dressed fur not dyed", "7.5%", "Dyed dressed furs", "0", "Manufactured fur not dyed", "17.5%", "Manufactured fur dyed", "25%", "All other fur articles", "0", "Hides and skins",  "0", "Hides and skin", "20%", "Catgut", "0", "Precious stones", "0", "Fur and fur skins: Lamb", "0", "Fur and fur skins: Rabbit",  "0", "Fur and fur skins: opossum", "0", "Fur and fur skin: others", "0", "Tantalum and Zirconium ore", "0", "Shells: mother-of-pearl", "0", "Tortoise shell", "0", "Sausage cacinge", "0", "Integruments, tendons, intestine", "0", "Other sheep and lamb skin", "0", "Kangoroo skin", "0", "Oriental wood"), ncol=2, byrow=TRUE)
-colnames(tariffscode) <- c("Absolute concession", "Description of the article")
+tariffscode <- matrix(c("2.5 ct per lb", "Tannic acid", "12.5 %", "Medical preparations", "12.5 %", "Chimical product: Eucalyptol", "12.5%", "Prepration in pills: Eucalyptol", "17.5%", "Thymol from eucalyptus", "7.5%", "Taning extracts", "7.5%", "Essential oil of E", "10%", "Veneers" , "16.33% and 10%", "Tennis racket frame", "3 ct per lb", "Beef", "3 ct per lb", "Veal", "0", "Beef and mutton tallow", "2.5 ct per lb", "Mutton", "3.5 ct per lb", "Lamb", "3 ct per lb", "Game", "1.5 ct per lb or min 7.5 %", "Butter", "7 ct per lb", "Other fruit paste", "1 ct per lb", "Grass and crop seeds", "87.5 ct per lb", "Peas", "Between 9.25 and 8 ct per lb", "Clothing wool", "9.25 ct per lb and 6.25%", "Carbonized wool", "2.5%", "Dressed fur not dyed", "7.5%", "Dyed dressed furs", "0", "Manufactured fur not dyed", "17.5%", "Manufactured fur dyed", "25%", "All other fur articles", "0", "Hides and skins",  "0", "Hides and skin", "20%", "Catgut", "Bind", "Precious stones", "Bind", "Fur and fur skins: Lamb", "Bind", "Fur and fur skins: Rabbit",  "Bind", "Fur and fur skins: opossum", "Bind", "Fur and fur skin: others", "Bind", "Tantalum and Zirconium ore", "Bind", "Shells: mother-of-pearl", "Bind", "Tortoise shell", "Bind", "Sausage cacinge", "Bind", "Integruments, tendons, intestine", "Bind", "Other sheep and lamb skin", "Bind", "Kangoroo skin", "Bind", "Oriental wood"), ncol=2, byrow=TRUE)
+colnames(tariffscode) <- c("Absolute concession 1946", "Description article")
 data.frame(tariffs, tariffscode)
 ```
 
@@ -25,9 +24,9 @@ The Geneva II round
 ================
 ```{r}
 tariffs <- matrix(c(2345, 20, 6.6, 6.6, 6.6, 2290, 20, 6.6, 6.6, 6.6, 23500, 16.6, 6.6, 3.3, 6.6, 0990, 15, 5, 5, 5), ncol=5, byrow=TRUE)
-colnames(tariffs) <- c("Code 1954", "Total concession percent", "Stage 1", "2", "3")
+colnames(tariffs) <- c("Code 1954", "Percentage concession 1954", "Stage 1", "2", "3")
 tariffscode <- matrix(c("1.5%", "Tanning extract", "Yes", "1.5%", "Eucalyptus Oil", "Yes", "0.5 ct per lb", "Game", "Yes", "3%", "Catgut", "Yes"), ncol=3, byrow=TRUE)
-colnames(tariffscode) <- c("Total concession (abs)", "Description article", "Correspondance code 1946")
+colnames(tariffscode) <- c("Absolute concession 1954", "Description article", "Correspondance code 1946")
 data.frame(tariffs, tariffscode)
 ```
 
