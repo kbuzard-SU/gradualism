@@ -1,0 +1,28 @@
+---
+title: "Summary of the 03.17.15 session"
+author: "Benjamin Heyries"
+date: "Tuesday, March 17, 2015"
+output: html_document
+---
+
+## Work done this week
+
+  * Defined definitively the status of the document of the type "Consolidated List of tariff concessions". They are not the definitive agreements on tariffs but all the concession offers and requests before the negotiations. Therefore, in the case of this study and at this stage, they are not directly relevant. 
+  * Completed the industry list with the complaints at the GATT. I added all the complaints where the USA are the complainant.  
+  * Modified the document of tariff concessions. I added the absolute value and changed the format in order to have a single data set.
+  * Created a  document about the product of our work.
+  
+## Content of the session
+
+  * Adding the complaint of the GATT to the industry list may be more relevant when the USA are the defendant. Indeed, the complaints may target protectionist malpractices, which reveals the action of some domestic private interests.
+  * The informative document is not done properly. It has to deal with the product not the source. It aims at explaining our choices on the way we treated data.
+  * It is not clear how much bilateral agreements were signed during the GATT round at our disposal. As a consequence, the width of the data set is not clearly defined. 
+  * Some uncertainties remains about how we should treat the data in the GATT document. Indeed, they may be subject to change at the ratification level. Qualitative sources may confirm their validity.  
+
+## Work for the next week
+
+  * Correct the documents reporting the bilateral tariff concessions. Standardize their form.
+  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
+  * Finish reading _Traders and diplomats_.
+  * Map the data: determine how many agreements have been signed between the USA and other contracting parties.
+  * Correct the document on documentation.

@@ -13,10 +13,9 @@ Annecy
 
 ```{r}
 tariffs <- matrix(c(2290, 50, 40, 16.6, 4280, 0, 36.2, 21.6, 133071, 0, 0, 50, 133040,50, 40, 16.6, 1309, 0, 0, 50, 1329, 42, 20, 37.5, 133082, 50, 22.9, 35.2, 133810, 20, 14.3, 41.7, 1714, 50, 10, 22.2, 3421, 0, 50, 0, 3390, 0, 44, 10, 3963, 0, 22.2, 35.7, 03695, 50, 0, 0, 03699, 0, 0, 50, 2302, 0, 0, 0, 2274, 0, 0, 0, 2320, 0, 0, 0), ncol=4, byrow=TRUE)
-colnames(tariffs) <- c("Code tariff", "Concession 1945", "Concession to present", "Present concession")
-rownames(tariffs) <- c(seq(1, 14), "Bind", 16, 17)
-tariffscode <- matrix(c("1.25%", "Vetivert oil", "0.83%", "Trays, Bowls, platters", "1 ct per lb", "Orange peel", "0.75 ct per lb", "Mangoes", "17.5%", "Pineanples candy", "6%", "Jellies", "4.75%", "Guavas", "10%","Mango paste and pulp", "0.5$ per gal.", "Rum", "0", "Manufactured non-cotton vegetal fiber", "5%", "Braids of non-cotton vegetal fiber", "45%", "Articles made of non-cotton VF", "0", "Alpargatas", "17.5%", "Boots with non-cotton VF", "Bind", "Logwood", "Bing", "Lemon-grass", "Bind", "Turmeric"), ncol=2, byrow=TRUE)
-colnames(tariffscode) <- c("Present concession abs", "Description article")
+colnames(tariffs) <- c("Code 1946", "Pre-Concession 1945", "Pre-Concession 1947", "Percentage concession 1950")
+tariffscode <- matrix(c("1.25%", "Vetivert oil", "0.83%", "Trays, Bowls, platters", "1 ct per lb", "Orange peel", "0.75 ct per lb", "Mangoes", "17.5%", "Pineanples candy", "6%", "Jellies", "4.75%", "Guavas", "10%","Mango paste and pulp", "0.5$ per gal.", "Rum", "0", "Manufactured non-cotton vegetal fiber", "5%", "Braids of non-cotton vegetal fiber", "45%", "Articles made of non-cotton VF", "0", "Alpargatas", "17.5%", "Boots with non-cotton VF", "Bind", "Logwood", "Bind", "Lemon-grass", "Bind", "Turmeric"), ncol=2, byrow=TRUE)
+colnames(tariffscode) <- c("Absolute concession 1950", "Description article")
 data.frame(tariffs, tariffscode)
 ```
 
@@ -25,9 +24,9 @@ Geneva II
 
 ```{r}
 tariffs <- matrix(c(2290, 20, 8, 4, 8, 4280, 16, 7, 3, 6), ncol=5, byrow=TRUE)
-colnames(tariffs) <- c("Code 1954", "Total Percentage of concession", "Stage 1", "Stage 2", "Stage 3")
+colnames(tariffs) <- c("Code 1954", "Percentage concession", "Stage 1", "Stage 2", "Stage 3")
 tariffscode <- matrix(c("1.25%", "Vetivert oil", "Yes", "No", "1.66%", "Forks, spoon, tray, bowl...", "No", "Too Small"), ncol=4, byrow=TRUE)
-colnames(tariffscode) <- c("Tariffs code 1954", "Description", "Code 1946", "Change")
+colnames(tariffscode) <- c("Absolute concession", "Description article", "Code 1946", "Change")
 data.frame(tariffs, tariffscode)
 ```
 
