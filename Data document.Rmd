@@ -10,6 +10,8 @@ The following document give details on the exploited documents in the study. The
 Tariff concessions by [contracting party 1] to [contracting party 2].Rmd
 ===============================
 
+###General description
+
 The data comes from documents called __"Outcomes of the bilateral negotiation between [contracting party 1] and [contracting party 2] at [GATT round]"__ accessible on the WTO website. The next links present the documents either by round or by contracting party.
 
 https://www.wto.org/english/docs_e/gattbilaterals_e/indexbyround_e.htm 
@@ -19,6 +21,15 @@ https://www.wto.org/english/docs_e/gattbilaterals_e/indexbycountry_e.htm
 So far, only the last pages of each source document were used. They recap the concessions the two parties agreed on. This entails that there is a letter in the document signed by the two delegations that presents the last part of the document as the final outcome of the negotiations. They are far from definitive. They may not be the tariffs applied under MFN if other contracting parties have negotiated the tariff line of the same item at the same round. They sometimes have to be ratified by the legislative body of the contracting party (like for the USA).
 
 Every data set contains the tariff codes, the final concessions in percentage and in absolute terms and the descriptions of the products. When available, several optional variables are included: the changes affecting the code attributed to a product and the gradual stages of tariff liberalization.
+
+###Specific features
+
+
+This subsection details the additional features that were added in the documents.
+
+__Pre-concession [date]__: concessions that were granted in independent negotiations previously to the GATT. As they may be relevant and because they do not appear previously in the GATT database, they were added to the summary of bilateral negotiation. They are reported in the treatment document. This is the case for the document on Haiti.
+__Stage [number]__/__X[number]__: liberalization is sometimes done gradually. As a consequence, I report in the document the schedule of tariff liberalization. For Geneva II, the period of time separating two stages is one year. This feature is present is the documents on Haiti and Australia.
+
 
 The Industry List
 ===============================

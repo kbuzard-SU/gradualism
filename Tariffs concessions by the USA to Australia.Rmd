@@ -24,7 +24,7 @@ The Geneva II round
 ================
 ```{r}
 tariffs <- matrix(c(2345, 20, 6.6, 6.6, 6.6, 2290, 20, 6.6, 6.6, 6.6, 23500, 16.6, 6.6, 3.3, 6.6, 0990, 15, 5, 5, 5), ncol=5, byrow=TRUE)
-colnames(tariffs) <- c("Code 1954", "Percentage concession 1954", "Stage 1", "2", "3")
+colnames(tariffs) <- c("Code 1954", "Percentage concession 1954", "Stage 1", "X2", "X3")
 tariffscode <- matrix(c("1.5%", "Tanning extract", "Yes", "1.5%", "Eucalyptus Oil", "Yes", "0.5 ct per lb", "Game", "Yes", "3%", "Catgut", "Yes"), ncol=3, byrow=TRUE)
 colnames(tariffscode) <- c("Absolute concession 1954", "Description article", "Correspondance code 1946")
 data.frame(tariffs, tariffscode)
