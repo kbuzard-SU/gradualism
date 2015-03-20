@@ -10,8 +10,7 @@ The following document give details on the exploited documents in the study. The
 Tariff concessions by [contracting party 1] to [contracting party 2].Rmd
 ===============================
 
-General description
-=============
+###General description
 
 The data comes from documents called __"Outcomes of the bilateral negotiation between [contracting party 1] and [contracting party 2] at [GATT round]"__ accessible on the WTO website. The next links present the documents either by round or by contracting party.
 
@@ -23,8 +22,8 @@ So far, only the last pages of each source document were used. They recap the co
 
 Every data set contains the tariff codes, the final concessions in percentage and in absolute terms and the descriptions of the products. When available, several optional variables are included: the changes affecting the code attributed to a product and the gradual stages of tariff liberalization.
 
-Specific features
-=============
+###Specific features
+
 
 This subsection details the additional features that were added in the documents.
 
