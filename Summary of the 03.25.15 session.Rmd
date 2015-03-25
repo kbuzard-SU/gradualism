@@ -1,0 +1,27 @@
+---
+title: "Summary of the 03.25.2015 session"
+author: "Benjamin Heyries"
+date: "Tuesday, March 24, 2015"
+output: html_document
+---
+
+## Work done this week
+
+  * Map the data: determine how many agreements have been signed between the USA and other contracting parties. Creation of the document __"Concession map"__.
+  * Correct the document on documentation. 
+  * Correct the documents reporting the bilateral tariff concessions. Standardize their form.
+  
+## Content of the session
+  
+  * Assessment of the work done: corrections have to be done (modify information on the __concession map__, make the difference between no agreement and no negotiations).
+  * Research for more information on the next rounds: Dillon, Kennedy and Tokyo. It seems that information is harder to find than it seems.
+  * Interrogation on the evolution of membership in the first rounds (why members leave?).
+  * Set an order of priority between the next task to complete.
+
+## Work for the next week
+
+  * Modify the __concession map__ document.
+  * Finish reading _Traders and diplomats_.
+  * Create more documents like the ones for Haiti and Australia.
+  * Study membership: explain the evolution of membership.
+  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
