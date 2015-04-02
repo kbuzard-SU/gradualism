@@ -1,0 +1,25 @@
+---
+title: "Summary of the 04.01.2015 session"
+author: "Benjamin Heyries"
+date: "Wednesday, April 01, 2015"
+output: html_document
+---
+
+## Work done this week
+
+  * Gather and classified the official admission date at the GATT
+  * Correct the document on documentation. 
+  * Start digitize the concession documents.
+  * Continue reading __Traders and Diplomats__
+  
+## Content of the session
+  
+  * The membership issue: the messiness of the admission problem requests some help. Some of the main interrogations are: negotiating countries that are not in the GATT yet, leaving countries with GATT agreements, actual participants in the different rounds.
+  * The book: it is really useful to determine what data we will have access (list of exceptions to the linear tariff cut). It also cast a doubt on the position of non-GATT member status.
+  * The digitization of the concession documents: it takes more time than forecast. Be patient and keep going.
+
+## Work for the next week
+
+  * Finish reading _Traders and diplomats_.
+  * Create more digitized concession documents.
+  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
