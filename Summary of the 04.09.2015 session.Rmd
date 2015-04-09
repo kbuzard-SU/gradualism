@@ -1,0 +1,24 @@
+---
+title: "Summary of the 09.04.15 session"
+author: "Benjamin Heyries"
+date: "Thursday, April 09, 2015"
+output: html_document
+---
+
+## Work done this week
+ 
+  * Digitize the Benelux concession documents.
+  * Finished reading __Traders and Diplomats__.
+  
+## Content of the session
+  
+  * R problem: the data does not seem to fit well. To be confirmed when the document will be over.
+  * The organization of the work: the next step for the digitization process.
+  * The need to review some documents: concession documents (7 digits code) and the concession map document (UK Geneva 1)
+
+## Work for the next week
+
+  * Summarize _Traders and diplomats_.
+  * Finish the Benelux concession document and Create more alike documents for Geneva 1.
+  * Correct the document according to the remarks made in the session.
+  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
