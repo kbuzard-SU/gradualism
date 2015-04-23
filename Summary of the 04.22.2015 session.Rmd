@@ -1,5 +1,5 @@
 ---
-title: "Summary of the 22.04.15 session"
+title: "Summary of the 04.21.15 session"
 author: "Benjamin Heyries"
 date: "Thursday, April 22, 2015"
 output: html_document
@@ -7,17 +7,18 @@ output: html_document
 
 ## Work done this week
  
-  * Corrected the Benelux concession documents.
+  * Corrected the Australia concession documents.
   * Finished reading _Tariff negotiations and renegotiations under the WTO_.
   
 ## Content of the session
   
-  * R problem: the document should be treated differently. It zill be done under the text editor and read through read.delim.
+  * R problem: the document should be treated differently. It will be done under the text editor and read through read.delim.
   * Data analysis: the data should take into account the data on the document rather than a computed data. The calculation of the concession would be done through R. Moreover, in order to limit the text format of the data a new column would be created to indicate the units.
   * Hoda's book: membership, base rate, renegotiations and supplementary negotiations at the GATT (the participation issue).
 
 ## Work for the next week
 
   * Summarize _Traders and diplomats_ and  _Tariff negotiations and renegotiations under the WTO_.
-  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
+  * Add the products that are recorded in the complaints at the GATT session with the USA as defendant in the industry list.
   * The need to review some documents: concession documents (7 digits code).
+  * Modify the input documents according to the remarks made during the session.
