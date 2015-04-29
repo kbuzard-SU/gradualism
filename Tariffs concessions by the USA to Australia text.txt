@@ -1,0 +1,75 @@
+C1946	%Cons	Abs1	Unit	Abs2	Unit	Desc.
+8220350	50	2.5	ct/lb	0	0	Tannic acid
+8220370	50	5.5	ct/lb	0	0	Tannic acid
+8220390	50	9	ct/lb	0	0	Tannic acid
+8130900	50	12.5	%	0	0	Medical preparations
+8380950	50	12.5	%	0	0	Chimical product: Eucalyptol
+8140590	25	12.5	%	0	0	Prepration in pills: Eucalyptol
+8130880	50	17.5	%	0	0	Thymol from eucalyptus
+2345900	50	7.5	%	0	0	Taning extracts
+2290200	50	7.5	%	0	0	Essential oil of Euca
+4209800	50	10	%	0	0	Veneers
+4225000	50	16.33	%	10	%	Tennis racket frame
+18000	50	3	ct/lb	0	0	Beef
+19000	50	3	ct/lb	0	0	Veal
+815600	8	0	0	0	0	Beef and mutton tallow
+21000	50	2.5	ct/lb	0	0	Mutton
+22000	50	3.5	ct/lb	0	0	Lamb
+23500	50	3	ct/lb	0	0	Game
+23600	50	1.5	ct/lb	7.5	%min	Edible offal
+44000	50	1.5	ct/lb	7.5	%min	Butter
+1330890	50	7	ct/lb	0	0	Other fruit paste
+2410070	50	1	ct/lb	0	0	Grass and crop seeds
+2410100	50	1	ct/lb	0	0	Grass and crop seeds
+2410200	50	0.5	ct/lb	0	0	Grass and crop seeds
+2410500	50	1	ct/lb	0	0	Grass and crop seeds
+1197000	60	88	ct/lb	0	0	Peas
+3520000	25	9.5	ct/lb	0	0	Clothing wool
+3521000	25	8	ct/lb	0	0	Clothing wool
+3521100	25	9.5	ct/lb	0	0	Clothing wool
+3521200	25	9.25	ct/lb	0	0	Clothing wool
+3521300	25	9.5	ct/lb	0	0	Clothing wool
+3522000	25	8	ct/lb	0	0	Clothing wool
+3523000	25	9.5	ct/lb	0	0	Clothing wool
+3523100	25	9.25	ct/lb	0	0	Clothing wool
+3523200	25	9.5	ct/lb	0	0	Clothing wool
+3523300	25	8	ct/lb	0	0	Clothing wool
+3526000	25	9.5	ct/lb	0	0	Clothing wool
+3527000	25	9.25	ct/lb	0	0	Clothing wool
+3527100	25	9.5	ct/lb	0	0	Clothing wool
+3527200	25	8	ct/lb	0	0	Clothing wool
+3527300	25	9.5	ct/lb	0	0	Clothing wool
+3528000	25	9.25	ct/lb	0	0	Clothing wool
+3529000	25	9.5	ct/lb	0	0	Clothing wool
+3529100	25	8	ct/lb	0	0	Clothing wool
+3529200	25	9.5	ct/lb	0	0	Clothing wool
+3529300	25	9.25	ct/lb	0	0	Clothing wool
+3541000	37	9.25	ct/lb	6.25	%	Carbonized wool
+734500	20	2.5	%	0	0	Dressed fur not dyed
+734520	37	7.5	%	0	0	Dyed dressed furs
+751400	0	0	0	0	0	Manufactured fur not dyed
+751420	45	17.5	%	0	0	Manufactured fur dyed
+759900	50	25	%	0	0	All other fur articles
+207000	0	0	0	0	0	Hides and skins
+208000	0	0	0	0	0	Hides and skins
+990130	50	20	%	0	0	Catgut
+5954300	0	0	B	0	0	Precious stones
+5954580	0	0	B	0	0	Precious stones
+5954590	0	0	B	0	0	Precious stones
+231300	0	0	B	0	0	Fur and fur skins: Lamb
+703000	0	0	B	0	0	Fur and fur skins: Rabbit
+719000	0	0	B	0	0	Fur and fur skins: opossum
+729500	0	0	B	0	0	Fur and fur skin: others
+6270400	0	0	B	0	0	Tantalum ore
+6270500	0	0	B	0	0	Zirconium
+961000	0	0	B	0	0	Shells: mother-of-pearl
+962500	0	0	B	0	0	Tortoise shell
+34000	0	0	B	0	0	Sausage cacinge
+35500	0	0	B	0	0	Sausage cacinge
+979300	0	0	B	0	0	Integruments, tendons, intestine
+231500	0	0	B	0	0	Other sheep and lamb skin
+231700	0	0	B	0	0	Other sheep and lamb skin
+234000	0	0	B	0	0	Other sheep and lamb skin
+235500	0	0	B	0	0	Other sheep and lamb skin
+291000	0	0	B	0	0	Kangoroo skin
+4033800	0	0	B	0	0	Oriental wood

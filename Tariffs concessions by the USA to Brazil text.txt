@@ -1,0 +1,96 @@
+C1946	%Cons	Abs1	Unit1	Abs2	Unit2	Desc.
+2141000	0	0	0	0	0	Balsam
+8110100	33	30	ct/lb	0	0	Caffeine
+8110110	33	25	ct/lb	0	0	Caffeine citrate
+8110120	30	8	%	0	0	Compound caffeine
+8110450	38	25	ct/lb	0	0	Theobromine
+1770900	0	0	0	0	0	Yerba maté
+2220170	0	0	0	0	0	Ipecac: advanced value or condition
+940100	30	10	%	0	ct/lb	Glue, animal
+8127100	20	10	ct/lb	0	0	Menthol natural
+2260030	50	1.5	ct/lb	0	0	Castor oil
+1423100	0	0	0	0	0	Cotton seed oil
+1423200	0	0	0	0	0	Cotton seed oil
+2290340	50	12.5	%	0	0	Peppermint
+5560810	0	0	0	0	0	Mica less 15 ct/lb 1
+5560840	0	0	0	0	0	Mica less 15 ct/lb 2
+5560860	0	0	0	0	0	Mica less 15 ct/lb 3
+5560890	0	0	0	0	0	Mica less 15 ct/lb 4
+5560910	NA	2	ct/lb	10	%	Mica valued above 15c/lb 1
+5560940	NA	2	ct/lb	10	%	Mica valued above 15c/lb 2
+5560960	NA	2	ct/lb	10	%	Mica valued above 15c/lb 3
+5560990	NA	2	ct/lb	10	%	Mica valued above 15c/lb 4
+5510250	50	25	%	0	0	Manufacture of rock crystal
+6211200	50	0.25	ct/lb	0	0	Manganese Ore 1
+6211300	50	0.25	ct/lb	0	0	Manganese Ore 2
+4202000	33	2.25	%	0	0	Harwoods: spanish cedar
+4202500	33	2.5	%	0	0	Hardwood: Granadilla
+4202850	50	7.5	%	0	0	HW: Lignum vitae
+4202890	50	7.5	%	0	0	HW: Lancewood
+4202100	33	2.5	%	0	0	HW: Mahogany
+1330170	48	7.5	%	0	0	Dried Bananas
+1356000	50	1.125	ct/lb	0	0	Shelled nuts
+1357000	50	8-Mar	ct/lb	0	0	Unshelled nuts
+2231000	0	0	0	0	0	Castor beans
+1420000	50	6.25	%	0	0	Cacao Butter
+3965900	50	30	%	0	0	Artificial flowers
+5955580	0	0	0	0	0	Turquoise
+5955590	50	5	%	0	0	Other Semi-precious stones
+334000	0	0	0	0	0	Reptilian and shark skin leather: shoes
+334100	40	10	%	0	0	Reptilian and shark skin leather: other
+335100	0	0	0	0	0	Pig and hog leather
+3410080	50	10	%	0	0	Other vegetable fibers
+2202000	0	0	B	0	0	Pyrethrum or insect flowers
+2210570	0	0	B	0	0	Maté
+2210450	0	0	B	0	0	Ipecac
+5120600	0	0	B	0	0	Brazilian pebble, unmanufactured
+1501300	0	0	B	0	0	Cocoa or cacao beans
+1501500	0	0	B	0	0	Shells of cocoa
+1511000	0	0	B	0	0	Coffee 1
+1511100	0	0	B	0	0	Coffee 2
+728400	0	0	B	0	0	Furs undressed = Ocelot
+2170000	0	0	B	0	0	Leche caspi
+2171900	0	0	B	0	0	Gum and resins
+2014000	0	0	B	0	0	Gutta balata
+6270000	0	0	B	0	0	Beryl ore
+6270200	0	0	B	0	0	Rutile
+6270400	0	0	B	0	0	Tantalum
+6270500	0	0	B	0	0	Zirconium
+2239620	0	0	B	0	0	Ouricuri kernels
+2239640	0	0	B	0	0	Kuru muru kernels
+2239130	0	0	B	0	0	Babassu nuts
+2239150	0	0	B	0	0	Babassu kernels
+2239660	0	0	B	0	0	Tucum kernels
+2280270	0	0	B	0	0	Bois de rose
+2257900	0	0	B	0	0	Nut oil
+2255600	0	0	B	0	0	Oiticica oil
+295000	0	0	B	0	0	Reptil skin, raw
+293100	0	0	B	0	0	Deer skin raw
+299900	0	0	B	0	0	Hides and skins
+1225000	0	0	B	0	0	Tapioca
+974000	0	0	B	0	0	Beeswax, crude
+2252300	0	0	B	0	0	Ouricury wax
+4204100	0	0	B	0	0	HW: low manufacture 1
+4204300	0	0	B	0	0	HW: low manufacture 2
+4204700	0	0	B	0	0	HW: low manufacture 3
+4204900	0	0	B	0	0	HW: low manufacture 4
+4031000	0	0	B	0	0	Hard woods logs: mahogany
+4032000	0	0	B	0	0	Cedar spanish
+4033000	0	0	B	0	0	Other HW logs 1
+4033200	0	0	B	0	0	Other HW logs 2
+4033300	0	0	B	0	0	Other HW logs 3
+4033400	0	0	B	0	0	Other HW logs 4
+4033500	0	0	B	0	0	Other HW logs 5
+4033600	0	0	B	0	0	Other HW logs 6
+4033800	0	0	B	0	0	Other HW logs 7
+4033900	0	0	B	0	0	Other HW logs 8
+4033950	0	0	B	0	0	Other HW logs 9
+4202000	50	0.75	ct/b.ft	0	0	HW: sawed 1
+4202500	50	0.75	ct/b.ft	0	0	HW: sawed 2
+4202850	50	1.5	ct/b.ft	0	0	HW: sawed 3
+4202890	50	0.75	ct/b.ft	0	0	HW: sawed 4
+4202100	50	0.75	ct/b.ft	0	0	HW: sawed 5
+4204100	0	0	0	0	0	HW: sawed 5
+4204700	0	0	0	0	0	HW: sawed 6
+4204300	0	0	0	0	0	HW: sawed 7
+4204900	0	0	0	0	0	HW: sawed 8

@@ -1,0 +1,480 @@
+C1946	%Cons	Abs1	Unit1	Abs2	Unit2	Abs3	Unit3	Desc.
+821600	50	10	%	0	0	0	0	Oleic Acid
+8231400	25	1	ct/lb	0	0	0	0	Fusel oil
+2260280	50	12.5	%	0	0	0	0	Fatty alcohol
+8130930	50	7.5	%	0	0	0	0	Haarlem oil
+8243600	33	5	%	0	0	0	0	Amonium silicofluoride
+8380940	0	0	%	0	0	0	0	Laundry sour
+8380140	50	0.1	ct/lb	0	0	0	0	Aluminium sulfate 1
+8380150	50	0.1	ct/lb	0	0	0	0	Aluminium sulfate 2
+8240000	50	8-May	ct/lb	0	0	0	0	Amonium chloride
+8241000	50	0.5	ct/lb	0	0	0	0	Amonium nitrate
+8402500	50	0.1	ct /lb	0	0	0	0	Whiting
+8402600	50	0.25	ct/lb	0	0	0	0	Whiting ground
+8140700	50	7.5	%	0	0	0	0	Haarlem oil doses
+8380500	0	0	0	0	0	0	0	Flavouring extracts with alcohol
+8040680	50	1.75	ct/lb	10	%	0	0	Naphthalene
+8089200	50	3.5	ct/lb	22.5	%	0	0	Saccharin
+8380340	0	0	0	0	0	0	0	Cobalt lineleate
+8380350	0	0	0	0	0	0	0	Cobalt sulfate
+8380410	50	2	ct/lb	0	0	0	0	Amyl acetate
+8380560	33	5	%	0	0	0	0	Flavouring extracts without alcohol
+8380620	50	5.5	ct/lb	0	0	0	0	Hexamethylenotetramine
+97300	10	2	%	0	ct/lb	0	0	Gelatine less 40ct/lb
+97500	50	3.5	ct/lb	10	%	0	0	Gelatine less 80ct/lb
+932100	50	4	ct/lb	12.5	%	0	0	Gelatine more 80ct/lb
+2946000	50	1	ct/lb 	12.5	%	0	0	Vegetable glue less 40ct/lb
+2946100	50	4	ct/lb	12.5	%	0	0	Vegetable Glue more than 40ct/lb
+8291100	31	15-Jul	ct/lb	0	0	0	0	Refined glycerine
+8380811M	20	5	%	0	0	0	0	Manganese compound: Borate
+8380811S	50	12.5	%	0	0	0	0	Manganese compound: sulphate
+821100	50	10	%	0	0	0	0	Animal fats
+1422000	NA	3	ct/lb	10	%maxN	20	%maxN	Corn or maise oil
+2260040	50	1	ct/lb	0	0	0	0	Poppy seed oil
+1428200	33	1	ct/lb	0	0	0	0	Sesame oil
+8420100	38	3	ct/lb	0	0	0	0	Blue pigments
+8380380	44	20	%	0	0	0	0	Activated chars and carbons
+8420170	25	0.625	ct/lb	0	0	0	0	Red load
+8410000	42	8-May	ct/lb	0	0	0	0	Lithopone 1
+8410100	50	8-Jul	ct/lb 	7.5	%	0	0	Lithopone 2
+8411000	33	0.3	ct/lb	0	0	0	0	Zinc oxide
+8330400	50	3.5	ct/lb	0	0	0	0	Potassium forricianide = red
+8330500	25	1	ct/lb	0	0	0	0	Potassium forrocyanide = yellow
+8340000	25	0.5	ct/lb	0	0	0	0	Sodium forrocyanide = yellow
+8350400	50	4-Mar	ct/lb	0	0	0	0	Sodium silicoflurride
+2812000	43	4-Mar	ct/lb	0	0	0	0	Potato starch
+2815000	50	4-Mar	ct/lb	0	0	0	0	Corn starsh
+2815100	33	0.5	ct/lb	0	0	0	0	Rice starsh
+2815200	33	0.5	ct/lb	0	0	0	0	Wheat starsh
+2815900	50	0.75	ct/lb	0	0	0	0	Other starsh
+8380390	22	0.5	ct/lb	0	0	0	0	Potato Dextrine
+8380400	38	0.75	ct/lb	0	0	0	0	Other dextrine
+8380921	50	15	%	0	0	0	0	Titanium
+8380933	NA	unreadable	0	0	0	0	0	Zinc chloride
+5380530	NA	20	%min 	0	0	0	0	Ceramic mosaic tiles <40ct
+5380540	50	30	%	0	0	0	0	Ceramic tiles>40ct
+5720000	50	15/64	ct/lb	0	0	0	0	Magnosite crude
+5722200	50	15/32	ct/lb	0	0	0	0	Magnisite: Ground caustique
+5181000	60	0.0225	ct/lb	0	0	0	0	Cement: hydraulic
+5181200	50	0.0225	ct/lb	0	0	0	0	Hydraulic cement clinker
+5182000	50	0.03	ct/lb	0	0	0	0	White nonstaining cement
+5420100	50	50	ct/ton	0	0	0	0	Sand >95% selica
+6301000	50	50	ct/ton	0	0	0	0	Bauxite crude
+5250400	NA	50	ct/u 	30	%minN	50	%maxN	Plated or cased glassware
+5200400	30	27/64	ct/lb	0	0	0	0	Cylinder, crown and sheet glass (CCSG) 1
+5200410	30	29/64	ct/lb	0	0	0	0	CCSG 2
+5200420	30	35/64	ct/lb	0	0	0	0	CCSG 3
+5200430	30	38/64	ct/lb	0	0	0	0	CCSG 4
+5200450	30	33/64	ct/lb	0	0	0	0	CCSG 5
+5200470	30	59/64	ct/lb	0	0	0	0	CCSG 6
+5200490	30	54/64	ct/lb	0	0	0	0	CCSG 7
+5200520	30	27/64	ct/lb	0	0	0	0	CCSG 8
+5200530	30	29/64	ct/lb	0	0	0	0	CCSG 9
+5200540	30	35/64	ct/lb	0	0	0	0	CCSG 10
+5200550	30	38/64	ct/lb	0	0	0	0	CCSG 11
+5200560	30	33/64	ct/lb	0	0	0	0	CCSG 12
+5200570	30	59/64	ct/lb	0	0	0	0	CCSG 13
+5200590	30	54/64	ct/lb	0	0	0	0	CCSG 14
+5200660	30	27/64	ct/lb	0	0	0	0	CCSG 15
+5200670	30	29/64	ct/lb	0	0	0	0	CCSG 16
+5200680	30	35/64	ct/lb	0	0	0	0	CCSG 17
+5200690	30	38/64	ct/lb	0	0	0	0	CCSG 18
+5200700	30	33/64	ct/lb	0	0	0	0	CCSG 19
+5200710	30	59/64	ct/lb	0	0	0	0	CCSG 20
+5200720	30	54/64	ct/lb	0	0	0	0	CCSG 21
+5200760	30	27/64	ct/lb	0	0	0	0	CCSG 22
+5200770	30	29/64	ct/lb	0	0	0	0	CCSG 23
+5200780	30	35/64	ct/lb	0	0	0	0	CCSG 24
+5200790	30	38/64	ct/lb	0	0	0	0	CCSG 25
+5200800	30	33/64	ct/lb	0	0	0	0	CCSG 26
+5200810	30	59/64	ct/lb	0	0	0	0	CCSG 27
+5200820	30	54/64	ct/lb	0	0	0	0	CCSG 28
+5250000	50	22.5	%	0	0	0	0	Luminated Glass
+5250100	50	22.5	%	0	0	0	0	Manufacture of luminated glass
+5240400	50	0.75	ct/lb	0	0	0	0	Rolled glass
+5220000	50	4.15	ct/sqf	0	0	0	0	Plate glass (PG)1
+5220010	50	5.65	ct/sqf	0	0	0	0	PG 2
+5220020	50	5.85	ct/sqf	0	0	0	0	PG3
+5220030	50	6.6	ct/sqf	0	0	0	0	PG 4
+5220100	50	4.15	ct/sqf	0	0	0	0	PG 5
+5220110	50	5.65	ct/sqf	0	0	0	0	PG 6
+5220120	50	5.85	ct/sqf	0	0	0	0	PG 7
+5220130	50	6.6	ct/sqf	0	0	0	0	PG 8
+5220200	50	5	ct/sqf	0	0	0	0	PG with wire netting (PGWN) 1
+5220210	50	6.6	ct/sqf	0	0	0	0	PGWN 2
+5220220	50	7.65	ct/sqf	0	0	0	0	PGWN 3
+5240000	50	4.15	ct/sqf	0	0	0	0	CCSG not plate gass (CCSGNPG)1
+5240010	50	5.65	ct/sqf	0	0	0	0	CCSGNPG 2
+5240020	50	5.85	ct/sqf	0	0	0	0	CCSGNPG 3
+5240030	50	6.6	ct/sqf	0	0	0	0	CCSGNPG 4
+5240090	50	25	%min	0	0	0	0	CCSGNPG 5
+5240100	50	4.15	ct/sqf	0	0	0	0	CCSGNPG 6
+5240110	50	5.65	ct/sqf	0	0	0	0	CCSGNPG 7
+5240120	50	5.85	ct/sqf	0	0	0	0	CCSGNPG 8
+5240130	50	6.6	ct/sqf	0	0	0	0	CCSGNPG 9
+5240180	50	25	%min	0	0	0	0	CCSGNPG 10
+5240190	50	20	%min	0	0	0	0	CCSGNPG 11
+5240300	50	5	ct/sqf	0	0	0	0	OTher CCSG (OCCSG) 1
+5240310	50	6.6	ct/sqf	0	0	0	0	OCCSG 2
+5240320	50	7.65	ct/sqf	0	0	0	0	OCCSG 3
+5270800	50	25	%	0	0	0	0	Pressed glass building block
+5290300	33	10	%	0	0	0	0	Circular glass tiles
+5080100	50	50	ct/cuft	0	0	0	0	Black marble: dressed or sawed
+5080300	50	32.5	ct/cuft	0	0	0	0	Black marble: rough
+6003300	30	37.5	ct/ton	0	0	0	0	Pig Iron: no dutiable alloy
+6003500	33	37.5	ct/ton	0	0	0	0	Pig iron: with dutiable alloy
+6020100	50	0.125	ct/lb	0	0	0	0	unfinished iron 1
+6020200	50	0.25	ct/lb	0	0	0	0	unfinished iron 2
+6021100	50	0.125	ct/lb	0	0	0	0	Non-iron muck bars 1
+6021200	50	0.25	ct/lb	0	0	0	0	Non-iron muck bars 2
+6005000	50	0.25	ct/lb	0	0	0	0	Steel concrete reinforcement bars (SCRB) 1
+6005100	50	0.2	ct/lb	0	0	0	0	SCRB 2
+6005200	50	10	%	0	0	0	0	SCRB 3
+6005300	50	10	%	0	0	0	0	SCRB 4
+6008000	50	0.125	ct/lb	0	0	0	0	Steel bars 1
+6008100	50	0.2	ct/lb	0	0	0	0	Steel bars 2
+6008200	50	16-Mar	ct/lb	0	0	0	0	Steel bars 3
+6008300	50	10	%	0	0	0	0	Steel bars 4
+6008400	50	10	%	0	0	0	0	Steel bars 5
+6041000	50	0.125	ct/lb	0	0	0	0	Steel ingot
+6041200	50	16-Mar	ct/lb	0	0	0	0	Steel ingot 2
+6041300	50	10	%	0	0	0	0	Steel ingot 3
+6041400	50	10	%	0	0	0	0	Steel ingot 4
+6042000	50	0.125	ct/lb	0	0	0	0	Steel billets 1
+6042100	50	0.2	ct/lb	0	0	0	0	Steel billets 2
+6042200	50	16-Mar	ct/lb	0	0	0	0	Steel billets 3
+6042300	50	10	%	0	0	0	0	Steel billets 4
+6042400	50	10	%	0	0	0	0	Steel billets 5
+6044000	50	0.125	ct/lb	0	0	0	0	Various steel item (VSI) 1
+6044200	50	0.2	ct/lb	0	0	0	0	VSI 2
+6044300	50	10	%	0	0	0	0	VSI 3
+6044400	50	10	%	0	0	0	0	VSI 4
+6053000	50	0.125	0	0	0	0	0	Steel circular saw plates (SCSP) 1
+6053100	50	0.2	ct/lb	0	0	0	0	SCSP 2
+6053200	50	10	%	0	0	0	0	SCSP 3
+6053300	50	10	%	0	0	0	0	SCSP 4
+6055000	50	0.125	ct/lb	0	0	0	0	Steel shouts and plates (SSP) 1
+6055100	50	0.2	ct/lb	0	0	0	0	SSP 2
+6055200	50	10	%	0	0	0	0	SSP 3
+6055130	50	10	%	0	0	0	0	SSP 4
+6039000	NA	10	%N	0.175	ct/lbMin (from 0.35)	0	0	Boiler or other plate iron (BPI) 1
+6039100	NA	10	%	0.175	ct/lbMin (from 0.35)	0	0	BPI 2
+6039300	50	10	%	0	0	0	0	BPI 3
+6054000	NA	10	%	0.175	ct/lbMin (from 0.35)	0	0	Steel and skelp (SS) 1
+6054100	NA	10	%	0.175	ct/lbMin (from 0.35)	0	0	SS 2
+6054200	NA	10	%	0.225	ct/lbMin (from 0.45)	0	0	SS 3
+6054300	NA	10	%	0.225	ct/lbMin (from 0.45)	0	0	SS 4
+6054400	NA	10	%	0.3	ct/lbMin	0	0	SS 5
+6054500	NA	10	%	0.35	ct/lbMin	0	0	SS 6
+6054600	NA	10	% 	0.3	ct/lb min	0	0	SS 7
+6054700	50	10	%	0	0	0	0	SS 8
+6054800	50	10	%	0	0	0	0	SS 9
+Vario	50	0.1	ct/lb	0	0	0	0	Additional duty on galvanized steel
+Vario	50	0.1	ct/lb	0	0	0	0	Additional duty on pickled/cold rolled/cleaned steel
+6081000	38	0.085	ct/lb	0	0	0	0	Not assembled structural shapes
+6081100	33	5	%	0	0	0	0	Assembled structural shapes
+6111000	40	0.1	ct/lb	0	0	0	0	Hoops iron/steel 1
+6101020	43	0.15	ct/lb	0	0	0	0	Hoops iron/steel 2
+6111300	46	0.25	ct/lb	0	0	0	0	Hoops iron/steel 3
+6110500	25	0.05	ct/lb	0	0	0	0	Hoops iron/steel 4
+6110900	25	0.05	ct/lb	0	0	0	0	Hoops iron/steel 5
+6036000	50	0.125	ct/lb	0	0	0	0	Wire rods
+6098100	50	17.5	%	0	0	0	0	Wire strand
+6790800	40	10	%	0	0	0	0	Wire
+6094900	50	0.25	ct/lb	0	0	0	0	Baling wire
+6100510	50	0.25	ct/lb	0	0	0	0	Galvanized fencing wire (GFW) 1
+6100520	50	0.25	ct/lb	0	0	0	0	GFW 2
+6100160	40	20	%	0	0	0	0	Woven wire cloth
+6113500	50	0.5	ct/lb	0	0	0	0	Wheels for railways
+6092000	50	8-Mar	ct/lb	0	0	0	0	Tubes 1
+6092100	50	8-May	ct/lb	0	0	0	0	Tubes 2
+6092200	50	8-Jul	ct/lb	0	0	0	0	Tubes 3
+6092300	50	8-May	ct/lb	0	0	0	0	Tubes 4
+6092400	50	8-Jul	ct/lb	0	0	0	0	Tubes 5
+6200500	50	0.5	ct/lb	0	0	0	0	Bolts 1
+6200510	50	0.3	ct/lb	0	0	0	0	Bolts 2
+6200520	43	15	%	0	0	0	0	Bolts 3
+6112000	25	0.1	ct/lb	0	0	0	0	Cut nails 1
+6112100	33	5	%	0	0	0	0	Cut nails 2
+6112600	0	0	0	0	0	0	0	Staples
+6112700	50	0.2	ct/lb	0	0	0	0	Wire nails small
+6112800	50	0.25	ct/lb	0	0	0	0	Wire snails big
+6112900	16	0.1	ct/lb	0	0	0	0	Other spikes and staples
+6200530	50	15	%	0	0	0	0	Rivets
+6200540	50	0.5	ct/lb	0	0	0	0	Other rivots
+6200820	40	10	%	0	0	0	0	Wood screws
+6200970	50	20	%	0	0	0	0	Hollow or flat ware
+7090690	50	17.5	%	0	0	0	0	Telephone apparitus
+7090700	43	7.5	%	0	0	0	0	X-ray tubes
+7090710	43	7.5	%	0	0	0	0	Other X-ray parts
+9470400	33	25	ct/unit	7.5	%	0	0	Shotgun, combination shotgun (SCS) 1
+9470410	50	75	ct/unit	22.5	%	0	0	SCS 2
+9470420	NA	100	ct/unit	7.5	%	0	0	SCS 3
+9470430	NA	200	ct/unit	22.5	%	0	0	SCS 4
+9470440	30	100	ct/unit	7.5	%	0	0	SCS 5
+9470450	NA	300	ct/unit	22.5	%	0	0	SCS 6
+9470460	NA	200	ct/unit	7.5	%	0	0	SCS 7
+9470470	NA	500	ct/unit	22.5	%	0	0	SCS 8
+9470480	39	12.5	%	0	0	0	0	SCS 9
+9470490	50	32.5	%	0	0	0	0	SCS 10
+9470500	NA	200	ct/unit	12.5	%	0	0	SCS 11
+9470530	0	0	0	0	0	0	0	Barrels for shotgun
+9470540	NA	100	ct/unit	10	%	0	0	Barrels for shotgun 2
+9470560	NA	125	ct/unit	10	%	0	0	Stocks for shotgun
+9470580	45	12.5	%	0	0	0	0	Other shotgun parts
+9590024	50	225	ct/unit	32.5	%	0	0	Pigeon timer
+9550980	50	22.5	%	0	0	0	0	Clock cases
+6559900	50	22.5	%	0	0	0	0	Zinc manufactures (no precious)
+6100700	40	20	%	0	0	0	0	Wire fencing before weaving
+6100710	50	30	%	0	0	0	0	Wire fencing after weaving
+4280220	50	12.5	%	0	0	0	0	Bio-shavings
+2601000	33	50	ct/lb	0	0	0	0	Tobacco unmanufactured
+2601100	20	43	ct/lb	0	0	0	0	Manufactured tobacco
+40000	44	0.8	ct/lb	0	0	0	0	Condensed and evaporated milk (CEM) 1
+40100	36	1	ct/lb	0	0	0	0	CEM 2
+40700	41	1.03	ct/lb	0	0	0	0	CEM 3
+41000	49	2.91	ct/lb	0	0	0	0	Whole milk dried
+41100	50	1.5	ct/lb	0	0	0	0	Skimmed mild dried
+41300	50	6.13	ct/lb	0	0	0	0	Cream dried
+36500	50	1.5	ct/lb	10	%min	0	0	Edam and Gouda
+46700	NA	0	0	0	0	0	0	Other Edam and cheese
+862100	50	25	ct/u	0	0	0	0	Live Birds 1
+862200	50	10	%	0	0	0	0	Live Birds 2
+862300	0	0	0	0	0	0	0	Song Birds 1
+862400	50	10	%	0	0	0	0	Song Birds 2
+862500	50	25	ct/unit	0	0	0	0	Other birds 1
+862600	50	10	%	0	0	0	0	Other Birds 2
+700000	40	10	%	0	0	0	0	Herring pickled/Salted 1
+700100	33	0.25	ct/lbNET	0	0	0	0	Herrin pickled/salted 2
+1090150	50	0.5	ct/lb	0	0	0	0	Pearl Barley
+1059100	50	16-May	ct/lb	0	0	0	0	Rice meal/flour/polish/bran
+1059200	0	0	0	0	0	0	0	Broken rice
+1318300	NA	7.5	ct/cu.ft uniformed	0	0	0	0	Hothouse grapes
+1330890	50	17.5	%	0	0	0	0	Other fruit pastes/pulps
+2501000	50	0.2	ct/unit	0	0	0	0	Bulbs 1
+2503000	0	0	0	0	0	0	0	Bulb 2
+2504000	17	0.1	ct/unit	0	0	0	0	Bulb 3
+2506000	50	0.05	ct/unot	0	0	0	0	Bulb 4
+2506900	33	5	%	0	0	0	0	Other bulbs
+2552000	0	0	0	0	0	0	0	Rose stocks and plants
+2552100	50	2	ct/unit	0	0	0	0	Rose plant and stock 2
+2265000	50	0.08	ct/lb	0	0	0	0	Poppy seeds
+2451000	17	1	ct/lb	0	0	0	0	Garden and field seeds (GFS) 1
+2454000	33	1	ct/lb	0	0	0	0	GFS 2
+2454100	33	1	ct/lb	0	0	0	0	GFS 3
+2456000	0	0	0	0	0	0	0	GFS 4
+2460100	33	1	ct/lb	0	0	0	0	GFS 5
+2460120	0	0	0	0	0	0	0	GFS 6
+2460130	0	0	0	0	0	0	0	GFS 7
+2460220	33	1	ct/lb	0	0	0	0	GFS 8
+2460240	38	3	ct/lb	0	0	0	0	GFS 9
+2460260	50	1	ct/lb	0	0	0	0	GFS 10
+2460420	25	1	ct/lb	0	0	0	0	GFS 11
+2460500	33	1	ct/lb	0	0	0	0	GFS 12
+2460700	0	0	0	0	0	0	0	GFS 13
+2460990	33	1	ct/lb	0	0	0	0	GFS 14
+1191500	50	1.5	ct/lb	0	0	0	0	Beans in brine
+1236100	50	1	ct/lb (net)	0	0	0	0	Peas 1
+1236300	33	0.5	ct/lb (net)	0	0	0	0	Peas 2
+1210040	50	0.75	ct/lb	0	0	0	0	Cabbage
+1235100	29	10	%	0	0	0	0	Cucumbers, pickled in brine
+1235200	40	10	%	0	0	0	0	Pickled onions or onions in brine
+1249600	50	12.5	%	0	0	0	0	Squerkraut
+1250210	50	17.5	%	0	0	0	0	Loup, Soup rolls or cubes
+1210010	50	0.75	ct/lb	0	0	0	0	Crude chicory emdives
+1250440	33	0.5	ct/lb	0	0	0	0	Crude chicory roots
+1250540	17	0.5	ct/lb	0	0	0	0	Chicory ground or prepared
+1502100	33	0.5	ct/lb	0	0	0	0	Cocoa unsweentened
+1503500	33	0.5	ct/lb	0	0	0	0	Chocolate, unswentened
+1503000	25	0.5	ct/lb	0	0	0	0	Sweetened cocoa or chocolate
+1502300	25	5	%	0	0	0	0	Sweetened cocoa or chocolate
+1503300	25	5	%	0	0	0	0	Sweetened cocoa or chocolate
+1770310	50	35	ct/gal	0	0	0	0	Cherry, prune, vine or juice
+1800000	50	250	ct/gal	0	0	0	0	Cherry, prune, vine or juice
+3078000	27	15	%	0	0	0	0	Tapestries amd Jacquard
+3080100	44	27.5	%	0	0	0	0	Cotton pile fabrics
+3086600	40	10	%	0	0	0	0	Polishing, dust and other mop clothes
+3230400	40	10	%	0	0	0	0	Label for garnments
+3224300	50	10	%	0	0	0	0	Cotton oriental imitation floor covering
+3224900	50	17.5	%	0	0	0	0	Cotton out pile rugs
+3262500	0	0	0	0	0	0	0	Unmanufactured Flax
+3262600	0	0	0	0	0	0	0	Unmanufactured Flax 2
+3262700	50	560	ct/ton	0	0	0	0	Unmanufactured Flax 3
+3390010	50	10	%	0	0	0	0	Silver and roving of vegetable
+3272500	50	20	%	0	0	0	0	Threads, tzines and cords of hemp and ramie
+3417110	0	0	0	0	0	0	0	Cordage 1
+3417200	50	0.75	ct/lb	0	0	0	0	Cordage 2
+3417500	25	5	%	0	0	0	0	Cords and twines of hard fiber
+3248100	50	15	%	0	0	0	0	Woven fabrics for paddings or interlinigs 1
+3286000	50	15	%	0	0	0	0	Woven fabrics for paddings or interlings 2
+3274000	50	15	%	0	0	0	0	Artists canvas of flax
+3248200	50	10	%	0	0	0	0	Woven fabrics 1
+3287300	50	10	%	0	0	0	0	Woven fabrics 2
+3285100	50	15	%	0	0	0	0	Pile non cotton fabrtics
+3285300	50	15	%	0	0	0	0	Manufacturer of non cotton pile fabrics
+3963600	50	20	%	0	0	0	0	Other floor covering
+3550000	25	4	ct/lb	0	0	0	0	Wool noils (WN) 1
+3550100	19	4	ct/lb	0	0	0	0	WN 2
+2553000	18	6	ct/lb	0	0	0	0	WN 3
+3553100	23	3.5	ct/lb	0	0	0	0	WN 4
+3553200	19	3.5	ct/lb	0	0	0	0	WN 5
+3553400	25	3.5	ct/lb	0	0	0	0	WN 6
+3553500	19	1.5	ct/lb	0	0	0	0	WN 7
+3553600	30	3.5	ct/lb	0	0	0	0	WN 8
+3553700	25	3.5	ct/ lb	0	0	0	0	WN 9
+3553000	0	0	0	0	0	0	0	WN 10
+3553900	0	0	0	0	0	0	0	WN 11
+3554000	0	0	0	0	0	0	0	WN 12
+3609000	NA	12.5	ct/lb	15	%	0	0	Green billiard clothes (GBC) 1
+3609100	NA	12.5	ct/lb	15	%	0	0	GBC 2
+3609200	NA	12.5	ct/lb	15	%	0	0	GBC 3
+3670010	25	10	%	0	0	0	0	Carpets, rugs, mats and parts(CRMP) 1
+3670020	25	10	%	0	0	0	0	CRMP 2
+3670030	25	10	%	0	0	0	0	CRMP 3
+3670050	25	10	%	0	0	0	0	CRMP 4
+3670110	25	10	%	0	0	0	0	CRMP 5
+3670120	25	10	%	0	0	0	0	CRMP 6
+3670130	25	10	%	0	0	0	0	CRMP 7
+3670140	25	10	%	0	0	0	0	CRMP 8
+3670150	25	10	%	0	0	0	0	CRMP 9
+3801000	50	22.5	%	22.5	ct/lbMin	0	0	Yarn of rayen or other synthetic textiles (YRS) 1
+3801300	NA	22.5	%	32.5	ct/lbMin	0	0	YRS 2
+3801600	NA	22.5	% 	17.5	ct/lbMin	0	0	YRS 3
+3801900	NA	25	%	27.5	ct/lbMin	0	0	YRS 4
+3802500	50	22.5	%	22.5	ct/lb	45	ct/lbMin	YRS 5
+3802600	NA	22.5	%	22.5	ct/lb	35	ct/lbMin	YRS 6
+3802700	NA	25	%	22.5	ct/lb	40	ct/lbMin	YRS 7
+3802800	NA	25	%	22.5	ct/lb	30	ct/lbMin	YRS 8
+3805000	50	5	%	0	0	0	0	Rayon waste
+3805100	50	12.5	%	0	0	0	0	Rayon noils
+3805200	50	5	ct/lb	12.5	%	0	0	Garnetted rayon
+3810000	20	5	%	0	0	0	0	Filaments of rayon
+4740140	50	5	%	0	0	0	0	Strawboard
+4721200	50	1	ct/lb	5	%	0	0	Vegetable parchment
+4721300	NA	1.5	ct/lb	5	%	0	0	Parafied paper
+4727000	0	0	0	0	0	0	0	Uncoated paper
+4727500	NA	0	ct/lb	10	%	0	0	Other uncoated papers
+9040000	50	10	%	0	0	0	0	Photographic print and similar papers (PPSP) 1
+9040100	50	12.5	%	0	0	0	0	PPSP 2
+9040200	0	0	0	0	0	0	0	PPSP 3
+9040400	47	10.5	%	0	0	0	0	PPSP 4
+9522400	50	15	%	0	0	0	0	Transparencies printed lithographically (TPL) 1
+9522500	47	17.5	%	0	0	0	0	TPL 2
+4274610	50	0.5	ct/lb	10	%	0	0	Bristol board (BB) 1
+4724620	50	1.5	ct/lb	12.5	%	0	0	BB 2
+4724710	NA	0.5	ct/lb	5	%	0	0	BB 3
+4772000	50	1.5	ct/lb	7.5	%	0	0	BB 4
+4717300	50	7.5	%	0	0	0	0	Strawboard amd straw paper
+9510410	47	3.5	%	0	0	0	0	Books of bona fide foreign authorship
+9510510	40	5	%	0	0	0	0	Book not of bona fide foreign authorship
+4799540	0	0	0	0	0	0	0	Ribben flycatchers
+5520000	50	0.3	ct/lb	0	0	0	0	Shingles, siding, roofing and ridge rolls of asbestos cement (SSRRR) 1
+5520100	50	8-Mar	ct/lb	0	0	0	0	SSRRR 2
+5520030	50	0.3	ct/lb	0	0	0	0	Articles in part of asbestos cement 1
+5520050	50	8-Mar	ct/lb	0	0	0	0	Articles in part of asbestos cement
+3910100	50	6.25	%	0	0	0	0	Harvest hats (HH) 1
+3910200	50	6.25	%	0	0	0	0	HH 2
+3910300	50	6.25	%	0	0	0	0	HH 3
+3910500	50	6.25	%	0	0	0	0	HH 4
+741000	46	12.5	%	0	0	0	0	Cut fur for hatters use
+3698800	50	5	%	0	0	0	0	Curled hair
+3698500	50	10	%	0	0	0	0	Hair felt
+3698600	50	10	%	0	0	0	0	Manufactured hairfel
+5957000	0	0	0	0	0	0	0	Diamonds out
+3163000	50	30	%	0	0	0	0	Laces articles 1
+3163100	44	20	%	0	0	0	0	Laces articles 2
+3293000	50	30	%	0	0	0	0	Laces articles 3
+3293100	44	20	%	0	0	0	0	Laces articles 4
+3643000	50	30	%	0	0	0	0	Laces articles 5
+3643100	44	20	%	0	0	0	0	Laces articles 6
+3749000	50	30	%	0	0	0	0	Laces articles 7
+3749100	44	20	%	0	0	0	0	Laces articles 8
+3853000	30	30	%	0	0	0	0	Laces articles 9
+3853100	20	20	%	0	0	0	0	Laces articles 10
+6883400	50	30	%	0	0	0	0	Laces articles 11
+6883600	44	20	%	0	0	0	0	Laces articles 12
+3963700	50	45	%	0	0	0	0	Fringes
+306100	17	3.5	%	0	0	0	0	Calf and kip upper leather
+2950060	50	12.5	%	0	0	0	0	Palm loaf manufactures
+9850640	50	25	ct/lb	20	%	0	0	Laminated reds, tubes, strips or blank of synthetic resin
+9010000	50	6.25	%	0	0	0	0	Photgraphic film sensitized (PFS) 1
+9010200	50	6.25	%	0	0	0	0	PFS 2
+9010300	50	6.25	%	0	0	0	0	PFS 3
+9010900	50	6.25	%	0	0	0	0	PFS 4
+9019100	50	6.25	%	0	0	0	0	Raw motion picture film sensitized (RMPFS) 1
+9019200	50	6.25	%	0	0	0	0	RMPFS 2
+9019200	50	6.25	%	0	0	0	0	RMPFS 3
+9019300	50	0.1	ct/lin.ft	0	0	0	0	RMPFS 4
+9019600	50	0.1	ct/lin.ft	0	0	0	0	RMPFS 5
+9019700	50	-0.9	ct/lin.ft	0	0	0	0	RMPFS 6
+9019800	50	0.1	ct/lin.ft	0	0	0	0	RMPFS 7
+9030100	0	0	0	0	0	0	0	Photographic dry plates
+9800410	50	1.25	ct/unit	15	%	0	0	Tobacco pipes
+2260210	25	5	%	0	0	0	0	Fatty acids 1
+2260230	25	5	%	0	0	0	0	Fatty acids 2
+2210020	0	0	0	0	0	0	0	Alcos
+7890090	0	0	0	0	0	0	0	Cream separators
+2308000	0	0	0	0	0	0	0	Gambier or terra japonica
+8380005	0	0	0	0	0	0	0	Arsenic sulphide
+9919300	0	0	0	0	0	0	0	Phtographic dry plates and fil; of Americam manufactured exposed abroad
+2201000	0	0	0	0	0	0	0	Cinchena bark from quinine
+3411000	0	0	0	0	0	0	0	Binding twine of single ply 
+8380009	0	0	0	0	0	0	0	Calcium arsonate
+5009000	0	0	0	0	0	0	0	Coal and coke briquet
+6661000	0	0	0	0	0	0	0	Cobalt metal
+2210040	0	0	0	0	0	0	0	Angelica seeds and roots
+2210290	0	0	0	0	0	0	0	Cubebs
+2210860	0	0	0	0	0	0	0	Drug roots
+8380017	0	0	0	0	0	0	0	Ferrous sulfate
+3403000	0	0	0	0	0	0	0	Kapok
+3409200	0	0	0	0	0	0	0	Magay or cantala
+8500000	0	0	0	0	0	0	0	Nitrogenous fertilizer: amomium sulfate
+8509800	0	0	0	0	0	0	0	Other nitrogenous fertilizer material
+8511300	0	0	0	0	0	0	0	Precipitated bone phosphate
+8519100	0	0	0	0	0	0	0	Basic slag
+8519300	0	0	0	0	0	0	0	Superphosphates 1
+8519400	0	0	0	0	0	0	0	Superphosphates 2
+8519500	0	0	0	0	0	0	0	Superphosphates 3
+2102000	0	0	0	0	0	0	0	Gums and resins: damar
+2109700	0	0	0	0	0	0	0	Gums and resins: copal gums
+930000	0	0	0	0	0	0	0	Ossein
+2237000	0	0	0	0	0	0	0	Rapeseed
+3428300	0	0	0	0	0	0	0	Oakum
+715000	0	0	0	0	0	0	0	Moleskins
+729400	0	0	0	0	0	0	0	Fur-tails, paws, pieces and cuttings
+2274100	0	0	0	0	0	0	0	Oil of citronella
+2280160	0	0	0	0	0	0	0	Caraway oil
+2243000	0	0	0	0	0	0	0	Palm oil
+5054300	0	0	0	0	0	0	0	Petroleum products 1
+5054500	0	0	0	0	0	0	0	Petroleu; products 2
+5054600	0	0	0	0	0	0	0	Petroleum products 3
+5054700	0	0	0	0	0	0	0	Petroleum products 4
+5057000	0	0	0	0	0	0	0	Petroleum products 5
+5062000	0	0	0	0	0	0	0	Petroleum products 6
+5067100	0	0	0	0	0	0	0	Petroleum products 7
+5076000	0	0	0	0	0	0	0	Petroleum products 8
+5077000	0	0	0	0	0	0	0	Petroleum products 9
+8130350	0	0	0	0	0	0	0	Petroleum products 10
+8102000	0	0	0	0	0	0	0	Quinine and salts 1
+8103200	0	0	0	0	0	0	0	Quinine and salts 2
+8103300	0	0	0	0	0	0	0	Quinine and salts 3
+8103300	0	0	0	0	0	0	0	Quinine and salts 4
+8103400	0	0	0	0	0	0	0	Quinine and salts 5
+8103500	0	0	0	0	0	0	0	Quinine and salts 6
+8103600	0	0	0	0	0	0	0	Quinine and salts 7
+8103800	0	0	0	0	0	0	0	Quinine and salts 8
+8103900	0	0	0	0	0	0	0	Quinine and salts 9
+8360000	0	0	0	0	0	0	0	Radium salts
+1227000	0	0	0	0	0	0	0	Sago crude and sago flour
+293200	0	0	0	0	0	0	0	Elk skins, buck or doe
+8335000	0	0	0	0	0	0	0	Sodium sulphate, crude
+1529000	0	0	0	0	0	0	0	Carazay seed
+1539000	0	0	0	0	0	0	0	Nutmegs, unground
+1540000	0	0	0	0	0	0	0	Mace, unground
+1541000	0	0	0	0	0	0	0	Black pepper, unground
+1542000	0	0	0	0	0	0	0	White pepper unground
+1228000	0	0	0	0	0	0	0	Tapiocca, tapiocca flour, and cassava
+2934000	0	0	0	0	0	0	0	Wafers not edible
+5750500	0	0	0	0	0	0	0	Mineral wax: ceresin
+6093000	0	0	0	0	0	0	0	Barbed wire
+4066000	0	0	0	0	0	0	0	Rattan unmanufactured
