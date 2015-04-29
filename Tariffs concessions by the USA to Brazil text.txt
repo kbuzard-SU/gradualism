@@ -1,4 +1,4 @@
-C1946	%Cons	Abs1	Unit1	Abs2	Unit2	Desc.
+﻿C1946	%Cons	Abs1	Unit1	Abs2	Unit2	Desc.
 2141000	0	0	0	0	0	Balsam
 8110100	33	30	ct/lb	0	0	Caffeine
 8110110	33	25	ct/lb	0	0	Caffeine citrate
@@ -30,7 +30,7 @@ C1946	%Cons	Abs1	Unit1	Abs2	Unit2	Desc.
 4202100	33	2.5	%	0	0	HW: Mahogany
 1330170	48	7.5	%	0	0	Dried Bananas
 1356000	50	1.125	ct/lb	0	0	Shelled nuts
-1357000	50	8-Mar	ct/lb	0	0	Unshelled nuts
+1357000	50	0.375	ct/lb	0	0	Unshelled nuts
 2231000	0	0	0	0	0	Castor beans
 1420000	50	6.25	%	0	0	Cacao Butter
 3965900	50	30	%	0	0	Artificial flowers
