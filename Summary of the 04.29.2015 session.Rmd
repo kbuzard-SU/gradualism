@@ -1,0 +1,24 @@
+---
+title: "Summary of the 04.15.15 session"
+author: "Benjamin Heyries"
+date: "Thursday, April 09, 2015"
+output: html_document
+---
+
+## Work done this week
+ 
+  * Correct the documents on text.
+  * Start summarize the books.
+  
+## Content of the session
+  
+  * R problem: The data is fixed in the text documents. Everything works fine.
+  * The organization of the work: summarize two more books on negotiation process (to solve renegotiation and membership problem for example) and try to digitize as much documents as possible.
+  * The need to review some documents: add the old and new tariff lines as reported in the document.
+  * Add some recommendations for future user of the data in the document on documentation.
+
+## Work for the next week
+
+  * Summarize _Traders and diplomats_ and  _Tariff negotiations and renegotiations under the GATT and the WTO_ by Anwarul Hoda.
+  * Create more alike tariff concession documents for Geneva 1.
+  * Correct the concession documents as said in the content of the session.
