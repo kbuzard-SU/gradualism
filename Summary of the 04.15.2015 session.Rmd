@@ -1,0 +1,28 @@
+---
+title: "Summary of the 04.15.15 session"
+author: "Benjamin Heyries"
+date: "Thursday, April 09, 2015"
+output: html_document
+---
+
+## Work done this week
+ 
+  * Finish digitizing the Benelux concession document.
+  * Correct Brazil document.
+  * Correct summary of the week
+  
+## Content of the session
+  
+  * R problem: the data still does not seem to fit well even after correction of the typos.
+  * The organization of the work: read two more books on negotiation process (to solve renegotiation and membership problem for example) and try to digitiwe as much documents as possible..
+  * The need to review some documents: concession documents for Australia (7 digits code).
+  * Add some recommendations for future user of the data in the document on documentation.
+
+## Work for the next week
+
+  * Summarize _Traders and diplomats_.
+  * Read _Tariff negotiations and renegotiations under the GATT and the WTO_ by Anwarul Hoda.
+  * Create more alike tariff concession documents for Geneva 1.
+  * Correct the concession documents in order to standardize them and make them exploitable.
+  * Correct the concession map document for the UK Geneva 1.
+  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
