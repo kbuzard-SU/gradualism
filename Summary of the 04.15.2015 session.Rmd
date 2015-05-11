@@ -1,7 +1,7 @@
 ---
 title: "Summary of the 04.15.15 session"
 author: "Benjamin Heyries"
-date: "Thursday, April 09, 2015"
+date: "Thursday, April 15, 2015"
 output: html_document
 ---
 
@@ -14,7 +14,7 @@ output: html_document
 ## Content of the session
   
   * R problem: the data still does not seem to fit well even after correction of the typos.
-  * The organization of the work: read two more books on negotiation process (to solve renegotiation and membership problem for example) and try to digitiwe as much documents as possible..
+  * The organization of the work: read two more books on negotiation process (to solve renegotiation and membership problem for example) and try to digitize as much documents as possible.
   * The need to review some documents: concession documents for Australia (7 digits code).
   * Add some recommendations for future user of the data in the document on documentation.
 
