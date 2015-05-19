@@ -2,7 +2,6 @@
 title: "Traders and Diplomats by Preeg"
 author: "Benjamin Heyries"
 date: "Wednesday, May 6, 2015"
-
 output: word_document
 ---
 
@@ -10,7 +9,6 @@ _Traders and diplomats_ by Ernest. H. Preeg describes the negotiations during th
 
 Reaching the general agreement
 ===================================================
-
 
 The Kennedy round is a round of change. Not only the process of negotiation is drastically changed but Agriculture is added to the list of concessions as a major issue, the GATT has to fight the new wave of particularism which spread because of the formation of new custom unions (the EEC, the EFTA) and, finally, developing countries are getting more and more importance in the GATT, changing the balance of power. The difficulties could have been dealt one by one on the long run if the limitation of the time for negotiating allowed to the US were not limited by the deadline of June, 1967, set by the Trade Expansion Act. As extension was impossible, this deadline loomed over the Contracting Parties and created pressure to conclude an agreement. They managed to agree only at the very last moment.
 
@@ -39,7 +37,6 @@ This is an intense period that will end by the final proposals in matter of line
 All Contracting parties agree on two elements. First, it is necessary to have across-the-board negotiations. Second, the disparities constitute an issue that it is necessary to handle. This is the conclusion of the ministerial meeting. As it does not specify the method for linear cut nor the way to handle disparities, it actually solves nothing.
 
 Disparities is an important source of conflict. A first issue is the definition of a disparity. At which threshold a gap between two tariff lines is called a disparity, that is a real mystery in May 1963. The second issue worsens the first one: how to handle disparities. This is critical and the focal point of all discussion until May 1964. Indeed, disparities are a problem already mentioned in Torque and, as the Kennedy Round is the first of its type, setting things right at the start may prevent any costly change in future negotiations. Two methods are in competition. The EEC, under the pernicious influence of the French delegation, abandoned the linear cut for the method of "ecretement", which consists in a sort of tariff harmonization. They advocated that the linear cut would worsen the gap between in protection between the United States and lower-average-tariff countries like the one in the EEC. Some other arguments were raised like the relative unfairness of high tariff lines compared to lower and less objectionable duties or the strategic concerns over the impossibility of reciprocity in the next rounds. For example, as reciprocity was not defined at that time, there were some worries about a potential situation where the EEC, under the rule of reciprocity, would give up a lot a bargaining power by suppressing several low tariff lines to decrease one high tariff line of the U.S.. Moreover, the fact that the group of high tariff countries were well identified and in the spotlight compared to the rest added some unnecessary tensions in the negotiations. The different nomenclatures, especially in textile and chemicals, made the talk even harder. The problem of disparities is that there is not any good solution. The supplementary cut which would be necessary by the United States seems pretty unfair and was forbidden by the 50%-cap set by the TEA of 1962. Using the "ecretement" method and putting the concession on high-level tariff lines at 50% would reduce the scope of the agreement and inevitably harm third parties. The problem is not solved on a general basis and the future of the round depends on the specific negotiations in touchy areas.
-
 Other negotiations issues were raised during the Round. First, it was the occasion of the empowerment of the developing countries. They had few possibilities but, as agreement need to be reach on the largest basis, their role was more important than in the previous bilateral negotiations. Another problem was non-tariff barriers, and in particular the American Selling Price (ASP), which would play an important role at the end of the round. Finally, agriculture was at the center of the US policy which was afraid of the magnitude the Common Agricultural Policy of the EEC (remember the Chicken War).
 
 	2. Specific offers
@@ -53,6 +50,8 @@ The political crisis that struck the EEC in 1965 is not directly linked to the K
 
 Going through the EEC crisis and reaching an agreement
 ===================================================
+
+###An anxious interlude
 
 The crisis stems from a trial to reform the EEC working process. Indeed, one of the fundamental innovations was to give to the Parliament some kind of power (rather than only consultative one). The negotiations in Geneva were explicitly mentioned to justify the move.
 As France objected, the negotiations stopped in Geneva. No agreement had been reached and therefore the EEC delegation has no power to negotiate. As the EEC was one of the major player in the negotiations, it has the effect of stopping the progress of the negotiations, each Contracting Party waiting for the return of the EEC. Side problems were tackled and sector groups pursued their analysis of the situation. However, no breakthrough could be achieved without the EEC. The Contracting Parties themselves had to wait for an improvement of the situation. The United States moved ahead on subsidiary topics. However, the continuous French rebuff, also known as the policy of the "chaise-vide", limited the effects of this initiative. 
