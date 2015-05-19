@@ -20,7 +20,7 @@ https://www.wto.org/english/docs_e/gattbilaterals_e/indexbycountry_e.htm
 
 So far, only the last pages of each source document were used. They recap the concessions the two parties agreed on. This entails that there is a letter in the document signed by the two delegations that presents the last part of the document as the final outcome of the negotiations. They are far from definitive. They may not be the tariffs applied under MFN if other contracting parties have negotiated the tariff line of the same item at the same round. They sometimes have to be ratified by the legislative body of the contracting party (like for the USA).
 
-Every data set contains the tariff codes, the final concessions in percentage and in absolute terms and the descriptions of the products. When available, several optional variables are included: the changes affecting the code attributed to a product and the gradual stages of tariff liberalization.
+Every data set contains the tariff codes, the computed final concessions - the difference between the former tariff line and the newly agreed on one - in percentages and in absolute terms and the descriptions of the products. As the tariff assigned to a product can be of different type (_ad valorem_, absolute terms, upper/lower boundaries, or any combination of the previous types), there will be a specific column attached to each type of concession (so far, up to 3 columns). As the units in which the tariff are can change, there will a special column attached to each type of tariff line (so far, up to 3). The code regarding the different unit are listed in the specific feature section. When available, several optional variables are included: the changes affecting the code attributed to a product and the gradual stages of tariff liberalization.
 
 ###Specific features
 
@@ -30,10 +30,24 @@ This subsection details the additional features that were added in the documents
 __Pre-concession [date]__: concessions that were granted in independent negotiations previously to the GATT. As they may be relevant and because they do not appear previously in the GATT database, they were added to the summary of bilateral negotiation. They are reported in the treatment document. This is the case for the document on Haiti.
 __Stage [number]__/__X[number]__: liberalization is sometimes done gradually. As a consequence, I report in the document the schedule of tariff liberalization. For Geneva II, the period of time separating two stages is one year. This feature is present is the documents on Haiti and Australia.
 
+For the columns described as __Unit #__:
+the code "%" indicates that the concession is in percentages.
+the codes ct/lb, ct/sqf, ct/cu.ft, ct/gal, ct/ton or any ct/_measurement unit_ indicate a tariff in absolute terms per measurement unit.
+the codes "max" or "min" indicate a concession on respectively the upper and the lower boundary of the tariff.
+the codes "Nmax" or "Nmin" indicate the appearing of a new boundary in the tariff line.
+
+###General advice
+
+Excel and Word can help to modify columns on the text editor or to spot errors.
+The respect of the standard format can help to spot errors.
+The data should not be computed. It is a mistake to avoid in order to have exploitable data.
+Simplification of the description can be done. Related products are often treated so acronyms can be used startng with the second one. However, no concession should be done on the tariff code: the 7 digits are needed (even 0 in front).
+
+
 Concession map
 ===============================
 
-The concession map document is an index of all the documents from the GATT of the type __"Outcomes of the bilateral negotiation between [contracting party 1] and [contracting party 2] at [GATT round]"__ that can be used in the production of a document of the type __"Tariff concessions by [contracting party 1] to [contracting party 2].Rmd"__. It precises if the countries reached an agreement with the American delegation and from what page the final concessions can be found in the document. In the table that summarize this data, it appears in parenthis as "(Loc)".
+The concession map document is an index of all the documents from the GATT of the type __"Outcomes of the bilateral negotiation between [contracting party 1] and [contracting party 2] at [GATT round]"__ that can be used in the production of a document of the type __"Tariff concessions by [contracting party 1] to [contracting party 2].Rmd"__. It precises if the countries reached an agreement with the American delegation and from what page the final concessions can be found in the document. In the table that summarize this data, it appears in parentheses as "(Loc)".
 
 
 The Industry List
