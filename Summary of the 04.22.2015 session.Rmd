@@ -7,6 +7,8 @@ output: html_document
 
 ## Work done this week
  
+
+  * Corrected the Benelux concession documents.
   * Corrected the Australia concession documents.
   * Finished reading _Tariff negotiations and renegotiations under the WTO_.
   
