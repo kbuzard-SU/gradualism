@@ -19,27 +19,21 @@ In western Europe, they had just established common standards for electronic com
 
 "Thus a comprehensive trade negotiation, while aiming at the elimination of tariffs and other trade barriers on industrial goods, should not attempt to abolish all of them. The more tender areas might have to wait. Certain tariffs might have to be reduced rather than eliminated; one should not attempt to negotiate agricultural commodity by agricultural commodity, but try to achieve a broad agreement on how to share the available markets. Finally, one should not try to cut through the maze of non-tariff barriers section by section. An attempt should instead be made to reach a broad agreement on respective rights and obligations or, where appropriate, to negotiate package deals and trade-ofs, leaving the residue to be eroded by time."
 
-	1. Numbered list
-
-text
-
-	2. Numbered list
-
-text
-
-### Subheading
-
-text
-
-	1. Numbered list
 
 
-
-	2. Numbered list
-
-
-Major heading
+Ch. 2: Non-Tariff Protection: Present State of the Arts
 ===================================================
 
-###Minor heading
+### Quantitative Restrictions
 
+Originally limited to `textiles and other simple manufactures' from Japan, Hong Kong and Korea, voluntary restrictions have been extended to other products such as steel and electronics.
+
+### Quantitative Restrictions
+
+Shipbuilding is heavily protected in the U.S. by the 1936 Merchant Marine Act, which requires the U.S. fleet be built and maintained by U.S. shipbuilders. Japan, on the other hand, subsidizes exports.
+
+  1. Numbered list
+
+
+
+	2. Numbered list
