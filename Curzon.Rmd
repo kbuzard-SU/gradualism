@@ -6,12 +6,18 @@ output: word_document
 ---
 
 
-B
+Major Trade Problems: Priorities for Action
 ===================================================
 
-text
+[Note this treatise was published in 1970]
 
-### Subheading
+After end of Kennedy Round  and before publishing of this book/paper, lobbies were pushing (unsuccessfully) for non-tariff barriers to trade (NTB's) in the U.S. Specifically: chemicals, steel, heavy engineering, textiles, footwear.
+
+In western Europe, they had just established common standards for electronic components that were detrimental to U.S. producers. (pg. 3)
+
+### Gradualism
+
+"Thus a comprehensive trade negotiation, while aiming at the elimination of tariffs and other trade barriers on industrial goods, should not attempt to abolish all of them. The more tender areas might have to wait. Certain tariffs might have to be reduced rather than eliminated; one should not attempt to negotiate agricultural commodity by agricultural commodity, but try to achieve a broad agreement on how to share the available markets. Finally, one should not try to cut through the maze of non-tariff barriers section by section. An attempt should instead be made to reach a broad agreement on respective rights and obligations or, where appropriate, to negotiate package deals and trade-ofs, leaving the residue to be eroded by time."
 
 	1. Numbered list
 
