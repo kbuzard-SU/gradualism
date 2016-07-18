@@ -1,0 +1,39 @@
+---
+title: "Hidden Barriers to International Trade by G. and V. Curzon"
+author: "K. Buzard"
+date: "Monday, July 18, 2016"
+output: word_document
+---
+
+
+B
+===================================================
+
+text
+
+### Subheading
+
+	1. Numbered list
+
+text
+
+	2. Numbered list
+
+text
+
+### Subheading
+
+text
+
+	1. Numbered list
+
+
+
+	2. Numbered list
+
+
+Major heading
+===================================================
+
+###Minor heading
+
