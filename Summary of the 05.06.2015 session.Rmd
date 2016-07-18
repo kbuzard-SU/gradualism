@@ -1,0 +1,22 @@
+---
+title: "Summary of the 05.06.15 session"
+author: "Benjamin Heyries"
+date: "Wednesday, May 6, 2015"
+output: html_document
+---
+
+## Work done this week
+ 
+  * Finished summarizing  _Tariff negotiations and renegotiations under the WTO_.
+  * Finished summarizing  _Traders and diplomats_.
+  
+## Content of the session
+  
+  * Correction and precision on the two summaries.
+  * Set the last goal of the semester: consolidate the acquired knowledge and polish the result. 
+
+## Work for the next week
+
+  * Correct the summaries according to the remarks made during the session
+  * Create a protocol for the digitalization.
+  * Summarize the important elements that may be useful for the next steps of the study.

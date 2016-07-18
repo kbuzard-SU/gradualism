@@ -1,5 +1,5 @@
----
-title: "Summary of the 04.09.15 session"
+--- 
+Title: "Summary of the 04.09.2015 session"
 author: "Benjamin Heyries"
 date: "Thursday, April 09, 2015"
 output: html_document
