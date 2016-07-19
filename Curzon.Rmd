@@ -32,8 +32,14 @@ Originally limited to `textiles and other simple manufactures' from Japan, Hong 
 
 Shipbuilding is heavily protected in the U.S. by the 1936 Merchant Marine Act, which requires the U.S. fleet be built and maintained by U.S. shipbuilders. Japan, on the other hand, subsidizes exports.
 
-  1. Numbered list
+### Customs Valuation
 
+The `American Selling Price' (ASP) is 'the most notorious non-tariff barrier of all.' Covers only 1 percent of total U.S. imports. Started with benzenoid chemicals in the 1920s to provide protection against recovering German firms. By Kennedy round, also covered pharmaceuticals, rubber footwear, canned clams, knitted wool gloves and mittens, chocolate and sugar confectionary and various machinery and machinery tools.
 
+ASP takes the higher U.S. price as the basis for duty calculations, not the foreign invoice price. Since it's usually the manufacturer's list price that is used, all the domestic firm has to do to get more protection is to raise its list price (at which very little product is actually sold; most is discounted).
 
-	2. Numbered list
+Abolition of ASP was negotiated in Kennedy round, but required Congressional approval that was not yet forthcoming when the book was written.
+
+### Discriminatory Excise Taxes
+
+The way the U.S. taxes alcohol discriminates against Scotch whisky. It was unsuccessfully negotiated in the Kennedy round and then brought to the U.S. courts under the Anglo-American Convention on Commerce (1815) and teh US-Irish Treat of Friendship, Commerce and Navigation (1950).
