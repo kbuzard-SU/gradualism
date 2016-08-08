@@ -10,10 +10,15 @@ output: word_document
 Chapter 1: Historial Orientation
 ===================================================
 
+Pg. 23: In the U.S.: 1921, Emergency Tariff Act introduced high duties on wheat, corn, meat, wool and sugar as a palliative for the agricultural unrest brought on by depression. Followed by Fordney-McUmber Act of 1922, dashed all hopes of debtor countries being able to pay off debts through exports. Marked a return to protectionism of the pre-Underwood days. Ag. products enjoyed high duties and increased rates of protected chemicals and metalurgical industries as well as others that feared foreign competition. The president used the ability to adjust rates by 50 percent up or down: 32 times up and 5 down in the following eight years.
 
+U.S. would not negotiate its tariffs, so MFN wasn't reciprocated. Pretty much killed MFN. By 1929, clear that more protectionism was coming, along with Depression. Smoot Hawley (1930), Britain abandons gold standard in 1931, gold standard collapses, devaluation of dollar. By 1933, trade at one-third of 1929 levels.
 
-### Subheading
+Cordell Hull's Reciprocal Trade Agreements program (1934) led to agreements with 20 countries, maintained unconditional MFN. But wasn't able to shift the world toward liberalism, in part b/c U.S. tariff was still at such a high level. In part b/c global politics were ugly.
 
+Keynes was not in favor of the domestic economy being subject to external (i.e. international) forces. But barriers to trade were an obstacle to the functioning of the international monetary system. Spring 1943: White and Keynes published plans for the post-war financial collaboration, including the free working of a multilateral payments mechanism, which in turn required that commerical controls should not impede international adjustments. Washington felt that U.S. should play important role in re-establishing a freer trading world.
+
+Richard N. Gardner, 'Sterling-Dollar Diplomacy,' Oxford, 1956 pp. 12-13, describing how Hull's views determined the attitudes of the post-war planners in the U.S.: "They considered that they United States, as the world's foremost economic power, should bear the primary responsibility for reconstructing a freely flowing system of international trade. Perhaps most important, they were prepared to devote a considerable amount of American wealth, influence, and energy toward achievement of that end. Such a conjunction of power and idealism in economic affairs was entirely unprecedented in American history."
 
 
 Ch. 2: Organization
