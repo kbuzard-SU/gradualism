@@ -1,0 +1,23 @@
+---
+title: "Multilateral Commerical Diplomacy by G. Curzon"
+author: "K. Buzard"
+date: "Monday, August 8, 2016"
+output: word_document
+---
+
+[Note this book was published in 1965]
+
+Chapter 1: Historial Orientation
+===================================================
+
+
+
+### Subheading
+
+
+
+Ch. 2: Organization
+===================================================
+
+### Subheading
+
