@@ -1,0 +1,37 @@
+---
+title: "Readings on Steel"
+author: "Hoang Pham"
+date: "August 18, 2016"
+output: html_document
+---
+
+This is summary of my readings while trying to find the story behind the steel industry.
+
+1. *Steel Phoenix: The Fall and Rise of the US Steel* 
+This book may not be very helpful and sort of technical
+
+2. *The Steel Crisis: The Economics and Politics of a Declining Industry* (available in Bird Lib)
+
+This book, though, not so much related to our main concern during period of 40s to 60s (first 4 GATT round), is highly insightful about ideas and political process underlying the changes of U.S steel industry. I found the ideas very interesting, disturbing and worth considering while thinking about gradualism.
+Summary of a book review on The Journal of Politics 1987
+
+* 1986: U.S. Steel changed its name to U.S.X (so interests shifted to oil, chemicals, engineering, and real estate) and the LTV corporation filed for bankruptcy, marking the decline of American manufacturing hegemony.
+* Why? In general, manufacturers found it more profitable overseas, speculate in "paper entrepreneurships or diversify their operations outside of manufacturing, **regardless of the consequences for workers, communities, or the nation as a whole.**
+Paper entrepreneurialism: idea that investors are primarily interested in short-term profit (often in non-manufacturing areas) 
+* The Steel Crisis focuses on the impact of steel's decline on the institutions of procedural democracy. (i.e: how changes in the structure of the economy affect political institutions approach)
+* The book covers 3 major trade policy developments that affected the steel industry: the Voluntary Restraint Agreement of 1969-1972 (VRA), the Trade Act of 1974, and the Trigger Price Mechanism of 1977.
+* It contains a lucid essay on the role of law and its relation to social power in United States
+* 2 major interrelated hypotheses:
++ the industry's economic decline is NOT due to foreign competition, but to the failure of domestic manufacturers to modernize. **In the pursuit of easier profits in other sectors, steel makers never attempted to compete with foreign producers**. Trade protectionism, coupled with tax breaks and modifications in environmental and safety regulations accelerated decline by giving the private corporations both the time and the capital to pull out of steel and go into more lucrative endeavors??? Justifications seemed very reasonable.
++ the rule of law, the core of procedural democracy, is replaced by administrative fiat.When law runs counter to the promotion of economic interests, law is frequently put aside. The rise of administrative structures and the decline of law give the state its "relative autonomy" to follow compromise policies conducive to the national interest.
+
+*Running Steel, Running America: Race, Economic Policy, and the Decline of Liberalism*
+By Judith Stein (available in Bird)
+
+Primarily focus on Race and Economic Policy, the problems with Liberalism during the late 70s and early 80s -> not likely to be very useful
+Some points:
+
+* Within the liberal view, race, poverty, and unemployment were understood as social problems distinct from the goals of economic planning
+* 1960s: Liberalism lacked an economic blueprint to match its social agenda. 
+* The tension between race and employment was further debilitated by a trade policy that aimed at strategic needs of the Cold War, not domestic growth.
+* Late 1970s: The failure of the Democratic Party to create an alternative industrial future left the nation without a concrete alternative to Ronald Reagan's assertion that tax cuts, free trade, and less regulation would pull the nation out of its crisis.
