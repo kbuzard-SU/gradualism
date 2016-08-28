@@ -1,0 +1,35 @@
+---
+title: "Notes on GATT procedures (Bagwell_Staiger_Yurukoglu)"
+author: "Hoang Pham"
+date: "August 26, 2016"
+output: html_document
+---
+
+This is a note on how actual process of GATT bargaining looks like. The source is the Bagwell-Staiger-Yurukoglu paper.
+
+- Most-favored nation (MFN) principle: Most Favored Nation (MFN) status is when a country enjoys the best trade terms given by its trading partner. That means it receives the lowest tariffs, the fewest trade barriers, and the highest import quotas (or none at all). In other words, all Most Favored Nation trade partners must be treated equally.
+
+- Bargaining challenges: preferential tariffs, asymmetries in tariff levels, bargaining externalities (principle supplier rule?, tariff concessions split?), major failures.
+
+- Principal-supplier rule: A norm under which participants in the request-offer process would negotiate a tariff concession only with the country that was the principal foreign supplier of that item in the global market. Any concessions granted, however, would then be extended to all countries that received MFN treatment. The principal-supplier rule operated to the disadvantage of smaller countries, as it reduced the scope of concessions that negotiators were willing to consider. See GATT Article XXVIII. This status is less significant today, when many tariff negotiations are conducted on the basis of formula cuts or zero-for-zero deals.
+
+- Six stylized facts:.
+- Multilateral reciprocity vs. bilateral reciprocity
+- Key to results: reciprocity + MFN
+- Modeling approach: terms-of-trade theory of trade agreements
+
+- GATT bargaining protocols:
+    + initial request lists of tariff cuts were common knowledge while the back-and-forth offers and counteroffers (in each bilateral) were not until an outcome (success or failure) for that bilateral had been achieved -> details of the outcome became common knowledge.
+	+ tariffs agreed in a bilateral would apply on a non-discriminatory basis to exports from any GATT-member country through MFN principle.
+	+ Expectations: Reciprocal concessions and principal supplier rule
+	
+-	Extensive form of negotiations:
+    + 1947: 4 stages. Stage 1: transmit to each other member a preliminary list of concessions which it proposes to request. Stage 2: submit of schedule of the proposed concessions. Stage 3: discussions on particular products between 2, 3 or 4 countries. Stage 4: be subject to general review by the Committee periodically (info. Indicated in summary reports). Each member should be entitled to receive the status of negotiations on particular products, may assert an interest in such negotiations.
+  
+-	Data
+    + Issues with the data: first, very complex b/c it involves simultaneous bilateral negotiations on many products, dynamic time dimension. Second, can't be read by machines. Third, product code concordance; focus on description of products and match these details to **HS 1988 6-digit codes**.
+  ??? standardized spreadsheet in Data Appendix
+  
+-	Stylized facts:
+    + Take-or-leave offers on intensive margin and back-and-forth offers on extensive margin: what could account for such distinction? ??? an important question for future research? 2 observations: GATT rules induce governments to reveal their true preferences in initial offers? "peril point" literature? ??? the point where US negotiators had incentives not to agree, estimated ahead of time.
+    + 2 interesting features: first, 2-way bargaining over the same products. Second, a country extends an offer to a second country that it has already made to a first country. ??? "to be paid twice" for its single MFN tariff cut.
