@@ -1,0 +1,36 @@
+---
+title: "Summary on process of peril point - 12-27-2016"
+author: "Hoang Pham"
+date: "December 27, 2016"
+output: html_document
+---
+
+The following note summarizes the information collected about the investigation process on the peril point from the document "Investigations under the "peril point" provision (as of April 15th, 1955)". The scanned version of this document is also uploaded to the current repository.
+
+(Note: "peril point" provision first appeared in the Trade Agreements Extension Act of 1948, was eliminated in 1949, came back in 1951 and died in Trade Expansion Act of 1962)
+
+1. The President, before entering into any trade-agreement negotiation, to transmit to the Tariff Commission a list of commodities that may be considered for possible concessions.
+
+2. The Tariff Commission the then required to make an investigation (including a public hearing) and to report its findings to the President on maximum decrease or minimum increase of duty (peril points).
+
+3. The President may not conclude a trade agreement until the Commission has made its report to him or after 120 days from the date he transmitted the orginial list of products.
+
+4. If the President fails to comply with the Commission's reports, he must transmit to the Congress his explanations and reasons.
+
+5. The Tariff Commission (promptly thereafter) must send a copy of the portion of its reports dealing with the articles where the President did not follow recommendation to the Senate Committee on Finance and the House Committee on Ways and Means
+
+There are couple of important information regarding these steps:
+
++ List of (original) commodities from the President were listed by the Interdepartmental Committee on Trade Agreements in its public notice. We don't know if this committee help president to prepare the list or not, but they published it.
+
++ This document, namely "Investigations under the "peril point" provision" (as of April 15th, 1955), only includes two major investigation period, the first was the one for Annecy round (1949) and the second one was for Geneva II round (1955) (i.e: excluding Torquay 1951, Dillon 1960-62 and possibly Kennedy round).
+
++ The supplemental lists from the President were usually transmitted to the Tariff Commission before the reports on original list by the Tariff Commission were submitted back to him.(i.e: the President kept supplementing the originial list as the investigation process was happening)
+
+I have found some samples of the documents and I believe that these product lists by Interdepartmental Committee are available somewhere. 
+
+http://onlinebooks.library.upenn.edu/webbin/book/lookupname?key=United%20States.%20Interdepartmental%20Committee%20on%20Trade%20Agreements
+(supplemental list 1950)
+
+http://www.presidency.ucsb.edu/ws/?pid=9089
+(Kenedy's message to Congress after Dillon round)
