@@ -1,0 +1,33 @@
+---
+title: "Data source on peril point 12-27-2016"
+author: "Hoang Pham"
+date: "December 27, 2016"
+output: html_document
+---
+
+The following notes describe the sources of data that are important to understand the process regarding the "peril point" provision.
+
+1.	Original list of commodities transmitted to the Tariff Comission (published by Interdepartmental Committee on Trade Agreements)
+-	These data are recorded in US National Archives => Records of Interdepartmental and Intradepartmental Committees => Record Group 353 (RG 353) => subsection 353.5 => subsection 353.5.7: Records of economic committees and conferences => **Interdepartmental Committee on Trade Agreements, 1934-61**
+-	Link:
+https://www.archives.gov/research/guide-fed-records/groups/353.html#353.5.7
+-	I have tried to search online, unfortunately, the records have not been scanned and available online (online catalog). The location of the record is in the link below:
+https://www.archives.gov/research/guide-fed-records/index-numeric/301-to-400.html#RG353
+(search "353" in this link)
+
+2.	There are two more lists we are eager to know here; both of these are associated with the Tariff Commission. The first, and the most important one, is the "peril point" recommendations made by the Tariff Commission to the President after (s)he transmitted the "original list" to the Commission. The second is the list of products where the President did not follow the recommendations on peril points.
+-	The data on these lists is likely to be contained in the US National Archives => Records of the United States International Trade Commission => Record Group 81 (RG 81) => subsection 81.5: Records of the U.S. Tariff Commission 1914-71 => either in **"Docketed case files and other records relating to surveys of the production of various commodities and to commission investigations, 1914-71"** or in **"Records relating to tariff schedule revisions, 1930-63"**.
+-	Link:
+https://www.archives.gov/research/guide-fed-records/groups/081.html#81.5
+**https://catalog.archives.gov/id/2103293**
+-	Location:
+https://www.archives.gov/research/guide-fed-records/index-numeric/001-to-100.html
+(search "81" in this link)
+
+3.	Another piece of information that is missing is the report that the President was required to make to the Congress on reasons why he did not follow the Tariff Commission's recommendation on peril point for some articles. I was not able to find any trace of this information, however, this information is partially reflected on the lists mention in part 2.
+
+4.	Another record on US National Archives which has a very general name, "Records Relating to Trade and the General Agreement on Tariffs and Trade (GATT), 1947 - 1966", contains the records on peril point. However, I am not sure to what extent, the peril point is treated in this record. 
+
+-	US National Archives => General Records of the Department of State, 1763 - 2002 => Record Group 59 (RG 59)
+-	Link
+https://catalog.archives.gov/id/2103293
