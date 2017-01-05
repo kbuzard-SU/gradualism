@@ -1,7 +1,7 @@
 ---
 title: "Data source on peril point 12-27-2016"
 author: "Hoang Pham"
-date: "December 27, 2016"
+date: "December 27, 2016/ updated on Jan 4, 2017"
 output: html_document
 ---
 
@@ -14,6 +14,10 @@ https://www.archives.gov/research/guide-fed-records/groups/353.html#353.5.7
 -	I have tried to search online, unfortunately, the records have not been scanned and available online (online catalog). The location of the record is in the link below:
 https://www.archives.gov/research/guide-fed-records/index-numeric/301-to-400.html#RG353
 (search "353" in this link)
+
+(Updates)
+The data we should expect to get from this is the list of commodities (called this L1) - not recommended peril point levels - initially sent by the President to the Tariff Commission. I have searched again and actually found that this list can be accessed through the Federal Register periodicals (published daily) in the Library of the Congress. I can also get exactly when some commodities are added to the list for "peril point" investigation before the GATT rounds. An example of the links could be found here:
+https://www.loc.gov/collections/federal-register/?q=peril+point&dates=1949
 
 2.	There are two more lists we are eager to know here; both of these are associated with the Tariff Commission. The first, and the most important one, is the "peril point" recommendations made by the Tariff Commission to the President after (s)he transmitted the "original list" to the Commission. The second is the list of products where the President did not follow the recommendations on peril points.
 -	The data on these lists is likely to be contained in the US National Archives => Records of the United States International Trade Commission => Record Group 81 (RG 81) => subsection 81.5: Records of the U.S. Tariff Commission 1914-71 => either in **"Docketed case files and other records relating to surveys of the production of various commodities and to commission investigations, 1914-71"** or in **"Records relating to tariff schedule revisions, 1930-63"**.
