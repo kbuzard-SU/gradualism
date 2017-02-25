@@ -1,9 +1,10 @@
----
-title: "Data Collected from FD - 1948 - Annecy"
-author: "Hoang Pham"
-date: "February 13, 2017"
-output: html_document
----
+#---
+#title: "Data Collected from FD - 1948 - Annecy"
+#author: "Hoang Pham"
+#date: "February 13, 2017"
+#output: html_document
+#---
+
 ## peril point, Denmark, 11-06-1948
 r1<-c('paragraph','article','description','date','round','investigation')
 r2<-c('353','electrical element or device','parts,finished,unfinished,not specifically provided for internal combustion engines')
