@@ -94,6 +94,53 @@ Economics 49, 333-361. \\
 \noindent Staiger, R., 1995. ``A theory of gradual trade liberalization.'' In: Levinsohn, J., Deardorff, A., Stern, R.
 (Eds.), New Directions in Trade Theory. University of Michigan Press, Ann Arbor, MI, pp. 249-284. \\
 
-\noindent Zissimos, B, 1997. ``The GATT and gradualism.'' The Journal of International Economics, 71, 410-433.
+\noindent Zissimos, B, 1997. ``The GATT and gradualism.'' The Journal of International Economics, 71, 410-433.\\
+
+\newpage
+\vskip.4in
+\large\textbf{Model} \\
+\normalsize In this model, I will explore how two large, symmetric countries might interact when setting trade policy. This will be a fully dynamic, infinite-horizon model in discrete time. There are two countries, Home ($H$) and Foreign ($F$); one factor of production, labor ($l$); a non-traded good ($N$) and two manufacturing goods ($X$ and $M$). $N$ is produced one-for-one from labor, while the production functions for the manufacturing goods in each country $i$ are $X_i = A_i^{1-\alpha} l_{it}^\alpha $ and $M_i = B_i^{1-\alpha} l_{it}^\alpha$ where $A_H > A_F$ and $B_H < B_F$ so that under free trade, Home will export $X$ and import $M$.
+
+OR:
+
+In this model, I will explore how two large, symmetric countries might interact when setting trade policy. This will be a fully dynamic, infinite-horizon model in discrete time. There are two countries, Home ($H$) and Foreign ($F$); one factor of production, labor ($l$); a non-traded good ($N$) and two manufacturing goods ($X$ and $M$). $N$ is produced one-for-one from labor, while the production functions for the manufacturing goods in each country $i$ are $X_i = A^i l$ and $M_i = B^i l$ where $A^H > A^F$ and $B^H < B^F$ so that under free trade, Home will export $X$ and import $M$.
+
+Consumer preferences, both for workers and entrepreneurs are specified as $U(c_M,c_X,c_N) = \nu c_M - \beta \frac{c_M^2}{2} + \nu c_X - \beta \frac{c_X^2}{2} + c_N$. This implies that the demand functions are $d_X(p_X) = \nu - \beta p_X$ and $d_M(p_M) = \nu - \beta p_M$, where $p_M$ and $p_X$ are tariff-inclusive prices.
+
+I follow Staiger and assume that the labor in the export sector is specific to that sector and therefore no movements into or out of this sector are possible in either country. This is done to focus the analysis on the dynamics in the import-competing sector. Again, for simplicity, I assume that the export sector in each country is perfectly competitive and therefore unable to lobby the government for protection.
+
+In the import-competing sector, I assume that all production is carried out by a single firm that can also choose to lobby the government. I also assume that output does not depreciate and that there are no capital markets so that the owner can save output but cannot borrow against future earnings. The entrepreneur who runs the firm seeks to maximize the discounted sum of his consumption subject to a budget constraint: he cannot spend more on consumption, wages and lobbying than the total of his savings and gross profits.
+%\[
+%  \max_{l_t,\tau_t} \sum_{t=0}^\infty \left\{B^H l_t(p_M^F + \tau^H) - w_t l_t - C_t(\tau_t) \right\} \hskip.2in \text{s.t.} \hskip.2in W_t \geq 0
+%\]
+The idea behind the non-negativity constraint on wealth is that the firm can choose to contribute more than its profits from a given period, but only up to the amount it has saved. Importantly, in the first period, it can only overspend profits by the amount of its initial wealth. The entrepreneur's wealth will serve as the state variable of this problem; I hope that it, along with the initial tariff levels, will provide interesting comparative statics.
+
+OR:
+
+Then the firm's objective function is to maximize profits net of campaign contributions, $C_t$:
+\[
+  \max_{l_t,\tau_t} \sum_{t=0}^\infty \left\{B^H l_t(p_M^F + \tau^H) - w_t l_t - C_t(\tau_t) \right\} \hskip.2in \text{s.t.} \hskip.2in W_t \geq 0
+\]
+where $W_t$ is total wealth. 
+
+
+For the initial analysis, I will assume that the import-competing firm is a price-taker in world markets. Therefore, it cannot set prices or quantity as a monopolist because it is constrained by the perfectly inelastic supply of goods from the foreign country at the tariff inclusive price. The important new feature here is that the monopolist can make strategic decisions in the current period in order to impact its future payoffs; the import-competing industry is now ``organized'' and can therefore make tradeoffs at the margin that the unorganized workers in Staiger (1995) could not make.
+
+We need to specify the government's welfare function and the precise timing of actions in order to determine how the firm will make these decisions. If the politician in power were completely selfless and sought only to maximize the welfare of voters, lobbying could not have an impact on his decision.\footnote{This might not hold if the government does not have full information and the lobby can communicate information through its contribution schedule, but we assume full information.}  Instead, as discussed above, I follow Grossman and Helpman (1994) in assuming that an incumbent politician maximizes his political support with the goal of being re-elected. Although the election itself is not explicitly modeled, our politicians trade off financial contributions from the lobby against the loss of support from voters that results from implementing socially-suboptimal policies. Grossman and Helpman show that one can model political conflict such as that between the import-competing firm owner and the rest of society with a weighted social welfare function such as the following:
+  \[
+		G(\tau) = C(\tau) + aW(\tau)
+	\]
+where $C$ is the lobby's contribution function, $\tau$ is the tariff level, and $W$ is aggregate welfare.
+
+\vskip.2in
+I model the timing within each period, which we might think of as an electoral cycle, as follows:
+		\begin{enumerate}
+			\item Lobby formulates and delivers contribution schedule $C_t(\tau_t)$
+			\item Government chooses $\tau_t$
+			\item Lobby pays contribution, government enforces tariff
+			\item Production takes place, workers are paid
+			\item Tariff revenue is distributed and consumption takes place
+			\item Election occurs (not explicitly modeled)
+		\end{enumerate}
 
 \end{document}
