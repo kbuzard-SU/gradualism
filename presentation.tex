@@ -155,13 +155,15 @@ Inefficient tariffs maintained through the lobbying of import-competing industri
 \begin{frame}{Preview of Results}
 
 \pause
-The 
-\pause
-\begin{itemize}[<+->]
-	\item I
-	\item D
-	\item I
-\end{itemize}
+None yet :(
+%\pause
+
+%\begin{itemize}[<+->]
+%	\item I
+%	\item D
+%	\item I
+%\end{itemize}
+
 \end{frame}
 
 
@@ -173,23 +175,27 @@ The
 \begin{frame}{Timeline}
 \pause
 
-Taking trade agreement tariff and anti-dumping duties as given,
+Within each period, taking initial wealth as given
 \pause
 \begin{enumerate}[<+->]
-	\item \textbf{Import-competing firms lobby DOC/ITC to renew AD duties}
-	\item \textbf{Uncertainty is resolved}
-	\item \textbf{DOC/ITC decide whether to renew duties}
-	\item Private actors make production, consumption decisions
+	\item Lobby/firm makes investments in technology and politics
+	\item Election occurs (reduced form)
+	\item Government chooses tariff ($\tau_t$)
+	\item Production takes place, workers are paid (profits realized)
+	\item Tariff revenue is distributed and consumption takes place (not explicitly modeled)
 \end{enumerate}
 \end{frame}
 
 
 \begin{frame}{Economy}
 \begin{itemize}
-	\item Two countries: home and foreign (${}^*$)
+	\item Small country (`home') and Rest of World (ROW, ${}^*$)
 	\item Separable in three goods: $X$ and $Y$ (traded) and numeraire
 	\item Demand identical for both goods in both countries
-	\item Supply: $Q_X^*(P_X) > Q_X(P_X)$ $\forall P_X$; symmetric for $Y$ 
+		\begin{itemize}
+			\item $d_X = \nu - \beta \cdot P_X$
+		\end{itemize}
+	\item Supply: $Q_X(P_X) = A(m) F l$
 		\begin{itemize}
 			\item Home net importer of $X$, net exporter of $Y$
 		\end{itemize}
@@ -205,7 +211,7 @@ Home levies $\tau$ on $X$, Foreign levies $\tau^*$ on $Y$
 
 \pause
 \vskip.2in
-Non-tradable specific factors motivates political activity
+Non-tradable specific factor ($F$) motivates political activity
 
 
 \end{frame}
@@ -215,11 +221,14 @@ Non-tradable specific factors motivates political activity
 In Home country (foreign is passive):
 \pause
 \begin{itemize}[<+->]
-	\item Dept. of Commerce 
+	\item Non-unitary government
 		\begin{itemize}[<+->]
-			\item Can 
-			\item Susceptible 
-			\item Modeled 
+			\item Members re-elected each period
+			\item Composition impacted by lobby's investment
+			\item Sets tariff by majority rule
+				%\begin{itemize}
+					%\item $\frac{\partial \tau}{\partial e} > 0$
+				%\end{itemize}
 		\end{itemize}
 %\pause
 	\item A Single Lobby
@@ -259,22 +268,21 @@ Decision determined by complex process. Reduced form:
 
 \pause
 \begin{itemize}
-	\item $\ga(e,\ta)$: weight on import-competing industry profits
+	\item $\ga$: weight on import-competing industry profits. Determined via election, influenced by
 		\begin{itemize}
 			\pause
 			\item $e$: lobbying effort
 			\pause
-			\item $\ta$: uncertain element in $G$'s preferences
+			\item $\ta$: uncertain element in electoral process
 		\end{itemize}
 \end{itemize}
 
 \pause
 \vskip.1in
 \begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Assumption 1}
-\begin{enumerate}
-  \pause
-	\item $\ga(e,\ta)$ is increasing and concave in $e$ for all $\ta \in \Theta$.
-\end{enumerate}
+
+$\ga(e,\ta)$ is increasing and concave in $e$ for all $\ta \in \Theta$.
+
 \end{beamerboxesrounded}
 \end{frame}
 
@@ -284,20 +292,21 @@ Decision determined by complex process. Reduced form:
 \vskip.2in
 \pause
 Lobby chooses effort to maximize:
-\[
-  \left\{1-\Pr\left[ \text{AD Renewal}\right]\right\} \ \pi(\tau^a) + \Pr\left[ \text{AD Renewal} \right]  \pi(\tau^{\mathit{ad}})  - e
-\]
+\begin{multline*}
+  \max_{e_t,m_t} \ \sum_{t=0}^\infty \left\{ A(m_t) \cdot F \cdot l_t(P^W + \tau(e_t)) - l_t - m_t - e_t \right\} \\ \hskip.2in \text{s.t.} \hskip.2in W_t \geq 0, \ m_t + e_t \leq W_{t-1}
+\end{multline*}
+where 
 
 \vskip.1in
 \pause
 \begin{itemize}[<+->]
-	\item $e$: Lobbying effort
-	\item $\tau^a$: home import tariff under trade agreement
-	\item $\tau^{\textit{ad}}$: home import tariff equivalent under anti-dumping duties
+	\item $m_t$: Investment in productivity
+	\item $l_t$: Labor
+	\item $e_t$: Lobbying effort
+	\item $\tau$: home tariff on good $X$
+	\item $W_t$ is total wealth
 \end{itemize}
 
-\vskip.1in
-Note: In Staiger (1995), gradualism breaks down in workers can organize
 
 \end{frame}
 
