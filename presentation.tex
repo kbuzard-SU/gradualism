@@ -1,5 +1,5 @@
-%\documentclass{beamer} 
-\documentclass[handout]{beamer} 
+\documentclass{beamer} 
+%\documentclass[handout]{beamer} 
 \usetheme{Ilmenau}
 \usepackage{graphicx,verbatim,hyperref}
 \usepackage{textpos}
@@ -80,25 +80,24 @@
 \begin{frame}
 \frametitle{Related Literature}
 
+\pause
 Export sector
 \begin{itemize}
   \item \footnotesize Benefits of trade integration to consumers (Devereau 1997)
-  \item \footnotesize Exporters increasingly dependent on trade via capacity accumulation (Chisik 2003)
+  \item \footnotesize Exporters increasingly depend on trade via capacity accumulation (Chisik 2003)
 \end{itemize}
 
-\vskip.1in
+\pause
 Import-competing sector
 \begin{itemize}
   \item \footnotesize Convex adjustment costs as workers leave import-competing sector (Mussa 1986); Furusawa $\&$ Lai similar for repeated game
 	\item \footnotesize Gradual reductions improve welfare when there's a minimum wage (Mehlum 1998)
 	\item \footnotesize Workers lose specialized skills as they leave (Staiger 1995)
+	\item \footnotesize Lobbying and capital mobility (MRC 2007)
 \end{itemize}
 
-Limitation of punishments to `withdrawal of equivalent concessions' generates gradualism (Zissimos 2007)
-
-\begin{itemize}
-	\item MRC?
-\end{itemize}
+\pause
+Limitation of punishments to WEC (Zissimos 2007)
 
 \end{frame}
 
@@ -106,9 +105,13 @@ Limitation of punishments to `withdrawal of equivalent concessions' generates gr
 \begin{frame}
 \frametitle{Politics: Motivation}
 
+\pause
 Is there a \textit{fundamentally} political economy explanation for gradualism?
+\pause
 \begin{itemize}
+	
 	\item i.e. a story that doesn't hinge on specific nature of trade
+	\pause
 	\item The hope: lessons could be applied to other issue areas
 \end{itemize}
 
@@ -118,8 +121,10 @@ Is there a \textit{fundamentally} political economy explanation for gradualism?
 \begin{frame}
 \frametitle{Politics: Mechanism}
 
+\pause
 Inefficient tariffs maintained through the lobbying of import-competing industries
-\begin{itemize}
+\pause
+\begin{itemize}[<+->]
 	\item BUT ability to maintain protection reduced by shocks to political support
 		\begin{itemize}
 			\item a key politician losing an election or committee position
@@ -152,10 +157,10 @@ Inefficient tariffs maintained through the lobbying of import-competing industri
 \end{frame}
 \end{comment}
  
-\begin{frame}{Preview of Results}
+%\begin{frame}{Preview of Results}
 
-\pause
-None yet :(
+%\pause
+%None yet :(
 %\pause
 
 %\begin{itemize}[<+->]
@@ -164,7 +169,7 @@ None yet :(
 %	\item I
 %\end{itemize}
 
-\end{frame}
+%\end{frame}
 
 
 
@@ -175,45 +180,34 @@ None yet :(
 \begin{frame}{Timeline}
 \pause
 
-Within each period, taking initial wealth as given
+Within each period $t$, taking initial wealth as given
 \pause
 \begin{enumerate}[<+->]
-	\item Lobby/firm makes investments in technology and politics
-	\item Election occurs (reduced form)
-	\item Government chooses tariff ($\tau_t$)
-	\item Production takes place, workers are paid (profits realized)
-	\item Tariff revenue is distributed and consumption takes place (not explicitly modeled)
+	%\item[1a.] Firm productivity realized: $A(m_{t-1} + \mu_{t-1})$
+	\item[1.] Election occurs (reduced form based on $e_{t-1}$)
+	\item[2.] Lobby/firm chooses $l_t$ and makes investments in technology $\mu_t$ and politics $e_t$
+	\item[3.] Government chooses tariff ($\tau_t$)
+	\item[4.] Production takes place, workers are paid (profits realized)
+	\item[5.] Tariff revenue is distributed and consumption takes place (not explicitly modeled)
 \end{enumerate}
 \end{frame}
 
 
 \begin{frame}{Economy}
-\begin{itemize}
+\begin{itemize}[<+->]
 	\item Small country (`home') and Rest of World (ROW, ${}^*$)
 	\item Separable in three goods: $X$ and $Y$ (traded) and numeraire
-	\item Demand identical for both goods in both countries
-		\begin{itemize}
-			\item $d_X = \nu - \beta \cdot P_X$
-		\end{itemize}
-	\item Supply: $Q_X(P_X) = A(m) F l$
-		\begin{itemize}
+		\begin{itemize}[<+->]
 			\item Home net importer of $X$, net exporter of $Y$
 		\end{itemize}
+	\item Home levies $\tau$ on $X$, Foreign levies $\tau^*$ on $Y$
+		\begin{itemize}[<+->]
+			\item $P_X=P_X^W + \tau$ and $\pi_X(P_X)$ increasing in $\tau$
+		\end{itemize}
+	\item Non-tradable specific factor ($F$) motivates political activity
+	\item Demand identical for both goods in both countries
+	\item $F_X(m_t,l_t) = A(m_t) F_t^{\alpha} l_t^{1 - \alpha}$
 \end{itemize}
-
-\vskip.2in
-\pause
-Home levies $\tau$ on $X$, Foreign levies $\tau^*$ on $Y$
-\pause
-\begin{itemize}
-	\item $P_X=P_X^W + \tau$ and $\pi_X(P_X)$ increasing in $\tau$
-\end{itemize}
-
-\pause
-\vskip.2in
-Non-tradable specific factor ($F$) motivates political activity
-
-
 \end{frame}
 
 
@@ -247,7 +241,7 @@ In Home country (foreign is passive):
 Decision determined by complex process. Reduced form:
 \pause
 \[
-  W_G = \mathit{CS}_X(\tau) + \ga(e,\ta) \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
+  W_{G,t} = \mathit{CS}_X(\tau) + \ga_t \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
 \]
 
 \pause
@@ -256,6 +250,7 @@ Decision determined by complex process. Reduced form:
 	\item $\pi_X(\tau)$: profits of import-competing industry
 	\item $\pi_Y(\tau^*)$: profits of exporting industry
 	\item $\mathit{TR}(\tau)$: tariff revenue
+	\item $\ga_t = \ga(e_{t-1},\ta_{t-1})$
 \end{itemize}
 \end{frame}
 
@@ -263,17 +258,17 @@ Decision determined by complex process. Reduced form:
 \begin{frame}
 \frametitle{``Government''}
 \[
-  W_G = \mathit{CS}_X(\tau) + \ga(e,\ta) \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
+  W_{G,t} = \mathit{CS}_X(\tau) + \ga_t \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
 \]
 
 \pause
 \begin{itemize}
-	\item $\ga$: weight on import-competing industry profits. Determined via election, influenced by
+	\item $\ga_t$: weight on import-competing industry profits. Determined via election, influenced by
 		\begin{itemize}
 			\pause
-			\item $e$: lobbying effort
+			\item $e_{t-1}$: lobbying effort
 			\pause
-			\item $\ta$: uncertain element in electoral process
+			\item $\ta_{t-1}$: uncertain element in electoral process
 		\end{itemize}
 \end{itemize}
 
@@ -281,7 +276,7 @@ Decision determined by complex process. Reduced form:
 \vskip.1in
 \begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Assumption 1}
 
-$\ga(e,\ta)$ is increasing and concave in $e$ for all $\ta \in \Theta$.
+$\ga(e_{t-1},\ta_{t-1})$ is increasing and concave in $e_{t-1}$ for all $\ta_{t-1} \in \Theta$.
 
 \end{beamerboxesrounded}
 \end{frame}
@@ -289,26 +284,94 @@ $\ga(e,\ta)$ is increasing and concave in $e$ for all $\ta \in \Theta$.
 
 \begin{frame}
 \frametitle{Lobby}
-\vskip.2in
 \pause
-Lobby chooses effort to maximize:
 \begin{multline*}
-  \max_{e_t,m_t} \ \sum_{t=0}^\infty \left\{ A(m_t) \cdot F \cdot l_t(P^W + \tau(e_t)) - l_t - m_t - e_t \right\} \\ \hskip.2in \text{s.t.} \hskip.2in W_t \geq 0, \ m_t + e_t \leq W_{t-1}
+  \max_{e_t,m_t,l_t} \ \sum_{t=1}^\infty \left\{ A(m_t) \cdot F^\alpha \cdot l_t^{1-\alpha}\left[P^W + \tau\left(\gamma(e_{t-1})\right)\right] - l_t - \mu_t - e_t \right\} \\ \hskip.2in \text{s.t.} \hskip.2in m_t = m_{t-1} + \mu_{t} %, \ W_t \geq 0 
 \end{multline*}
+\pause
 where 
 
-\vskip.1in
 \pause
 \begin{itemize}[<+->]
-	\item $m_t$: Investment in productivity
+	\item $\mu_t$: Investment in productivity
+		\begin{itemize}
+			\item Assume $A(\cdot)$ increasing and concave in $m_t$
+		\end{itemize}
 	\item $l_t$: Labor
 	\item $e_t$: Lobbying effort
-	\item $\tau$: home tariff on good $X$
-	\item $W_t$ is total wealth
+	\item $\tau_t$: home tariff on good $X$
+	%\item $W_t$ is total wealth
 \end{itemize}
 
 
 \end{frame}
+
+
+\section{Political Shocks}
+\subsection{}
+\begin{frame}
+\frametitle{Two-Period Model}
+\pause
+Given $\ga_0$
+\begin{multline*}
+  \max_{l_1,e_1,\mu_1,l_2,\mu_2} \ \left\{ A(m_0 +\mu_1) \cdot F^\alpha \cdot l_1^{1-\alpha}\left[P^W + \tau\left(\gamma_0\right)\right] - l_1 - \mu_1 - e_1 \right\} \\
+	\left\{ A(m_1 + \mu_1) \cdot F^\alpha \cdot l_2^{1-\alpha}\left[P^W + \tau\left(\gamma(e_1)\right)\right] - l_2 - \mu_2 \right\} 
+\end{multline*}
+ 
+\vskip.2in
+\pause
+What happens when $\ga_0$ decreases? Two cases:
+\pause
+\begin{enumerate}
+	\item $\mu_1 \! \uparrow$ and $l_1 \! \uparrow$
+	\pause
+	\item $\mu_1 \! \downarrow$ and $l_1 \! \downarrow$
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Two-Period Model}
+
+
+\pause
+$\mu_1 \! \downarrow$ and $l_1 \! \downarrow$: reduce investment in productivity
+\pause
+\begin{itemize}
+	\item investment in politics ($e_1$) $\uparrow$
+	\pause
+	\item $l_2 \! \downarrow$
+\end{itemize}
+
+\vskip.2in
+\pause
+$\mu_1 \! \uparrow$ and $l_1 \! \uparrow$: increase investment in productivity
+\pause
+\begin{itemize}
+	\item investment in politics ($e_1$) $\downarrow$
+	\pause
+	\item $l_2 \! \uparrow$
+\end{itemize}
+\pause
+\textbf{This is gradualism!}
+
+
+\end{frame}
+
+\section{Next Steps}
+\subsection{}
+\begin{frame}{Next Steps}
+\pause
+\begin{itemize}[<+->]
+	\item Determine what separates cases of $\mu_1 \! \uparrow$ from $\mu_1 \! \downarrow$?
+	\item Add wealth constraint
+	\item Fully dynamic model
+	\item Comparative statics on $A(m_t)$
+	\item CRS production
+\end{itemize}
+\end{frame}
+
 
 \begin{comment}
 \section{Uncertainty}
