@@ -52,10 +52,78 @@ Gradualism Notes
 
 
 \section{Big Picture}
+\begin{itemize}
+	\item From repeated game paper: if $\ga(e) \: \uparrow$, need lower $\tau^a$; so if $\ga(e) \; \downarrow$, can get away with lower $\tau^a$ and still be self-enforced
+	\item Caroline Freund: lobbying wastes productive resources; that's what I've built in here
+	\item Need feedback mechanism
+		\begin{itemize}
+			\item Need feedback from shock to lead to future lower investment
+			\item Investment by lobby shifts political support function
+				\begin{itemize}
+					\item Investment complements/substitutes for shock?
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+\section{Modeling choices}
+
+\begin{enumerate}
+	\item Small country: commitment to lower tariff, but no TOT change, just internal price
+	\item Want to focus on lobby's dynamic problem
+	\item Uncertainty vs certainty
+		\begin{itemize}
+			\item With certainty,  you know you'll get a given amount of support, i.e. know the price of maintaining support, which is getting your people re-elected (perhaps combined with getting them to vote your way)
+				\begin{itemize}
+					\item Think of $\ta$ as shocks to who's in office, which changes the price of maintaining support; it would take more $e$ to get a given $\ga$, either because you need to work harder to get other people elected next time, or you have to pay more to convince people who are fundamentally less agreeable to your cause
+				\end{itemize}
+		\end{itemize}
+\end{enumerate}
+
+\vskip.2in
+Within each period $t$, taking initial wealth as given
+\begin{enumerate}
+	%\item[1a.] Firm productivity realized: $A(m_{t-1} + \mu_{t-1})$
+	\item[1.] Election occurs (reduced form based on $e_{t-1}$)
+	\item[2.] Lobby/firm chooses $l_t$ and makes investments in technology $\mu_t$ and politics $e_t$
+	\item[3.] Government chooses tariff ($\tau_t$)
+	\item[4.] Production takes place, workers are paid (profits realized)
+	\item[5.] Tariff revenue is distributed and consumption takes place (not explicitly modeled)
+\end{enumerate}
+
 
 \section{One-period model}
 
 \section{Two-period model}
+Given $\ga_0$
+\begin{multline*}
+  \max_{l_1,e_1,\mu_1,l_2,\mu_2} \ \left\{ A(m_0 +\mu_1) \cdot F^\alpha \cdot l_1^{1-\alpha}\left[P^W + \tau\left(\gamma_0\right)\right] - l_1 - \mu_1 - e_1 \right\} \\
+	\left\{ A(m_1 + \mu_1) \cdot F^\alpha \cdot l_2^{1-\alpha}\left[P^W + \tau\left(\gamma(e_1)\right)\right] - l_2 - \mu_2 \right\} 
+\end{multline*}
+
+\vskip.2in
+What happens when $\ga_0$ decreases? Two cases:
+\begin{enumerate}
+	\item $\mu_1 \! \uparrow$ and $l_1 \! \uparrow$: increase investment in productivity
+		\begin{itemize}
+			\item investment in politics ($e_1$) $\downarrow$
+			\item $l_2 \! \uparrow$
+		\end{itemize}
+	\item $\mu_1 \! \downarrow$ and $l_1 \! \downarrow$: reduce investment in productivity
+	  \begin{itemize}
+			\item investment in politics ($e_1$) $\uparrow$
+			\item $l_2 \! \downarrow$
+		\end{itemize}
+\end{enumerate}
+
+
+
+\section{Literature}
+\begin{itemize}
+	\item Hillman (1991): decide between lobbying and investing in internal monitoring of production. In book at library, HF1372.158 1991 3rd Floor (Helpman and Razin)
+	\item Rodrik (1996): use labor to make lobbying (p. 5/15)
+	\item Krueger (1974)
+	\item Sturzenegger F. (1993) never got published
+\end{itemize}
 
 
 
