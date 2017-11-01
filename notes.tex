@@ -92,13 +92,51 @@ Within each period $t$, taking initial wealth as given
 
 
 \section{One-period model}
+Given $\ga_0$
+\[
+  \max_{l_1,e_1,\mu_1} \ A(m_0 +\mu_1) \cdot F^\alpha \cdot l_1^{1-\alpha}\left[P^W + \tau\left(\gamma_0\right)\right] - l_1 - \mu_1 - e_1 
+	\]
 
+
+\vskip.2in
+Interior F.O.C.'s
+\[
+   \left(1-\alpha\right) A(m_0 +\mu_1) \cdot \left(\frac{F}{l_1}\right)^\alpha \left[P^W + \tau\left(\gamma_0\right)\right] = 1
+\]
+\[
+  \frac{\partial A(m_0 +\mu_1)}{\partial \mu_1} \cdot F^\alpha \cdot l_1^{1-\alpha}\left[P^W + \tau\left(\gamma_0\right)\right] = 1
+\]
+\[
+  A(m_0 +\mu_1) \cdot F^\alpha \cdot l_1^{1-\alpha} \frac{\partial \tau}{\partial \ga} \frac{\partial \ga}{\partial e_1}= 1
+\]
+Combining these
+\[
+  \left(1-\alpha\right) A(m_0 +\mu_1) \cdot \left(\frac{F}{l_1}\right)^\alpha = \frac{\partial A(m_0 +\mu_1)}{\partial \mu_1} \cdot F^\alpha \cdot l_1^{1-\alpha}
+\]
+\[
+  \left(1-\alpha\right) A(m_0 +\mu_1) = \frac{\partial A(m_0 +\mu_1)}{\partial \mu_1} \cdot l_1
+\]
+And
+\[
+  \left(1-\alpha\right) A(m_0 +\mu_1) \cdot \left(\frac{F}{l_1}\right)^\alpha \left[P^W + \tau\left(\gamma_0\right)\right] = A(m_0 +\mu_1) \cdot F^\alpha \cdot l_1^{1-\alpha} \frac{\partial \tau}{\partial \ga} \frac{\partial \ga}{\partial e_1}
+\]
+\[
+  \left(1-\alpha\right) \left[P^W + \tau\left(\gamma_0\right)\right] = l_1 \frac{\partial \tau}{\partial \ga} \frac{\partial \ga}{\partial e_1}
+\]
+And combining these two
+\[
+  \frac{A(m_0 +\mu_1)}{P^W + \tau\left(\gamma_0\right)} = \frac{\frac{\partial A(m_0 +\mu_1)}{\partial \mu_1}}{\frac{\partial \tau}{\partial \ga} \frac{\partial \ga}{\partial e_1}}
+\]
+Notice there is no constraint assumed on $e_1$ or $\mu_1$.
+
+\vskip.5in
 \section{Two-period model}
 Given $\ga_0$
 \begin{multline*}
-  \max_{l_1,e_1,\mu_1,l_2,\mu_2} \ \left\{ A(m_0 +\mu_1) \cdot F^\alpha \cdot l_1^{1-\alpha}\left[P^W + \tau\left(\gamma_0\right)\right] - l_1 - \mu_1 - e_1 \right\} \\
-	\left\{ A(m_1 + \mu_1) \cdot F^\alpha \cdot l_2^{1-\alpha}\left[P^W + \tau\left(\gamma(e_1)\right)\right] - l_2 - \mu_2 \right\} 
+  \max_{l_1,e_1,\mu_1,l_2,\mu_2} \ \left\{ A(m_0 +\mu_1) \cdot F^\alpha \cdot l_1^{1-\alpha}\left[P^W + \tau\left(\gamma_0\right)\right] - l_1 - \mu_1 - e_1 \right\} +\\
+	\left\{ A(m_1 + \mu_2) \cdot F^\alpha \cdot l_2^{1-\alpha}\left[P^W + \tau\left(\gamma(e_1)\right)\right] - l_2 - \mu_2 \right\} 
 \end{multline*}
+where $m_1 = m_0 + \mu_1$
 
 \vskip.2in
 What happens when $\ga_0$ decreases? Two cases:
@@ -115,8 +153,26 @@ What happens when $\ga_0$ decreases? Two cases:
 		\end{itemize}
 \end{enumerate}
 
+\vskip.2in
+Interior F.O.C.'s
+\[
+   l_1: \left(1-\alpha\right) A(m_0 +\mu_1) \cdot \left(\frac{F}{l_1}\right)^\alpha \left[P^W + \tau\left(\gamma_0\right)\right] = 1
+\]
+\[
+  \mu_1: \frac{\partial A(m_0 +\mu_1)}{\partial \mu_1} \cdot F^\alpha \cdot l_1^{1-\alpha}\left[P^W + \tau\left(\gamma_0\right)\right] + \frac{\partial A(m_0 +\mu_1 + \mu_2)}{\partial \mu_1} \cdot F^\alpha \cdot l_2^{1-\alpha}\left[P^W + \tau\left(\gamma(e_1)\right)\right] = 1
+\]
+\[
+  e_1: A(m_0 +\mu_1 + \mu_2) \cdot F^\alpha \cdot l_1^{1-\alpha} \frac{\partial \tau}{\partial \ga} \frac{\partial \ga}{\partial e_1}= 1
+\]
+\[
+   l_2: \left(1-\alpha\right) A(m_0 +\mu_1 + \mu_2) \cdot \left(\frac{F}{l_2}\right)^\alpha \left[P^W + \tau\left(\ga(e_1)\right)\right] = 1
+\]
+\[
+  \mu_2: \frac{\partial A(m_0 +\mu_1 + \mu_2)}{\partial \mu_2} \cdot F^\alpha \cdot l_2^{1-\alpha}\left[P^W + \tau\left(\gamma(e_1)\right)\right] = 1
+\]
 
 
+\vskip.5in
 \section{Literature}
 \begin{itemize}
 	\item Hillman (1991): decide between lobbying and investing in internal monitoring of production. In book at library, HF1372.158 1991 3rd Floor (Helpman and Razin)
