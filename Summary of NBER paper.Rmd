@@ -1,0 +1,69 @@
+---
+title: "U.S. Trade Policy Since 1934 An Uneven Path Toward Greater Trade Liberalization by Robert E. Balwin"
+author: "Hoang Pham"
+date: "August 10, 2016"
+output: html_document
+---
+
+This is a summary of the NBER working paper by Robert E. Baldwin 2009.The paper presents a brief historical survey of U.S trade policy with a particular emphasis on the underlying economic and political conditions.
+
+## 1. Intro
+
+- Irwin (1996) estimates that 70 percent of the 99 percent decline in the average tariff rate on dutiable imports between 1932 and 1954 was due to a rise in import prices (tariff acts constant) and only 29 percent was attributable to tariff acts alone (import price constant). The reduction (29%) is still very impressive.
+- There was a decline in non-tariff measures (such as quotas)
+
+## 2. Trade liberalization under RTAA (1934-1962)
+
+- The Congress passed the Trade Agreement Acts 1934, gave president the power to reduce tariffs by 50% over 3-year period through reciprocal negotiations.
+- A major argument: provide an outlet for the disposition of American surplus products, especially **agricultural products**.
+- It's worthy to note that **the level of supports was not very high** (274 to 111 in the House, and 57 to 33 in the Senate). 16 trade agreements were concluded from 1934-1937.
+- The program was extended in 1937, 1940, 1943 without any new tariff-reducing authority. Note that the argument for extension **shifted from domestic policy objectives to foreign policy goals**.
+- 1945 Roosevelt urged the Congress to extend program for another 3-year and grant more tariff cutting authority. The bill passed by 258 to 153 in the House and 53 to 21 in the Senate
+- 1944 Bretton Woods: IMF, International Bank for Reconstruction and Development.
+- 1945 U.S invited its WWII allies to establish an international trade organization. However, American business community opposed it (Havana Charter 1948) because there were so many exceptions that most countries could comply without freeing the trade.
+- 1947 Geneva: U.S negotiators did not wait for the establishment of International Trade Organization but used their new tariff-reducing powers under 1945 extension to implement multilateral trade negotiation. **U.S agreed to a 21.1% cut in average tariff level**.
+
+### 2.5 Shifts in the view of Republicans and Democrats toward Trade Liberalization
+
+- 1948: The Democrats renewed the program for another 3-year with its peril point provision
+- 1949 (Annecy): The Administration used its authority to implement another multilateral negotiation round, but this time, the average level of U.S duties declined by **only 1.9 percentage points**.
+- 1950 (Torquay): Average U.S duties declined by only **3.0 percentage points**.
+
+### 2.6 The Eisenhower Years
+
+- 1955: Eisenhower was able to obtain a 3-year extension with an additional 15% tariff-cutting authority.
+- 1959: **Import quotas on oil** were introduced. The Eisenhower Administration pressured Japan into voluntary restraints on **their exports of cotton textiles**.
+- 1955: U.S obtained **waiver covering agricultural products** (agricultural and fishery products).
+- 1958: Eisenhower successfully extended the Trade Agreements Program for another 4-year w additional 20% cutting authority (in exchange for allowing the Congress to override presidential decisions on escape clause)
+- The Eisenhower used the tariff-cutting authority obtained in 1955 and 1958 to enter GATT Geneva II (1956) and Dillon (1960) rounds.
+- 1956 (Geneva II): Average duty declined **by 3.5%**
+- 1960 (Dillon): Average duty declined **by 2.4%**
+
+## 3.  1962-94, Significant Multilateral Reductions in Tariffs and Nontariff Trade Barriers but with Selective Protectionism
+
+### 3.1 The Trade Expansion Act of 1962 and the Kennedy Round of Trade Negotiations, 1963-67
+
+- Trade Expansion Act of 1962 (when Kennedy in office 1961-1963): president was given power to reduce **the tariff by 50%**, any tariff **under 5% could be reduced by 100%**.
+- Important reasons: economic and foreign policy
++ **Formation of EC** in 1957 (European Economic Community): U.S exports to these countries would be threaten. Therefore, negotiating a general decrease in levels of protection would reduce the margin of preference for these members. (**If they are opening together, you don't want to close**)
++ Tariff-liberalizing negotiations would strengthen political ties with Atlantic Community.
++ Preventing Communist economic penetration
+- In achieving such authority, the Kennedy Administration had to made several concessions to the protectionists:
++ Long-Term Agreement regarding trade in **Cotton Textiles (import quotas)**  
++ Safeguard decisions on **glass and carpets**.
++ TAA (first time)
++ Shifting the administration of trade negotiation away from Executive Offices of President
+-The act passed with high level of consensus (299 to 128 in the House and 78 to 8 in the Senate)
+- 1964 Kennedy round: The average reduction in dutiable imports of **nonagricultural products** for the U.S., EC, United Kingdom, and Japan was in the range of **36 to 39%**. The average tariff reduction on **dutiable agricultural imports** of the major industrial countries was **20%** or considerably less than in nonagricultural sectors.
+
+### 3.2 Tariff preferences for developing countries
+
+- 1964: U.S and other industrial countries provide **zero-duty treatment** on imports of most **manufactured goods from developing countries**. This kept going in Tokyo and later rounds.
+### 3.3. Particular Protectionism of the 1970 and 1980s
+
+- During the 1970s and 1980s, there was a rapid rise in import penetration ratios in many U.S. manufacturing sectors. The result was a wave of protectionism that restricted imports from various countries on **steel, textiles and apparel, footwear, color television sets, and automobiles** at various times.
+- A shift in the policy position of **organized labor** from supporting trade liberalization to advocating import restrictions.
+
+### 3.4. The Trade Act of 1974 and the Tokyo Round of Trade Negotiations, 1973-79
+
+- The Trade Act 1974 (also included TAA): aimed at reducing nontariff barriers and decreased tariff by 60%.

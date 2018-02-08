@@ -1,0 +1,18 @@
+---
+title: "Relief for Victims of Tariff Cuts AER 1950"
+author: "Hoang Pham"
+date: "August 10, 2016"
+output: html_document
+---
+This paper on AER 1950 by Clair Wilcox presents some of main arguments for opposition towards TAA. The arguments are interesting and theoretically solid. I give a brief summary of noteworthy points.
+
+The author argued against the proposed compensation to those who hurt by increased imports in 4 aspects: economic, ethical, political and administrative.
+
++ Economically, the proposed program should "justify itself by facilitating adaptation to changes in the conditions of supply and demand, improving the allocation of resources, and rising planes of living."
++ Sense of justice generally does not apply in practice, eg: changes in regulations, innovation and technology (slavery, breweries, unregulated enterprises, etc) ??? This is inherent in a free economy (free means less government intervention)
++ Politically: the author proposed that an announced policy of indemnification would intensify opposition because it would attract attention to the losses of freer trade rather than the benefits of it. 
++ The administrative costs would be high, if not unaffordable (impossible). How do we identify injury? Real cause of injury? Level of compensations? See details in underlined notes.
+
+Conclusion
+
+Better (general) approach: provide public assistance to facilitate conversion of more "promising activities", rather than focus on the specific groups. The problems above would never be faced.
