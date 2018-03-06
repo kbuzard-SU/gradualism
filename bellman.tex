@@ -34,34 +34,34 @@
 
 \title{Lobby}
 \[
-\max_{e^t,m^t,l^t} \sum_{t=1}^\infty \left\{A(m_t)F^\alpha\cdot l^{1-\alpha}_t\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t-\mu_t-e_t\}
+\max_{e^t,m^t,l^t} \sum_{t=1}^\infty \beta^{t-1}\left\{A(m_t)F^\alpha\cdot l^{1-\alpha}_t\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t-\mu_t-e_t
   \right\} \hskip.2in \text{s.t.} \hskip.2in  m_t=m_{t-1}+\mu_t
 \]
 
  
 \title{Bellman Equation}
 \[
-  V_l(e_t,m_t)=\max_{e_t,m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t-\mu_t-e_t+B_V_l(e_{t+1},m_{m+t}\}
+  V_l(e_t,m_t)=\max_{e_t,m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t-\mu_t-e_t+\beta V_l(e_{t+1},m_{m+t}
   \right\} \hskip.2in 
 \]
 \title{Value Function}
 \[
-  V_l(e_t^\ast,m_t^\ast)=\left\{A(m_t^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t^\ast-\mu_t-e_t^\ast+B_V_l(e^\ast_{t+1},m^\ast_{t+1})\}
+  V_l(e_t^\ast,m_t^\ast)=\left\{A(m_t^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\left[P^W+\tau(\gamma(e_{t-1}^\ast))\right]-l_t^\ast-\mu_t^\ast-e_t^\ast+\beta V_l(e^\ast_{t+1},m^\ast_{t+1})
   \right\} \hskip.2in
 \]
 
 \[
-t=this\quad period
+t=\text{this period}
 \]
 \[
-t+1=next\quad period
+t+1=\text{next period}
 \]
 \[
-B=discount\quad factor
+\beta=\text{discount factor}
 \]
 \[
-l=lobby
+l=\text{lobby}
 \]
-		\end{enumerate}
+		
 
 \end{document}
