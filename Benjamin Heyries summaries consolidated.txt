@@ -1,0 +1,436 @@
+---
+title: "Summary of the 01/14/2015 session"
+author: "Benjamin Heyries"
+date: "Monday, January 19, 2015"
+output: word_document
+---
+This session is the first session of the independant. It was a good time to sum up what has been accomplished so far and to define what are the objectives, the skills I have to master and the resource I have at my disposal.
+
+##**Question regarding the previous work**
+
+1. About the book, _Politics and trade policy_ by Joe R. Wilkinson:
+  * there is not much about the trade agreements themselves but rather on how they are negotiated. The trade agreement act is about giving more power to the president to negotiate reciprocal agreements. I should look closer to the arguments in favor and against this new power.
+  * the technical aspect are not that important: what amount of tariffs is bilaterally removed does not really matter but rather how and why does the agreement can be accepted.
+  * the structure of the American politics does not allow to directly observe all the steps of the formation of the trade agreement: only one trade agreement was rejected by Congress because all the agreements that were put to vote were acceptable at the time of the voting. THe formation of the agreement is shaped the expected lobbying by the concerned industries and the expected comportment of the COngress. Therefore, in order to define a pattern, we need to find more than only voting results.In order to do that, it may be important to see the formation of the agenda.
+2. About the acquired skills
+  * R is useful but I need to get more into Git and Github in order to share. A repository will be in place in order to share documents.
+  * Markdown is to be improved as it would be the dominant format of the shared documents.
+
+##**Next objectives**
+
+1. Familiarized myself with new resources and tools
+  * Markdown
+  * Strengthen Git and GitHub use
+  * Get familiar with the WTO scanned documents about the GATT rounds in order toi find a pattern on tariffs negotiation
+  * start reading a new book on trade _Traders and diplomats_ by Ernest H. Preeg
+
+2. Start making summary of the accomplished work
+  * first session summary
+  * type _politics and trade policy_ under on text and markdown
+
+3. Start looking for the long run objectives
+  * who determines the agenda during the GATT rounds?
+  * Is there any particular exploitable industry that would stand out and be only concerned by changes on tariffs during those rounds?
+
+
+---
+title: "Summary of the 01/21/2015 session"
+author: "Benjamin Heyries"
+date: "Wednesday, January 21, 2015"
+output: word_document
+---
+
+##Content of the session
+
+1. The organization of the work
+Three issues has been settled
+  * First, the interaction process has to be defined.Three possibilities can be evaluated: pull request, use of Wikis and the Issue function.The choice regarding of the different options will depend of the use of GitHub and my state of learning.
+  * I should read _The GATT Legal System and World Trade Diplomacy by Robert E. Hudec_ on the history of the WTO.
+  * The objective has to be clarified. Once the work of the WTO repertory is done, it is important to find the detail agenda of the tariff modification, the cause of settling this agenda and finally the result of it, which is the nature of gradualism.
+2. GitHub issue: it is necessary that I keep learning about using Git and GitHub in order to have a nice and professional work.
+
+##Plan and summary
+
+1. Summary of the work done
+  * Work on data: file _Politics and Trade policy_; reading of the first chapters of _Traders and Diplomats_; I still have to look to the raw data.
+  * learning skills: followed git tutorials on code school "Try Git" and "Git real 1";
+2. Plan for the next week
+  * work on data: finish filing under the recommendation of Professor Buzard. Get through the second book. Start looking at the raw data. 
+  * learning skills: finish "git real 1", start "git real 2" and maybe advance on "master GitHub"
+
+
+---
+title: "Summary of the 01.28.15 session"
+author: "Benjamin Heyries"
+date: "Wednesday, January 28, 2015"
+output: word_document
+---
+
+##Work done this week
+  * Finish Git Real and Git Git Real 2
+  * Finish the summary of _Trade and politics_ with the conclusion file
+  * Modification of the Summaries in order to find a standard format
+  * Research at the WTO database on the following key words: "agenda" and "tariffs"
+
+##content of the meeting
+  * the organization of the repository on Github: it is necessary push the excel document even if it cannot really be modified.
+  * new document to be foreseen: the list of industries that were protected in order to see their history and their potential part in the gradualism history. 
+  * this new document will be crossed with the final commitment of the United States at the different GATT round in order to see the change in tariffs through time. 
+  * some phenomena are to be evaluated in the gradualism story: logrolling, export VS import fight, anti-dumping process.
+  * third book given _The GATT legal system and World Trade Diplomacy_ by Robert Hudec
+
+##work for the weeek
+  * correct the format once again
+  * provide the first issue of the previous documents
+  * go to the logrolling conference on Friday 30 of January
+  * start reading the second book, _Traders and diplomats_ and the third book _The GATT legal system and World Trade Diplomacy_ by Robert Hudec
+  * finish the Git path on Code School with GitHub Master
+
+
+---
+title: "Summary of the 02.04.15 session"
+author: "Benjamin Heyries"
+date: "Thursday, February 05, 2015"
+output: word_document
+---
+
+## Work done this week
+  * Finished the Git path on code school. Even if some elements may be a bit unclear, most of the tools on sharing document are mastered. 
+  * Conception of an industry list that reports all the protectionist measures present in the different votes of the TAA. It aims at showing the action of lobbies applying pressure on Congressmen in order to protect their tariff based competitive advantage.
+  * Correction of the different documents that were uploaded last week
+
+## Content of the meeting
+  * Key questions about the background of tariff negotiation: what is the pattern in the adoption of the TAA? How does the opposition of the TAA change through time? Do we see some sectors put out of the tariff negotiation?
+  * Practical problems: research on how to make tables under markdown
+
+## Work for the weeek
+  * start reading the second book, _Traders and diplomats_ and the third book _The GATT legal system and World Trade Diplomacy_ by Robert Hudec
+  * some questions need to answered in order to define the  role of the TAA in the definition of the background of the model:
+      * Is the TAA relevant in multilateral negotiations like the GATT? Is the extension of the TAA linked to the negotiation at the GATT? If yes, how? 
+      * How does the TAA exactly condition the president action when negotiating? Does it have any resemblance with the fast-track procedures in the 2000s? What are some examples of the parameters the TAA authorized the president to negotiate within?
+      * What is the exact pattern of the tariffs in force for the different industries? Do we observe a decrease linked of the general level coupled with a carving out action regarding strategic industries or industries supported by big lobbies? 
+
+
+---
+title: "Summary of the 02.11.15 session"
+author: "Benjamin Heyries"
+date: "Wednesday, February 11, 2015"
+output: word_document
+---
+
+## Work done this week
+  * Researched on the questions of the last session: the exact function of the TAA (it is alike fast track system); the TAA may apply in GATT as it allows the president to negotiate tariff levels; the relation between the formation of the GATT and the TAA is still unclear but a strong resemblance in their amendments points at an existing correlation between the two. For example, the introduction of the escape clause in the ITO charter in 1945 after stiff negotiations happens at the same time as the setting of an escape clause in the TAA in the extensions of 1945 and 1948.
+  * Read _The GATT legal system and World Trade Diplomacy_ by Robert Hudec and started to make a summary of the book. 
+
+## Content of the meeting
+  * Shared of the precedent answers and correction of some unclear or wrong assertion of the last meeting. 
+  * Questions about the book (difference between quotas and quantitative restriction, form of the summary, formalization of some rules of the game or markers like the escape clause, the ratification of the agreement or the observation of the delay of ratification).
+  * Directives for the next week.
+
+## Work for the week
+  * Finish the summary of _The GATT legal system and World Trade Diplomacy_ by Robert Hudec.
+  * Read _Traders and diplomats_ on the Kennedy round.
+  * Start looking at the WTO data in order to find the final tariff agenda of any round. 
+
+
+---
+title: "Summary of the 02.18.15 session"
+author: "Benjamin Heyries"
+date: "Thursday, February 19, 2015"
+output: word_document
+---
+
+## Work done this week
+
+  * Finish the summary on Read _The GATT legal system and World Trade Diplomacy_ by Robert Hudec
+  * Find the WTO data on the tariff agreement per country and per conference
+  * Start reading _Traders and diplomats_
+  
+## Content of the session
+
+  * Discussion on the GitHub problem about notification of merging modification
+  * Some leads to research on: the major supplier rule associated with the most favored nation status against bilateral negotiations; the transition of the EEC from separated contracting parties to a single one; the Schelling prize speech on the effect of the executive negotiating; 
+  * The procedure for gathering the data: take the concession of the US toward a developed country and a developing country that would be present during the different round. Two possibilities: Brazil and Australia. This will be a one-way concession in order to keep the model simple. 
+
+## Work for the next week
+
+  * Finish reading _Traders and diplomats_ 
+  * Start gathering the data 
+  * Make some quick research about the leads in order to clarify the general model
+
+
+---
+title: "Summary of the 02.24.15 session"
+author: "Benjamin Heyries"
+date: "Wednesday, February 25, 2015"
+output: html_document
+---
+
+## Work done this week
+
+  * Made some research on some important details: the major supplier rule associated with the most favored nation status against bilateral negotiations; the transition of the EEC from separated contracting parties to a single one; the Schelling prize speech on the effect of the executive negotiating.
+The "principal supplier rule" is a way to prevent free riding by giving to members the possibility to ask for tariff concessions on their exports. It is also applied when contracting parties can revise their concessions (every three years starting in 1958).
+The EEC members negotiate as a single entity as soon as the Dillon round. Meanwhile, the ECSC also negotiates as a single entity at the Geneva Round, the Dillon Round and the Kennedy Round. The links between the two are nebulous as the same countries participate in the two institutions. Apparently, the ECSC only negotiates tariff concessions on products in relation with mining and steel industries whereas the EEC negotiates for other types of product. However, it is not clear if the EEC can supersedes the ECSC authority and negotiates tariff concessions on mining and steel industries products.
+Finally the Schelling bargaining theory on executive power is a conjecture about the interactions between domestic policies and international negotiations. It assumes that if the domestic legislator does not renounce to its power of amendment, the foreign negotiator may walk out of the negotiation table.
+  * Worked on the data: gathered the tariff concessions of the United States for Australia, Brazil and Haiti.
+  
+## Content of the session
+
+  * Discussion on the leads and the other necessary research: it may be useful to look at Putnam theory on "two-level" games. 
+  * Discussion on the data: how to better gather it and how to better organize it. It is necessary to define the nature of the general concession of the United States. Is it a document that gathers all the tariff concession done to the different countries or is it the result of independent multilateral negotiations? It is also necessary to add the absolute value to the table and to construct a data frame in order to have a centralized table.
+
+## Work for the next week
+
+In order of priority:
+
+  * Define the nature of the document "Consolidated List of Tariff concession offers"
+  * Correct the documents reporting the bilateral tariff concessions
+  * Make some quick research about the leads in order to clarify the general model
+  * Finish reading _Traders and diplomats_ 
+  * Add the products that are the object of complaints during the GATT session in the industry list.
+
+
+---
+title: "Summary of the 03.04.15 session"
+author: "Benjamin Heyries"
+date: "Thursday, March 05, 2015"
+output: html_document
+---
+
+## Work done this week
+
+  * Define the nature of the document "Consolidated List of Tariff concession offers": the consolidated list gathers the obligation of a country under MFN taken at a certain round. 
+  * Make some quick research about the leads in order to clarify the general model: reading of the article of Bagwell, Staiger and Yurukoglu.  
+  * Started to add products that are the object of complaints during the GATT session in the industry list.
+  
+## Content of the session
+
+  * The problem of the consolidated lists: it is unclear if the actual list matches the different bilateral agreements. The mention of preferential agreements in the WTO documents does not allow us to conclude that they exactly match. Further work is needed.
+  * Discussion on the article of Bagwell and Staiger: more study is necessary to explain how reciprocity interact with the MFN status in order to limit bargaining externalities.
+
+## Work for the next week
+
+  * Correct the documents reporting the bilateral tariff concessions.
+  * Add the products that are the object of complaints during the GATT session in the industry list.
+  * Finish reading _Traders and diplomats_.
+  * Compare the consolidated tariff list with the bilateral agreements in order to draw conclusion about their nature. 
+
+
+---
+title: "Summary of the 03.17.15 session"
+author: "Benjamin Heyries"
+date: "Tuesday, March 17, 2015"
+output: html_document
+---
+
+## Work done this week
+
+  * Defined definitively the status of the document of the type "Consolidated List of tariff concessions". They are not the definitive agreements on tariffs but all the concession offers and requests before the negotiations. Therefore, in the case of this study and at this stage, they are not directly relevant. 
+  * Completed the industry list with the complaints at the GATT. I added all the complaints where the USA are the complainant.  
+  * Modified the document of tariff concessions. I added the absolute value and changed the format in order to have a single data set.
+  * Created a  document about the product of our work.
+  
+## Content of the session
+
+  * Adding the complaint of the GATT to the industry list may be more relevant when the USA are the defendant. Indeed, the complaints may target protectionist malpractices, which reveals the action of some domestic private interests.
+  * The informative document is not done properly. It has to deal with the product not the source. It aims at explaining our choices on the way we treated data.
+  * It is not clear how much bilateral agreements were signed during the GATT round at our disposal. As a consequence, the width of the data set is not clearly defined. 
+  * Some uncertainties remains about how we should treat the data in the GATT document. Indeed, they may be subject to change at the ratification level. Qualitative sources may confirm their validity.  
+
+## Work for the next week
+
+  * Correct the documents reporting the bilateral tariff concessions. Standardize their form.
+  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
+  * Finish reading _Traders and diplomats_.
+  * Map the data: determine how many agreements have been signed between the USA and other contracting parties.
+  * Correct the document on documentation.
+
+
+---
+title: "Summary of the 03.25.2015 session"
+author: "Benjamin Heyries"
+date: "Tuesday, March 24, 2015"
+output: html_document
+---
+
+## Work done this week
+
+  * Map the data: determine how many agreements have been signed between the USA and other contracting parties. Creation of the document __"Concession map"__.
+  * Correct the document on documentation. 
+  * Correct the documents reporting the bilateral tariff concessions. Standardize their form.
+  
+## Content of the session
+  
+  * Assessment of the work done: corrections have to be done (modify information on the __concession map__, make the difference between no agreement and no negotiations).
+  * Research for more information on the next rounds: Dillon, Kennedy and Tokyo. It seems that information is harder to find than it seems.
+  * Interrogation on the evolution of membership in the first rounds (why members leave?).
+  * Set an order of priority between the next task to complete.
+
+## Work for the next week
+
+  * Modify the __concession map__ document.
+  * Finish reading _Traders and diplomats_.
+  * Create more documents like the ones for Haiti and Australia.
+  * Study membership: explain the evolution of membership.
+  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
+
+
+---
+title: "Summary of the 04.01.2015 session"
+author: "Benjamin Heyries"
+date: "Wednesday, April 01, 2015"
+output: html_document
+---
+
+## Work done this week
+
+  * Gather and classified the official admission date at the GATT
+  * Correct the document on documentation. 
+  * Start digitize the concession documents.
+  * Continue reading __Traders and Diplomats__
+  
+## Content of the session
+  
+  * The membership issue: the messiness of the admission problem requests some help. Some of the main interrogations are: negotiating countries that are not in the GATT yet, leaving countries with GATT agreements, actual participants in the different rounds.
+  * The book: it is really useful to determine what data we will have access (list of exceptions to the linear tariff cut). It also cast a doubt on the position of non-GATT member status.
+  * The digitization of the concession documents: it takes more time than forecast. Be patient and keep going.
+
+## Work for the next week
+
+  * Finish reading _Traders and diplomats_.
+  * Create more digitized concession documents.
+  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
+
+
+--- 
+Title: "Summary of the 04.09.2015 session"
+author: "Benjamin Heyries"
+date: "Thursday, April 09, 2015"
+output: html_document
+---
+
+## Work done this week
+ 
+  * Digitize the Benelux concession documents.
+  * Finished reading __Traders and Diplomats__.
+  
+## Content of the session
+  
+  * R problem: the data does not seem to fit well. To be confirmed when the document will be over.
+  * The organization of the work: the next step for the digitization process.
+  * The need to review some documents: concession documents (7 digits code) and the concession map document (UK Geneva 1)
+
+## Work for the next week
+
+  * Summarize _Traders and diplomats_.
+  * Finish the Benelux concession document and Create more alike documents for Geneva 1.
+  * Correct the document according to the remarks made in the session.
+  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
+
+
+---
+title: "Summary of the 04.15.15 session"
+author: "Benjamin Heyries"
+date: "Thursday, April 15, 2015"
+output: html_document
+---
+
+## Work done this week
+ 
+  * Finish digitizing the Benelux concession document.
+  * Correct Brazil document.
+  * Correct summary of the week
+  
+## Content of the session
+  
+  * R problem: the data still does not seem to fit well even after correction of the typos.
+  * The organization of the work: read two more books on negotiation process (to solve renegotiation and membership problem for example) and try to digitize as much documents as possible.
+  * The need to review some documents: concession documents for Australia (7 digits code).
+  * Add some recommendations for future user of the data in the document on documentation.
+
+## Work for the next week
+
+  * Summarize _Traders and diplomats_.
+  * Read _Tariff negotiations and renegotiations under the GATT and the WTO_ by Anwarul Hoda.
+  * Create more alike tariff concession documents for Geneva 1.
+  * Correct the concession documents in order to standardize them and make them exploitable.
+  * Correct the concession map document for the UK Geneva 1.
+  * Add the products that are the object of complaints at the GATT session with the USA as defendant in the industry list.
+
+
+---
+title: "Summary of the 04.21.15 session"
+author: "Benjamin Heyries"
+date: "Thursday, April 22, 2015"
+output: html_document
+---
+
+## Work done this week
+ 
+
+  * Corrected the Benelux concession documents.
+  * Corrected the Australia concession documents.
+  * Finished reading _Tariff negotiations and renegotiations under the WTO_.
+  
+## Content of the session
+  
+  * R problem: the document should be treated differently. It will be done under the text editor and read through read.delim.
+  * Data analysis: the data should take into account the data on the document rather than a computed data. The calculation of the concession would be done through R. Moreover, in order to limit the text format of the data a new column would be created to indicate the units.
+  * Hoda's book: membership, base rate, renegotiations and supplementary negotiations at the GATT (the participation issue).
+
+## Work for the next week
+
+  * Summarize _Traders and diplomats_ and  _Tariff negotiations and renegotiations under the WTO_.
+  * Add the products that are recorded in the complaints at the GATT session with the USA as defendant in the industry list.
+  * The need to review some documents: concession documents (7 digits code).
+  * Modify the input documents according to the remarks made during the session.
+
+
+---
+title: "Summary of the 04.15.15 session"    (Repository Title say date is 4/29/2015, but dates in document don't match for some reason)
+author: "Benjamin Heyries"
+date: "Thursday, April 09, 2015"
+output: html_document
+---
+
+## Work done this week
+ 
+  * Correct the documents on text.
+  * Start summarize the books.
+  
+## Content of the session
+  
+  * R problem: The data is fixed in the text documents. Everything works fine.
+  * The organization of the work: summarize two more books on negotiation process (to solve renegotiation and membership problem for example) and try to digitize as much documents as possible.
+  * The need to review some documents: add the old and new tariff lines as reported in the document.
+  * Add some recommendations for future user of the data in the document on documentation.
+
+## Work for the next week
+
+  * Summarize _Traders and diplomats_ and  _Tariff negotiations and renegotiations under the GATT and the WTO_ by Anwarul Hoda.
+  * Create more alike tariff concession documents for Geneva 1.
+  * Correct the concession documents as said in the content of the session.
+
+
+---
+title: "Summary of the 05.06.15 session"
+author: "Benjamin Heyries"
+date: "Wednesday, May 6, 2015"
+output: html_document
+---
+
+## Work done this week
+ 
+  * Finished summarizing  _Tariff negotiations and renegotiations under the WTO_.
+  * Finished summarizing  _Traders and diplomats_.
+  
+## Content of the session
+  
+  * Correction and precision on the two summaries.
+  * Set the last goal of the semester: consolidate the acquired knowledge and polish the result. 
+
+## Work for the next week
+
+  * Correct the summaries according to the remarks made during the session
+  * Create a protocol for the digitalization.
+  * Summarize the important elements that may be useful for the next steps of the study.
