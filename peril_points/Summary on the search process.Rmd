@@ -1,0 +1,18 @@
+---
+title: "Summary on the search process"
+author: "Hoang Pham"
+date: "February 13, 2017"
+output: html_document
+---
+
+-	The public notices from Federal Registers (FD) match the records in the little document namely "Investigation under peril point provision" for period from June 1948 to June 1962. One note is that the dates on this document is slightly different from the date these notices were published on FD due to time lags (normally one or two days). Therefore, in searching for these documents, we should take this into account.
+
+-	The specific links to FD, as I have mentioned before, is in Library of Congress website. One example of the document is in the link below:
+https://www.loc.gov/item/fr013218/
+
+-	I started searching for this kind of documents and collecting them. My strategy was as follow: search for "interdepartmental committee on trade agreement" by year, then collect (save) all of the search results. The documents were already named in order of their volume and issue numbers, so no need for adjustment, yet I added the date into their pdf names anyway. After that I looked into all the documents, search (within) "interdepartmental", "tariff", "peril point" to find out some traces and eliminate all that were irrelevant, and extract the pages with important information in each FD. These pages are all contained in the shared dropbox folder and classified by years.
+
+-	I found out some more important information in which **the Committee for Reciprocity Information** and **the US Tariff Commission** played important roles. Their announcements, most of the times, went together with the announcements from **the Interdepartmental Committee on Trade Agreements** in each FD. This was described in the extracted documents **Executive Order 10004** from FD on Oct 7th, 1948. Additional adjustment was made in **Executive Order 10082** from FD on Oct 7th, 1949. After I read these executive order, it's clear that **the exact peril point results were confidential and not made available for public references**.
+
+-	I was only able to have enough time to collect the data on the investigations for Annecy round in 1948. The structure of data is as we have discussed.
+

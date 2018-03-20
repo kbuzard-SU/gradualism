@@ -1,0 +1,15 @@
+---
+title: "TAA and Its Role in US Trade Policy (CRS report 2011)"
+author: "Hoang Pham"
+date: "August 10, 2016"
+output: html_document
+---
+This is a summary of a CRS report for Congress in 2011 about history of the Trade Adjustment Assistance (TAA) since its beginning in 1962 and how TAA have affected U.S trade policy until today.
+
+-	National Gains to trade have long been recognized, yet related costs, though much smaller, affect a vocal and concentrated constituency
+-	4 TAA programs: 1962, 1974 (communities program), 1982 (terminated the communities program), 2000 (added a farmers' program), 2009 (another communities program) ??? see other CRS reports
+-	Hardship on some import-competing industries facing increased competition ??? see "Uneven gains and unbalanced burdens" for comprehensive summary
+-	Different types of economic dislocation by freer trade?
+-	Interesting point: "while there are no categorical federal programs to address casualties of many types of specific economic change resulting from technological innovation, evolved consumer tastes, or regional relocation of businesses, there has long been a case made for supporting trade adjustment policies".
+-	Strongest case for TAA is its potential political effect.
+-	The whole article demonstrates the idea that TAA is more or less a tool to gain political consensus on free trade (especially, to achieve presidential authority towards free trade). TAA has been generally ineffective in serving its main goal: help workers and firms adjust to dislocation that may be caused by increased trade liberalization. (see highlighted and underlined notes in the article)
