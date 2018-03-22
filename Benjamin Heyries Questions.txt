@@ -1,0 +1,43 @@
+Questions Raised
+
+Regarding Books:
+
+-Politics and Trade Policy by Joe R. Wilkerson-
+  * there is not much about the trade agreements themselves but rather on how they are negotiated. The trade agreement act is about giving more power to the president to negotiate reciprocal agreements. I should look closer to the arguments in favor and against this new power.
+  * the technical aspect are not that important: what amount of tariffs is bilaterally removed does not really matter but rather how and why does the agreement can be accepted.
+  * the structure of the American politics does not allow to directly observe all the steps of the formation of the trade agreement: only one trade agreement was rejected by Congress because all the agreements that were put to vote were acceptable at the time of the voting. THe formation of the agreement is shaped the expected lobbying by the concerned industries and the expected comportment of the COngress. Therefore, in order to define a pattern, we need to find more than only voting results.In order to do that, it may be important to see the formation of the agenda.
+
+-The GATT Legal System and World Trade Diplomacy by: Robert Hudec
+ * Questions about the book (difference between quotas and quantitative restriction, form of the summary, formalization of some rules of the game or markers like the escape clause, the ratification of the agreement or the observation of the delay of ratification).
+
+-Other-
+  * Discussion on the article of Bagwell and Staiger: more study is necessary to explain how reciprocity interact with the MFN status in order to limit bargaining externalities.
+
+
+
+General Questions:
+
+-Long Run Objectives-
+ * who determines the agenda during the GATT rounds?
+ * Is there any particular exploitable industry that would stand out and be only concerned by changes on tariffs during those rounds?
+ * The objective has to be clarified. Once the work of the WTO repertory is done, it is important to find the detail agenda of the tariff modification, the cause of settling this agenda and finally the result of it, which is the nature of gradualism.
+ * some phenomena are to be evaluated in the gradualism story: logrolling, export VS import fight, anti-dumping process.
+
+-TAA Questions-
+ * Key questions about the background of tariff negotiation: what is the pattern in the adoption of the TAA? How does the opposition of the TAA change through time? Do we see some sectors put out of the tariff negotiation?
+ * some questions need to answered in order to define the  role of the TAA in the definition of the background of the model:
+      * Is the TAA relevant in multilateral negotiations like the GATT? Is the extension of the TAA linked to the negotiation at the GATT? If yes, how? 
+      * How does the TAA exactly condition the president action when negotiating? Does it have any resemblance with the fast-track procedures in the 2000s? What are some examples of the parameters the TAA authorized the president to negotiate within?
+      * What is the exact pattern of the tariffs in force for the different industries? Do we observe a decrease linked of the general level coupled with a carving out action regarding strategic industries or industries supported by big lobbies? 
+        ** Researched on the questions of the last session: the exact function of the TAA (it is alike fast track system); the TAA may apply in GATT as it allows the president to negotiate tariff levels; the relation between the formation of the GATT and the TAA is still unclear but a strong resemblance in their amendments points at an existing correlation between the two. For example, the introduction of the escape clause in the ITO charter in 1945 after stiff negotiations happens at the same time as the setting of an escape clause in the TAA in the extensions of 1945 and 1948.
+
+
+-GATT/Round Questions-
+ * Assessment of the work done: corrections have to be done (modify information on the __concession map__, make the difference between no agreement and no negotiations).
+ * Research for more information on the next rounds: Dillon, Kennedy and Tokyo. It seems that information is harder to find than it seems.
+ * Interrogation on the evolution of membership in the first rounds (why members leave?).
+
+ * Study membership: explain the evolution of membership.
+           (From next entry)
+  * The membership issue: the messiness of the admission problem requests some help. Some of the main interrogations are: negotiating countries that are not in the GATT yet, leaving countries with GATT agreements, actual participants in the different rounds.
+  * The book: it is really useful to determine what data we will have access (list of exceptions to the linear tariff cut). It also cast a doubt on the position of non-GATT member status.

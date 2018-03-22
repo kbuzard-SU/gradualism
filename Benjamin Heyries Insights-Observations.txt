@@ -1,0 +1,26 @@
+Leads/Data Insights
+
+
+ * Some leads to research on: the major supplier rule associated with the most favored nation status against bilateral negotiations; the transition of the EEC from separated contracting parties to a single one; the Schelling prize speech on the effect of the executive negotiating; 
+  * Made some research on some important details: the major supplier rule associated with the most favored nation status against bilateral negotiations; the transition of the EEC from separated contracting parties to a single one; the Schelling prize speech on the effect of the executive negotiating.
+The "principal supplier rule" is a way to prevent free riding by giving to members the possibility to ask for tariff concessions on their exports. It is also applied when contracting parties can revise their concessions (every three years starting in 1958).
+The EEC members negotiate as a single entity as soon as the Dillon round. Meanwhile, the ECSC also negotiates as a single entity at the Geneva Round, the Dillon Round and the Kennedy Round. The links between the two are nebulous as the same countries participate in the two institutions. Apparently, the ECSC only negotiates tariff concessions on products in relation with mining and steel industries whereas the EEC negotiates for other types of product. However, it is not clear if the EEC can supersedes the ECSC authority and negotiates tariff concessions on mining and steel industries products.
+Finally the Schelling bargaining theory on executive power is a conjecture about the interactions between domestic policies and international negotiations. It assumes that if the domestic legislator does not renounce to its power of amendment, the foreign negotiator may walk out of the negotiation table.
+
+
+ * The procedure for gathering the data: take the concession of the US toward a developed country and a developing country that would be present during the different round. Two possibilities: Brazil and Australia. This will be a one-way concession in order to keep the model simple. 
+
+ * Discussion on the leads and the other necessary research: it may be useful to look at Putnam theory on "two-level" games. 
+ * Discussion on the data: how to better gather it and how to better organize it. It is necessary to define the nature of the general concession of the United States. Is it a document that gathers all the tariff concession done to the different countries or is it the result of independent multilateral negotiations? It is also necessary to add the absolute value to the table and to construct a data frame in order to have a centralized table.
+
+ * The problem of the consolidated lists: it is unclear if the actual list matches the different bilateral agreements. The mention of preferential agreements in the WTO documents does not allow us to conclude that they exactly match. Further work is needed.
+  * Defined definitively the status of the document of the type "Consolidated List of tariff concessions". They are not the definitive agreements on tariffs but all the concession offers and requests before the negotiations. Therefore, in the case of this study and at this stage, they are not directly relevant. 
+
+Regaring GATT:
+ * Adding the complaint of the GATT to the industry list may be more relevant when the USA are the defendant. Indeed, the complaints may target protectionist malpractices, which reveals the action of some domestic private interests.
+ * The informative document is not done properly. It has to deal with the product not the source. It aims at explaining our choices on the way we treated data.
+ * It is not clear how much bilateral agreements were signed during the GATT round at our disposal. As a consequence, the width of the data set is not clearly defined. 
+ * Some uncertainties remains about how we should treat the data in the GATT document. Indeed, they may be subject to change at the ratification level. Qualitative sources may confirm their validity.  
+
+ * Map the data: determine how many agreements have been signed between the USA and other contracting parties.
+  * Map the data: determine how many agreements have been signed between the USA and other contracting parties. Creation of the document __"Concession map"__.
