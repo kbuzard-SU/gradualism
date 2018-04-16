@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+\addtolength{\textwidth}{.6in}
+\addtolength{\oddsidemargin}{-.3in}
+\setlength{\textheight}{8.4in}
+\setlength{\topmargin}{-.25in}
+\setlength{\headheight}{0.0in}
+\renewcommand{\baselinestretch}{1.0}
+\linespread{1.15}
+
+\usepackage{cite}
+\usepackage{times, verbatim,xcolor,bm}
+\usepackage{amsbsy,amssymb, amsmath, amsthm}
+\usepackage{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{assumption}{Assumption}
+\newtheorem{fact}{Fact}
+
+\newcommand{\ve}{\varepsilon}
+\newcommand{\ov}{\overline}
+\newcommand{\un}{\underline}
+\newcommand{\ta}{\theta}
+\newcommand{\Ta}{\Theta}
+\newcommand{\expect}{\mathbb{E}}
+
+\begin{document}
+\title{\vskip-0.6in Gradualism Bellman Equation and Value Function}
+\author{ECN 490}
+\date{\today}
+\maketitle
+
+\title{Lobby}
+\[
+\max_{m^t,l^t} \sum_{t=1}^\infty \beta^{t-1}\left\{A(m_t)F^\alpha\cdot l^{1-\alpha}_t\cdot P^W-l_t-(1-\delta)\mu_t
+  \right\} \hskip.2in \text{s.t.} \hskip.2in  m_{t+1}=m_{t}+\mu_t
+\]
+\begin{center}\text{So} $\mu_t=m_{t+1}-m_{t}$\end{center}
+
+\title{Bellman Equation}
+\[
+  V_l(m_t)=\max_{m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\cdot P^W-l_t-(m_{t+1}-(1-\delta)m_t)+\beta V_l(m_{t+1})
+  \right\} \hskip.2in 
+\]
+\begin{center}\text{In the optimal stage} $m_t=m_t^\ast=m^\ast_{t+1}$\end{center}
+\title{Value Function}
+\[
+  V_l(m_{t+1}^\ast)=\left\{A(m_{t+1}^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-l_t^\ast-(m^\ast_{t+1}-(1-\delta)m^\ast_{t+1})+\beta V_l(m^\ast_{t+1})
+ \right\} \hskip.2in
+\]
+\begin{center}\title{Which implies that}\end{center}
+\[V_l(m_{t+1}^\ast)=\frac{1}{1-\beta}[A(m_{t+1}^\ast)\cdot F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-\delta(m^\ast_{t+1})]\]
+\begin{center}\text{So}\end{center}
+\[
+  V_l(m_t)=A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\cdot P^W-l_t-(m^\ast_{t+1}-(1-\delta)m_t)+\frac{\beta}{1-\beta}[A(m_{t+1}^\ast)\cdot F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-\delta(m^\ast_{t+1})] 
+\]
+\title{FOCs}
+\[\frac{\partial V_L}{\partial m_t}=\frac{\partial A(m_t)}{\partial m_t} \cdot F^\alpha \cdot l^{1-\alpha}_t \cdot P^W-\delta+\frac{\beta}{1-\beta}[A(m_{t+1})\cdot F^\alpha\cdot (l_t)^{1-\alpha}\cdot P^W-\delta(m_{t+1})]=1
+\]
+\[
+\frac{\partial V_L}{\partial l_t}= (1-\alpha) \cdot A(m_t) \cdot F^\alpha \cdot l^{-\alpha} \cdot P^W =1
+\]
+\[
+t=\text{this period}
+\]
+\[
+t+1=\text{next period}
+\]
+\[
+\beta=\text{discount factor}
+\]
+\[
+\delta=\text{deprecation factor}
+\]
+
+\end{document}
