@@ -66,40 +66,50 @@ t+1=\text{next period}
 l=\text{lobby}
 \]
 
-\section{No Government / Lobbying Effort}
+\section{No Government / Lobbying Effort, Technology Depreciates}
 \title{Lobby}
 \[
 \max_{m^t,l^t} \sum_{t=1}^\infty \beta^{t-1}\left\{A(m_t)F^\alpha\cdot l^{1-\alpha}_t\cdot P^W-l_t-\mu_t
-  \right\} \hskip.2in \text{s.t.} \hskip.2in  m_t=m_{t-1}+\mu_t
+  \right\} \hskip.2in \text{s.t.} \hskip.2in  m_{t+1}=(1-\delta)m_{t}+\mu_t
 \]
+\begin{center}\text{So} $\mu_t=m_{t+1}-(1-\delta)m_{t}$\end{center}
 
- 
 \title{Bellman Equation}
 \[
-  V_l(m_t)=\max_{m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\cdot P^W-l_t-(m_t-m_{t-1})+\beta V_l(m_{t+1})
+  V_l(m_t)=\max_{m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\cdot P^W-l_t-(m_{t+1}-(1-\delta)m_t)+\beta V_l(m_{t+1})
   \right\} \hskip.2in 
 \]
+\begin{center}\text{In the optimal stage} $m_t=m_t^\ast=m^\ast_{t+1}$\end{center}
 \title{Value Function}
 \[
-  V_l(e_t^\ast,m_t^\ast)=\left\{A(m_t^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-l_t^\ast-(m^\ast_t-m_{t-1})+\beta V_l(m^\ast_{t+1})
-  \right\} \hskip.2in
+  V_l(m_{t+1}^\ast)=\left\{A(m_{t+1}^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-l_t^\ast-(m^\ast_{t+1}-(1-\delta)m^\ast_{t+1})+\beta V_l(m^\ast_{t+1})
+ \right\} \hskip.2in
 \]
+\begin{center}\title{Which implies that}\end{center}
+\[V_l(m_{t+1}^\ast)=\frac{1}{1-\beta}\left[ A(m_{t+1}^\ast)\cdot F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-l^\ast_t-\delta(m^\ast_{t+1})\right]\]
+ 
 \title{FOCs}
-\[\dfrac{\delta V_L}{\delta m_t^\ast}=\dfrac{\delta A}{\delta m^\ast_t} \cdot F^\alpha \cdot l^{1-\alpha}_t \cdot P^W +\beta [\dfrac{\delta V_L(m_{t+1^\ast})}{\delta(m_{t+1^\ast})} \cdot 1] =1
-\hskip.2in
+
+\[\frac{\partial V_l(m^\ast_{t+1})}{\partial m^\ast_{t+1}}=\frac{1}{1-\beta}\cdot \left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W-\delta\right]
+\]
+\[\frac{\partial V_l}{\partial m_t}=\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W+\frac{\beta}{1-\beta}\cdot \left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W-\delta\right]\cdot(1-\delta)=\delta
 \]
 \[
-\dfrac{\delta V_L}{\delta \mu_t}=\dfrac{d^A}{dM_t} \cdot \dfrac{dM_t}{d\mu_t} \cdot F^\alpha \cdot l_t^{1-\alpha} \cdot P^W + \beta[\dfrac{\delta V_L(m_{t+1})}{\delta(m_{t+1})} \cdot 1] =1
-\hskip.2in 
+\frac{\partial V_L}{\partial l_t}= (1-\alpha) A(m^\ast_t) \cdot F^\alpha \cdot l^{-\alpha} \cdot P^W =1
 \]
 \[
-\dfrac{\delta V_L}{\delta l_t}= (1-\alpha) A(m_{t-1}+\mu_t) \cdot F^\alpha \cdot 1^{-\alpha} \cdot P^W =1
-\hskip.2in 
+\text{rearrange}\ l^{\ast 1-\alpha}_t: (1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W=l^{\ast \alpha}_t
 \]
 \[
-\dfrac{\dfrac{\delta A}{\delta m_t} \cdot l^t}{(1-\alpha) A(m_{t+1}+\mu_t)} +\beta \dfrac{\delta V_L (m_{t+1})}{\delta m_{t+1}} =1
-\hskip.2in
+\text{square}\left(\frac{1-\alpha}{\alpha}\right)\text{on both sides}=\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}= l^{\ast 1-\alpha}_t 
 \]
+\begin{flushleft}
+Euler Equation:
+\end{flushleft}
+\begin{multline}
+\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}+ \
+\frac{\beta}{1-\beta}\cdot (1-\delta)\\\cdot\left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha\cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha\cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W-\delta\right]=\delta
+\end{multline}
 \[
 t=\text{this period}
 \]
@@ -110,7 +120,11 @@ t+1=\text{next period}
 \beta=\text{discount factor}
 \]
 \[
+\delta=\text{depreciation rate}
+\]
+\[
 l=\text{lobby}
 \]
-note: 1 comes from $\dfrac{\delta m_{t+1}}{\delta \mu}$
+
+
 \end{document}
