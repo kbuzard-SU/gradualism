@@ -7,6 +7,7 @@
 \setlength{\headheight}{0.0in}
 \renewcommand{\baselinestretch}{1.0}
 \linespread{1.15}
+\pagenumbering{gobble}
 
 \usepackage{cite}
 \usepackage{times, verbatim,xcolor,bm}
@@ -106,10 +107,28 @@ l=\text{lobby}
 \begin{flushleft}
 Euler Equation:
 \end{flushleft}
-\begin{multline}
-\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}+ \
+\begin{multline} 
+\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W +\
 \frac{\beta}{1-\beta}\cdot (1-\delta)\\\cdot\left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha\cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha\cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W-\delta\right]=\delta
 \end{multline}
+\begin{flushleft}
+Simplified Euler Equation:
+\end{flushleft}
+\begin{center}
+\text{Set}$\left[\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha\cdot P^W\right]=\Pi$\ \text{and Set}$\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}=Z$\\
+\text{Then}\ $\Pi +Z+\frac{\beta}{1-\beta}\cdot (1-\delta)\cdot \Pi\cdot Z-\frac{\beta}{1-\beta}\cdot (1-\delta)\cdot \delta=\delta$ \\
+$\Pi\cdot Z \left[1+\frac{\beta}{1-\beta}\cdot (1-\delta)\right]=\delta +\left[\frac{\beta}{1-\beta}\cdot (1-\delta)\right]$\\
+$\Pi\cdot Z\left(\frac{1-\beta+\beta-\beta\delta}{1-\beta}\right)=\frac{\delta(1-\beta)}{1-\beta}+\frac{\beta\delta-\beta\delta^2}{1-\beta}$\\$\Pi\cdot Z\left(\frac{1-\beta\delta}{1-\beta}\right)=\frac{\delta-\beta\delta^2}{1-\beta}$\\
+$\Pi\cdot Z=\frac{\delta(1-\beta\delta)}{1-\beta}\cdot\frac{1-\beta}{1-\beta\delta}$\\
+$\Pi\cdot Z=\delta$
+\end{center}
+\begin{flushleft}
+Change$\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}$\ \text{to}\ $\left[(1-\delta)^\frac{1-\alpha}{\alpha}\cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}\cdot F^{1-\alpha}\cdot P^{\frac{W-W\alpha}{\alpha}}\right]$
+\end{flushleft}
+\begin{center}
+$\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F \cdot P^{\frac{W}{\alpha}}\cdot(1-\delta)^\frac{1-\alpha}{\alpha}\cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}=\delta$\\
+$\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}=\frac{\delta}{(1-\delta)^{\frac{1-\alpha}{\alpha}}\cdot F\cdot P^{\frac{W}{\alpha}}}$
+\end{center}
 \[
 t=\text{this period}
 \]
@@ -125,6 +144,7 @@ t+1=\text{next period}
 \[
 l=\text{lobby}
 \]
+
 
 
 \end{document}
