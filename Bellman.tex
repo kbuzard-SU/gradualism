@@ -1,268 +1,153 @@
 \documentclass[12pt]{article}
 
-
-
 \addtolength{\textwidth}{.6in}
-
 \addtolength{\oddsidemargin}{-.3in}
-
 \setlength{\textheight}{8.4in}
-
 \setlength{\topmargin}{-.25in}
-
 \setlength{\headheight}{0.0in}
-
 \renewcommand{\baselinestretch}{1.0}
-
 \linespread{1.15}
-
 \pagenumbering{gobble}
 
-
-
 \usepackage{cite}
-
 \usepackage{times, verbatim,xcolor,bm}
-
 \usepackage{amsbsy,amssymb, amsmath, amsthm}
-
 \usepackage{hyperref}
 
-
-
 \newtheorem{definition}{Definition}
-
 \newtheorem{theorem}{Theorem}
-
 \newtheorem{lemma}{Lemma}
-
 \newtheorem{corollary}{Corollary}
-
 \newtheorem{assumption}{Assumption}
-
 \newtheorem{fact}{Fact}
 
-
-
 \newcommand{\ve}{\varepsilon}
-
 \newcommand{\ov}{\overline}
-
 \newcommand{\un}{\underline}
-
 \newcommand{\ta}{\theta}
-
 \newcommand{\Ta}{\Theta}
-
 \newcommand{\expect}{\mathbb{E}}
 
-
-
 \begin{document}
-
 \title{\vskip-0.6in Gradualism}
-
 \author{ECN 490}
-
-\date{May 1, 2018}
-
+\date{\today}
 \maketitle
 
 
-
 \section{Original Model with Government / Lobbying Effort}
-
 \title{Lobby}
-\begin{equation}
-\begin{aligned}
-\max_{e^t,m^t,l^t} \sum_{t=1}^\infty \beta^{t-1}\left\{A(m_t)F^\alpha\cdot l^{1-\alpha}_t\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t-\mu_t-e_t\right\}\\
-\text{s.t.} \hspace{5pt}  m_t=m_{t-1}+\mu_t\hskip.2in\\ 
-\end{aligned}
-\end{equation}
-
-\title{Bellman Equation}
-\begin{equation}
-\begin{aligned}
-V_l(e_t,m_t)=\max_{e_t,m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t-\mu_t-e_t+\beta V_l(e_{t+1},m_{m+t})\right\}\hskip.2in\\
-\end{aligned}
-\end{equation}
-
-\title{Value Function}
-\begin{equation}
-\begin{aligned}
-V_l(e_t^\ast,m_t^\ast)=\left\{A(m_t^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\left[P^W+\tau(\gamma(e_{t-1}^\ast))\right]-l_t^\ast-\mu_t^\ast-e_t^\ast+\beta V_l(e^\ast_{t+1},m^\ast_{t+1})\right\} \hskip.2in\\
-\end{aligned}
-\end{equation}
 \[
+\max_{e^t,m^t,l^t} \sum_{t=1}^\infty \beta^{t-1}\left\{A(m_t)F^\alpha\cdot l^{1-\alpha}_t\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t-\mu_t-e_t
+  \right\} \hskip.2in \text{s.t.} \hskip.2in  m_t=m_{t-1}+\mu_t
 \]
-\normalsize
-Where $e_t$ is the choice of lobbing effort at time t, $m_t$ the level of technology at time t, $\mu_t$ the level of investment in technology in period t,  $\beta_t$ the discount factor, $\tau(\gamma(e_{t-1}))$ represent the tarif level as a function of the lobbying effort in the previous period. We use a Cobb-Douglas for the production function of the firm the lobbyst is representing in which $A(m_t)$ determines the level of technology in the production process, $F^\alpha$ is the amount of the fixed factor, $l_t$ the labor at time t and $P^W$ is the world price. 
-\vskip.2in
 
+ 
+\title{Bellman Equation}
+\[
+  V_l(e_t,m_t)=\max_{e_t,m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t-\mu_t-e_t+\beta V_l(e_{t+1},m_{m+t}
+  \right\} \hskip.2in 
+\]
+\title{Value Function}
+\[
+  V_l(e_t^\ast,m_t^\ast)=\left\{A(m_t^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\left[P^W+\tau(\gamma(e_{t-1}^\ast))\right]-l_t^\ast-\mu_t^\ast-e_t^\ast+\beta V_l(e^\ast_{t+1},m^\ast_{t+1})
+  \right\} \hskip.2in
+\]
+
+\[
+t=\text{this period}
+\]
+\[
+t+1=\text{next period}
+\]
+\[
+\beta=\text{discount factor}
+\]
+\[
+l=\text{lobby}
+\]
 
 \section{No Government / Lobbying Effort, Technology Depreciates}
-
 \title{Lobby}
-
-\begin{equation}
-\begin{aligned}
-\max_{m^t,l^t} \sum_{t=1}^\infty \beta^{t-1}\left\{A(m_t)F^\alpha\cdot l^{1-\alpha}_t\cdot P^W-l_t-\mu_t\right\}\\ 
-\text{s.t.} \hskip.2in  m_{t+1}=(1-\delta)m_{t}+\mu_t\\
-\end{aligned}
-\end{equation}
 \[
+\max_{m^t,l^t} \sum_{t=1}^\infty \beta^{t-1}\left\{A(m_t)F^\alpha\cdot l^{1-\alpha}_t\cdot P^W-l_t-\mu_t
+  \right\} \hskip.2in \text{s.t.} \hskip.2in  m_{t+1}=(1-\delta)m_{t}+\mu_t
 \]
-\normalsize
-By rearranging the law of motion equation and then replacing it in the Bellman Equation
-\begin{equation}
-\begin{aligned}
-\mu_t=m_{t+1}-(1-\delta)m_{t}\\
-\end{aligned}
-\end{equation}
+\begin{center}\text{So} $\mu_t=m_{t+1}-(1-\delta)m_{t}$\end{center}
 
 \title{Bellman Equation}
-\begin{equation}
-\begin{aligned}
- V_l(m_t)=\max_{m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\cdot P^W-l_t-(m_{t+1}-(1-\delta)m_t)+\beta V_l(m_{t+1})\right\} \hskip.2in 
-\end{aligned}
-\end{equation}
-
-\normalsize
-At the Lobby's optimum, we have that
-\begin{equation}
-\begin{aligned}
-m_t=m_t^\ast=m^\ast_{t+1}\\
-\end{aligned}
-\end{equation}
-
+\[
+  V_l(m_t)=\max_{m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\cdot P^W-l_t-(m_{t+1}-(1-\delta)m_t)+\beta V_l(m_{t+1})
+  \right\} \hskip.2in 
+\]
+\begin{center}\text{In the optimal stage} $m_t=m_t^\ast=m^\ast_{t+1}$\end{center}
 \title{Value Function}
-\begin{equation}
-\begin{aligned}
-V_l(m_{t+1}^\ast)=\left\{A(m_{t+1}^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-l_t^\ast-(m^\ast_{t+1}-(1-\delta)m^\ast_{t+1})+\beta V_l(m^\ast_{t+1})\right\} \hskip.2in
-\end{aligned}
-\end{equation}
-
-\normalsize
-Which implies that
-\begin{equation}
-\begin{aligned}
-V_l(m_{t+1}^\ast)=\frac{1}{1-\beta}\left[ A(m_{t+1}^\ast)\cdot F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-l^\ast_t-\delta(m^\ast_{t+1})\right]\
-\end{aligned}
-\end{equation}
-
-\normalsize
-By taking the First Order Conditions and reajusting terms
-\begin{equation}
-\begin{aligned}
-\frac{\partial V_l(m^\ast_{t+1})}{\partial m^\ast_{t+1}}=\frac{1}{1-\beta}\cdot \left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W-\delta\right]
-\end{aligned}
-\end{equation}
 \[
+  V_l(m_{t+1}^\ast)=\left\{A(m_{t+1}^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-l_t^\ast-(m^\ast_{t+1}-(1-\delta)m^\ast_{t+1})+\beta V_l(m^\ast_{t+1})
+ \right\} \hskip.2in
 \]
-\begin{equation}
-\begin{aligned}
-\frac{\partial V_l}{\partial m_t}=\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W+\frac{\beta}{1-\beta}\cdot \left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W-\delta\right]\cdot(1-\delta)=\delta\
-\end{aligned}
-\end{equation}
+\begin{center}\title{Which implies that}\end{center}
+\[V_l(m_{t+1}^\ast)=\frac{1}{1-\beta}\left[ A(m_{t+1}^\ast)\cdot F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-l^\ast_t-\delta(m^\ast_{t+1})\right]\]
+ 
+\title{FOCs}
+
+\[\frac{\partial V_l(m^\ast_{t+1})}{\partial m^\ast_{t+1}}=\frac{1}{1-\beta}\cdot \left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W-\delta\right]
+\]
+\[\frac{\partial V_l}{\partial m_t}=\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W+\frac{\beta}{1-\beta}\cdot \left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W-\delta\right]\cdot(1-\delta)=\delta
+\]
 \[
-\]
-\begin{equation}
-\begin{aligned}
 \frac{\partial V_L}{\partial l_t}= (1-\alpha) A(m^\ast_t) \cdot F^\alpha \cdot l^{-\alpha} \cdot P^W =1
-\end{aligned}
-\end{equation}
-\[
 \]
-\normalsize
-Rearrange $l^{\ast 1-\alpha}_t$ as:
-\begin{equation}
-\begin{aligned}
-(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W=l^{\ast \alpha}_t
-\end{aligned}
-\end{equation}
 \[
+\text{rearrange}\ l^{\ast 1-\alpha}_t: (1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W=l^{\ast \alpha}_t
 \]
-\normalsize
-Square to the power of $\frac{1-\alpha}{\alpha}$
-\begin{equation}
-\begin{aligned}
-\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}= l^{\ast 1-\alpha}_t 
-\end{aligned}
-\end{equation}
 \[
+\text{square}\left(\frac{1-\alpha}{\alpha}\right)\text{on both sides}=\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}= l^{\ast 1-\alpha}_t 
 \]
-\normalsize
+\begin{flushleft}
 Euler Equation:
-\begin{equation}
-\begin{aligned}
-\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W +\frac{\beta}{1-\beta}\cdot (1-\delta)\\\cdot\left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha\cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha\cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W-\delta\right]=\delta
-\end{aligned}
-\end{equation}
+\end{flushleft}
+\begin{multline} 
+\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W +\
+\frac{\beta}{1-\beta}\cdot (1-\delta)\\\cdot\left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha\cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha\cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W-\delta\right]=\delta
+\end{multline}
+\begin{flushleft}
+Simplified Euler Equation:
+\end{flushleft}
+\begin{center}
+\text{Set}$\left[\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha\cdot P^W\right]=\Pi$\ \text{and Set}$\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}=Z$\\
+\text{Then}\ $\Pi +Z+\frac{\beta}{1-\beta}\cdot (1-\delta)\cdot \Pi\cdot Z-\frac{\beta}{1-\beta}\cdot (1-\delta)\cdot \delta=\delta$ \\
+$\Pi\cdot Z \left[1+\frac{\beta}{1-\beta}\cdot (1-\delta)\right]=\delta +\left[\frac{\beta}{1-\beta}\cdot (1-\delta)\right]$\\
+$\Pi\cdot Z\left(\frac{1-\beta+\beta-\beta\delta}{1-\beta}\right)=\frac{\delta(1-\beta)}{1-\beta}+\frac{\beta\delta-\beta\delta^2}{1-\beta}$\\$\Pi\cdot Z\left(\frac{1-\beta\delta}{1-\beta}\right)=\frac{\delta-\beta\delta^2}{1-\beta}$\\
+$\Pi\cdot Z=\frac{\delta(1-\beta\delta)}{1-\beta}\cdot\frac{1-\beta}{1-\beta\delta}$\\
+$\Pi\cdot Z=\delta$
+\end{center}
+\begin{flushleft}
+Change$\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}$\ \text{to}\ $\left[(1-\delta)^\frac{1-\alpha}{\alpha}\cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}\cdot F^{1-\alpha}\cdot P^{W\frac{1-\alpha}{\alpha}}\right]$
+\end{flushleft}
 \[
-\]
-\normalsize
-In order to simplify the analysis, we define the next expessions as:
-\begin{equation}
-\begin{aligned}
-\frac{\partial A(m^\ast_t)}{\partial m^\ast_t}\cdot F^\alpha\cdot P^W=\Pi\text{   and   }\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}=Z
-\end{aligned}
-\end{equation}
-\[
-\]
-\normalsize
-Then we replace in the Euler Equation and rearrange terms
-\begin{equation}
-\begin{aligned}
-\Pi\ +Z+\frac{\beta}{1-\beta}\cdot (1-\delta)\cdot \Pi\cdot Z-\frac{\beta}{1-\beta}\cdot (1-\delta)\cdot \delta=\delta
-\end{aligned}
-\end{equation}
-\begin{equation}
-\begin{aligned}
-\Pi\cdot Z \left[1+\frac{\beta}{1-\beta}\cdot (1-\delta)\right]=\delta +\left[\frac{\beta}{1-\beta}\cdot (1-\delta)\right]
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-\Pi\cdot Z\left(\frac{1-\beta+\beta-\beta\delta}{1-\beta}\right)=\frac{\delta(1-\beta)}{1-\beta}+\frac{\beta\delta-\beta\delta^2}{1-\beta}
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-\Pi\cdot Z\left(\frac{1-\beta\delta}{1-\beta}\right)=\frac{\delta-\beta\delta^2}{1-\beta}
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-\Pi\cdot Z=\frac{\delta(1-\beta\delta)}{1-\beta}\cdot\frac{1-\beta}{1-\beta\delta}
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-\Pi\cdot Z=\delta
-\end{aligned}
-\end{equation}
-\normalsize
-Expand Z to $\left[(1-\delta)^\frac{1-\alpha}{\alpha}\cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}\cdot F^{1-\alpha}\cdot P^{W\frac{1-\alpha}{\alpha}}\right]$and replace Z and $\Pi$ in (22) 
-
-\begin{equation}
-\begin{aligned}
 \frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F \cdot P^{W\frac{1}{\alpha}}\cdot(1-\delta)^\frac{1-\alpha}{\alpha}\cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}=\delta
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}=\frac{\delta}{(1-\delta)^{\frac{1-\alpha}{\alpha}}\cdot F\cdot P^{W\frac{1}{\alpha}}}
-\end{aligned}
-\end{equation}
-\[
 \]
-\normalsize
-$\delta$= depreciation rate
+\[
+  \frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}=\frac{\delta}{(1-\delta)^{\frac{1-\alpha}{\alpha}}\cdot F\cdot P^{W\frac{1}{\alpha}}}
+\]
+
+\[
+t=\text{this period}
+\]
+\[
+t+1=\text{next period}
+\]
+\[
+\beta=\text{discount factor}
+\]
+\[
+\delta=\text{depreciation rate}
+\]
+\[
+l=\text{lobby}
+\]
+
 
 
 \end{document}
