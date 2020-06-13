@@ -1,0 +1,20 @@
+Units: =1 cents per pound, =2 cents per gallon, =3 dollars per pound, =4 cents per ounce, =5 dollars per ounce, =6 cents per square foot, =7 cents per ton, =8 dollar per ton
+
+Paragraph	Description	Specific	Units	AdValorem	Extra	Schedule
+
+501	Sugars, concrete and concentrated molasses, melada, concentrated melada, sirups of cane juice, and tank bottoms, testing by the polariscope not over 75 sugar degrees, and all mixtures containing sugar and water and testing by the polariscope over 50 but not over 75 sugar degrees	0.428125	1
+	and for each additional sugar degree shown by the polariscopic test	0.009375	1		additional, and fractions of a degree in proportion
+502	Molasses and sugar sirups, nspf: Containing soluble nonsugar solids (excluding any foreign substance that may have been added or de­veloped in the product) equal to more than 6% of the total soluble solids, and testing: Not over 48% total sugars	0.125	2
+	Over 48%, total sugars	0.1375	cents additional for each 1% of total sugars and fractions of 1% in proportion 
+	Other, testing: Not over 48% total sugars	0.135	2 
+	Over 48% total sugars	0.151	cents additional for each 1% of total sugars and fractions of 1% in proportion
+	Molasses not imported to be commercially used for the extraction of sugar or for human consumption	0.015	1		of total sugars
+503	Maple sirup	1.5	1
+	Maple sugar	2	1
+505	Adonite, arabinose, dextrose testing over 99.7%, d-tegatpse, d-talose, dulcite, galactose, inosite, inulin, lactose, mannite, mannose, melezitose, melibiose, raffinose, rham­nose, ribose, sorbite, xylose, and other saccharides (not including levulose or salicin)			25
+	Salicin			17.5
+506	Sugar candy and all confectionery nspf, valued per pound: Under 6 cents			20
+	6 cents or more			14
+
+
+

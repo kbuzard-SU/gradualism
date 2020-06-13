@@ -1,0 +1,83 @@
+---
+title: "Random Notes"
+author: "Ross Jestrab"
+date: "6/12/2020"
+output: html_document
+---
+
+## Overview
+
+This file covers notes I made when working on coding the United States import tariffs from the Tariff Act of 1930 and the first three GATT rounds (Geneva 1, Annecy, and Torquay).  
+
+## Tariff Act of 1930
+
+Act was imposed on June 18, 1930 (Irwin, RESTAT, 1998). It took one and a half years to get through Congress.
+
+The Tariff Act of 1930 (also known as the Smooth-Hawley Tariff Act) includes a list of products that had tariffs set by the United States government. Products are organized into paragraphs and paragraphs correspond with schedules, see below. A pdf copy of the act is available in the Admin folder ("Tariff Act of 1930" and "Tariff Act of 1930 cleaner" pdfs in "G:\\MAX-Filer\\Collab\\SOP-kbuzard-S13\\Admin").
+
+Schedule | Category | Paragraphs
+-------- | -------- | ----------
+1 | Chemicals, Oils, and Paints | 1 to 97
+2 | Earths, Earthenware, and Glassware | 201 to 236
+3 | Metals and Manufactures of | 301 to 398
+4 | Wood and Manufactures of | 401 to 412
+5 | Sugar, Molasses, and Manufactures of | 501 to 506
+6 | Tobacco and Manufactures of | 601 to 605
+7 | Agricultural Products and Provisions | 701 to 783
+8 | Spirits, Wines, and Other Beverages | 801 to 815
+9 | Cotton Manufactures | 901 to 924
+10 | Flax, Hemp, Jute, and Manufactures of | 1001 to 1022
+11 | Wool and Manufactures of | 1101 to 1122
+12 | Silk Manufactures | 1201 to 1211
+13 | Manufactures of Rayon or Other Synthetic Textile | 1301 to 1313
+14 | Papers and Books | 1401 to 1413
+15 | Sundries | 1501 to 1559
+16 | Title II - Free List | 1601 to 1814
+Note: There does not appear to be any Paragraphs in the 100s. I think this is due to the formatting of Schedule 1. In the Tariff Act of 1930 it lists Paragraphs 1 to 97, but I think it is really implying that these are Paragraphs 101 to 197.
+
+The citation of "Tariff Act of 1930 cleaner" pdf in "G:\\MAX-Filer\\Collab\\SOP-kbuzard-S13\\Admin" is the following:
+
+Accessed on 08/06/2019.
+
+Website: http://legisworks.org/sal/46/stats/STATUTE-46-Pg590.pdf
+
+Website created and maintained by: Joe Carmel.
+
+Part of the "Statutes at Large Project for Pre-1951 & Post-2010 Volumes (July 2014)".
+
+## Organizing Products
+
+The first 3 GATT rounds follow the Tariff Act of 1930 paragraphs for organizing the products. Most of the descriptions line up across these GATT rounds, but there are a few cases where they jump from specific products to more general descriptions (e.g. paragraphs 2, 5, and 23). After reading the descriptions and using the Tariff Act of 1930 pdf, I am able to figure out which products the tariffs correspond to (except for a few yellow highlighted lines in the excel files I need to check in more detail).
+
+Using the schedules from the Tariff Act of 1930 may be the most straightforward way to categorize the data for analysis, but they are wide categories. 
+
+Attempting to match the products to detailed HS codes is challenging and not straight forward. The United States International Trade Commission (USITC) publishes the Harmonized Tariff Schedule at the 10-digit level, see <https://hts.usitc.gov/current>. The main challenge when trying to match the products is the "level" of classification is not always the same. The HS 10-digit level is pretty detailed and specific, while the Tariff Act of 1930 descriptions can range from specific products to wide categories.
+
+GATT Round | Year | Product Organization | PDF in Admin Folder
+---------- | ---- | -------------------- | -------------------
+Geneva 1 | 1947 | Tariff Act of 1930 Paragraphs | Yes
+Annecy | 1949 | Tariff Act of 1930 Paragraphs | Yes
+Torquay | 1951 | Tariff Act of 1930 Paragraphs | Yes
+Geneva 2 | 1956 | Tariff Act of 1930 Paragraphs | Yes
+Dillon | 1960-1961 | Tariff Act of 1930 Paragraphs | Yes
+Kennedy | 1964-1967 | Tariff Item Number | Yes
+Tokyo | 1973-1979 | Unknown | No
+Uruguay | 1986-1994 | Unknown | No
+Note: It appears the Geneva 1 and Annecy files only list products that have new tariffs, while the Torquay file lists all the products that received new tariffs in all 3 rounds.
+
+## Related Literature
+
+* Pierce and Schott (Journal of Official Statistics, 2012) <http://www.justinrpierce.com/index_files/Pierce_Schott_JOS_2012.pdf> map HS 10-digit level changes over time for the United States. Their algorithm allows the researcher to control for the reclassification of goods, which aids in product level analysis (especially when comparing the extensive and intensive margins of trade). The United States Census provides documentation of which HS codes are changing each period (important). We do not have this type of documentation so it does not appear we can directly follow their method.
+
+* Pierce and Schott (NBER Working Paper, 2009) <https://www.nber.org/papers/w15548)> map HS 10-digit level codes to SIC and NAICS industries for the United States. They build on concordances that are already published by the U.S. Census to cover a larger time period. I could not find any concordances for going from the Tariff Act of 1930 to HS codes, but maybe the U.S. Census has something along these lines.
+
+* Irwin (RESTAT, 1998)
+This paper looks at the impact of the Smoot-Hawley tariff on U.S. trade and welfare. Erwin uses an ad valorem equivalent “average tariff” (tariff revenue as a share of dutiable imports) and not the actual Tariff Act of 1930. During this period many of the import tariffs are specific or specific plus ad valorem (U.S. Tariff Commission in 1925 calculates these cover 65% of dutiable imports). Since many of the tariffs are specific, the real burden of a tariff change is related to price fluctuations. For example, deflation will result in a rise in the tariff measure when holding the actual tariffs constant. 
+
+* Irwin (AER, 1998)
+This paper covers tariff movements over 1865 to 1967 in the U.S. and also uses the average ad valorem tariff rate (ratio of total revenue from import duties to the value of dutiable imports). It builds on the last point from above that price fluctuations affect the average ad valorem tariff rate measure. First, Irwin attempts to disentangle the degree to which changes in import prices and actual tariff rates have been responsible for movements in the average ad valorem tariff rate. This is done by regressing the average ad valorem tariff rate on the log of import price and dummy variables representing different periods of tariff legislation. After 1934, Irwin finds that import price inflation contributed much more to the decline in the tariff than trade agreements. Second, Irwin discusses the political process (Republicans vs. Democrats).
+
+Irwin does not calculate the average ad valorem tariff rates. The series is available from the U.S. Bureau of the Census, Department of Commerce (data citation included below). In the torquay folder ("G:\MAX-Filer\\Collab\\SOP-kbuzard-S13\\Admin\\torquay") I have included the page from the U.S. Census document ("US Census Average Ad Valorem Tariff Rates" pdf) that includes this series (see the two columns labeled 212).
+
+Data Source: 
+U.S. Bureau of the Census, Department of Commerce. Historical statistics of the United States, colonial times to 1970, Bicentennial Ed. Washington, DC: U.S. Government Printing Office, 1975.
