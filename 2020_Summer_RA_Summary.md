@@ -1,6 +1,6 @@
 # Summary
 
-## Softwares involved: Adobe Pro; Rstudio; Excel (VBA) 
+## Software involved: Adobe Pro; Rstudio; Excel (VBA) 
 
 ## Explanation of existing files.
 
