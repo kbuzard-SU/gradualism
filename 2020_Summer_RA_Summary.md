@@ -1,6 +1,13 @@
 # Summary
 
-## Software involved: Adobe Pro; Rstudio; Excel (VBA) 
+## Software involved: 
+Adobe Pro (version 20.012.20043);
+
+Rstudio (version 1.3.1073); 
+
+Excel (VBA) (16.0.13029 .20344).
+
+notes: most of the process can be achieved on the basic version of the software. However one specific tool that involved is that you need upgrade the adobe to pro version to use to crop tool to crop the original pdf files.
 
 ## Explanation of existing files.
 
@@ -30,6 +37,8 @@
 4. bounds of tax rate.
 
 ## Change of subparagraphs
+
+* Typical changes of the subparagraphs involve with the differentiation of percentage, value of size. For example for paragraph 370, in Geneva47 file, there is not specification of the value of the engine, but in Torquay file, there are two (three) subparagraphs setting different tax rate on engines of different value. Similar cases for other standards like size and percentage.  
 
 * The subparagraphs situations are documented under the column **"Extra"** too, and the mainly unsolved problem is that sometimes the paragraphs converge in the next round and sometime it diverge in the next round (Geneva -> Annecy -> Torquay). One potential solution is to extend the lines that diverge and put the uniform tax rate for all the branches.
 
