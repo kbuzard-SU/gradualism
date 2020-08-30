@@ -17,7 +17,7 @@ notes: most of the process can be achieved on the basic version of the software.
 
 * <font size=4>There are several paragraphs that are not very matched with the Geneva(Annecy) description, those files are listed in file ***"paragraphs"*** and painted with color in the ***"Schedules_1-15_units_changeds"***. Some of paragraphs are involved with a change of the unit across(within) rounds and they are all listed (they have been changed already, but if you want to trace them, they are listed in the file).</font>
 
-* <font size=4>I created a seperated folder called ***"UNTC_814"*** in the G:/drive, the 814 is the registration number of all the GATT files. The folder includes all the rounds files from the source of UN treaty collections. And follow the volume number, more related information can be found on the website. And other information related to the change of policy could be found in other volumes under the GATT project in UNTC.</font>
+* <font size=4>I created a seperated folder called ***"UNTC_814"*** in the G:/drive, the 814 is the registration number of all the GATT files. The folder includes all the rounds files from the source of UN treaty collections. And follow the volume number, more related information can be found on the website. And other information related to the change of policy could be found in other volumes under the GATT project in UNTC.The link for the website is <https://treaties.un.org/pages/AdvanceSearch.aspx?tab=UNTS&clang=_en>, select search for "treaty" and search on registration number 814.</font>
 
 ## The relationship between Annecy and Geneva (1947)
 
@@ -38,7 +38,7 @@ notes: most of the process can be achieved on the basic version of the software.
 
 ## Change of subparagraphs
 
-* Typical changes of the subparagraphs involve with the differentiation of percentage, value of size. For example for paragraph 370, in Geneva47 file, there is not specification of the value of the engine, but in Torquay file, there are two (three) subparagraphs setting different tax rate on engines of different value. Similar cases for other standards like size and percentage.  
+* Typical changes in the subparagraphs involve differentiation by percentage, value or size. For example for paragraph 370, in Geneva47 file, there is not specification of the value of the engine, but in Torquay file, there are two (three) subparagraphs setting different tax rate on engines of different value. Similar cases for other standards like size and percentage.  
 
 * The subparagraphs situations are documented under the column **"Extra"** too, and the mainly unsolved problem is that sometimes the paragraphs converge in the next round and sometime it diverge in the next round (Geneva -> Annecy -> Torquay). One potential solution is to extend the lines that diverge and put the uniform tax rate for all the branches.
 
@@ -48,7 +48,7 @@ notes: most of the process can be achieved on the basic version of the software.
 
 ## Special clarification
 
-* Some products have special properties that needs to be specifically specified, and usually these properties remain the same across different rounds.
+* Some products have special properties that needs to be specifically specified, and usually these properties remain the same across different rounds. For example 304, in the original file, it specifies some additional condition or detailed rules to followed when deal with the tax rate, so we documented them in the "EXTRA".
 
 ## Different description
 
@@ -88,7 +88,7 @@ In general, those paragraphs have been manually filled in and checked, but I am 
  
 ## File type
 
-* The default setting of the file is the TSV file, namely set TAB as default seperated values. The txt file run after the R code can then be converted into tsv file in EXCEL.
+* After run the R code contributed by Ross Jestrab (see codes details in Ross's report), we first manually reorganize the txt result (R code output). The default setting of the file should be the TSV file, namely to set TAB as default seperated values during the manual reorganization process. The TSV file is more convenient to process under EXCEL and Rstudio environment for further operation.
 
 ## Random notes on future work
 
