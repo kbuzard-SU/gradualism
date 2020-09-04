@@ -88,7 +88,7 @@ In general, those paragraphs have been manually filled in and checked, but I am 
  
 ## File type
 
-* After run the R code contributed by Ross Jestrab (see codes details in Ross's report), we first manually reorganize the txt result (R code output). The default setting of the file should be the TSV file, namely to set TAB as default seperated values during the manual reorganization process. The TSV file is more convenient to process under EXCEL and Rstudio environment for further operation.
+* After run the R code contributed by Ross Jestrab (see codes details in Ross's report "Coding-Torquay"), we first manually reorganize the txt result (R code output). The default setting of the file should be the TSV file, namely to set TAB as default seperated values during the manual reorganization process. The TSV file is more convenient to process under EXCEL and Rstudio environment for further operation.
 
 ## Random notes on future work
 
