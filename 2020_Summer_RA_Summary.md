@@ -1,5 +1,7 @@
 # Summary
 
+To-dos in <span style="color: red;">red</span>
+
 ## Software involved: 
 Adobe Pro (version 20.012.20043);
 
@@ -7,17 +9,17 @@ Rstudio (version 1.3.1073);
 
 Excel (VBA) (16.0.13029 .20344).
 
-notes: most of the process can be achieved on the basic version of the software. However one specific tool that involved is that you need upgrade the adobe to pro version to use to crop tool to crop the original pdf files.
+Note: most of the process can be achieved on the basic version of each software. However one specific tool in Adobe requires you upgrade to Adobe Pro: that is, to use to crop tool to crop the original pdf files.
 
 ## Explanation of existing files.
 
-* <font size=4>The digitization (so far) only covers the regular schedules (from schedule 1 to schedule 16). Among them schedule 1 to schedule 15 of Geneva (1947), Annecy and Torquay data have been coded in EXCEL file ***"Schedules_1-15_units_changed"***. For completeness, I maintain all the possible types of units that appear in the original pdf file. But as one can tell, some of the units are refering very close meanings, and if further simplification is needed, one can use EXCEL VBA or R to replace the certain units that you want. </font>
+* The digitization (so far) only covers the regular schedules (from schedule 1 to schedule 16). Among them schedule 1 to schedule 15 of Geneva (1947), Annecy and Torquay data have been coded in EXCEL file ***"Schedules_1-15_units_changed"***. For completeness, I maintain all the possible types of units that appear in the original pdf file. But as one can tell, some of the units are refering very close meanings, and if further simplification is needed, one can use EXCEL VBA or R to replace the certain units that you want.
 
-* <font size=4>For schedule 16, the free list has not been included in the above file. The main reason is that the tax rate are all zero and the relation between different rounds files is not clear now. Therefore all the the free list paragraphs are stored in another seperate file: ***"paragraphs"***, also an example list of Torquay free list is stored in file ***"Torquay_free_list"***. For now we put the duty rate of free list items in the specific tax rate column (namely, take the tax type as specific and tax rate as zero).</font>
+* For schedule 16, the free list has not been included in the above file. The main reason is that the tax rate are all zero and the relation between different rounds files is not clear now. Therefore all the the free list paragraphs are stored in another seperate file: ***"paragraphs"***, also an example list of Torquay free list is stored in file ***"Torquay_free_list"***. For now we put the duty rate of free list items in the specific tax rate column (namely, take the tax type as specific and tax rate as zero).
 
-* <font size=4>There are several paragraphs that are not very matched with the Geneva(Annecy) description, those files are listed in file ***"paragraphs"*** and painted with color in the ***"Schedules_1-15_units_changeds"***. Some of paragraphs are involved with a change of the unit across(within) rounds and they are all listed (they have been changed already, but if you want to trace them, they are listed in the file).</font>
+* There are several paragraphs that are not very matched with the Geneva(Annecy) description, those files are listed in file ***"paragraphs"*** and painted with color in the ***"Schedules_1-15_units_changeds"***. Some of paragraphs are involved with a change of the unit across(within) rounds and they are all listed (they have been changed already, but if you want to trace them, they are listed in the file).
 
-* <font size=4>I created a seperated folder called ***"UNTC_814"*** in the G:/drive, the 814 is the registration number of all the GATT files. The folder includes all the rounds files from the source of UN treaty collections. And follow the volume number, more related information can be found on the website. And other information related to the change of policy could be found in other volumes under the GATT project in UNTC.The link for the website is <https://treaties.un.org/pages/AdvanceSearch.aspx?tab=UNTS&clang=_en>, select search for "treaty" and search on registration number 814.</font>
+* I created a seperated folder called ***"UNTC_814"*** in the G:/drive, the 814 is the registration number of all the GATT files. The folder includes all the rounds files from the source of UN treaty collections. And follow the volume number, more related information can be found on the website. And other information related to the change of policy could be found in other volumes under the GATT project in UNTC.The link for the website is <https://treaties.un.org/pages/AdvanceSearch.aspx?tab=UNTS&clang=_en>, select search for "treaty" and search on registration number 814.
 
 ## The relationship between Annecy and Geneva (1947)
 
@@ -88,7 +90,18 @@ In general, those paragraphs have been manually filled in and checked, but I am 
  
 ## File type
 
-* After run the R code contributed by Ross Jestrab (see codes details in Ross's report "Coding-Torquay"), we first manually reorganize the txt result (R code output). The default setting of the file should be the TSV file, namely to set TAB as default seperated values during the manual reorganization process. The TSV file is more convenient to process under EXCEL and Rstudio environment for further operation.
+To transform the PDF data for Torquay Schedule 16 into a digital version, we first run Ross Jestrab's R code from gradualism/torquay/Coding-Torquay.Rmd.
+
+* The .txt output from the R code is really messy (because the PDFs are usually not high quality), so we then manually reorganize the .txt file that the R code outputs.
+
+  + We also need to reorganize the lines and separate values (using TAB).
+
+  + Ross uses csv; Victor preferred using the TSV format (i.e. set TAB as the default separating values). He just felt that the TSV format was more convenient.
+
+* We then use EXCEL to read the file (reading as TSV) and change the columns width and so on in EXCEL to make it more readable and convenient to edit. Victor notes that these steps do the same job for Schedule 16 as Ross did for Schedules 1-15 of Torquay and this produces output that looks the same. He didn't know whether the process he followed was identical to the one Ross followed.
+
+  + This is Victor's version of what Ross described under the two sections of Coding-Torquay.html called "Making a Master Excel File for Torquay Data" and "Manual Cleaning". "Manual Cleaning" refers to the steps taken after running the code: we actually need to first create the column names, design what columns we want for analysis, and then put all the messy information into the corresponding columns, and separate them with TABs. "Making a Master Excel File for Torquay Data" describes the process that occurs after creating the columns in Notepad++ and putting them in good shape to then open the file in excel and make it more editable and readable.
+
 
 ## Random notes on future work
 
