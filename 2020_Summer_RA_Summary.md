@@ -95,6 +95,30 @@ Note: most of the process can be achieved on the basic version of each software.
 
 * Notice that in the later rounds, the IRC coded product still exist, but in few amounts.
  
+## Smoot-Hawley
+
+* At the end of the summer, Victor got a start on manually digitizing the Smoot-Hawley tariff data from G:\MAX-Filer\Collab\gradualism-kbuzard-S20\Admin\gradualism\Tariff Act of 1930 cleaner.pdf. His output is in the same folder and named Schedules_1-15_units_changed_HS.xlsx
+
+* Victor's notes:
+
+  + Time spent: around eight hours
+  
+  + Work completed in this time: Schedule 1 & 2, around 1/5 of the whole file
+ 
+    - Some suggestions on the estimation of time spent: I am more familiar with the project's structure and have the experience from finishing the Geneva data entry, so that may have helped me to be more efficient, but meanwhile I believe native speakers will also be relatively more efficient in this work.  
+    
+    - <span style="color: red;">For now I put the unsolved features (like the paragraph differentiation problem) in the column "Extra", but it will also take some time to solve these problems.</span>
+ 
+    - Some features:
+    
+      1. Many products in H-S are not in Torquay (Geneva);
+    
+      2. The differentiation in H-S is not frequent. In many paragraphs, all the products are under one single tariff rate. And in all these cases, I put the notes in the "Extra" column and applied a uniform tax for all products;
+
+      3. The tax rate is significantly higher than Geneva and Torquay;
+
+* <span style="color: red;">To do: manually digitize the rest of the Smoot-Hawley tariffs</span>
+
 ## File type
 
 To transform the PDF data for Torquay Schedule 16 into a digital version, we first run Ross Jestrab's R code from gradualism/torquay/Coding-Torquay.Rmd.
@@ -119,12 +143,3 @@ To transform the PDF data for Torquay Schedule 16 into a digital version, we fir
 * <span style="color: red;">Geneva 1956: there are three columns of tax rate in the Geneva 1956 file, ***Geneva_56_UNTC***, there is a one year period between each of them to be effective. More specific details can be found on page 142 of the original file. One potential solution is to create three separate columns, or to simplify, take the average or middle value of the three.</span>
 
 * About late rounds: in a recent Trade Talks episode about the rise of containerization, they talked about how there were many goods that just weren't traded before containers because it was too expensive. This won't take effect until at least the mid to late 1960s so shouldn't affect the work we're doing now, but it's an interesting "detail" to be aware of.
-
-* <span style="color: red;">For Smoot-Hawley: **to be filled in.**</span>
-
-
-
-
- 
-
-
