@@ -87,6 +87,10 @@ Note: most of the process can be achieved on the basic version of each software.
 
 * The existing files have **NOT** covered the part of Cuba preferential trade agreements and also the IRC code products.
 
+  + For Torquay, the IRC section runs from pages 203-205 (original numbering in the scans Ross made) and Cuba runs from pages 206-216 ("Part II")
+  
+  + <span style="color: purple;">Interestingly, the Torquay list from the UNTC website (G:\MAX-Filer\Collab\gradualism-kbuzard-S20\Admin\gradualism\UNTC_814) is about half the length of the the list from the book that was scanned.</span>
+
 * <span style="color: purple;">But it should be prominently noted, that we are not going to get a good time series on these from the first four rounds if they aren't in the first two rounds. They make some weird references to Smoot Hawley, so I think this will need to be explored at some point</span>
 
 * Notice that in the later rounds, the IRC coded product still exist, but in few amounts.
