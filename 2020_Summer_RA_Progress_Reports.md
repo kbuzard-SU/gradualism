@@ -34,6 +34,8 @@ For the past three days I was studing Ross' s file. I think the whole assignment
 1. Organizing the original PDF files (Annecy, Geneva, Torquay documents);
 
 2. Extracting the texts in PDF files and digitalizing them in Rstudio (converting pictures into characters);
+  
+   + Kristy's note: We didn't digitize Annecy and Geneva. It seemed less efficient to do all that than to just enter the much smaller number of tariff lines manually.
 
 3. Cleaning the data in R and reorganizing them so that it can be converted into EXCEL file (make it readable and nice looking);
 
@@ -48,6 +50,10 @@ Hopefully I will have understood the coding in the third step by the end of next
 
 ## Some other notes:
 
-1. There are around 30 pages left in Torquay pdf that are not coded yet. If they are relevant, then I guess schedule 16 is needed. But we can decide it after I finish the coding part.
+1. There are around 30 pages left in Torquay pdf that are not coded yet (pages 185-216 of the color version of the Torquay scans). If they are relevant, then I guess schedule 16 is needed. But we can decide it after I finish the coding part.
 
-2. Although it is not the priority right now, I happened to find out that in the Annecy pdf file, from page 413, the files is written in French. I am not sure whether it is new information or repeated one with just a change of language, so for now I will just leave it there and look into it when doing the step 1 later.
+   + Ross' s file ends at Torquay schedule_15_34.pdf, which corresponds to page 184 of the original Torquay file, the original file ends at page 216.
+
+2. Although it is not the priority right now, I happened to find out that in the Annecy pdf file, from page 249, the files is written in French. I am not sure whether it is new information or repeated one with just a change of language, so for now I will just leave it there and look into it when doing the step 1 later.
+
+   * Kristy's response: Page 249 in Annecy.pdf is the beginning of the French copy of the earlier English version. If you ever run into French and need to check, just let me know--it's very easy for me to do as I am proficient in French.
