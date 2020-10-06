@@ -1,3 +1,27 @@
+# Progress Report 1
+
+### 2020/6/16
+### Zeyuan Xiong (Victor)
+
+
+1. Monday June 15th
+   - I spent the day figuring our the markdown system, including both rmarkdown package and the markdown on Github. So far these two share the similar functions but seems rmarkdown is more convenient to use and the markdown syntax on the comment part in the Github is kind of confusing, many functions like greek letters and print coding result are easy to achieve within R but not on Github. I will try to find out why, but before that I may use the rmarkdown to write my report and transform it on the Github.
+ 
+   - Another thing is that I am still a little confused about is how to send the progress report to your "issue/branch" and keep it updated while avoding messing up with the order of files in the folder. If this file is successfully uploaded then I guess it is a good start.
+ 
+2. Tuesday June 16th
+   - I am mainly going through the files that Ross uploaded to check what exactly I need to do next and how should I do it. I guess this may take several days to digest, since there are many files in the folder and the way that Ross described to digitalized the data may seem a little complicated. But thanks Ross again, he has done really amazing job and is so generous to include some explanation of the key steps. Salute!
+ 
+   - The markdown syntax should not be hard to master given that I learned R and Latex. The repository and pull request system should be OK if  Professor you can read this file. Further functions like @ and #num on desktop will be exploitd in the following days through working and communicating.
+ 
+   - But I am confused that this file can be transformed in HTMl in my Rstudio but not here. Maybe it is because it is the file rather than comment. I will try other methods later.
+
+
+### Current work undone / questions
+* According to Ross's file "main_data" <https://github.com/kbuzard/gradualism/blob/master/torquay/Main%20Data.Rmd>. The "Torquay" data has been already digitalized in the excel file "Torquay All Schedules". And I assume that the undone part should be the "Geneva" and "Annecy" data. Please let me know if I get it right.
+
+  - Kristy's reply: I agree with your interpretation, although I think we should look at Schedule 16 from Torquay and see if it should be added.
+
 # Progress Report 2
 
 ### 2020/6/19
