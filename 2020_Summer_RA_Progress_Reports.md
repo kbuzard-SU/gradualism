@@ -235,3 +235,68 @@ These at least give us some sources (along with the UN Treaty Website that is re
 
 I haven't completely figured out why Ross painted those paragraphs, maybe it is the same reason that I painted some paragraphs blue, that is there are some difference in how the descriptions between two agreements are organized. I will look them up in the second round check. But in general most products look fine so I don't think this should be a big problem.
 
+(From Kristy, via email on July 25): We agreed that "Tariff Act of 1930 cleaner.pdf" is the right document from which to digitize the Smoot Hawley tariffs.
+
+# Quick Progress Report
+
+### July 28, 2020
+### Zeyuan Xiong (Victor)
+
+(via email)
+
+I just got the book from the library and I will check it this week to see if there are any clues in it.
+
+Meanwhile, attached are the pdf version of OTAP (1934-1948) part I-V in case you are also interested. I have just read through Part III. In most of the tables, it says the tables are from the import stats of year 1939. I don't think they are from the nominal tariff of the 1937 Geneva negotiation tariff rate. My intuition is that they used the real world import data of year 1939 to compare with the import data before the Geneva round and derive these stats (most of them are ratios). The report is more like a evaluation of the trade agreements (concession) impact.
+
+And the ad valorem tax rate we discussed last time is calculated based on the sub-sample of the whole deal, which covers 80% of the dutiable imports of 1939. They also pointed out that there are some "phase out" periods that some tariffs were not reduced instantly which also makes me believe that they are using the applied tariff. I will keep reading other parts to see if there are any other new information.
+
++ Kristy's response: Would you put these files in the gradualism folder on the G: drive so they'll be easy to find in the future? I put the first part in there yesterday (I think).
+
+   - There has to be something other than the 1939 import data to be able to calculate all the percentages in the table I was looking at yesterday. I may be that they took 1939 tariff revenue data and then 1948 tariff revenue data. That would line up with what Doug Irwin told me, which is that all the data he knew of was calculated from applied rates. But it also seems like if they're reporting on what we call Geneva I (at that time, it was just the GATT to them since none of the future rounds had happened), they should make some mention of the tariff schedules and where they could be found. But maybe not...
+
+   - When you say "the sub sample of the whole deal", do you mean they just made the calculations for the tariffs that were in ad valorem terms and ignored the specific tariffs?
+   
++ Victor's response (July 29 email): The otap Part I- Part V have been uploaded to the G:drive folder gradualism.
+
+
+
+I have summarized some of the paragraphs that I had difficulty coding with, paragraphs with tax rates bounds (all the Torquay data have no bounds), and also listed out the free list items that appear in different agreements.
+
+# Quick Progress Report
+
+### July 31, 2020
+### Zeyuan Xiong (Victor)
+
+As for the units, I have coded them all with numbers, there are around 50 numbers for units, which is more than I expected and also I believe at least half of them appear just several times and are special designed for certain products. However I do believe we can simplify them a little bit, some of the units have similar meanings like "cents per dozen" and "cents per dozen pairs". Also it may also make the coding system easier if we transform all the dollars into cents.
+
+As for the books and reports, I still haven't found out anything related to the new source of the data for year of 1948, and am still trying to figure out the method of estimation. I will keep looking into it during the weekend and may have something new next week.
+
++ Kristy's response: I'm working through the "special paragraphs" list to try to understand what is going on in all of these cases. I'll prepare some notes on them for the next time we meet.
+
+   - I think it would be most efficient for us to talk through the issue with the units when we meet again too.
+
+   - And after playing around with the free list items for a while, I think it makes more sense to wait to deal with them until we understand whether "Geneva 1.pdf" is really Geneva or part of Annecy. So that should be the top priority. If there's anything you want me to look at in that regard, let me know.
+
++ Victor's response (Aug 3): While searching for clues of the original copies of the Geneva round, I am more worried that they might not be released. I found this from the OTAP Part III table 1 introduction (picture attached). I searched this website of US department of commerce, but it seems to be a very new website, most of the data are new (from the 1990s), maybe you know something? I also searched other sources but haven't found anything yet. I will keep looking and maybe will find something new when we meet.
+
+   - Kristy's response: Since the GATT is an international agreement, if you couldn't find any earlier version of it on the U.N. website, maybe there are other international websites that would have it. Or maybe we can find the hard copy and get it digitized like we did with Torquay (this involves searching the Interlibrary Loan databases, and we could also look back at the Torquay book and see if there are clues there for how to find this earlier version of the treaty).
+   
+      + Victor's response: I have tried several other websites like WTO, New York University Law Library and others. I will keep trying tonight, maybe I will find something new by tomorrow.
+      
+      + I am attaching some documents from the UN website that I believe partially explain the relationship of the files we got (Geneva 1 and Annecy). I will explain that later in details, thanks!
+      
+
+# Quick Progress Report
+
+### August 20, 2020
+### Zeyuan Xiong (Victor)
+
+Very sorry for the late update of report, the reason of the delay is that I didn't make any significant progress on the Smooth-Hawley file digitization. I tried some methods, but none of them can significantly reduce the manual effort to put them in the existing excel file. And due the way the paragraphs are organized, this file, as I estimated, will take much longer time than the Geneva and Annecy to put in manually. I am sorry I didn't come up with a better solution. But I will keep looking for alternatives from time to time, maybe I will find something new.
+ 
+For the Geneva 1956. I do find a file on the UN website. The front page is different from the one we had in our folder (it has cover and "UN series"), but the content remains the same as we expected. One thing to be noticed is that on page 20 (the pdf file page), the page of "Schedule XX United State of America", the footnote shows (all) the volumes that contain the US schedules, among them vol.61 and vol.63 are Geneve 1947 and Annecy 1949, also other rounds are included. And all those volumes are under the registration number 814 (GATT).
+ 
+I will keep in touch with the librarian and dig in more about the relationship between the Annecy and Geneva rounds.
+ 
+For the digitization of Geneva 1956, compared to the Smooth-Hawley however, looks easier. Approximately, as I estimated, around 30 hours work will finish it. One thing to be noticed, in its general note is that the three columns are corresponding to three effective date of the duty, between each of them there is a one year period. I believe itself represents a kind of gradulism because in general the tax rate decreases every year. For now I think if we are going to code it, we could just preserve the all three columns.
+ 
+I will finish a summary report this week (half done already), to briefly summarized the decisions we have made to help the succesor to see a bigger picture. And given that I asked a one week off in early July, I will keep allocating time on this project for the rest of the August to make up for it. So please if there is anything you would want me to do, just let me know, for example begin to manually put in the first few schedules of Geneva 56 or extra. And again thanks so much for offering this opportunity, I really learned a lot from it.
