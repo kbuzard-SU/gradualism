@@ -101,8 +101,47 @@ Also from Victor on July 4: I will integrate schedule 16 and IRC part with Ross'
 
 # Progress Report 6
 
-GOES HERE. I don't know what happened to 4 and 5; maybe he counted the emails we sent back and forth between July 1 and July 5.
+#### Zeyuan Xiong (Victor)
+#### 2020/7/8
 
+### Questions
+
+Before the report, I have an important question, I am not sure whether I headed the wrong way. So when we talk about "Geneva" data, we are talking about "Geneva round 1947" right? Not "Geneva round 1956". So in the pdf file "Geneva 1", on page 2 in adobe reader, it says it was registered in "May 1950", which is the same year as in file "Annecy" page 2 "May 1950", and in the following pages both write as 1950. But the real time line should be "Geneva 1947" and "Annecy 1949". This is confusing, but I do find out that at least in the schedule 16 "Free list", the contents are different.
+
++ Kristy's response: Yes, you should be focusing for now on Geneva I (1947). You can check with Ross's work to make sure--he entered the Geneva I and Annecy tariffs for some of the tariff lines before continuing to fill in the rest of Torquay. We thought it was important to understand the broader structure the file would need to take on before filling in all the details.
+
+If the Geneva in our previous conversation refers to file "Geneva 56", then the agreements is slightly different from the Torquay data, starting from page 218(220), there are three columns of taxes and I don't know which one I should take for our assignment. Could you help to clarify this to me. Meanwhile I will first start with the Annecy data.
+
++ Kristy's response: This is why we started out focusing on Geneva I, Annecy and Torquay--they are the simplest. At some point the tariff codes change away from the Smoot-Hawley line numbers, and that will make things more complicated. There is also more to learn about the multiple schedules.
+
+
+### Overview
+
+1. Based on the "Torquay All Schedule",  I think the number of ad valorem taxes and specific taxes are generally fifty fifty. Some products only have ad valorem, some only have specific. I don't see an obvious pattern, it should depend on the products.
+
+   + Kristy's response: Okay, then add in the free items as ad valorem. We will probably try to convert to ad valorem whenever we need to make comparisons.
+
+2. Yes, I just check the original 1930 Tariff act file, the 1601-1814 are included in the section called "Free list" (schedule 16). I believe not all the products are included (but most included), for example PAR 1814 "worm gut" is not included in the Torquay round. And some paragraphs use different description, but in general, the two parts match.
+
+3. I think for now I will not integrate the IRC part in the existing schedules, because there are only three pages of them and the products included are not many. There are no IRC products in Annecy, a few covered in Geneva (less than Torquay), which is kind of weird based on the time line.
+
+   + I think this is okay for now, but it should be prominently noted. We are not going to get a good time series on these from the first four rounds if they aren't in the first two rounds. They make some weird references to Smoot Hawley, so I think this will need to be explored at some point.
+
+4. For the containers, I also learned about the trade history in Australia, it says that the trade of beef, other food and also certain chemicals increases in significantly larger volumns after the development of technology. I will pay more attention to those products when taking comparisons with other agreements. Maybe there are more changes of products in later rounds like Kenedy round and Tokyo round.
+
+5. I just compared the schedule_16 (Free list) in Annecy and Torquay, I notice that around half of the products which are in the Torquay free list are not in the Annecy. Geneva (file Geneva1) round covers similar amounts of Free list products as Torquay, but there are several covered in Torquay but not Geneva and vice versa. So several products on the Free list had been removed from Geneva to Torquay, I will manually fill them in. 
+
+   + Kristy's response: Yes, manually filling these in is the right thing to do.
+
+      - Will you also check to make sure that tariff lines are not being moved from Schedules 1-15 into the Free List when they become free? If this is something that happens, we will have to think about what to do about it--we only want each good listed in one place (I think).
+
+6. Given the situation in point 5, if I encounter paragraphs in other schedules that are covered in one of the agreements but not in others, I will manually put in the products. But so far I don't think we need to create a dummy variable on this because it will be straight forward if the columns in other rounds are empty. 
+
+   + Kristy's response: I agree. We scanned in Torquay because it seemed to be the most comprehensive list that used the Smoot Hawley line numbers, but it wouldn't surprise me if there are a few things in the earlier rounds that are not included in Torquay.
+
+      - What is most important is to be careful of the lines that change between rounds. I believe Ross had left a bunch of lines that were highlighted--these were ones that he was still trying to figure out exactly what the correct relationship was between rounds so that we could record those tariff line changes in the way that made the most sense for creating time series.
+
+7. I have just started the filling in of Annecy data.
 
 # Quick Progress Report
 
@@ -114,3 +153,18 @@ GOES HERE. I don't know what happened to 4 and 5; maybe he counted the emails we
 * I have just finished the manual-fill-in of the Annecy data.
 
 * I haven't found out a way to "copy paste the progress_report_6 with the email" and keep everything in order and tidy, but instead I will summarize all the decisions we discussed and made from report_1 to report_6 in a monthly report next week. I believe this document will help to record our decisions and also help the following students working on this project. I will start this document after I finish the entry of Geneva and by then I will also be able to answer your questions related to the free list items in your comments of report_6.
+
+
+# Quick Progress Report
+
+### July 19, 2020
+### Zeyuan Xiong (Victor)
+
+(Via email)
+
++ The fill-in work of Geneva data took much more time than I expected.
+
++ In general I have just finished the fill-in work of both Geneva and Annecy (except for the free list part which as we discussed need to be further checked). Still some paragraphs need to be double checked because they use different description as in Torquay and also a general go-through will be good given that the words are intensive and that mistyping could happen.
+
++ I will write a more formal report about the problems and my solutions to them next week while conducting the double check. So there will be two separate reports next week: this one and also the summary of previous reports.
+
