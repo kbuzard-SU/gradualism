@@ -28,7 +28,7 @@
 
 ## Overview:
 
-For the past three days I was studying Ross' s file. I think the whole assignment could be summarizing into  four steps:
+For the past three days I was studying Ross' s file. I think the whole assignment could be summarized into four steps:
 
 1. Organizing the original PDF files (Annecy, Geneva, Torquay documents);
 
@@ -40,7 +40,7 @@ For the past three days I was studying Ross' s file. I think the whole assignmen
 
 4. Manually cleaning the data and summarizing some basic features in the EXCEL.
 
-Thanks for Ross's codes and description and some other online resources, I am now able to deal with the first two steps, namely **PDF->R** but the coding part in step 3 is more complicated and requires further digestion and experiment.
+Thanks to Ross's codes and description and some other online resources, I am now able to deal with the first two steps, namely **PDF->R** but the coding part in step 3 is more complicated and requires further digestion and experimentation.
 
 
 ## Moving forward:
@@ -49,7 +49,7 @@ Hopefully I will have understood the coding in the third step by the end of next
 
 ## Some other notes:
 
-1. There are around 30 pages left in Torquay pdf that are not coded yet (pages 185-216 of the color version of the Torquay scans). If they are relevant, then I guess schedule 16 is needed. But we can decide it after I finish the coding part.
+1. There are around 30 pages left in the Torquay pdf that are not coded yet (pages 185-216 of the color version of the Torquay scans). If they are relevant, then I guess schedule 16 is needed. But we can decide it after I finish the coding part.
 
    + Ross' s file ends at Torquay schedule_15_34.pdf, which corresponds to page 184 of the original Torquay file, the original file ends at page 216.
 
@@ -62,23 +62,23 @@ Hopefully I will have understood the coding in the third step by the end of next
 
 #### July 1, 2020
 
-Victor sent this report via email and I have added it here. He choose to send this email instead of on github because he wanted to attach some sample excel files but failed to achieve that on github.
+Victor sent this report via email and I have added it here. He choose to send this email instead of on github because he wanted to attach some sample Excel files but of course Github hates Excel files. Most of what remains in this document was pasted in here from emails I received from Victor.
 
-* I have first (half) digitized the Part I in the remaining pages of Torquay data (185-205). The pdf has been transferred in to tidy and readable EXCEl file (or csv). The next step will be manually making the description more concise and fit them in the categories that Ross created. (Also in this part most of the goods are "Free" so I will treat them as tax=0.) After that I can add it to the existing Torquay files. I think I can finish this part by early next week.
+* I have first (half) digitized the Part I in the remaining pages of Torquay data (185-205). The pdf has been transferred in to tidy and readable EXCEl file (or csv). The next step will be manually making the descriptions more concise and fitting them in the categories that Ross created. (Also in this part most of the goods are "Free" so I will treat them as tax=0.) After that I can add it to the existing Torquay files. I think I can finish this part by early next week.
 
-  + Kristy's response: It's hard for me to see if there are any problems with these files, as they are an intermediate stage that Ross did not show me. Make sure you read through his notes for details about decisions we made on sub-paragraphs (there was an issue at one point about us needing to assign some numbers or letters to the various sub-parts of some lines because they were just all listed together but we would need them to have separate names. It doesn't look like this has been done in any consistent way in "Torquay All Schedules.xlsx" so maybe that is something that still needs to be done.
+  + Kristy's response: It's hard for me to see if there are any problems with these files, as they are an intermediate stage that Ross did not show me. Make sure you read through his notes for details about decisions we made on sub-paragraphs. There was an issue at one point about us needing to assign some numbers or letters to the various sub-parts of some lines because they were just all listed together but we would need them to have separate names. It doesn't look like this has been done in any consistent way in "Torquay All Schedules.xlsx" so maybe that is something that still needs to be done.
    
       - Victor's response: Given that all of the goods in this part are "tax-free", I fill in all the products under "Torquay extra" as free, and fill in zero for the specific tax options.
       
          - Kristy's further query: Are the majority of the lines in the Torquay round--if they only have one component--ad valorem or specific? We will have to make some hard decisions about how to deal with the lines with more than one component, and we can make some of the work easier by entering these free lines under whichever of ad valorem or specific is the more frequent. 
       
-      - Victor's response: Also another thing need to be noticed is that in schedule16 the products cover a lot of categories (chemical, textile, food and so on). I think they are included in this schedule rather than the previous schedules is that they are all "Free".
+      - Victor's response: Also another thing need to be noticed is that in Schedule 16 the products cover a lot of categories (chemical, textile, food and so on). I think the reason they are included in this schedule rather than the previous schedules is that they are all "Free".
 
          - Kristy's further query: Will you look in the Smoot Hawley document to make sure that these are the numbers from the original classification system? I don't see why they wouldn't be, but it would be good for us to know that for sure. 
 
    + I also don't understand why there are so many blank lines in the excel documents. Probably they are just spaces in the pdfs, but this should be checked to make sure nothing was missed.
 
-      - Victor's response: The reason for the "many blanks" is that in order to keep the content tidy, I try to mimic the format in the original pdf file (that each goods is a separate row, although sharing the same tax volume). I have rearrange them in the files.
+      - Victor's response: The reason for the "many blanks" is that in order to keep the content tidy, I try to mimic the format in the original pdf file (that each good is a separate row, although sharing the same tax volume). I have rearranged them in the files.
       
       - Victor's further response: Just to clarify, I think Ross used tsv file instead of csv file, so my file is also stored as tsv file. I used "readr" package and "read_tsv" function
 
@@ -87,7 +87,7 @@ Victor sent this report via email and I have added it here. He choose to send th
   
   + Kristy's response: Leave the tariffs that are especially for Cuba out. Those aren't important for our purposes--that is a special political situation and we are looking at the more general situation.
   
-A query from Kristy: Can you save your work as a .csv and then send it to me AS A .CSV so that when I open it in Excel it will look the way you mean it to? We don't want to save anything in Excel--just use excel to more easily edit the files.
+A query from Kristy: Can you save your work as a .csv and then send it to me AS A .CSV so that when I open it in Excel it will look the way you mean it to? We don't want to save anything in Excel--we just want to use Excel to more easily edit the files.
 
 * Victor's response: Yes, I have csv copy in my own drive, it is just excel is easier to read and to show to others. However in order to make the csv file that I attached the same as the excel file, you may need to manually set the font and cell format in excel. And sometimes it is easier to make changes on excel and we can always save the file as tsv (csv) files.
 
@@ -103,7 +103,7 @@ Also from Victor on July 4: I will integrate schedule 16 and IRC part with Ross'
 
 ### Questions
 
-Before the report, I have an important question, I am not sure whether I headed the wrong way. So when we talk about "Geneva" data, we are talking about "Geneva round 1947" right? Not "Geneva round 1956". So in the pdf file "Geneva 1", on page 2 in adobe reader, it says it was registered in "May 1950", which is the same year as in file "Annecy" page 2 "May 1950", and in the following pages both write as 1950. But the real time line should be "Geneva 1947" and "Annecy 1949". This is confusing, but I do find out that at least in the schedule 16 "Free list", the contents are different.
+I have an important question: when we talk about "Geneva" data, we are talking about "Geneva round 1947" right? Not "Geneva round 1956". So in the pdf file "Geneva 1", on page 2 in adobe reader, it says it was registered in "May 1950", which is the same year as in file "Annecy" page 2 "May 1950", and in the following pages both write as 1950. But the real time line should be "Geneva 1947" and "Annecy 1949". This is confusing, but I do find out that at least in the schedule 16 "Free list", the contents are different.
 
 + Kristy's response: Yes, you should be focusing for now on Geneva I (1947). You can check with Ross's work to make sure--he entered the Geneva I and Annecy tariffs for some of the tariff lines before continuing to fill in the rest of Torquay. We thought it was important to understand the broader structure the file would need to take on before filling in all the details.
 
@@ -118,13 +118,13 @@ If the Geneva in our previous conversation refers to file "Geneva 56", then the 
 
    + Kristy's response: Okay, then add in the free items as ad valorem. We will probably try to convert to ad valorem whenever we need to make comparisons.
 
-2. Yes, I just check the original 1930 Tariff act file, the 1601-1814 are included in the section called "Free list" (schedule 16). I believe not all the products are included (but most included), for example PAR 1814 "worm gut" is not included in the Torquay round. And some paragraphs use different description, but in general, the two parts match.
+2. Yes, I just checked the original 1930 Tariff act file, paragraphs 1601-1814 are included in the section called "Free list" (schedule 16). I believe not all the products are included (but most are included), for example Paragraph 1814 "worm gut" is not included in the Torquay round. And some paragraphs use different descriptions, but in general, the two parts match.
 
 3. I think for now I will not integrate the IRC part in the existing schedules, because there are only three pages of them and the products included are not many. There are no IRC products in Annecy, a few covered in Geneva (less than Torquay), which is kind of weird based on the time line.
 
    + I think this is okay for now, but it should be prominently noted. We are not going to get a good time series on these from the first four rounds if they aren't in the first two rounds. They make some weird references to Smoot Hawley, so I think this will need to be explored at some point.
 
-4. For the containers, I also learned about the trade history in Australia, it says that the trade of beef, other food and also certain chemicals increases in significantly larger volumes after the development of technology. I will pay more attention to those products when taking comparisons with other agreements. Maybe there are more changes of products in later rounds like Kennedy round and Tokyo round.
+4. For the idea about containerization from the Trade Talks podcast, I also learned about the trade history in Australia, it says that the trade of beef, other food and also certain chemicals increases in significantly larger volumes after the development of technology. I will pay more attention to those products when taking comparisons with other agreements. Maybe there are more changes of products in later rounds like Kennedy round and Tokyo round.
 
 5. I just compared the schedule_16 (Free list) in Annecy and Torquay, I notice that around half of the products which are in the Torquay free list are not in the Annecy. Geneva (file Geneva1) round covers similar amounts of Free list products as Torquay, but there are several covered in Torquay but not Geneva and vice versa. So several products on the Free list had been removed from Geneva to Torquay, I will manually fill them in. 
 
@@ -159,7 +159,7 @@ If the Geneva in our previous conversation refers to file "Geneva 56", then the 
 
 + The fill-in work of Geneva data took much more time than I expected.
 
-+ In general I have just finished the fill-in work of both Geneva and Annecy (except for the free list part which as we discussed need to be further checked). Still some paragraphs need to be double checked because they use different description as in Torquay and also a general go-through will be good given that the words are intensive and that mistyping could happen.
++ In general I have just finished the fill-in work of both Geneva and Annecy (except for the free list part which as we discussed need to be further checked). Still some paragraphs need to be double checked because they use different description than in Torquay and also a general go-through will be good given that the words are intensive and that mistyping could happen.
 
 + I will write a more formal report about the problems and my solutions to them next week while conducting the double check. So there will be two separate reports next week: this one and also the summary of previous reports.
 
@@ -192,19 +192,19 @@ These at least give us some sources (along with the UN Treaty Website that is re
 
 2. In general, by rough estimation, Geneva and Annecy data TOGETHER cover around 90% of the Torquay paragraphs and within this, the proportion of Geneva to Annecy is around 7:1 or even higher. This is one of the reasons that the fill-in work of Geneva takes much longer than Annecy.  
 
-3. Considering this fact, I am doubtful about whether these two files (name "Geneva 1" and "Annecy" in the folder) are indeed ONE agreement. Another "evidence" that supports my doubt is that these two files look very similar in format and both assign year "1950" in every page, which actually contradicts with the timeline of Geneva round which is 1947. Or there may be some historical facts that I don't know about these two rounds, maybe the Annecy round was indeed to be designed as a supplement for the Geneva agreements.
+3. Considering this fact, I am doubtful about whether these two files (name "Geneva 1" and "Annecy" in the folder) are indeed two separate agreements. More "evidence" that supports my doubt is that these two files look very similar in format and both assign year "1950" in every page, which actually contradicts with the timeline of Geneva round which is 1947. Or there may be some historical facts that I don't know about these two rounds, maybe the Annecy round was indeed to be designed as a supplement for the Geneva agreements.
 
 4. The main reason I bring this up is that it directly influences the process of "Gradualism", the "Geneva->Annecy->Torquay" does not make sense, but the "(Geneva + Annecy -> Torquay)". You could see this big picture by special paste option in EXCEL: copy the three columns of Geneva and paste them in the Annecy column and select to pass the empty cell, then you can see it is very close to the Torquay data.
 
-5. Given that the Geneva data takes most of the proportion, if without further explanation, the pattern I will discuss in the following sections are from Geneva only (in many cases, the Annecy data is too "dispersed" to have a pattern).
+5. Given that the Geneva data takes most of the proportion, if without further explanation, the pattern I will discuss in the following sections are from Geneva only (in many cases, the Annecy data is too sparse to have a pattern).
 
 #### During filling-in:
 
-1. If we set Torquay data as benchmark. Nearly all the paragraphs in Annecy and Geneva (note: not "sub-paragraphs") are covered in the Torquay, very few exceptions are like paragraph 1507 "Bristles, sorted, bunched, or prepared --- 3 cents per lb" is only in Geneva data but not Torquay; and  paragraph 1506 "Brooms, made of broom corn, straw, wooden fiber, or twigs --- 12.5% ad val". 
+1. If we set Torquay data as benchmark, nearly all the paragraphs in Annecy and Geneva (note: not "sub-paragraphs") are covered in Torquay, with very few exceptions like paragraph 1507 "Bristles, sorted, bunched, or prepared --- 3 cents per lb" is only in Geneva data but not Torquay; and  paragraph 1506 "Brooms, made of broom corn, straw, wooden fiber, or twigs --- 12.5% ad val". 
 
-2. However the Geneva (plus Annecy as supplement) and Torquay do vary a lot in the "sub-paragraphs". The most frequent case is that there are sub-paragraphs such as "... value over 8 cents ...", "... width over 10 inches" in Torquay but not in Geneva. For quick check you may check paragraph 923, row 9 extra, paragraph 909, 910, 911a, row 1518 (for further examples, follow the extra column). I think these items should be paid more attention to. Because the classification itself, to some extent, represents a process of gradualism since the tax rate must have diverged (or converged).  In practice, I temporarily left those columns blank and wrote a note in the column "extra", but I suggest that we should fill in those column with the uniform tax rate of the "unclassified" items, because it makes not sense to put zero in them in the next stage of cleaning data. 
+2. However the Geneva (plus Annecy as supplement) and Torquay do vary a lot in the "sub-paragraphs". The most frequent case is that there are sub-paragraphs such as "... value over 8 cents ...", "... width over 10 inches" in Torquay but not in Geneva. For quick check you may check paragraph 923, row 9 extra, paragraph 909, 910, 911a, row 1518 (for further examples, follow the extra column). I think these items should be paid more attention to. Because the classification itself, to some extent, represents a process of gradualism since the tax rate must have diverged (or converged).  In practice, I temporarily left those columns blank and wrote a note in the column "extra", but I suggest that we should fill in those column with the uniform tax rate of the "unclassified" items, because it does not make sense to put zero in them in the next stage of cleaning data. 
 
-3. Similar cases, though very few, exist in Torquay but not Geneva, that is there are sub-classifications in Geneva but not in Torquay, in this case, I suggest we extend the Torquay rows to include them.
+3. Similar cases, though very few, exist in Torquay but not Geneva, that is there are sub-classifications in Geneva but not in Torquay. In this case, I suggest we extend the Torquay rows to include them.
 
 4. Some of the tax consist of a specific tax and an upper bound or lower or both ad valorem tax rate and vice versa. We need to decide how to deal with those taxes. You can find them in column "extra". I believe similar cases also happen Torquay's file but I am not sure how Ross dealt with it, didn't see any record, maybe I miss something.
 
@@ -217,7 +217,7 @@ These at least give us some sources (along with the UN Treaty Website that is re
 8. There are some paragraphs are either very complicated or the descriptions are not matched in two agreements (paragraphs painted blue), I will double check them.
 
 #### Free list items
-1. First of all, the free list products cover a lot of categories from schedule 1-15, so there aren't much information we can derive from the number of the paragraph it has and thus hard to locate them.
+1. First of all, the free list products cover a lot of categories from schedule 1-15, so there isn't much information we can derive from the number of the paragraph it has and thus hard to locate them.
 
 2. Also the pattern of complimentary relation between Geneva and Annecy exists in the Free List part as well. If we combine the free list of Annecy and Geneva data together (call it GA), then most of the products in GA are also in Torquay, however there are some unique items in both of the agreements that are not in the other one. I used keyword search to identify some (the first 100 products start with 16**) unique free list products in GA (those not in Torquay) in the Torquay schedule (1-15), but I cannot find them, this may imply that they are not removed from (or to) the free list to (from) other schedules. But if this is true, where are they from and where are they now?
 
@@ -239,9 +239,9 @@ I haven't completely figured out why Ross painted those paragraphs, maybe it is 
 
 I just got the book from the library and I will check it this week to see if there are any clues in it.
 
-Meanwhile, attached are the pdf version of OTAP (1934-1948) part I-V in case you are also interested. I have just read through Part III. In most of the tables, it says the tables are from the import stats of year 1939. I don't think they are from the nominal tariff of the 1937 Geneva negotiation tariff rate. My intuition is that they used the real world import data of year 1939 to compare with the import data before the Geneva round and derive these stats (most of them are ratios). The report is more like a evaluation of the trade agreements (concession) impact.
+Meanwhile, attached are the pdf version of OTAP (1934-1948) part I-V in case you are also interested. I have just read through Part III. In most of the tables, it says the tables are from the import stats of year 1939. I don't think they are from the nominal tariff of the 1937 Geneva negotiation tariff rate. My intuition is that they used the real world import data of year 1939 to compare with the import data before the Geneva round and derive these stats (most of them are ratios). The report is more like an evaluation of the trade agreements' (concession) impact.
 
-And the ad valorem tax rate we discussed last time is calculated based on the sub-sample of the whole deal, which covers 80% of the dutiable imports of 1939. They also pointed out that there are some "phase out" periods that some tariffs were not reduced instantly which also makes me believe that they are using the applied tariff. I will keep reading other parts to see if there are any other new information.
+And the ad valorem tax rate we discussed last time is calculated based on the sub-sample of the whole deal, which covers 80% of the dutiable imports of 1939. They also pointed out that there are some "phase out" periods that some tariffs were not reduced instantly which also makes me believe that they are using the applied tariff. I will keep reading other parts to see if there is any other new information.
 
 + Kristy's response: Would you put these files in the gradualism folder on the G: drive so they'll be easy to find in the future? I put the first part in there yesterday (I think).
 
@@ -259,7 +259,7 @@ I have summarized some of the paragraphs that I had difficulty coding with, para
 
 #### July 31, 2020
 
-As for the units, I have coded them all with numbers, there are around 50 numbers for units, which is more than I expected and also I believe at least half of them appear just several times and are special designed for certain products. However I do believe we can simplify them a little bit, some of the units have similar meanings like "cents per dozen" and "cents per dozen pairs". Also it may also make the coding system easier if we transform all the dollars into cents.
+As for the units, I have coded them all with numbers, there are around 50 numbers for units, which is more than I expected and also I believe at least half of them appear just several times and are specially designed for certain products. However I do believe we can simplify them a little bit, some of the units have similar meanings like "cents per dozen" and "cents per dozen pairs". Also it may also make the coding system easier if we transform all the dollars into cents.
 
 As for the books and reports, I still haven't found out anything related to the new source of the data for year of 1948, and am still trying to figure out the method of estimation. I will keep looking into it during the weekend and may have something new next week.
 
@@ -282,12 +282,12 @@ As for the books and reports, I still haven't found out anything related to the 
 
 #### August 20, 2020
 
-Very sorry for the late update of report, the reason of the delay is that I didn't make any significant progress on the Smooth-Hawley file digitization. I tried some methods, but none of them can significantly reduce the manual effort to put them in the existing excel file. And due the way the paragraphs are organized, this file, as I estimated, will take much longer time than the Geneva and Annecy to put in manually. I am sorry I didn't come up with a better solution. But I will keep looking for alternatives from time to time, maybe I will find something new.
+Very sorry for the late update of report, the reason of the delay is that I didn't make any significant progress on the Smooth-Hawley file digitization. I tried some methods, but none of them can significantly reduce the manual effort to put them in the existing excel file. And due to the way the paragraphs are organized, this file, as I estimated, will take much longer time than the Geneva and Annecy to put in manually. I am sorry I didn't come up with a better solution. But I will keep looking for alternatives from time to time, maybe I will find something new.
  
-For the Geneva 1956. I do find a file on the UN website. The front page is different from the one we had in our folder (it has cover and "UN series"), but the content remains the same as we expected. One thing to be noticed is that on page 20 (the pdf file page), the page of "Schedule XX United State of America", the footnote shows (all) the volumes that contain the US schedules, among them vol.61 and vol.63 are Geneva 1947 and Annecy 1949, also other rounds are included. And all those volumes are under the registration number 814 (GATT).
+For Geneva 1956, I did find a file on the UN website. The front page is different from the one we had in our folder (it has cover and "UN series"), but the content remains the same as we expected. One thing to be noticed is that on page 20 (the pdf file page), the page of "Schedule XX United State of America", the footnote shows (all) the volumes that contain the US schedules, among them vol.61 and vol.63 are Geneva 1947 and Annecy 1949, also other rounds are included. And all those volumes are under the registration number 814 (GATT).
  
 I will keep in touch with the librarian and dig in more about the relationship between the Annecy and Geneva rounds.
  
-For the digitization of Geneva 1956, compared to the Smooth-Hawley however, looks easier. Approximately, as I estimated, around 30 hours work will finish it. One thing to be noticed, in its general note is that the three columns are corresponding to three effective date of the duty, between each of them there is a one year period. I believe itself represents a kind of gradualism because in general the tax rate decreases every year. For now I think if we are going to code it, we could just preserve the all three columns.
+The digitization of Geneva 1956, compared to the Smoot-Hawley, looks easier. Approximately, as I estimated, around 30 hours work will finish it. One thing to be noticed: in its general note it says that the three columns correspond to three effective dates of the duty; between each of them there is a one year period. I believe this in itself represents a kind of gradualism because in general the tax rate decreases every year. For now I think if we are going to code it, we could just preserve the all three columns.
  
-I will finish a summary report this week (half done already), to briefly summarized the decisions we have made to help the successor to see a bigger picture. And given that I asked a one week off in early July, I will keep allocating time on this project for the rest of the August to make up for it. So please if there is anything you would want me to do, just let me know, for example begin to manually put in the first few schedules of Geneva 56 or extra. And again thanks so much for offering this opportunity, I really learned a lot from it.
+I will finish a summary report this week (half done already), to briefly summarized the decisions we have made to help the successor to see a bigger picture.
