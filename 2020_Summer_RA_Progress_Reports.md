@@ -1,35 +1,34 @@
+### Progress Reports for the work of Zeyuan Xiong (Victor) for Summer 2020
+
 # Progress Report 1
 
-### 2020/6/16
-### Zeyuan Xiong (Victor)
-
+#### June 16, 2020
 
 1. Monday June 15th
    - I spent the day figuring our the markdown system, including both rmarkdown package and the markdown on Github. So far these two share the similar functions but seems rmarkdown is more convenient to use and the markdown syntax on the comment part in the Github is kind of confusing, many functions like greek letters and print coding result are easy to achieve within R but not on Github. I will try to find out why, but before that I may use the rmarkdown to write my report and transform it on the Github.
  
-   - Another thing is that I am still a little confused about is how to send the progress report to your "issue/branch" and keep it updated while avoding messing up with the order of files in the folder. If this file is successfully uploaded then I guess it is a good start.
+   - Another thing is that I am still a little confused about is how to send the progress report to your "issue/branch" and keep it updated while avoiding messing up with the order of files in the folder. If this file is successfully uploaded then I guess it is a good start.
  
 2. Tuesday June 16th
    - I am mainly going through the files that Ross uploaded to check what exactly I need to do next and how should I do it. I guess this may take several days to digest, since there are many files in the folder and the way that Ross described to digitalized the data may seem a little complicated. But thanks Ross again, he has done really amazing job and is so generous to include some explanation of the key steps. Salute!
  
-   - The markdown syntax should not be hard to master given that I learned R and Latex. The repository and pull request system should be OK if  Professor you can read this file. Further functions like @ and #num on desktop will be exploitd in the following days through working and communicating.
+   - The markdown syntax should not be hard to master given that I learned R and Latex. The repository and pull request system should be OK if  Professor you can read this file. Further functions like @ and #num on desktop will be exploited in the following days through working and communicating.
  
-   - But I am confused that this file can be transformed in HTMl in my Rstudio but not here. Maybe it is because it is the file rather than comment. I will try other methods later.
+   - But I am confused that this file can be transformed in HTML in my Rstudio but not here. Maybe it is because it is the file rather than comment. I will try other methods later.
 
 
 ### Current work undone / questions
-* According to Ross's file "main_data" <https://github.com/kbuzard/gradualism/blob/master/torquay/Main%20Data.Rmd>. The "Torquay" data has been already digitalized in the excel file "Torquay All Schedules". And I assume that the undone part should be the "Geneva" and "Annecy" data. Please let me know if I get it right.
+* According to Ross's file "main_data" <https://github.com/kbuzard/gradualism/blob/master/torquay/Main%20Data.Rmd>: the "Torquay" data has been already digitalized in the excel file "Torquay All Schedules". And I assume that the undone part should be the "Geneva" and "Annecy" data. Please let me know if I get it right.
 
   - Kristy's reply: I agree with your interpretation, although I think we should look at Schedule 16 from Torquay and see if it should be added.
 
 # Progress Report 2
 
-### 2020/6/19
-### Zeyuan Xiong (Victor)
+#### 2020/6/19
 
 ## Overview:
 
-For the past three days I was studing Ross' s file. I think the whole assignment could be summerizing into  four steps:
+For the past three days I was studying Ross' s file. I think the whole assignment could be summarizing into  four steps:
 
 1. Organizing the original PDF files (Annecy, Geneva, Torquay documents);
 
@@ -41,7 +40,7 @@ For the past three days I was studing Ross' s file. I think the whole assignment
 
 4. Manually cleaning the data and summarizing some basic features in the EXCEL.
 
-Thanks for Ross's codes and description and some other online resources, I am now able to deal with the first two steps, namely **PDF->R**，but the coding part in step 3 is more complicated and requires further digestion and experiment.
+Thanks for Ross's codes and description and some other online resources, I am now able to deal with the first two steps, namely **PDF->R** but the coding part in step 3 is more complicated and requires further digestion and experiment.
 
 
 ## Moving forward:
@@ -61,14 +60,13 @@ Hopefully I will have understood the coding in the third step by the end of next
    
 # Progress Report 3
 
-### July 1, 2020
-### Zeyuan Xiong (Victor)
-   
+#### July 1, 2020
+
 Victor sent this report via email and I have added it here. He choose to send this email instead of on github because he wanted to attach some sample excel files but failed to achieve that on github.
 
 * I have first (half) digitized the Part I in the remaining pages of Torquay data (185-205). The pdf has been transferred in to tidy and readable EXCEl file (or csv). The next step will be manually making the description more concise and fit them in the categories that Ross created. (Also in this part most of the goods are "Free" so I will treat them as tax=0.) After that I can add it to the existing Torquay files. I think I can finish this part by early next week.
 
-  + Kristy's response: It's hard for me to see if there are any problems with these files, as they are an intermediate stage that Ross did not show me. Make sure you read through his notes for details about decisions we made on sub-paragraphs (there was an issue at one point about us needing to assign some numbers or letters to the various sub-parts of some lines because they were just all listed together but we would need them to have separate names. It doesn't look like this has been done in any consistent way in "Torquay All Schedules.xlxs" so maybe that is something that still needs to be done.
+  + Kristy's response: It's hard for me to see if there are any problems with these files, as they are an intermediate stage that Ross did not show me. Make sure you read through his notes for details about decisions we made on sub-paragraphs (there was an issue at one point about us needing to assign some numbers or letters to the various sub-parts of some lines because they were just all listed together but we would need them to have separate names. It doesn't look like this has been done in any consistent way in "Torquay All Schedules.xlsx" so maybe that is something that still needs to be done.
    
       - Victor's response: Given that all of the goods in this part are "tax-free", I fill in all the products under "Torquay extra" as free, and fill in zero for the specific tax options.
       
@@ -95,13 +93,12 @@ A query from Kristy: Can you save your work as a .csv and then send it to me AS 
 
 Further from Victor on July 4: See the second sheet in the attached excel file "part I table" for excel version and p2 of tsv version. They should look basically the same as Ross's file in general.
 
-Also from Victor on July 4: I will integrate schedule 16 and IRC part with Ross's schdule 1-15 soon
+Also from Victor on July 4: I will integrate schedule 16 and IRC part with Ross's schedule 1-15 soon
 
 * Response from Kristy (July 5): Before you integrate the IRC lines, I think we should create a dummy variable that says that these are using a different coding system. Or we could create one variable that takes on different values depending on what coding system is used for each year (it is going to change as we move forward in time). Or maybe you have some suggestion that would be better. I will look through the Irwin book when I get home and see if there is anything in there about the coding changes over time. I suspect they used the IRC numbers for products that had not been covered in the Smoot Hawley bill and therefore had no code there. But, again, this would be good to know to make sure that we're not making any false assumptions.
 
 # Progress Report 6
 
-#### Zeyuan Xiong (Victor)
 #### 2020/7/8
 
 ### Questions
@@ -127,7 +124,7 @@ If the Geneva in our previous conversation refers to file "Geneva 56", then the 
 
    + I think this is okay for now, but it should be prominently noted. We are not going to get a good time series on these from the first four rounds if they aren't in the first two rounds. They make some weird references to Smoot Hawley, so I think this will need to be explored at some point.
 
-4. For the containers, I also learned about the trade history in Australia, it says that the trade of beef, other food and also certain chemicals increases in significantly larger volumns after the development of technology. I will pay more attention to those products when taking comparisons with other agreements. Maybe there are more changes of products in later rounds like Kenedy round and Tokyo round.
+4. For the containers, I also learned about the trade history in Australia, it says that the trade of beef, other food and also certain chemicals increases in significantly larger volumes after the development of technology. I will pay more attention to those products when taking comparisons with other agreements. Maybe there are more changes of products in later rounds like Kennedy round and Tokyo round.
 
 5. I just compared the schedule_16 (Free list) in Annecy and Torquay, I notice that around half of the products which are in the Torquay free list are not in the Annecy. Geneva (file Geneva1) round covers similar amounts of Free list products as Torquay, but there are several covered in Torquay but not Geneva and vice versa. So several products on the Free list had been removed from Geneva to Torquay, I will manually fill them in. 
 
@@ -145,8 +142,7 @@ If the Geneva in our previous conversation refers to file "Geneva 56", then the 
 
 # Quick Progress Report
 
-### July 12, 2020
-### Zeyuan Xiong (Victor)
+#### July 12, 2020
 
 (Via email)
 
@@ -157,8 +153,7 @@ If the Geneva in our previous conversation refers to file "Geneva 56", then the 
 
 # Quick Progress Report
 
-### July 19, 2020
-### Zeyuan Xiong (Victor)
+#### July 19, 2020
 
 (Via email)
 
@@ -171,7 +166,6 @@ If the Geneva in our previous conversation refers to file "Geneva 56", then the 
 # Progress Report 7
 
 #### July 19, 2020
-#### Zeyuan Xiong (Victor)
 
 (deleting the separate file and integrating it here)
 
@@ -179,7 +173,7 @@ If the Geneva in our previous conversation refers to file "Geneva 56", then the 
 
 #### About the data: 
 
-1. First of all, I believe (with 95% confidential interval) that the two file sources (name "Geneva 1" and "Annecy" in the folder) have some complementary relations: as you go through the results in the excel, you will find that if you set the Torquay data paragraphs as benchmark, there are a lot of missing sub-paragraphs in Geneva that exist in the Annecy data and vice versa, for quick check, see example of paragraph 1531 at around row 2147 in the excel file. This kind of completementary relations appear quite frequently across the whole agreements (an easy way to see more, just follow the Annecy data).
+1. First of all, I believe (with 95% confidential interval) that the two file sources (name "Geneva 1" and "Annecy" in the folder) have some complementary relations: as you go through the results in the excel, you will find that if you set the Torquay data paragraphs as benchmark, there are a lot of missing sub-paragraphs in Geneva that exist in the Annecy data and vice versa, for quick check, see example of paragraph 1531 at around row 2147 in the excel file. This kind of complementary relations appear quite frequently across the whole agreements (an easy way to see more, just follow the Annecy data).
 
    + Kristy's comments: The notes at the end of the United States' schedule in "Annecy.pdf" (p. 63 by document's numbering, p.67 of PDF) say:
 "1. The provisions of this supplemental schedule are subject to the pertinent notes appearing at the end of Schedule XX (original), as authenticated at Geneva on
@@ -200,7 +194,7 @@ These at least give us some sources (along with the UN Treaty Website that is re
 
 3. Considering this fact, I am doubtful about whether these two files (name "Geneva 1" and "Annecy" in the folder) are indeed ONE agreement. Another "evidence" that supports my doubt is that these two files look very similar in format and both assign year "1950" in every page, which actually contradicts with the timeline of Geneva round which is 1947. Or there may be some historical facts that I don't know about these two rounds, maybe the Annecy round was indeed to be designed as a supplement for the Geneva agreements.
 
-4. The main reason I bring this up is that it directly influences the process of "Gradulism", the "Geneva->Annecy->Torquay" does not make sense, but the "(Geneva + Annecy -> Torquay)". You could see this big picture by special paste option in EXCEL: copy the three columns of Geneva and paste them in the Annecy column and select to pass the empty cell, then you can see it is very close to the Torquay data.
+4. The main reason I bring this up is that it directly influences the process of "Gradualism", the "Geneva->Annecy->Torquay" does not make sense, but the "(Geneva + Annecy -> Torquay)". You could see this big picture by special paste option in EXCEL: copy the three columns of Geneva and paste them in the Annecy column and select to pass the empty cell, then you can see it is very close to the Torquay data.
 
 5. Given that the Geneva data takes most of the proportion, if without further explanation, the pattern I will discuss in the following sections are from Geneva only (in many cases, the Annecy data is too "dispersed" to have a pattern).
 
@@ -212,13 +206,13 @@ These at least give us some sources (along with the UN Treaty Website that is re
 
 3. Similar cases, though very few, exist in Torquay but not Geneva, that is there are sub-classifications in Geneva but not in Torquay, in this case, I suggest we extend the Torquay rows to include them.
 
-4. Some of the tax consist of a specific tax and an upper bound or lower or both ad valorem tax rate and vice versa. We need to decide how to deal with those taxes. You can find them in cloumn "extra". I believe similar cases also happen Torquay's file but I am not sure how Ross dealt with it, didn't see any record, maybe I miss something.
+4. Some of the tax consist of a specific tax and an upper bound or lower or both ad valorem tax rate and vice versa. We need to decide how to deal with those taxes. You can find them in column "extra". I believe similar cases also happen Torquay's file but I am not sure how Ross dealt with it, didn't see any record, maybe I miss something.
 
 5. A good example of the above case will be paragraph 1301, check row 1746. All Torquay, Geneva, Annecy use different classification, and different lower bounds for specific tax. I used extrapolation in this part to fulfill the blank of classified sub-paragraphs by using the tax rate of unclassified sub-paragraphs (see the repeated tax rate). To be more specific, for example Geneva data has no classification of the value (not mentioned in Geneva file), then I apply the same tax rate for "singles" for both under and above 80 cents. Similar actions will be taken for other paragraphs after your approval. 
 
 6. About the unit: cents and dollar. For now, I directly use the units shown in the pdf file. However this will raise two problems: (1) within agreements, there are products which are valued in cents and others in dollars, this may happen in one products, see paragraph 1532(a), row 2156, but this only happens in one or two products; (2) across agreements, comparing Geneva and Torquay, there could be different units used in different agreements on same product, check paragraph 1541(b), row 2230, this is more important since it creates outliers if we only look at the numbers. For this two problems, I plan to identify them manually and use a uniform unit for this situations. I don't think it is necessary to transfer all the dollars units into cents (maybe we should do that?), but for now I will first identify them and use the unit of nearest product to unify the units.
 
-7. Some more about the unit: there all many types of irregular units such as: "cents per 2000 lb" or  "cents per lb of total sugar", it is hard to generalize them all in one coding system (reprent them all with numbers). So I suggest maybe we should just use the words instead of numbers. In practice, I keep the same unit as Torquay (except the ones in point 5).
+7. Some more about the unit: there all many types of irregular units such as: "cents per 2000 lb" or  "cents per lb of total sugar", it is hard to generalize them all in one coding system (represent them all with numbers). So I suggest maybe we should just use the words instead of numbers. In practice, I keep the same unit as Torquay (except the ones in point 5).
 
 8. There are some paragraphs are either very complicated or the descriptions are not matched in two agreements (paragraphs painted blue), I will double check them.
 
@@ -239,8 +233,7 @@ I haven't completely figured out why Ross painted those paragraphs, maybe it is 
 
 # Quick Progress Report
 
-### July 28, 2020
-### Zeyuan Xiong (Victor)
+#### July 28, 2020
 
 (via email)
 
@@ -264,8 +257,7 @@ I have summarized some of the paragraphs that I had difficulty coding with, para
 
 # Quick Progress Report
 
-### July 31, 2020
-### Zeyuan Xiong (Victor)
+#### July 31, 2020
 
 As for the units, I have coded them all with numbers, there are around 50 numbers for units, which is more than I expected and also I believe at least half of them appear just several times and are special designed for certain products. However I do believe we can simplify them a little bit, some of the units have similar meanings like "cents per dozen" and "cents per dozen pairs". Also it may also make the coding system easier if we transform all the dollars into cents.
 
@@ -288,15 +280,14 @@ As for the books and reports, I still haven't found out anything related to the 
 
 # Quick Progress Report
 
-### August 20, 2020
-### Zeyuan Xiong (Victor)
+#### August 20, 2020
 
 Very sorry for the late update of report, the reason of the delay is that I didn't make any significant progress on the Smooth-Hawley file digitization. I tried some methods, but none of them can significantly reduce the manual effort to put them in the existing excel file. And due the way the paragraphs are organized, this file, as I estimated, will take much longer time than the Geneva and Annecy to put in manually. I am sorry I didn't come up with a better solution. But I will keep looking for alternatives from time to time, maybe I will find something new.
  
-For the Geneva 1956. I do find a file on the UN website. The front page is different from the one we had in our folder (it has cover and "UN series"), but the content remains the same as we expected. One thing to be noticed is that on page 20 (the pdf file page), the page of "Schedule XX United State of America", the footnote shows (all) the volumes that contain the US schedules, among them vol.61 and vol.63 are Geneve 1947 and Annecy 1949, also other rounds are included. And all those volumes are under the registration number 814 (GATT).
+For the Geneva 1956. I do find a file on the UN website. The front page is different from the one we had in our folder (it has cover and "UN series"), but the content remains the same as we expected. One thing to be noticed is that on page 20 (the pdf file page), the page of "Schedule XX United State of America", the footnote shows (all) the volumes that contain the US schedules, among them vol.61 and vol.63 are Geneva 1947 and Annecy 1949, also other rounds are included. And all those volumes are under the registration number 814 (GATT).
  
 I will keep in touch with the librarian and dig in more about the relationship between the Annecy and Geneva rounds.
  
-For the digitization of Geneva 1956, compared to the Smooth-Hawley however, looks easier. Approximately, as I estimated, around 30 hours work will finish it. One thing to be noticed, in its general note is that the three columns are corresponding to three effective date of the duty, between each of them there is a one year period. I believe itself represents a kind of gradulism because in general the tax rate decreases every year. For now I think if we are going to code it, we could just preserve the all three columns.
+For the digitization of Geneva 1956, compared to the Smooth-Hawley however, looks easier. Approximately, as I estimated, around 30 hours work will finish it. One thing to be noticed, in its general note is that the three columns are corresponding to three effective date of the duty, between each of them there is a one year period. I believe itself represents a kind of gradualism because in general the tax rate decreases every year. For now I think if we are going to code it, we could just preserve the all three columns.
  
-I will finish a summary report this week (half done already), to briefly summarized the decisions we have made to help the succesor to see a bigger picture. And given that I asked a one week off in early July, I will keep allocating time on this project for the rest of the August to make up for it. So please if there is anything you would want me to do, just let me know, for example begin to manually put in the first few schedules of Geneva 56 or extra. And again thanks so much for offering this opportunity, I really learned a lot from it.
+I will finish a summary report this week (half done already), to briefly summarized the decisions we have made to help the successor to see a bigger picture. And given that I asked a one week off in early July, I will keep allocating time on this project for the rest of the August to make up for it. So please if there is anything you would want me to do, just let me know, for example begin to manually put in the first few schedules of Geneva 56 or extra. And again thanks so much for offering this opportunity, I really learned a lot from it.
