@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}
+
+\addtolength{\textwidth}{.6in}
+\addtolength{\oddsidemargin}{-.3in}
+\setlength{\textheight}{8.4in}
+\setlength{\topmargin}{-.25in}
+\setlength{\headheight}{0.0in}
+\renewcommand{\baselinestretch}{1.0}
+\linespread{1.15}
+\pagenumbering{gobble}
+
+\usepackage{cite}
+\usepackage{times, verbatim,xcolor,bm}
+\usepackage{amsbsy,amssymb, amsmath, amsthm}
+\usepackage{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{assumption}{Assumption}
+\newtheorem{fact}{Fact}
+
+\newcommand{\ve}{\varepsilon}
+\newcommand{\ov}{\overline}
+\newcommand{\un}{\underline}
+\newcommand{\ta}{\theta}
+\newcommand{\Ta}{\Theta}
+\newcommand{\expect}{\mathbb{E}}
+
+\begin{document}
+\title{\vskip-0.6in Gradualism}
+\author{ECN 490}
+\date{\today}
+\maketitle
+
+
+\section{Original Model with Government / Lobbying Effort}
+\title{Lobby}
+\[
+\max_{e^t,m^t,l^t} \sum_{t=1}^\infty \beta^{t-1}\left\{A(m_t)F^\alpha\cdot l^{1-\alpha}_t\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t-\mu_t-e_t
+  \right\} \hskip.2in \text{s.t.} \hskip.2in  m_t=m_{t-1}+\mu_t
+\]
+
+ 
+\title{Bellman Equation}
+\[
+  V_l(e_t,m_t)=\max_{e_t,m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\left[P^W+\tau(\gamma(e_{t-1}))\right]-l_t-\mu_t-e_t+\beta V_l(e_{t+1},m_{m+t}
+  \right\} \hskip.2in 
+\]
+\title{Value Function}
+\[
+  V_l(e_t^\ast,m_t^\ast)=\left\{A(m_t^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\left[P^W+\tau(\gamma(e_{t-1}^\ast))\right]-l_t^\ast-\mu_t^\ast-e_t^\ast+\beta V_l(e^\ast_{t+1},m^\ast_{t+1})
+  \right\} \hskip.2in
+\]
+
+\[
+t=\text{this period}
+\]
+\[
+t+1=\text{next period}
+\]
+\[
+\beta=\text{discount factor}
+\]
+\[
+l=\text{lobby}
+\]
+
+\section{No Government / Lobbying Effort, Technology Depreciates}
+\title{Lobby}
+\[
+\max_{m^t,l^t} \sum_{t=1}^\infty \beta^{t-1}\left\{A(m_t)F^\alpha\cdot l^{1-\alpha}_t\cdot P^W-l_t-\mu_t
+  \right\} \hskip.2in \text{s.t.} \hskip.2in  m_{t+1}=(1-\delta)m_{t}+\mu_t
+\]
+\begin{center}\text{So} $\mu_t=m_{t+1}-(1-\delta)m_{t}$\end{center}
+
+\title{Bellman Equation}
+\[
+  V_l(m_t)=\max_{m_t,l_t}\left\{A(m_t)F^\alpha\cdot (l_t)^{1-\alpha}\cdot P^W-l_t-(m_{t+1}-(1-\delta)m_t)+\beta V_l(m_{t+1})
+  \right\} \hskip.2in 
+\]
+\begin{center}\text{In the optimal stage} $m_t=m_t^\ast=m^\ast_{t+1}$\end{center}
+\title{Value Function}
+\[
+  V_l(m_{t+1}^\ast)=\left\{A(m_{t+1}^\ast)F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-l_t^\ast-(m^\ast_{t+1}-(1-\delta)m^\ast_{t+1})+\beta V_l(m^\ast_{t+1})
+ \right\} \hskip.2in
+\]
+\begin{center}\title{Which implies that}\end{center}
+\[V_l(m_{t+1}^\ast)=\frac{1}{1-\beta}\left[ A(m_{t+1}^\ast)\cdot F^\alpha\cdot (l^\ast_t)^{1-\alpha}\cdot P^W-l^\ast_t-\delta(m^\ast_{t+1})\right]\]
+ 
+\title{FOCs}
+
+\[\frac{\partial V_l(m^\ast_{t+1})}{\partial m^\ast_{t+1}}=\frac{1}{1-\beta}\cdot \left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W-\delta\right]
+\]
+\[\frac{\partial V_l}{\partial m_t}=\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W+\frac{\beta}{1-\beta}\cdot \left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha \cdot l^{\ast 1-\alpha}_t \cdot P^W-\delta\right]\cdot(1-\delta)=\delta
+\]
+\[
+\frac{\partial V_L}{\partial l_t}= (1-\alpha) A(m^\ast_t) \cdot F^\alpha \cdot l^{-\alpha} \cdot P^W =1
+\]
+\[
+\text{rearrange}\ l^{\ast 1-\alpha}_t: (1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W=l^{\ast \alpha}_t
+\]
+\[
+\text{square}\left(\frac{1-\alpha}{\alpha}\right)\text{on both sides}=\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}= l^{\ast 1-\alpha}_t 
+\]
+\begin{flushleft}
+Euler Equation:
+\end{flushleft}
+\begin{multline} 
+\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W +\
+\frac{\beta}{1-\beta}\cdot (1-\delta)\\\cdot\left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha\cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha\cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W-\delta\right]=\delta
+\end{multline}
+\begin{flushleft}
+Simplified Euler Equation:
+\end{flushleft}
+\begin{center}
+\text{Set}$\left[\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha\cdot P^W\right]=\Pi$\ \text{and Set}$\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}=Z$\\
+\text{Then}\ $\Pi +Z+\frac{\beta}{1-\beta}\cdot (1-\delta)\cdot \Pi\cdot Z-\frac{\beta}{1-\beta}\cdot (1-\delta)\cdot \delta=\delta$ \\
+$\Pi\cdot Z \left[1+\frac{\beta}{1-\beta}\cdot (1-\delta)\right]=\delta +\left[\frac{\beta}{1-\beta}\cdot (1-\delta)\right]$\\
+$\Pi\cdot Z\left(\frac{1-\beta+\beta-\beta\delta}{1-\beta}\right)=\frac{\delta(1-\beta)}{1-\beta}+\frac{\beta\delta-\beta\delta^2}{1-\beta}$\\$\Pi\cdot Z\left(\frac{1-\beta\delta}{1-\beta}\right)=\frac{\delta-\beta\delta^2}{1-\beta}$\\
+$\Pi\cdot Z=\frac{\delta(1-\beta\delta)}{1-\beta}\cdot\frac{1-\beta}{1-\beta\delta}$\\
+$\Pi\cdot Z=\delta$
+\end{center}
+\begin{flushleft}
+Change$\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}$\ \text{to}\ $\left[(1-\delta)^\frac{1-\alpha}{\alpha}\cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}\cdot F^{1-\alpha}\cdot P^{W\frac{1-\alpha}{\alpha}}\right]$
+\end{flushleft}
+\[
+\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F \cdot P^{W\frac{1}{\alpha}}\cdot(1-\delta)^\frac{1-\alpha}{\alpha}\cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}=\delta
+\]
+\[
+  \frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot A(m^\ast_t)^\frac{1-\alpha}{\alpha}=\frac{\delta}{(1-\delta)^{\frac{1-\alpha}{\alpha}}\cdot F\cdot P^{W\frac{1}{\alpha}}}
+\]
+
+\[
+t=\text{this period}
+\]
+\[
+t+1=\text{next period}
+\]
+\[
+\beta=\text{discount factor}
+\]
+\[
+\delta=\text{depreciation rate}
+\]
+\[
+l=\text{lobby}
+\]
+
+
+
+\end{document}
