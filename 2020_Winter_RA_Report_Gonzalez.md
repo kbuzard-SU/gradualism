@@ -447,7 +447,7 @@ Completed 7 Hours
 - p.1532.a added rates/fixed entries
 - p.1537.b added av
 - p.1541.a other category in Geneva 
-    - ***Come back here**
+    - ***Come back here***
 - p.1541.b added new entries
 - p.1551 fixed entry
 - p.1556 added av
@@ -559,7 +559,7 @@ Question/Thought: HS does not use tax intervals and does not specify rates based
 
 Completed 3 hours
 
-**HOURS SUBMITTED UP TO THIS POINT
+**HOURS SUBMITTED UP TO THIS POINT** 
 
 
 ## Monday, Jan. 4
