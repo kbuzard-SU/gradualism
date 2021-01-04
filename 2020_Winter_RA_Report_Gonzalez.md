@@ -193,14 +193,14 @@ Completed 2 hours.
 Before progressing further, I will compare the GENEVA1 on GitHub and the Hardcopy. In response to this [suggestion.](https://github.com/kbuzard/gradualism/pull/52#discussion_r545213)
 
 - Currently up to paragraph 75. No differences between PDF and hardcopy. 
-- I need to know the specifics of how GENEVA1 was coded. Current understanding is that Torquay was digitized by Ross (available in repo). However, not sure if there is a corresponding digitiztion file for Geneva? 
+- ~~I need to know the specifics of how GENEVA1 was coded. Current understanding is that Torquay was digitized by Ross (available in repo). However, not sure if there is a corresponding digitiztion file for Geneva?~~ 
     - These "additional" entries match Torquay, But not H-S
 
 #### Summary/Todo:
 Completed 3 hours.
 
-[x] Meeting tomorrow
-[x] Identify the original coding/digitalization process for Geneva
+- [x] Meeting tomorrow
+- [x] Identify the original coding/digitalization process for Geneva
 
 ## Saturday, Dec. 19
 
@@ -212,6 +212,8 @@ Completed 3 hours.
 - Making sure that updated "Onedrive" File (Which now will be the main "working" file) is consistent with changes from previous reports
 - Review some of Victor's "Tax Boundaries" in red
 - Continue working through Geneva
+    - Begin reviewing Victor's list of paragraphs (explained below)
+
 
 
 ### Relevant Notes:
@@ -227,10 +229,15 @@ Completed 3 hours.
 
 ### For Victor (List of Paragraphs)
 
-- p.202 
-    - Seems accurate. Though I am unsure above that 30 AV in K325
-    - (Not sure if this is calculated) 
 
+The following work relates to paragraphs in Geneva1 that Victor requested I look through.
+Specifically, the list includes:
+
+Geneva1: paragraph 202, 212, 218(f) 353, 355, 368, 719.4, 1301, 1529, 1530, 368
+
+#### Comments
+- p.202  Seems accurate. Though I am unsure above that 30 AV in K325
+    - (Not sure if this is calculated) 
 - p.212 is tricky... Some related notes are provided above. 
     - I'll come back
 - p.218(f)
@@ -254,6 +261,8 @@ Completed 4 hours.
 
 ### Overview
 
+Today's work is related to Victor's list of paragraphs
+
 ### Relevant Notes
 - Pages out of order in Geneva1 PDF: page 86 is placed after page 54
 
@@ -272,11 +281,16 @@ Completed 4 hours.
 
 Completed 2 hours
 
-
 ## Monday AM, Dec. 21
 
 ### Overview 
 
+The following work is related to Victor's paragraphs and developing a sheet for new entries in the excel file.
+Specifically, this "New Entries" sheet is for paragraphs/descriptions specified in both the hard copy and PDF version of Geneva1, but were not represented in the original "Main Data"
+sheet of the excel document:
+  - For example: Schedule 1. p. 54: "Peanut Oil" Was added to "New entries" as there was no row originally specified in the "Main Data" sheet
+    - Rows in "New entries sheet" are discussed between Victor and myself before being integrated into main data. 
+    - Once these rows are discussed/documents, these entries are copied from the "New entries" sheet and into "Main Data"
 - Continue paragraphs for Victor
 - Create list of "New" Entries
     - Enter entries in Shared file
@@ -328,18 +342,22 @@ Completed 2 hours
 
 Completed 2 hours
 
+The following is a list of items to be completed in the coming days:
+
 - Insert lines from "'New' Entries" sheet to "Main Data"
-- Check accuracy entire Geneva1 
-- Compare all of Hardcopy vs PDF (Geneva1)
+- Begin checking accuracy of entire Geneva1. (Ensure that the Victor's manual entries for each row in Geneva1 are consistent with the hard copy and PDF version of Geneva1) 
+- Compare all of Hardcopy vs PDF (Geneva1). (Compare each line of the Geneva Hard copy and PDF to identify inconsistencies) This is similar to the above, but here I am looking for differences in the texts, while in the above I am checking for errors
 - Begin Smoot-Hawley
 
 ## Monday, Dec. 28
 
 ### Overview
 
-- Complete 'Todo' tasks defined on 12/23
+- Today, I intend to complete the 'Todo' tasks defined on 12/23
 
 ### Relevant Notes:
+
+Rows were inserted from the "New Entries" sheet into "Main Data". 
 
 - Siennas? p.73 (In Geneva1 col in doc, but not specified in Hardcopy or pdf)
 - Added specific for Talc: (Schedule 2, p.209)
@@ -364,14 +382,15 @@ Completed 2 hours
 
 Completed 5 hours
 
-- Continue with accuracy check
+The following items are to be completed in the coming days:
+- Continue with accuracy check of Geneva1 (Here I am looking for errors in the coding of this schedule)
 - Begin Smooth Hawley
 
 ## Tuesday, Dec. 29
 
 ### Overview
 
-- Continue accuracy check for Geneva1
+Today's work continues the accuracy check for Geneva1 (Here I am looking for errors in the coding of this schedule)
 
 ### Relevant Notes:
 
@@ -430,7 +449,7 @@ Completed 7 Hours
 ## Wednesday, Dec. 30
 
 ### Relevant Notes:
-- **p.1410 added comment regarding values on section.
+- p.1410 added comment regarding values on section.
 - p.1413 added to new entries
 - p.1506 added brooms to new entries
 - p.1507 added bristles to new entries
@@ -453,10 +472,12 @@ Completed 7 Hours
 - p.1556 added av
 - p,1558 added to new entries
 
-**(mostly) Completed Geneva**
+#### (mostly) Completed the accuracy check for Geneva1:
 
+At this point, I have checked entire Geneva1 schedule for errors in coding, and for potential "New entries" to be added. 
+There are paragraphs that Victor and I will come back to after I code Smoot-Hawley. This is because we assume that Smoot-Hawley might give us some insight/inspiration as to how some difficult sections can be dealt with. There are also paragraphs that I am interested in returning to after S-H. These are 
+captured by bold **"Come back here"** notes.
 
-### Beginning Smoot-Hawley
 
 ### Misc
 
@@ -464,20 +485,24 @@ Completed 7 Hours
 
 ### Summary/Todo:
 
-Complted 3.5 hours
+Completed 3.5 hours
+
+
+#### Beginning Smoot-Hawley
+
+Having completed checking over Geneva1, I will begin manually coding S-H tomorrow, Starting at schedule 3, where Victor left off. 
+
 
 
 ## Thursday, Dec. 31
 
 ### Overview:
 
-- Begin Smoot-Hawley
-    - Most comments are included in "Extra" category for HS
+- Today I will begin coding Smoot-Hawley schedule 3
+    - I include comment related to the codign in the "Extra" category for HS
 
 
 ### Relevant Notes:
-
-
 
 - p.302.n (Check previous work.. unsure if it should be a single rate across the paragraph. )
 - p.302.r There are some paragraphs in HS that are not included in later schedules?
@@ -563,5 +588,9 @@ Completed 3 hours
 
 
 ## Monday, Jan. 4
+
+### Relevant notes:
+
+- p.1301 Tough section. Should discuss with Victor. **Come back **
 
 
