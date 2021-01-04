@@ -553,7 +553,7 @@ Completed 4 hours
 - p.1108,1109,1119: difficult paragraphs
 
 
-Question/Thought: HS does not use tax intervals and does not specify rates based on value. As such, there are many instances with a single tax rate across entire paragraphs: **p.804 ass an example**
+Question/Thought: HS does not use tax intervals and does not specify rates based on value. As such, there are many instances with a single tax rate across entire paragraphs: **p.804 as an example**
 
 ### Summary/Todo:
 
