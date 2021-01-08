@@ -167,7 +167,7 @@ Completed 2 hours.
 
 
 
-# Progress Report 3 (12/19/20 - ...)
+# Progress Report 3 (12/19/20 - 1/5/2021)
 
 ## Thursday, Dec. 17
 
@@ -587,10 +587,195 @@ Completed 3 hours
 **HOURS SUBMITTED UP TO THIS POINT** 
 
 
+# Progress report 4 (1/4/2021 - ...)
+
 ## Monday, Jan. 4
 
-### Relevant notes:
+### Overview
 
-- p.1301 Tough section. Should discuss with Victor. **Come back **
+I submitted a PR for this file to be merged with master. Prof. Buzard suggested that I improve clarity on certain sections. As such, I spent time revising the PR. I was assigned [Issue #56](https://github.com/kbuzard-SU/gradualism/issues/56)
+related to some problems with Geneva1. My thoughts are recorded on Github. The following notes outline thoughts on the Github issues. Then, in the "Relevant notes" section, I record comments related to my work in manually coding Smoot-Hawley.  
+
+#### Github Issues (#56-57)
+- Before going continuing with issue #56, it is important to understand potential copyright restrictions ([Issue #57](https://github.com/kbuzard-SU/gradualism/issues/57))
+    - While waiting for this, I can reexamine the Geneva1 hard copy vs PDF and develop a specific list of differences. **My biggest concern here is the potential difference in 911.a** 
+
+### Relevant notes (S-H):
+
+- p.1301 Tough section. Should discuss with Victor. **Come back**
+- p.1404-1406 are difficult **Come back**
+- p.1503 is highlighted in the excel document, with comments related to entries that are available in S-H but not listed in the descriptions column of our working Excel sheet. This is not the first occurrence
+
+### Summary/Todo:
+
+Completed 6 hours
+
+Wednesday, 1/6/2021, I will meet with Victor and Professor Buzard to discuss current work/issues. The items to be completed before this meeting are:
+
+- S-H coding
+- Develop agenda for S-H meeting with Victor
+- Another careful analysis of Geneva1 hard copy vs. PDF
+
+
+## Tuesday, Jan. 5
+
+### Overview
+
+I will complete my first pass of manually coding S-H. There are a variety of difficulties related to matching entries to descriptions, and identifying which tax rates are appropriate to certain entries. I have included particularly difficult sections
+in this report, (See 1/4/2021 and 1/3/2021), but I have made more specific comments in the "H-S Extra" col of the working excel sheet.
+After completing S-H, I will develop a list of topics that I'd like to cover in tomorrow's meeting.
+
+The "Relevant notes" section will include comments on work related to coding S-H
+
+
+### Relevant notes (S-H)
+
+- I have commented in the actual workbook in the "Extra" column with thoughts and questions
+- Sections that are highlighted in light green are sections that I would like to come back to after discussing some issues with Victor
+- The text of certain entries are colored light green. These are entries that I was particularly unsure about, and would like to come back to as well.
+
+I have now completed a first pass of manually coding S-H. As mentioned above, there are sections that should be revisited. (See notes from early this week as an example of problematic sections)
+I will outlines my next steps in the following "Summary/Todo:" section 
+
+
+### Summary/Todo:
+
+Completed 5 hours
+
+Before tomorrow's meeting, I will address the folling in tomorrow's notes:
+
+- I need to outline the specific issues I'm having with S-H
+- There are certain entries leftover from Geneva1: "New entries" sheet that should be integrated with "Main data"
+    - I was waiting for Victor to first integrate his "New entries" found when coding Geneva56.
+- Progress with [Issue 56](https://github.com/kbuzard-SU/gradualism/issues/56)
+
+
+
+## Wednesday, Jan. 6
+
+### Overview
+
+I will spend some time today preparing a specific outline of my progress and questions for tonights meeting with Prof. Buzard and Victor.
+The "Todo" items from 1/5/2021 will be discussed in the following sections.
+
+The following items will be addressed:
+
+- Integrating Geneva1 "New entries" into main data. (This process is outlined in December 21: Overview)
+- Difficulties in coding S-H
+- Issue 56: (Addressing issues with Geneva 1.pdf)
+
+####  Integrating "New entries" into main data.
+
+I have been hesitant to copy over some of the data from the "New entries" sheet before discussing with Victor. I expect, however, that I should have the green
+light to go ahead and integrate these new entries by tonight. This process should not be particularly time consuming. Also, I 
+should note that some of these "New entries" have already been added to the sheet by Victor. This should make the process even easier.
+
+#### Issue 56:
+
+It is important to address some key difference between the hard copy version of Geneva 1, and the PDF version. In this section I will discuss these differences:
+
+- Geneva 1 Page 85-86 comes after page 54 in the PDF. 
+    - Page number is 54, 85, 86, then 55
+    - These pages must be moved to their accurate positions
+- Page 149 is not missing in Geneva PDF (The note in progress report 3 is incorrect)
+- ~~page 53, hard copy is hard to read, double check~~ 
+- ERROR p.764 carrot: $0.03/lb in hard copy $0.05/lb in PDF. 
+    - French version confirms $0.03/lb is accurate
+
+#### Difficulties with S-H
+
+The issues I discuss here are described in detail in comments in the actual excel file. 
+
+- Description of certain paragraphs is missing from the working Excel document, though are available in S-H. 
+    - I assume that we will need to add these to our spreadsheet
+- Issues with matching descriptions p.304 
+    - EXAMPLE: p.329
+- The way paragraphs changed over time can be confusing: 
+    - EXAMPLE: p.353. (Some machines were added as time progressed?)
+- Some specified rates based on value don't match up with the rates in Geneva1 
+    - EXAMPLE: p.358 
+- Question: What to do with entries that are not specified in S-H. Example: 1530.b.5
+
+
+
+Some problematic paragraphs with notes for discussion:
+(These are just examples to talk about)
+
+p.353
+    - All of the foregoing are given the same AV
+p.368
+    - Difficult to group because many paragraphs included in the Excel sheet but not in S-H
+p.719.4
+    - Difficulty with "Allewives" section
+p.1301
+    - One of the more difficult paragraphs, problematic areas are highlighted 
+p.1529
+    - Everything is provided with the same AV?
+
+
+### Summary/Todo:
+
+Completed 4 hours
+
+Following the meeting with Victor and Prof. Buzard, the notes of Issue 56 and the "New Entries" sections from above are resolved.
+
+Regarding S-H:
+
+- In general, the largest issue with coding S-H is that S-H has either too few descriptions for items in certain paragraphs
+than our current Excel file, or too many.
+- Victor and are are working to develop a specific framework to address this:
+    - For instances with too few entries in S-H, we will most likely be applying a S-H tax rate that captured 
+    will capture an entire section 
+        - This above note is unclear, I will illustrate this in the coming days with an example
+    - For instances with too many entries, we will mostly likely be adding entries
+
+More details will be provided in the coming days
+
+
+## Thursday, Jan. 7
+
+### Overview
+
+Today I will copying entries from the "New Entries" sheet into "Main Data". Then, I will be documenting processes for coding problematic sections in S-H
+
+
+### Integrating "New Entries"
+- p.1413 "New Entry" already included in the original file but wasn't highlighted in blue. I'm choosing to highlight here.
+
+Process is complete.
+
+### S-H 
+Now I will begin documenting a process for 
+
+p. 302.b: Added Specific
+
+p. 302.e: Since S-H provides only a tax rate for a general category of items, only single tax rate is specified
+p. 304: Concrete reenforcement bar;... over 1.5 but not over 2.5: filled in this section. Rates match those of Steel blooms, ingots etc...
+    - Bars and billets is also filled in similarly. Note here that the description indicates, for example "valued over 1.5 but not over 2.5: not over 30 lbs" and "valued over 1.5 bu not over 2.5: Over 30 lbs". Because S-H does not provide separate rates based on these evaluations, I have coded them with the same rate.
+    - **AN ISSUE**: (This is documented in The file under "H-S Extra", and was previously mentioned in a comment) HS states: Over 2.5 but not over 3.5. Then has an additional entry for over 3.5 but under 5. These two entries are taxed differently. Not sure if I should add a new entry?
+p.308: I have entered the same rate as I did for description in E636. This is because S-H does not specify different rates for values under $1.75 vs [$1.75,$3]
+p.316: Added AV
+p.318: Cylindrical Wires: two entries here are taxed at the same rate as S-H does not specify based on value.
+    - This is continued in descriptions below
+p.321: S-H did not original break this section into multiple entries. Both are taxed at same rate
+p.327: Although "Castings of malleable iron, nspf:  heel and other plates for boots and shoots etc..." is not specified, I believe that is should fit under general category of "castings of malleable iron"
+
+p.333 Missing from Excel. "Common horse, mule, or ox shoes etc..."
+    - Should we make new entry list? Or wait
+p.334 Steel shavings, also missing from Excel file. 
+
+
+
+
+p.328: Corrected section 
+
+
+
+
+
+
+
+
+
 
 
