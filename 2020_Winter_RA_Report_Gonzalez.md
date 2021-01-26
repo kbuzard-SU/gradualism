@@ -769,6 +769,414 @@ p.334 Steel shavings, also missing from Excel file.
 
 p.328: Corrected section 
 
+### Summary/Todo:
+
+Completed 4 hours
+
+I will continue working on improving S-H in the coming days.
+
+## Friday, Jan. 8
+
+### Overview
+
+I uploaded a correctly ordered copy of Geneva 1.pdf to the G:drive folder. This is documented in #56.
+Today, I will continue working with Victor on improving the coding of S-H.
+
+### S-H 
+
+I created a "New_-S-H" Column that will help document paragraphs/items that are described in S-H, but are currently missing as rows in the Excel file.
+This process is similiar to the "New__Genva1" process described in previous notes.
+
+The following notes relate to a "second pass" of S-H
+
+- p.304: added new rows for specifications based on value that were original not in our excel sheet
+- p.333: adding this missing paragraph to "New entries" ("NE" hereafter)
+- p.334: added "steel shavings" to NE
+
+- p.339: should an entry be added to NE? 
+
+- p.340: crosscut and circular saws are coded with the same AV, regardless of specified value
+- p.343: How should we enter the "Other" Entries for S-H?
+  - In this example I was able to just enter an AV because the description mentioned "And all other needles". But I believe that this is sometimes an issue. I'll explain more when I come across a more problematic example.
+- p.344: Adding a entry to NE
+
+### Summary/Todo:
+
+Completed 3.5 hours
+
+
+## Saturday, Jan. 5
+
+### Overview
+
+Today I will continue working with S-H in the manner described above
+
+
+### S-H 
+
+- p.345: I realized that in Geneva1 NE, I had proposed adding to new entries, "If not plated with gold or silver" and "Plated with gold or silver" 
+  I found that these items were actually already captured by the Excel file, so I am removing them from NE.
+- p.345: S-H originally separated harness hardware (Adding to NE) 
+  - I have added this line and explained some thoughts to Victor in an Excel comment
+- p.346: entered rate in for NE that victor added
+- p.347: entered rate in for NE that victor added
+- p.350: Uniform tax rate as no further specification is provided
+- **p.353: This paragraph is an instance where items were invented at a later point. This will be discussed with Victor** 
+- p.354: No specification for "other". I will code here based on tax rate specified for items over $6
+- p.355: I've added some rates (and comments) In the excel sheet to discuss with Victor
+
+### Summary/Todo:
+
+Completed 2 hours
+
+
+## Monday, Jan 11
+
+### Overview
+
+- Prof. Buzard contacted Victor and me via email to propose change in deadline for this section (Data development and some analysis in R). The new deadline is (mostly likely) Jan 25. I am following this email thread.
+  I will spend today working with S-H in the same manner as described above.
+
+### S-H 
+
+p.358: More intervals in S-H than in current excel sheet. This section converges to only two intervals in Torquay.
+p.358: Because there is no specification based on value for safety razor frames and handles, each tax interval is coded with a uniform tax rate (10 cents each and 30 AV)
+    - This is somewhat similar to p. 304. Using p.304 as a precedent, I will added the addition intervals to NE
+    - I will not yet integrate this into "Main Data". I'd like to mention to Victor first.
+p.359: Somewhat interesting example. Our Excel sheet lists two entries. (Surgical needles, including hypodermic needles) and (other instruments, forceps, hypodermic syringes etc..), Both specify "Except articles in chief value of glass". Now 
+consider S-H. S-H groups Hypodermic needles, forceps and hypodermic syringes together, instead of splitting them. AND also specifies a rate for these articles if they are composed in chief value of glass.
+    - As a result, I expect to create new entries for articles specifying chief value of glass (based on our current excel sheet structure)
+    and adding to NE. See excel sheet for example. 
+    - A similar method applied to "dental equipment" in the same paragraph
+p.360: I had marked with "No further specifications", but the coding I initially used was appropriate.
+p.362: Added the addition sub-paragraphs mentioned in S-H
+    - **A thought: S-H specifies rates for various lengths. Annecy then specifies a reduction in AV duty for length "over 7 inches long"... Whats going on for items less than 7 inches long?**
+p.364: Bicycle bells are not specified in S-H. Coding them with general rate specified in S-H
+p.365: Shotguns, rifles and combination shotguns/rifles are grouped together in S-H 
+    - Corrected rate to 55 AV: Other parts of rifles, parts of combination shotguns and rifles, and fittings for rifle stocks or barrels, finished or unfinished
+p.366: Added interval to NE that was not captured in original sheet or Geneva56
+p.367: Long paragraph to add. (Not adding just yet) I want to see if any entries in p.367 were later captured in p. 368
+p.368.a.1.2_6 S-H does not specify "other", so coding based on valuation (over $10). See excel sheet.
+p.368.1.2_8 fixed entries to reflect taxation on each additional jewel. S-H does not apply further specifications based on items
+p.368.a.1.2_9 Though pigeon timers are not specified, this, I think that the tax rate I coded makes sense
+p.368.a.1.2_11 Similar to p.368.a.1.2_9 
+p.368.a.1.2_12 Providing the same duty as additional jewels (see p.368.1.2_6)
+**p.368.c_13 and .c_14: Unsure here. I have coded with the same rate.** 
+p.368.c_17 **Having a lot of difficulty figuring out what to tax this as**.
+p.368.c_19 removed highlight. Confident that this is correct
+p.368: It appears that some Geneva1 entries belong in torquay. This is brought to Victor's attention
+p.372: Cream separators: We may need new entries here for different valuations.
+    - **ALSO, There are additional items that seem to be added (or invented) after S-H. These is an example to be discussed with Victor**
+    - Parts of Sewing machines is difficult to tax here. Code with same rate as "Other?"
+
+p.377: Stopping here
+
+### Summary/Todo:
+
+Completed 4 hours
+
+
+## Tuesday, Jan. 12
+
+### Overview
+
+Today I will be continuing working to improve the S-H file as described above.
+
+### S-H 
+
+Based on conversation with Victor in comments of Excel, check over Torquay p.368.c_16...  
+p.380: added entry to NE
+p.382.a: and p.382.b added entries to NE
+p.383.a,b: added entries to NE
+p.386: p.387
+
+p.389: The "Other" entry is difficult here. I haven't come up with a method of coding this at the moment 
+
+   - **Discuss with Victor** 
+
+p.394: Fixed entry for Zinc 
+p.395: Added new entry to NE
+
+p.397: Tricky, many additional entries in the rounds that come after S-H. These can potentially be coded with a uniform tax rate (45 av) but I want to be sure
+
+   - **Discuss with Victor**
+
+p.405: Confirmed my original entries
+p.410: Added to NE
+p.411: Added AV for "Other"
+p.412: I think my entries make sense here
+
+   - **Discuss** 
+
+p.504: Added to NE
+p.601: Added entry to NE
+
+p.701: Stopping here
+
+
+### Summary/Todo:
+
+Completed 3.5 hours
+
+
+## Wedneday, Jan. 13
+
+Today I will continue working to improve the S-H file as described above.
+
+
+### S-H
+
+p.701 and 702: Added items to NE
+p.706 and 710: **Tax intervals? I'd like to go over these** 
+p.710: Many more descriptions of Cheese in Excel than in S-H
+p.717.b: Not sure how to group "swordfish"
+p.717.c: Added two new entries for "Other". **Not sure how necessary these entries are**
+
+p.719.4: **This section should be discussed*. There are some comments in the "Extra" col for S-H. My concern is related to grouping. S-H has "Weighing with their contents not more than 15 pounds each" whereas the Torquay dezscription in excel mentions: "Herring in immediate containers containing each not over 10 pounds of herring" **
+
+- I believe that this paragraph (and 719.xx in general) needs to be developed (i.e. paragraph numbers need to be changed, ordering, description etc..)** 
+
+p.731.a: Added row to NE
+p.720.d not sure if we should add an entry for "other"
+p.727: added rows to NE
+p.730: **I may have added a duplicate from Geneva. I'll look into it.** 
+
+- added rows to NE
+
+p.736: Added rows to NE. Cleaned up entries 
+p.741: Added rows to NE
+
+
+### Summary/Todo:
+
+Completed 4 hours
+
+## Thursday, Jan. 14
+
+Today I will be continuing working to improve the S-H file as described above.
+
+### S-H 
+
+p.743, 744,747,748 749: Added rows to NE
+
+**p.753: Hyancinth bulbs and tulip bulbs: We may want to look at this description again and make changes**
+p.756: Added rows to NE
+p.759: Added rows to NE
+p.760: Added rows to NE
+p.761: Added rows to NE
+p.762: Added rows to NE
+p.763: Added rows to NE
+p.764: Added rows to NE
+p.766: Added rows to NE
+p.770: **Onion sets is a difficult entry to code.** 
+p.771: Added rows to NE 
+p.774,775,776: Added rows to NE
+p.779: Added rows to NE
+p.781: Added rows to NE
+
+### Summary/Todo:
+
+Completed 3 hours
+
+## Friday, Jan. 15
+
+### Overview
+
+Today I will be continuing working to improve the S-H file as described above.
+
+### S-H
+
+p.901: Similar to bicycle example on GitHub discussion. **COME BACK**
+p.901.c: Added to NE
+p.904: Similar to p.901 **COME BACK**
+p.909: Difficult to code "Other" here
+p.911: Added to NE
+p.912: Added to NE
+p.914: Added to NE
+p.915: Added to NE 
+p.921, 923: added to NE
+
+p.923: An interesting example where S-H offers a general description that diverges into sub-paragraphs later on.. **Come back**
+p.1003, 1007: Added to NE
+p.1012: This is an example of S-H having more entries than in Geneva. Added to NE but want to **COME BACK**  
+p.1014: Cleaned up this section's entries
+p.1016: Cleaned up entries
+p.1021: Added NE and cleaned up entries
+p.1023: Entry for "Jute" is coded based on the assumption that jute is a vegetable fiber.
+p.1101.b: added comment. Description is slightly different in S-H. I believe this belongs in 1101.a
+p.1102.a added comment regarding "provision"
+
+p.1107, 1108, 1109: Added entries to NE. **THESE SHOULD BE REVIEWED** 
+p.1110: Added to entries to NE
+p.1111: Added entries to NE
+p.1117.a **Review** 
+
+### Summary/Todo:
+
+Completed 4 hours
+
+- I will be meeting with Victor at 2pm on Monday to discuss some of the "left over" paragraphs that I am still unsure about. I will complete the "second pass" of S-H before then.
+
+
+## Saturday, Jan. 16
+
+### Overview
+
+My goal is to complete the second pass of S-H by Monday
+Today, I'd like to reach p.1523
+
+### S-H
+
+p.1205: **ISSUES ARE DISCUSSED IN COMMENT SECTION** 
+p.1206: Added to NE
+p.1301: Although tricky, seems to be largely resolved. **DISCUSS THIS**
+p.1306: Added to NE, though may need to add another entry? **DISCUSS** 
+p.1404: Difficult but I believe that this section is largely resolved
+p.1405: Provided section is confusing
+p.1405: I'll need to come back here 
+p.1406: Some additional entries may be needed  **DISCUSS LAST THREE SECTIONS**
+    - Last part of 1406 is difficult to group, especially with Dillon entries
+p.1410: Some entries may still need to be added. **COME BACK**
+
+p.1503: Added to NE. Fixed some entries
+    - Can't find entry for handbag
+p.1504.b: Somewhat complicated. Need to check over this **COME BACK**
+p.1506: **MAY NEED TO ADD MORE ENTRIES**?
+p.1511: **HAVEN'T ADDED THIS PARAGRAPH YET**
+p.1513: Tricky. **REVIEW**
+p.1517: Might add entries...waiting on some entries from DILLON
+p.1526: Similar to Sewing machine GitHub discussion. **COME BACK** 
+
+p.1552: ENDING HERE
+
+### Summary/Todo:
+
+Completed 5 hours
+
+
+## Monday, Jan. 18
+
+### Overview
+
+Today I will complete my second pass of S-H and develop notes to discuss with Victor, regarding some remaining difficulties in coding:
+
+### S-H Notes for discussion
+
+In this section, I will compile a list of notes for a discussion with Victor based on my experiences coding this section.
+
+#### Todo:
+
+- I still have to "integrate" entries from the NE sheet into "Main Data"
+- I should review Victor's work on schedules 1-2
+
+#### An overview of items to be addressed:
+
+- After integrating items from NE to Main data, we will need to check over all the "new entries"in main data across rounds for accuracy
+  - Say, for instance, a Dillon row was added that also existed in S-H, We will have to be sure that the entry is coded in both schedules
+- Tax intervals: 
+  - I have done my best in areas where there seemed to be a tax interval, however, I would appreciate if these can be reviewed. These sections are always commented in "extra" in red
+- Paragraph redesign:
+  - Similar to sewing machine example from GitHub. 
+  - Also, consider Hyacinth/Tulip bulb example.  
+
+#### Issues/list of items for review: 
+
+The following paragraphs were mentioned in the above sections (Under "S-H") as being problematic. Some just need to be reviewed, while others are tagged with additional comments/suggestions **in bold**
+
+
+p.362 
+p.368
+p.372
+p.389
+p.397
+p.412
+
+p.706 **TAX INTERVALS** 
+p.717 **How necessary are certain entries** 
+p.719 **We might need to redevelop these paragraphs?** 
+p.770
+p.901,p.904, p.1523 Similar issue to "Sewing machine" example provided on GitHub
+p.909 **Issues with coding "other"**
+
+p.923
+p.1012
+p.1107-1109
+p.1117
+p.1205
+p.1301
+p.1306
+p.1403-1406
+p.1410
+p.1504
+p.1506
+p.1511
+p.1513
+
+
+### Meeting with Victor
+
+- Keywords for "not specified" etc..
+  - I will use NS to indicate "Not specified" and NSV for "Not specified based on value". I should develop a key here.
+- Potential for a folder in Onedrive  for "how we've coded"?
+
+
+#### Summary/Todo: 
+
+- Changing Units
+- **Clean columns/notes extra**
+- code remaining blank enteries (S-H)
+- **Change color and font**
+- Check that all items are represented in S-H
+
+
+Completed 3 hours
+
+
+## Tuesday, Jan. 19
+
+### Overview
+
+I started today by fixing some entries with Victor on our Main Data sheet. I want to go over p.308. I'm confused by what seems to be a tax boundary here. This will be addressed after I hear back from Victor
+Otherwise, Today I will be integrating entries from NE to Main data.
+
+I also went through schedules 1 and 2, which were previously coded by Victor, to improve accuracy and add any additional entries (if necessary)
+
+### Misc Notes (I will mention these in an upcoming report):
+
+- Dealing with Geneva47 paragraph 308: Sheets of iron or steel, common or black, of whatever dimensions, and skelp iron or steel; all the foregoing valued per pound: Over 1.75 cents but not over 3 cents, and in thickness: Under 0.038 but not under 0.022 inch
+- p.68`
+
+### Summary/Todo:
+
+Tomorrow, I will develop a report identifying remaining issues in S-H and Geneva. This report will be developed as a seperate .md file
+
+### Wednesday, Jan. 20
+
+Completed 8 hours
+
+### Thursday, Jan 21
+
+Completed 8 hours
+
+### Friday, Jan 22
+
+Completed 4 hours
+
+### Saturday, Jan 23:
+
+Completed 2 hours
+
+
+
+## Monday, Jan 25: 
+
+### Overview: 
+
+Today, I addressed the problematic paragraphs in [issue #61](https://github.com/kbuzard-SU/gradualism/issues/61)
+At this point, these seem to be largely resolved. I will return to these and review my answers tomorrow. 
+
+
+Completed 3 hours
 
 
 
