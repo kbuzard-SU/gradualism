@@ -594,12 +594,13 @@ Completed 3 hours
 ### Overview
 
 I submitted a PR for this file to be merged with master. Prof. Buzard suggested that I improve clarity on certain sections. As such, I spent time revising the PR. I was assigned [Issue #56](https://github.com/kbuzard-SU/gradualism/issues/56)
-related to some problems with Geneva1. My thoughts are recorded on Github. The following notes outline thoughts on the Github issues. Then, in the "Relevant notes" section, I record comments related to my work in manually coding Smoot-Hawley.  
+related to some problems with Geneva1. My thoughts are recorded on Github. The following notes outline thoughts on the Github issues #56 and #57. Then, in the "Relevant notes" section, I record comments related to my work in manually coding Smoot-Hawley.  
 
 #### Github Issues (#56-57)
 - Before going continuing with issue #56, it is important to understand potential copyright restrictions ([Issue #57](https://github.com/kbuzard-SU/gradualism/issues/57))
-    - While waiting for this, I can reexamine the Geneva1 hard copy vs PDF and develop a specific list of differences. **My biggest concern here is the potential difference in 911.a** 
-
+    - While waiting for this, I can reexamine the Geneva1 hard copy vs PDF and develop a specific list of differences.
+    - ~~ **My biggest concern here is the potential difference in 911.a*~~* **This concern was resolved in [Issues #56](https://github.com/kbuzard-SU/gradualism/issues/56). The French version of Geneva1 was used to verify the correct solution of this entry
+    
 ### Relevant notes (S-H):
 
 - p.1301 Tough section. Should discuss with Victor. **Come back**
@@ -680,7 +681,7 @@ It is important to address some key difference between the hard copy version of 
 - Page 149 is not missing in Geneva PDF (The note in progress report 3 is incorrect)
 - ~~page 53, hard copy is hard to read, double check~~ 
 - ERROR p.764 carrot: $0.03/lb in hard copy $0.05/lb in PDF. 
-    - French version confirms $0.03/lb is accurate
+    - This error is similar to p.911.a (Resolved by Github issue #56) The French version confirms $0.03/lb is accurate.
 
 #### Difficulties with S-H
 
@@ -814,7 +815,7 @@ Today I will continue working with S-H in the manner described above
 
 ### S-H 
 
-- p.345: I realized that in Geneva1 NE, I had proposed adding to new entries, "If not plated with gold or silver" and "Plated with gold or silver" 
+- p.345: I realized that in Geneva1 NE, I had proposed adding two new entries, "If not plated with gold or silver" and "Plated with gold or silver" 
   I found that these items were actually already captured by the Excel file, so I am removing them from NE.
 - p.345: S-H originally separated harness hardware (Adding to NE) 
   - I have added this line and explained some thoughts to Victor in an Excel comment
