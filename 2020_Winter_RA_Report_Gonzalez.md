@@ -805,7 +805,7 @@ The following notes relate to a "second pass" of S-H
 Completed 3.5 hours
 
 
-## Saturday, Jan. 5
+## Saturday, Jan. 9
 
 ### Overview
 
