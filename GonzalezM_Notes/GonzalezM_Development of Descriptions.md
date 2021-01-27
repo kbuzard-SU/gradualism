@@ -12,11 +12,11 @@ An example, p.219:
 
 - The original description from Torquay:
 
-![Screen Shot 2021-01-27 at 10.49.26 AM](/Users/matthew/Library/Application Support/typora-user-images/Screen Shot 2021-01-27 at 10.49.26 AM.png)
+![Load](https://github.com/MatthewRGonzalez/gradualism/blob/MG-Gradualism/GonzalezM_Notes/p.219_Torquay.png?raw=true)
 
 - The description from Smoot-Hawley: 
 
-![Screen Shot 2021-01-27 at 10.51.12 AM](/Users/matthew/Library/Application Support/typora-user-images/Screen Shot 2021-01-27 at 10.51.12 AM.png)
+![Screen Shot 2021-01-27 at 10.51.12 AM](https://github.com/MatthewRGonzalez/gradualism/blob/MG-Gradualism/GonzalezM_Notes/p.219_S-H.png?raw=true)
 
 
 
