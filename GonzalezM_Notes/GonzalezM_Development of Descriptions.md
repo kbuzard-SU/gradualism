@@ -72,7 +72,7 @@ p.701: Changed descriptions for entries based on cattle weights to accommodate c
 
 p.719.4: See [GitHub #61](https://github.com/kbuzard-SU/gradualism/issues/61)
 
-**p.721.d**
+p.721.d: Added paragraphs and adjusted desctiptions for boiled vs not boiled in order to capture the changes in tax rate between Sturgeon Roe and not sturgeon row.
 
 p.901.a: Added row and changed description because initially S-H describes rates for over/under 90. Then Geneva1 describes rates for over/under 60
 
