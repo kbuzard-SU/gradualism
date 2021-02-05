@@ -21,12 +21,12 @@ setwd("C:/Users/victo/OneDrive/桌面/code for gradualism")#Set working director
 ##### But luckily only small amount of them remain, ex: paragraph 11 in the paragraph column.
 
 
-data_set <- read.csv(file='test_final.csv', encoding="UTF-8",na.string=c(""," ","" ,"" ,"NA"))[,c('X.U.FEFF.Schedule','Paragraph','Description','Specific_SH','Units_SH','Ad_Valorem_SH','Specific_Geneva',
-                                                                                                  'Units_Geneva','Ad_Valorem_Geneva','Specific_Annecy','Units_Annecy','Ad_Valorem_Annecy','Specific_Torquay',
-                                                                                                  'Units_Torquay','Ad_Valorem_Torquay','Specific_Geneva56_A','Units_Geneva56_A','Ad_Valorem_Geneva56_A',
-                                                                                                  'Specific_Geneva56_B','Units_Geneva56_B','Ad_Valorem_Geneva56_B','Specific_Geneva56_C','Units_Geneva56_C',
-                                                                                                  'Ad_Valorem_Geneva56_C','Specific_Dillon_A','Units_Dillon_A','Ad_Valorem_Dillon_A',
-                                                                                                  'Specific_Dillon_B','Units_Dillon_B','Ad_Valorem_Dillon_B')]
+data_set <- read.csv(file='C:/Users/krist/Downloads/test_1.csv', encoding="UTF-8",na.string=c(""," ","" ,"" ,"NA","\u00A0"))[,c('X.U.FEFF.Schedule','Paragraph','Description','Specific_SH','Units_SH','Ad_Valorem_SH','Specific_Geneva',
+                                                                'Units_Geneva','Ad_Valorem_Geneva','Specific_Annecy','Units_Annecy','Ad_Valorem_Annecy','Specific_Torquay','Units_Torquay','Ad_Valorem_Torquay',
+                                                                  'Specific_Geneva56_A','Units_Geneva56_A','Ad_Valorem_Geneva56_A','Specific_Geneva56_B','Units_Geneva56_B','Ad_Valorem_Geneva56_B',
+                                                                'Specific_Geneva56_C','Units_Geneva56_C','Ad_Valorem_Geneva56_C','Specific_Dillon_A','Units_Dillon_A','Ad_Valorem_Dillon_A',
+                                                                'Specific_Dillon_B','Units_Dillon_B','Ad_Valorem_Dillon_B')]
+
 
 # Select the above columns by names
 
@@ -46,7 +46,7 @@ data_set<-data_set %>%
   mutate(id=row_number()) #id represents the number of observation 
 data_set<-data_set %>%
   group_by(Paragraph) %>%
-  mutate(Product=row_number())# Now every line can be located as, "Paragraph. X, No. Y product", while the schedule information is contained in the paragraph number. 
+  mutate(Product=row_number()) %>% ungroup() # Now every line can be located as, "Paragraph. X, No. Y product", while the schedule information is contained in the paragraph number. 
 
 
 
