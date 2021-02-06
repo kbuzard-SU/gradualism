@@ -56,6 +56,7 @@ adval_dillon_n <- str_extract(adval_ss[7,9],regexp)
 
 - Roughly 2/3 of the lines have an ad valorem tariff. In Dillon, `r max(ad_valorem[,"Ad_Valorem_Dillon_B"])` rows out of `r nrow(ad_valorem)` are missing, so `r nrow(ad_valorem)` ad valorem tariffs. `r n_perc(ad_valorem$Ad_Valorem_Dillon_B == NA)` test2
 
+## What was the total reduction in negotiated tariffs under the GATT in each round? 
 
 ### Mixed
 
