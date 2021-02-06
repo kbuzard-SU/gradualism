@@ -1,73 +1,41 @@
 \documentclass[12pt]{article}
 
-
-
 \addtolength{\textwidth}{.6in}
-
 \addtolength{\oddsidemargin}{-.3in}
-
 \setlength{\textheight}{8.4in}
-
 \setlength{\topmargin}{-.25in}
-
 \setlength{\headheight}{0.0in}
-
 \renewcommand{\baselinestretch}{1.0}
-
 \linespread{1.15}
-
 \pagenumbering{gobble}
 
-
-
 \usepackage{cite}
-
 \usepackage{times, verbatim,xcolor,bm}
-
 \usepackage{amsbsy,amssymb, amsmath, amsthm}
-
 \usepackage{hyperref}
 
-
-
 \newtheorem{definition}{Definition}
-
 \newtheorem{theorem}{Theorem}
-
 \newtheorem{lemma}{Lemma}
-
 \newtheorem{corollary}{Corollary}
-
 \newtheorem{assumption}{Assumption}
-
 \newtheorem{fact}{Fact}
 
-
-
 \newcommand{\ve}{\varepsilon}
-
 \newcommand{\ov}{\overline}
-
 \newcommand{\un}{\underline}
-
 \newcommand{\ta}{\theta}
-
 \newcommand{\Ta}{\Theta}
-
 \newcommand{\expect}{\mathbb{E}}
-
 
 
 \begin{document}
 
 \title{\vskip-0.6in Gradualism}
-
 \author{ECN 490}
-
 \date{May 1, 2018}
 
 \maketitle
-
 
 
 \section{Original Model with Government / Lobbying Effort}
@@ -189,17 +157,12 @@ Square to the power of $\frac{1-\alpha}{\alpha}$
 \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}= l^{\ast 1-\alpha}_t 
 \end{aligned}
 \end{equation}
-\[
-\]
 \normalsize
 Euler Equation:
-\begin{equation}
-\begin{aligned}
-\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W +\frac{\beta}{1-\beta}\cdot (1-\delta)\\\cdot\left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha\cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha\cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W-\delta\right]=\delta
-\end{aligned}
-\end{equation}
-\[
-\]
+\begin{multline}
+	\frac{\partial A(m^\ast_t)}{\partial m^\ast_t} \cdot F^\alpha \cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W +\frac{\beta}{1-\beta}\cdot (1-\delta) \\
+	\cdot\left[\frac{\partial A(m^\ast_{t+1})}{\partial m^\ast_{t+1}}\cdot F^\alpha\cdot \left[(1-\delta)A(m^\ast_t)\cdot F^\alpha\cdot P^W\right]^\frac{1-\alpha}{\alpha}\cdot P^W-\delta\right]=\delta
+\end{multline}
 \normalsize
 In order to simplify the analysis, we define the next expessions as:
 \begin{equation}
@@ -207,8 +170,6 @@ In order to simplify the analysis, we define the next expessions as:
 \frac{\partial A(m^\ast_t)}{\partial m^\ast_t}\cdot F^\alpha\cdot P^W=\Pi\text{   and   }\left[(1-\delta)A(m^\ast_t)\cdot F^\alpha \cdot P^W\right]^\frac{1-\alpha}{\alpha}=Z
 \end{aligned}
 \end{equation}
-\[
-\]
 \normalsize
 Then we replace in the Euler Equation and rearrange terms
 \begin{equation}
