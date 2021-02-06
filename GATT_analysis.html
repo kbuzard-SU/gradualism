@@ -378,6 +378,20 @@ summary {
 
 </div>
 
+<div id="TOC">
+<ul>
+<li><a href="#importing-and-cleaning-the-data">Importing and cleaning the data</a></li>
+<li><a href="#basic-summary-statistics">Basic summary statistics</a><ul>
+<li><a href="#specific-tariffs">Specific tariffs</a></li>
+<li><a href="#ad-valorem-tariffs">Ad valorem tariffs</a></li>
+</ul></li>
+<li><a href="#what-was-the-total-reduction-in-negotiated-tariffs-under-the-gatt-in-each-round">What was the total reduction in negotiated tariffs under the GATT in each round?</a></li>
+<li><a href="#which-lines-were-only-ad-valorem-only-specific-or-both">Which lines were only ad valorem, only specific, or both?</a><ul>
+<li><a href="#mixed">Mixed</a></li>
+</ul></li>
+<li><a href="#implementation-dates">Implementation dates</a></li>
+</ul>
+</div>
 
 <div id="importing-and-cleaning-the-data" class="section level2">
 <h2>Importing and cleaning the data</h2>
@@ -391,9 +405,9 @@ summary {
 <ul>
 <li>About half came in Geneva, the rest through Dillon. That is, Geneva did half the work and the following four rounds did the other half</li>
 </ul>
-<p>But this could be deceptive since different lines use different tariffs.</p>
+<p>But this could be deceptive since different lines use different units</p>
 <ul>
-<li>Use list of units from Victor to investigate this</li>
+<li>Victor has standardized everything to be in cents (per U.S. dollar) – add UnitsKey.rmd code here so that it is accessible when needed within the knitr session</li>
 </ul>
 <table>
 <colgroup>
@@ -631,6 +645,12 @@ summary {
 <li>Roughly 2/3 of the lines have an ad valorem tariff. In Dillon, NA rows out of 2956 are missing, so 2956 ad valorem tariffs. NA/0 ( NA%) test2</li>
 </ul>
 </div>
+</div>
+<div id="what-was-the-total-reduction-in-negotiated-tariffs-under-the-gatt-in-each-round" class="section level2">
+<h2>What was the total reduction in negotiated tariffs under the GATT in each round?</h2>
+</div>
+<div id="which-lines-were-only-ad-valorem-only-specific-or-both" class="section level2">
+<h2>Which lines were only ad valorem, only specific, or both?</h2>
 <div id="mixed" class="section level3">
 <h3>Mixed</h3>
 <p>Next need to know about the lines that have both ad valorem and specific (or take them out from above); at least quantify them to start</p>
@@ -641,6 +661,10 @@ sum(both_SH$bothSH, na.rm = TRUE)</code></pre>
 <pre class="r"><code>sum(both_SH$bothGeneva, na.rm = TRUE)</code></pre>
 <pre><code>## [1] 444</code></pre>
 </div>
+</div>
+<div id="implementation-dates" class="section level2">
+<h2>Implementation dates</h2>
+<p>Geneva 1: January 1, 1948 (Irwin 2017, p. 486)</p>
 </div>
 
 

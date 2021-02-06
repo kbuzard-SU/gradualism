@@ -2,9 +2,10 @@
 title: "GATT Analysis"
 author: "Kristy Buzard"
 date: "2/6/2021"
-output: html_document
+output:
+  html_document:
+    toc: true
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -21,9 +22,9 @@ We see below that the specific tariffs come down by roughly half from Smoot Hawl
 
 - About half came in Geneva, the rest through Dillon. That is, Geneva did half the work and the following four rounds did the other half
 
-But this could be deceptive since different lines use different tariffs.
+But this could be deceptive since different lines use different units
 
-- Use list of units from Victor to investigate this
+- Victor has standardized everything to be in cents (per U.S. dollar) -- add UnitsKey.rmd code here so that it is accessible when needed within the knitr session
 
 ```{r echo=FALSE}
 specific_ss <- summary(specific[,3:11])
@@ -58,6 +59,8 @@ adval_dillon_n <- str_extract(adval_ss[7,9],regexp)
 
 ## What was the total reduction in negotiated tariffs under the GATT in each round? 
 
+## Which lines were only ad valorem, only specific, or both?
+
 ### Mixed
 
 Next need to know about the lines that have both ad valorem and specific (or take them out from above); at least quantify them to start
@@ -68,3 +71,7 @@ both_SH <- data_set %>% mutate(bothSH=!is.na(data_set[,"Specific_SH"])&!is.na(da
 sum(both_SH$bothSH, na.rm = TRUE)
 sum(both_SH$bothGeneva, na.rm = TRUE)
 ```
+
+## Implementation dates
+
+Geneva 1: January 1, 1948 (Irwin 2017, p. 486)
