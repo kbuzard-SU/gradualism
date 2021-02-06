@@ -1,0 +1,69 @@
+---
+title: "GATT Analysis"
+author: "Kristy Buzard"
+date: "2/6/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Importing and cleaning the data
+Importing and cleaning the data is currently done with program "Cleaning the data in R .rmd" . It need to be reprogrammed before being added here because it is nearly 1000 lines long. For now, that means this program won't work by hitting the "Knit" button. We instead need the command rmarkdown::render("C:/Users/krist/Github/Gradualism/Gatt_analysis.rmd")
+
+
+## Basic summary statistics
+
+### Specific tariffs
+
+We see below that the specific tariffs come down by roughly half from Smoot Hawley.
+
+- About half came in Geneva, the rest through Dillon. That is, Geneva did half the work and the following four rounds did the other half
+
+But this could be deceptive since different lines use different tariffs.
+
+- Use list of units from Victor to investigate this
+
+```{r echo=FALSE}
+specific_ss <- summary(specific[,3:11])
+
+library(knitr)
+library(qwraps2)
+kable(specific_ss)
+```
+
+### Ad valorem tariffs
+
+Strikingly, the reductions look to be of the same magnitude for Ad valorem, again with Geneva doing about half the work.
+
+
+```{r echo=FALSE}
+adval_ss <- summary(ad_valorem[,3:11])
+kable(adval_ss)
+```
+
+```{r echo=FALSE}
+library(stringr)
+
+# prepare regular expression
+regexp <- "[[:digit:]]+"
+
+adval_dillon_n <- str_extract(adval_ss[7,9],regexp)
+
+```
+
+
+- Roughly 2/3 of the lines have an ad valorem tariff. In Dillon, `r max(ad_valorem[,"Ad_Valorem_Dillon_B"])` rows out of `r nrow(ad_valorem)` are missing, so `r nrow(ad_valorem)` ad valorem tariffs. `r n_perc(ad_valorem$Ad_Valorem_Dillon_B == NA)` test2
+
+
+### Mixed
+
+Next need to know about the lines that have both ad valorem and specific (or take them out from above); at least quantify them to start
+
+```{r}
+both_SH <- data_set %>% mutate(bothSH=!is.na(data_set[,"Specific_SH"])&!is.na(data_set[,"Ad_Valorem_SH"]),bothGeneva=!is.na(data_set[,"Specific_Geneva"])&!is.na(data_set[,"Ad_Valorem_Geneva"]))
+
+sum(both_SH$bothSH, na.rm = TRUE)
+sum(both_SH$bothGeneva, na.rm = TRUE)
+```
