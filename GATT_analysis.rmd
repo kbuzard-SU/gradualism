@@ -5,18 +5,19 @@ date: "2/6/2021"
 output:
   html_document:
     toc: true
+    number_sections: true
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Importing and cleaning the data
+# Importing and cleaning the data
 Importing and cleaning the data is currently done with program "Cleaning the data in R .rmd" . It need to be reprogrammed before being added here because it is nearly 1000 lines long. For now, that means this program won't work by hitting the "Knit" button. We instead need the command rmarkdown::render("C:/Users/krist/Github/Gradualism/Gatt_analysis.rmd")
 
 
-## Basic summary statistics
+# Basic summary statistics
 
-### Specific tariffs
+## Specific tariffs
 
 We see below that the specific tariffs come down by roughly half from Smoot Hawley.
 
@@ -34,7 +35,7 @@ library(qwraps2)
 kable(specific_ss)
 ```
 
-### Ad valorem tariffs
+## Ad valorem tariffs
 
 Strikingly, the reductions look to be of the same magnitude for Ad valorem, again with Geneva doing about half the work.
 
@@ -57,21 +58,41 @@ adval_dillon_n <- str_extract(adval_ss[7,9],regexp)
 
 - Roughly 2/3 of the lines have an ad valorem tariff. In Dillon, `r max(ad_valorem[,"Ad_Valorem_Dillon_B"])` rows out of `r nrow(ad_valorem)` are missing, so `r nrow(ad_valorem)` ad valorem tariffs. `r n_perc(ad_valorem$Ad_Valorem_Dillon_B == NA)` test2
 
-## What was the total reduction in negotiated tariffs under the GATT in each round? 
+# What was the total reduction in negotiated tariffs under the GATT in each round? 
 
-## Which lines were only ad valorem, only specific, or both?
+# Which lines were only ad valorem, only specific, or both?
 
-### Mixed
+## Mixed
 
 Next need to know about the lines that have both ad valorem and specific (or take them out from above); at least quantify them to start
 
 ```{r}
-both_SH <- data_set %>% mutate(bothSH=!is.na(data_set[,"Specific_SH"])&!is.na(data_set[,"Ad_Valorem_SH"]),bothGeneva=!is.na(data_set[,"Specific_Geneva"])&!is.na(data_set[,"Ad_Valorem_Geneva"]))
+both <- data_set %>% mutate(bothSH=!is.na(data_set[,"Specific_SH"])&!is.na(data_set[,"Ad_Valorem_SH"]),bothGeneva=!is.na(data_set[,"Specific_Geneva"])&!is.na(data_set[,"Ad_Valorem_Geneva"]),bothAnnecy=!is.na(data_set[,"Specific_Annecy"])&!is.na(data_set[,"Ad_Valorem_Annecy"]),bothTorquay=!is.na(data_set[,"Specific_Torquay"])&!is.na(data_set[,"Ad_Valorem_Torquay"]),bothGeneva56A=!is.na(data_set[,"Specific_Geneva56_A"])&!is.na(data_set[,"Ad_Valorem_Geneva56_A"]),bothGeneva56B=!is.na(data_set[,"Specific_Geneva56_B"])&!is.na(data_set[,"Ad_Valorem_Geneva56_B"]),bothGeneva56C=!is.na(data_set[,"Specific_Geneva56_C"])&!is.na(data_set[,"Ad_Valorem_Geneva56_C"]),bothDillonA=!is.na(data_set[,"Specific_Dillon_A"])&!is.na(data_set[,"Ad_Valorem_Dillon_A"]),bothDillonB=!is.na(data_set[,"Specific_Dillon_B"])&!is.na(data_set[,"Ad_Valorem_Dillon_B"]))
 
-sum(both_SH$bothSH, na.rm = TRUE)
-sum(both_SH$bothGeneva, na.rm = TRUE)
+sum(both$bothSH, na.rm = TRUE)
+sum(both$bothGeneva, na.rm = TRUE)
+sum(both$bothAnnecy, na.rm = TRUE)
+sum(both$bothTorquay, na.rm = TRUE)
+sum(both$bothGeneva56A, na.rm = TRUE)
+sum(both$bothGeneva56B, na.rm = TRUE)
+sum(both$bothGeneva56C, na.rm = TRUE)
+sum(both$bothDillonA, na.rm = TRUE)
+sum(both$bothDillonB, na.rm = TRUE)
+
 ```
 
-## Implementation dates
+### Victor's intuition on mixed lines
+I believe many of the changes from specific tax to ad valorem or otherwise is because of the tax intervals. You could search the keywords “tax boundaries” and “tax interval(s)” in Extra column of every round to locate them.
+
+### Proportions of specific, ad valorem, mixed
+
+#### Smoot Hawley
+2956 total lines minus 451 lines with both specific and ad valorem leaves `r 2956 - 451` that have at most one or the other. 1417 ad valorem only; 1013 specific only. This leave 75 with neither. Why?
+
+```{r}
+print.data.frame(neither_SH[which(neither_SH$neitherSH==TRUE),c("X.U.FEFF.Schedule","Product","Paragraph","Description")],row.names = FALSE)
+```
+
+# Implementation dates
 
 Geneva 1: January 1, 1948 (Irwin 2017, p. 486)
