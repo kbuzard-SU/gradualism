@@ -4,8 +4,8 @@ author: "Kristy Buzard"
 date: "2/6/2021"
 output:
   html_document:
-    toc: true
-    number_sections: true
+    toc: yes
+    number_sections: yes
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -90,7 +90,13 @@ I believe many of the changes from specific tax to ad valorem or otherwise is be
 2956 total lines minus 451 lines with both specific and ad valorem leaves `r 2956 - 451` that have at most one or the other. 1417 ad valorem only; 1013 specific only. This leave 75 with neither. Why?
 
 ```{r}
-print.data.frame(neither_SH[which(neither_SH$neitherSH==TRUE),c("X.U.FEFF.Schedule","Product","Paragraph","Description")],row.names = FALSE)
+neither <- data_set %>% mutate(neitherSH=is.na(data_set[,"Specific_SH"])&is.na(data_set[,"Ad_Valorem_SH"]),neitherAnnecy=is.na(data_set[,"Specific_Annecy"])&is.na(data_set[,"Ad_Valorem_Annecy"]),neitherDillonB=is.na(data_set[,"Specific_Dillon_B"])&is.na(data_set[,"Ad_Valorem_Dillon_B"]))
+
+print.data.frame(neither[which(neither$neitherSH==TRUE),c("X.U.FEFF.Schedule","Product","Paragraph","Description")],row.names = FALSE)
+
+print.data.frame(neither[which(neither$neitherAnnecy==TRUE),c("X.U.FEFF.Schedule","Product","Paragraph","Description")],row.names = FALSE)
+
+print.data.frame(neither[which(neither$neitherDillonB==TRUE),c("X.U.FEFF.Schedule","Product","Paragraph","Description")],row.names = FALSE)
 ```
 
 # Implementation dates
