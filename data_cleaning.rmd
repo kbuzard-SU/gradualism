@@ -901,11 +901,14 @@ remove(arr) #delete arr
 
 ################################################################################ Create corresponding transpose of the data_set for checking and information
 
-specific <- data_set[, c("Paragraph","Product","Specific_SH","Specific_Geneva","Specific_Annecy","Specific_Torquay","Specific_Geneva56_A","Specific_Geneva56_B","Specific_Geneva56_C","Specific_Dillon_A","Specific_Dillon_B")]
+colnames(data_set)[1] <- "Sched"
+
+specific <- data_set[, c("Sched","Paragraph","Product","Specific_SH","Specific_Geneva","Specific_Annecy","Specific_Torquay","Specific_Geneva56_A","Specific_Geneva56_B","Specific_Geneva56_C","Specific_Dillon_A","Specific_Dillon_B")]
 specific2 <- data.frame(t(specific[,]))
 
-ad_valorem <-data_set[,c("Paragraph", "Product","Ad_Valorem_SH", "Ad_Valorem_Geneva","Ad_Valorem_Annecy", "Ad_Valorem_Torquay", "Ad_Valorem_Geneva56_A", "Ad_Valorem_Geneva56_B", "Ad_Valorem_Geneva56_C","Ad_Valorem_Dillon_A", "Ad_Valorem_Dillon_B")]
+ad_valorem <-data_set[,c("Sched","Paragraph", "Product","Ad_Valorem_SH", "Ad_Valorem_Geneva","Ad_Valorem_Annecy", "Ad_Valorem_Torquay", "Ad_Valorem_Geneva56_A", "Ad_Valorem_Geneva56_B", "Ad_Valorem_Geneva56_C","Ad_Valorem_Dillon_A", "Ad_Valorem_Dillon_B")]
 ad_valorem2<-data.frame(t(ad_valorem[,]))
 
-units<-data_set[, c("Paragraph","Product","Units_SH", "Units_Geneva", "Units_Annecy", "Units_Torquay", "Units_Geneva56_A", "Units_Geneva56_B", "Units_Geneva56_C", "Units_Dillon_A", "Units_Dillon_B")]
+units<-data_set[, c("Sched","Paragraph","Product","Units_SH", "Units_Geneva", "Units_Annecy", "Units_Torquay", "Units_Geneva56_A", "Units_Geneva56_B", "Units_Geneva56_C", "Units_Dillon_A", "Units_Dillon_B")]
 units2<-data.frame(t(units[,]))
+
