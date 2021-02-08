@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Importing and cleaning the data
 ```{r, include=FALSE}
-source("C:/Users/krist/Github/Gradualism/Cleaning the data in R .rmd", local = knitr::knit_global())
+source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit_global())
 ```
 Importing and cleaning the data is currently done with program "Cleaning the data in R .rmd" . It need to be reprogrammed before being added here because it is nearly 1000 lines long. For now, that means this program won't work by hitting the "Knit" button. We instead need the command rmarkdown::render("C:/Users/krist/Github/Gradualism/Gatt_analysis.rmd")
 
@@ -31,7 +31,7 @@ But this could be deceptive since different lines use different units
 - Victor has standardized everything to be in cents (per U.S. dollar) -- add UnitsKey.rmd code here so that it is accessible when needed within the knitr session
 
 ```{r echo=FALSE}
-specific_ss <- summary(specific[,3:11])
+specific_ss <- summary(specific[,])
 
 library(knitr)
 library(qwraps2)
@@ -44,20 +44,9 @@ Strikingly, the reductions look to be of the same magnitude for Ad valorem, agai
 
 
 ```{r echo=FALSE}
-adval_ss <- summary(ad_valorem[,3:11])
+adval_ss <- summary(ad_valorem[,])
 kable(adval_ss)
 ```
-
-```{r echo=FALSE}
-library(stringr)
-
-# prepare regular expression
-regexp <- "[[:digit:]]+"
-
-adval_dillon_n <- str_extract(adval_ss[7,9],regexp)
-
-```
-
 
 - Roughly 2/3 of the lines have an ad valorem tariff. In Dillon, `r max(ad_valorem[,"Ad_Valorem_Dillon_B"])` rows out of `r nrow(ad_valorem)` are missing, so `r nrow(ad_valorem)` ad valorem tariffs. `r n_perc(ad_valorem$Ad_Valorem_Dillon_B == NA)` test2
 
@@ -95,11 +84,11 @@ I believe many of the changes from specific tax to ad valorem or otherwise is be
 ```{r}
 neither <- data_set %>% mutate(neitherSH=is.na(data_set[,"Specific_SH"])&is.na(data_set[,"Ad_Valorem_SH"]),neitherAnnecy=is.na(data_set[,"Specific_Annecy"])&is.na(data_set[,"Ad_Valorem_Annecy"]),neitherDillonB=is.na(data_set[,"Specific_Dillon_B"])&is.na(data_set[,"Ad_Valorem_Dillon_B"]))
 
-print.data.frame(neither[which(neither$neitherSH==TRUE),c("X.U.FEFF.Schedule","Product","Paragraph","Description")],row.names = FALSE)
+print.data.frame(neither[which(neither$neitherSH==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
 
-print.data.frame(neither[which(neither$neitherAnnecy==TRUE),c("X.U.FEFF.Schedule","Product","Paragraph","Description")],row.names = FALSE)
+print.data.frame(neither[which(neither$neitherAnnecy==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
 
-print.data.frame(neither[which(neither$neitherDillonB==TRUE),c("X.U.FEFF.Schedule","Product","Paragraph","Description")],row.names = FALSE)
+print.data.frame(neither[which(neither$neitherDillonB==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
 ```
 
 # Implementation dates

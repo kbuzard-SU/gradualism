@@ -21,7 +21,7 @@ Both having more industrial detail about tariffs and having this detail on the n
 
 # What we do
 ```{r, include=FALSE}
-source("C:/Users/krist/Github/Gradualism/Cleaning the data in R .rmd", local = knitr::knit_global())
+source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit_global())
 ```
 
 We have been able to locate the original documents that contain the consolidated GATT tariff schedules at the end of each of the nine round of negotiations.\footnote{**Some of these were digital copies, and some we could find only in hard copy.**} To date, we have digitalized and standardized the tariff data for the United States for the first five GATT rounds for the United States. We have done the same for the tariff schedule that was in effect before the start of the GATT---the so-called Smoot Hawley tariffs.
