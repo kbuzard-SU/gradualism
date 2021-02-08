@@ -1,0 +1,60 @@
+---
+title: "Quantifying GATT Trade Liberalization"
+author: "Kristy Buzard and Zeyuan (Victor) Xiong"
+date: "2/7/2021"
+output: pdf_document
+fontsize: 12pt
+## linestretch: 1.5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+```
+
+
+# Motivation
+Large-scale tariff reductions within the framework of the General Agreement on Tariffs and Trade (GATT) have come as a result of a series of eight rounds of negotiations that began in 1947. Most of the literature that attempts to understand this phenomenon is theoretical,\footnote{See, for instance, the literature that seeks to explain the gradual nature of this liberalization, e.g. Devereaux (1997) and  Chisik (2003) who focus on exporters; Mussa (1986), Staiger (1995) or Mehlum (1998) on the import-competing story; or Zissimos (2007) on the role of the `withdrawal of equivalent concessions' rule.} in large part because data availability has been a major barrier to empirical research on this massive dismantling of trade barriers. Bown and Irwin (2017) have documented the available data, finding it to be frustratingly sparse. They find data on the tariffs that are actually charged at the border---i.e. applied tariffs. These are at most disaggregated to the level of ten broad sectors. 
+
+As little as we know about applied tariffs in this context, we know even less about the negotiated tariff bindings. Somewhat surprisingly, data on the tariff commitments made by the GATT signees has not been widely available, preventing empirical studies on the workings of the GATT and the dynamics of this important episode of trade liberalization. One notable exception **[add here on Bagwell, Staiger and Yurukoglu]**.
+
+Both having more industrial detail about tariffs and having this detail on the negotiated tariffs is important. First, the negotiated tariff commitments allow us to study the political constraints that led to the GATT agreements. The negotiated tariffs are the cleanest data that exist for all negotiating parties since they are not complicated by the various processes that determine applied tariffs. Second, often the most important object in terms of policymaking is the gap between the negotiated tariff and the applied tariff, the so-called “water” in the bindings **[Add citations here--Kuenzel, Pelc, Busch]**. Even if we know what the applied tariffs were, we can’t know how much water is in the bindings if we don’t also know the negotiated tariff caps.
+
+# What we do
+We have been able to locate the original documents that contain the consolidated GATT tariff schedules at the end of each of the nine round of negotiations.\footnote{**Some of these were digital copies, and some we could find only in hard copy.**} To date, we have digitalized and standardized the tariff data for the United States for the first five GATT rounds for the United States. We have done the same for the tariff schedule that was in effect before the start of the GATT---the so-called Smoot Hawley tariffs.
+
+Work is underway to add the Kennedy, Tokyo and Uruguay rounds for the U.S. and all rounds for several other countries. Our preliminary findings reported herein are for the U.S. data on Smoot Hawley tariffs through the Dillon round. In standardizing the tariff lines across rounds, we end up `r nrow(data_set)` lines.
+
+# Results
+```{r echo=FALSE, warning=FALSE}
+specific_mean <- data.frame(sapply(specific, mean, na.rm=TRUE))
+```
+
+We find that from the Smoot-Hawley tariffs in 1930 to the last phase in of the Dillon Round in 1964, both specific and *ad valorem* tariffs were cut roughly in half. The mean *Ad valorem* tariff binding decreases from 38.6% in 1930 to 19.1% in 1964. For ad valorem tariffs the medians are quite close to the means: the median drops from 35% to 15%. *Ad valorem* tariffs cover roughly two-thirds of tariff lines.
+
+Things look a bit different for specific tariffs. The mean specific tariff binding decreases from `r round(specific_mean[3,],2)` cents in 1930 to 24 cents in 1964, while the median bindings are much smaller, dropping from 4.375 cents to 3 cents. Specific tariffs are present for roughly half of tariff lines. About 450 lines have both an ad valorem and specific tariff in a given round.
+
+\vskip.4in
+\begin{enumerate}
+	\item[2.] Which products/industries suffer from large tariff cuts and which industries/products continue to receive protection?
+	\item[3.] Were tariffs cut gradually across the board, or was there variation in the speed with which tariffs were cut across products? If there is variation, can we find an explanation for that variation?
+	\item[4.] Which types of products had ad-valorem versus specific tariffs, and how did this change over time? What role did the presence of specific tariffs, combined with inflation, have in reducing the total level of tariff protection?
+\end{enumerate}
+
+
+
+# References
+
+Bown, C. P. and D. A. Irwin, ``The GATT's Starting Point: Tariff Levels circa 1947,'' in Manfred Elsig, Bernard Hoekman, and Joost Pauwelyn (eds.), Assessing the World Trade Organization: Fit for Purpose? Cambridge, UK: Cambridge University Press, 2017, 45-74 (Chapter 3).
+
+Chisik, R., 2003. ``Gradualism in free trade agreements: a theoretical justification.'' Journal of International Economics, 59, 367-397.
+
+Devereux, M., 1997. ``Growth, specialization, and trade liberalization.'' International Economic Review
+38, 565-585.
+
+Mehlum, H., 1998. ``Why gradualism?'' The Journal of International Trade and Economic Development 7, 279-297.
+
+Mussa, M., 1986. ``The adjustment process and the timing of trade liberalization.'' In: Choksi, A., Papageorgiou, D. (Eds.), Economic Liberalization in Developing Countries. Basil Blackwell, Oxford.
+
+Staiger, R., 1995. ``A theory of gradual trade liberalization.'' In: Levinsohn, J., Deardorff, A., Stern, R. (Eds.), New Directions in Trade Theory. University of Michigan Press, Ann Arbor, MI, pp. 249-284.
+
+Zissimos, B, 1997. ``The GATT and gradualism.'' The Journal of International Economics, 71, 410-433.
