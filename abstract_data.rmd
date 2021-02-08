@@ -20,18 +20,25 @@ As little as we know about applied tariffs in this context, we know even less ab
 Both having more industrial detail about tariffs and having this detail on the negotiated tariffs is important. First, the negotiated tariff commitments allow us to study the political constraints that led to the GATT agreements. The negotiated tariffs are the cleanest data that exist for all negotiating parties since they are not complicated by the various processes that determine applied tariffs. Second, often the most important object in terms of policymaking is the gap between the negotiated tariff and the applied tariff, the so-called “water” in the bindings **[Add citations here--Kuenzel, Pelc, Busch]**. Even if we know what the applied tariffs were, we can’t know how much water is in the bindings if we don’t also know the negotiated tariff caps.
 
 # What we do
+```{r, include=FALSE}
+source("C:/Users/krist/Github/Gradualism/Cleaning the data in R .rmd", local = knitr::knit_global())
+```
+
 We have been able to locate the original documents that contain the consolidated GATT tariff schedules at the end of each of the nine round of negotiations.\footnote{**Some of these were digital copies, and some we could find only in hard copy.**} To date, we have digitalized and standardized the tariff data for the United States for the first five GATT rounds for the United States. We have done the same for the tariff schedule that was in effect before the start of the GATT---the so-called Smoot Hawley tariffs.
 
 Work is underway to add the Kennedy, Tokyo and Uruguay rounds for the U.S. and all rounds for several other countries. Our preliminary findings reported herein are for the U.S. data on Smoot Hawley tariffs through the Dillon round. In standardizing the tariff lines across rounds, we end up `r nrow(data_set)` lines.
 
 # Results
+
 ```{r echo=FALSE, warning=FALSE}
 specific_mean <- data.frame(sapply(specific, mean, na.rm=TRUE))
+specific_med <- data.frame(sapply(specific, median, na.rm=TRUE))
+
 ```
 
 We find that from the Smoot-Hawley tariffs in 1930 to the last phase in of the Dillon Round in 1964, both specific and *ad valorem* tariffs were cut roughly in half. The mean *Ad valorem* tariff binding decreases from 38.6% in 1930 to 19.1% in 1964. For ad valorem tariffs the medians are quite close to the means: the median drops from 35% to 15%. *Ad valorem* tariffs cover roughly two-thirds of tariff lines.
 
-Things look a bit different for specific tariffs. The mean specific tariff binding decreases from `r round(specific_mean[3,],2)` cents in 1930 to 24 cents in 1964, while the median bindings are much smaller, dropping from 4.375 cents to 3 cents. Specific tariffs are present for roughly half of tariff lines. About 450 lines have both an ad valorem and specific tariff in a given round.
+Things look a bit different for specific tariffs. The mean specific tariff binding decreases from `r round(specific_mean["Specific_SH",],2)` cents in 1930 to `r round(specific_mean["Specific_Dillon_B",],2)` cents in 1964, while the median bindings are much smaller, dropping from `r round(specific_med["Specific_SH",],2)` cents to `r round(specific_med["Specific_Dillon_B",],2)` cents. Specific tariffs are present for roughly half of tariff lines. About 450 lines have both an ad valorem and specific tariff in a given round.
 
 \vskip.4in
 \begin{enumerate}

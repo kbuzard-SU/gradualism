@@ -12,6 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Importing and cleaning the data
+```{r, include=FALSE}
+source("C:/Users/krist/Github/Gradualism/Cleaning the data in R .rmd", local = knitr::knit_global())
+```
 Importing and cleaning the data is currently done with program "Cleaning the data in R .rmd" . It need to be reprogrammed before being added here because it is nearly 1000 lines long. For now, that means this program won't work by hitting the "Knit" button. We instead need the command rmarkdown::render("C:/Users/krist/Github/Gradualism/Gatt_analysis.rmd")
 
 

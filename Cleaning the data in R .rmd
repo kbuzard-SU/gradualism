@@ -8,7 +8,7 @@ library(dplyr)
 library(readr)
 library(tidyselect)
 
-setwd("C:/Users/victo/OneDrive/桌面/code for gradualism")#Set working directory
+#setwd("C:/Users/victo/OneDrive/桌面/code for gradualism")#Set working directory
 
 
 
