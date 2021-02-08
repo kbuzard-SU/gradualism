@@ -2,7 +2,8 @@
 title: "Data Sources"
 author: "Zeyuan Xiong (Victor)"
 date: "2/8/2021"
-output: html_document
+output: pdf_document
+urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
@@ -24,7 +25,7 @@ Geneva47_UNTC      | Geneva 1947 MFN Schedules | UNTC official website, Registra
 |Uruguay_UNTC_1|Uruguay 1988 MFL Schedules up to Ch. 63|UNTC official website, Registration number A-814, Volume number 1632. <br>Note that Volume 1632 seems the same file as Volume 1633.<br> <https://treaties.un.org/doc/Publication/UNTS/Volume%201632/v1632.pdf> |
 |Uruguay_UNTC_2|Uruguay 1988 MFL Schedules, after Ch. 63 |UNTC official website, Registration number A-814, Volume number 1634. <br>Note that Volume 1634 seems the same file as Volume 1635. <br><https://treaties.un.org/doc/Publication/UNTS/Volume%201634/v1634.pdf>|
 | Torquay (black white)|Geneva47, Annecy, Torquay MFN Schedules combined |The hard copy was borrowed from the Library of University of Texas.<br> We then scanned and digitized the copy. <br><https://search.lib.utexas.edu/discovery/fulldisplay?context=L&vid=01UTAU_INST:SEARCH&search_scope=MyInst_and_CI&tab=Everything&docid=alma991056424989706011>|
-|Tariff Act of 1930 cleaner|Tariff schedule of 1930 Smoot-Hawley Tariff Act|Tariff Act of 1930: "AN ACT To provide revenue, to regulate commerce with foreign countries, to encourage the industries of the United States, to protect American labor, and for other purposes." June 17, 1930 <br> File: <https://govtrackus.s3.amazonaws.com/legislink/pdf/stat/46/STATUTE-46-Pg590.pdf>; <br>For citation information, search the following for "page: 590": <https://github.com/unitedstates/legisworks-historical-statutes/blob/master/data/046.yaml>|
+|Tariff Act of 1930 cleaner|Tariff schedule of 1930 Smoot-Hawley Tariff Act|Tariff Act of 1930: "AN ACT To provide revenue, to regulate commerce with foreign countries, to encourage the industries of the United States, to protect American labor, and for other purposes." June 17, 1930 <br> File: <https://govtrackus.s3.amazonaws.com/legislink/pdf/stat/46/STATUTE-46-Pg590.pdf>; For citation information, search the following for "page: 590": <https://github.com/unitedstates/legisworks-historical-statutes/blob/master/data/046.yaml>|
 
 
 
