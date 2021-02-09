@@ -50,6 +50,44 @@ kable(adval_ss)
 
 - Roughly 2/3 of the lines have an ad valorem tariff. In Dillon, `r max(ad_valorem[,"Ad_Valorem_Dillon_B"])` rows out of `r nrow(ad_valorem)` are missing, so `r nrow(ad_valorem)` ad valorem tariffs. `r n_perc(ad_valorem$Ad_Valorem_Dillon_B == NA)` test2
 
+# How did liberalization vary across Schedules?
+
+Some summary stats for specific tariffs
+```{r echo=FALSE, warning=FALSE}
+sum_specific <- specific %>%   
+  group_by(Sched) %>%  
+  summarize(SH_mean = mean(Specific_SH, na.rm=TRUE),
+            DB_mean = mean(Specific_Dillon_B, na.rm=TRUE),
+            SH_median = median(Specific_SH, na.rm=TRUE),
+            DB_median = median(Specific_Dillon_B, na.rm=TRUE),
+            SH_max = max(Specific_SH,na.rm=TRUE),
+            DB_max = max(Specific_Dillon_B,na.rm=TRUE),
+            SH_nonmissing = sum(!is.na(Specific_SH)),
+            DB_nonmissing = sum(!is.na(Specific_Dillon_B)),
+            n_samples = n()) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+kable(sum_specific)
+```
+
+Schedule 12 must be all ad valorem
+
+Some summary stats for ad valorem tariffs
+```{r echo=FALSE, warning=FALSE}
+sum_av <- ad_valorem %>%   
+  group_by(Sched) %>%  
+  summarize(SH_mean = mean(Ad_Valorem_SH, na.rm=TRUE),
+            DB_mean = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
+            SH_median = median(Ad_Valorem_SH, na.rm=TRUE),
+            DB_median = median(Ad_Valorem_Dillon_B, na.rm=TRUE),
+            SH_max = max(Ad_Valorem_SH,na.rm=TRUE),
+            DB_max = max(Ad_Valorem_Dillon_B,na.rm=TRUE),
+            SH_nonmissing = sum(!is.na(Ad_Valorem_SH)),
+            DB_nonmissing = sum(!is.na(Ad_Valorem_Dillon_B)),
+            n_samples = n()) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+kable(sum_av)
+```
+
 # What was the total reduction in negotiated tariffs under the GATT in each round? 
 
 # Which lines were only ad valorem, only specific, or both?
