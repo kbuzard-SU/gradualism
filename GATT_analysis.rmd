@@ -90,6 +90,79 @@ kable(sum_av)
 
 # What was the total reduction in negotiated tariffs under the GATT in each round? 
 
+Mean and median of specific tariffs in each round
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(kableExtra)
+sp_mean_time <- specific %>%   
+  summarize(Smoot_Hawley = mean(Specific_SH, na.rm=TRUE),
+            Geneva = mean(Specific_Geneva, na.rm=TRUE),
+            Annecy = mean(Specific_Annecy, na.rm=TRUE),
+            Torquay = mean(Specific_Torquay, na.rm=TRUE),
+            Geneva56A = mean(Specific_Geneva56_A, na.rm=TRUE),
+            Geneva56B = mean(Specific_Geneva56_B, na.rm=TRUE),
+            Geneva56C = mean(Specific_Geneva56_C, na.rm=TRUE),
+            DillonA = mean(Specific_Dillon_A, na.rm=TRUE),
+            DillonB = mean(Specific_Dillon_B, na.rm=TRUE)
+            )
+spmeant = data.frame(t(sp_mean_time))
+spmeant = cbind(spmeant, c(0,-diff(spmeant$t.sp_mean_time.)/spmeant[-nrow(spmeant),] * 100))
+
+sp_med_time <- specific %>%   
+  summarize(SH_med = median(Specific_SH, na.rm=TRUE),
+            G_med = median(Specific_Geneva, na.rm=TRUE),
+            An_med = median(Specific_Annecy, na.rm=TRUE),
+            Tor_med = median(Specific_Torquay, na.rm=TRUE),
+            GA_med = median(Specific_Geneva56_A, na.rm=TRUE),
+            GB_med = median(Specific_Geneva56_B, na.rm=TRUE),
+            GC_med = median(Specific_Geneva56_C, na.rm=TRUE),
+            DA_med = median(Specific_Dillon_A, na.rm=TRUE),
+            DB_med = median(Specific_Dillon_B, na.rm=TRUE)
+            )
+
+spmt = data.frame(t(sp_med_time))
+spmt = cbind(spmeant,spmt, c(0,-diff(spmt$t.sp_med_time.)/spmt[-nrow(spmt),] * 100))
+names(spmt)<-c('Mean','% Decrease','Median','% Decrease')
+
+x <- kable(spmt,digits=2, "html")  %>%
+  kable_styling(full_width = F)
+add_header_above(x, c("Mean and median of specific tariffs by round
+"=5),font_size = "large")
+
+av_mean_time <- ad_valorem %>%   
+  summarize(Smoot_Hawley = mean(Ad_Valorem_SH, na.rm=TRUE),
+            Geneva = mean(Ad_Valorem_Geneva, na.rm=TRUE),
+            Annecy = mean(Ad_Valorem_Annecy, na.rm=TRUE),
+            Torquay = mean(Ad_Valorem_Torquay, na.rm=TRUE),
+            Geneva56A = mean(Ad_Valorem_Geneva56_A, na.rm=TRUE),
+            Geneva56B = mean(Ad_Valorem_Geneva56_B, na.rm=TRUE),
+            Geneva56C = mean(Ad_Valorem_Geneva56_C, na.rm=TRUE),
+            DillonA = mean(Ad_Valorem_Dillon_A, na.rm=TRUE),
+            DillonB = mean(Ad_Valorem_Dillon_B, na.rm=TRUE)
+            )
+avmeant = data.frame(t(av_mean_time))
+avmeant = cbind(avmeant, c(0,-diff(avmeant$t.av_mean_time.)/avmeant[-nrow(avmeant),] * 100))
+
+av_med_time <- ad_valorem %>%   
+  summarize(SH_med = median(Ad_Valorem_SH, na.rm=TRUE),
+            G_med = median(Ad_Valorem_Geneva, na.rm=TRUE),
+            An_med = median(Ad_Valorem_Annecy, na.rm=TRUE),
+            Tor_med = median(Ad_Valorem_Torquay, na.rm=TRUE),
+            GA_med = median(Ad_Valorem_Geneva56_A, na.rm=TRUE),
+            GB_med = median(Ad_Valorem_Geneva56_B, na.rm=TRUE),
+            GC_med = median(Ad_Valorem_Geneva56_C, na.rm=TRUE),
+            DA_med = median(Ad_Valorem_Dillon_A, na.rm=TRUE),
+            DB_med = median(Ad_Valorem_Dillon_B, na.rm=TRUE)
+            )
+
+avmt = data.frame(t(av_med_time))
+avmt = cbind(avmeant,avmt, c(0,-diff(avmt$t.av_med_time.)/avmt[-nrow(avmt),] * 100))
+names(avmt)<-c('Mean','% Decrease','Median','% Decrease')
+
+y <- kable(avmt,digits=2, "html")  %>%
+  kable_styling(full_width = F)
+add_header_above(y, c("Mean and median of ad valorem tariffs by round
+"=5),font_size = "large")
+```
 # Which lines were only ad valorem, only specific, or both?
 
 ## Mixed
@@ -124,7 +197,7 @@ neither <- data_set %>% mutate(neitherSH=is.na(data_set[,"Specific_SH"])&is.na(d
 
 print.data.frame(neither[which(neither$neitherSH==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
 
-print.data.frame(neither[which(neither$neitherAnnecy==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
+# print.data.frame(neither[which(neither$neitherAnnecy==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
 
 print.data.frame(neither[which(neither$neitherDillonB==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
 ```
