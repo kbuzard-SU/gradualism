@@ -1,0 +1,46 @@
+---
+title: "Schedule_Key"
+author: "Matthew Gonzalez"
+date: "2/8/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r clear}
+rm(list = ls())# clear all
+```
+## Import Packages
+
+```{r imports}
+library(tidyverse)
+library(foreign)
+library(dplyr)
+library(readr)
+library(tidyselect)
+```
+## Import schedules numbers and titles
+
+```{r columns}
+schedule_nums<-c('Schedule 1', 'Schedule 2', 'Schedule 3', 'Schedule 4', 'Schedule 5', 'Schedule 6', 'Schedule 7', 'Schedule 8', 'Schedule 9', 'Schedule 10', 'Schedule 11', 'Schedule 12','Schedule 13', 'Schedule 14', 'Schedule 15')
+
+schedule_names<-c('Chemicals, Oil, and Paints', 'Earths, Earthenware, and Glassware', 'Metals and Manufactures of', ' Wood and Manufactures of', 'Sugar, Molasses, and Manufactures of', 'Tobacco and Manufactures of', 'Agricultural Products and Provisions', 'Spirits, Wines, and other Beverages','Cotton Manufactures','Flax, Hemp, Jute, and Manufactures of','Wool and Manufactures of', 'Silk Manufactures','Manufactures of Rayon or Other Synthetic Textile', 'Papers and Books', 'Sundries')
+```
+
+
+```{r data}
+data_schedules<-data.frame(schedule_nums,schedule_names)
+names(data_schedules)<-c('Schedule Number','Schedule Title')
+```
+
+## Clear environment
+
+```{r cleanup}
+remove(schedule_names,schedule_nums)
+```
+
+```{r final output}
+print(data_schedules,quote = TRUE, row.names = FALSE)
+```
