@@ -2,20 +2,20 @@
 title: "GATT Analysis"
 author: "Kristy Buzard"
 date: "2/6/2021"
-output:
-  html_document:
-    toc: yes
-    number_sections: yes
+output: pdf_document
+toc: yes
+number_sections: yes
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # Importing and cleaning the data
-```{r, include=FALSE}
+Importing and cleaning the data is currently done with program "Cleaning the data in R .rmd" . It need to be reprogrammed before being added here because it is nearly 1000 lines long. The chunk below calls that program to make the processed data available to the rest of the commands in this document.
+
+```{r data, message=FALSE, warning=FALSE, echo=TRUE}
 source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit_global())
 ```
-Importing and cleaning the data is currently done with program "Cleaning the data in R .rmd" . It need to be reprogrammed before being added here because it is nearly 1000 lines long. For now, that means this program won't work by hitting the "Knit" button. We instead need the command rmarkdown::render("C:/Users/krist/Github/Gradualism/Gatt_analysis.rmd")
 
 
 # Basic summary statistics
@@ -30,12 +30,24 @@ But this could be deceptive since different lines use different units
 
 - Victor has standardized everything to be in cents (per U.S. dollar) -- add UnitsKey.rmd code here so that it is accessible when needed within the knitr session
 
-```{r echo=FALSE}
-specific_ss <- summary(specific[,])
-
+```{r echo=FALSE, message=FALSE}
 library(knitr)
 library(qwraps2)
-kable(specific_ss)
+library(kableExtra)
+
+sp_mean <- specific[,4:12] %>% sapply(mean, na.rm=TRUE)
+sp_med <- specific[,4:12] %>% sapply(median, na.rm=TRUE)
+sp_count <- specific[,4:12] %>% sapply(function(x) sum(!is.na(x)))
+sp_min <- specific[,4:12] %>% sapply(min, na.rm=TRUE)
+sp_max <- specific[,4:12] %>% sapply(max, na.rm=TRUE)
+sp_25p <- specific[,4:12] %>% sapply(function(x) quantile(x,probs=0.25,na.rm = TRUE))
+sp_75p <- specific[,4:12] %>% sapply(function(x) quantile(x,probs=0.75,na.rm = TRUE))
+
+sp_table = cbind(data.frame(sp_min),data.frame(sp_25p),data.frame(sp_mean),data.frame(sp_med),data.frame(sp_75p),data.frame(sp_max),data.frame(sp_count))
+names(sp_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
+rownames(sp_table) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+s <- kbl(sp_table,digits=2,booktabs=T) %>% kable_styling(position = "center")
+add_header_above(s, c(" " = 1,"Summary Statistics of Specific Tariffs by Round"=7),font_size = 12)
 ```
 
 ## Ad valorem tariffs
@@ -44,124 +56,82 @@ Strikingly, the reductions look to be of the same magnitude for Ad valorem, agai
 
 
 ```{r echo=FALSE}
-adval_ss <- summary(ad_valorem[,])
-kable(adval_ss)
+av_mean <- ad_valorem[,4:12] %>% sapply(mean, na.rm=TRUE)
+av_med <- ad_valorem[,4:12] %>% sapply(median, na.rm=TRUE)
+av_count <- ad_valorem[,4:12] %>% sapply(function(x) sum(!is.na(x)))
+av_min <- ad_valorem[,4:12] %>% sapply(min, na.rm=TRUE)
+av_max <- ad_valorem[,4:12] %>% sapply(max, na.rm=TRUE)
+av_25p <- ad_valorem[,4:12] %>% sapply(function(x) quantile(x,probs=0.25,na.rm = TRUE))
+av_75p <- ad_valorem[,4:12] %>% sapply(function(x) quantile(x,probs=0.75,na.rm = TRUE))
+
+adval_table = cbind(data.frame(av_min),data.frame(av_25p),data.frame(av_mean),data.frame(av_med),data.frame(av_75p),data.frame(av_max),data.frame(av_count))
+names(adval_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
+rownames(adval_table) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+a <- kbl(adval_table,digits=2,booktabs=T) %>% kable_styling(position = "center")
+add_header_above(a, c(" " = 1,"Summary Statistics of Ad Valorem Tariffs by Round"=7),font_size = 12)
 ```
 
 - Roughly 2/3 of the lines have an ad valorem tariff. In Dillon, `r max(ad_valorem[,"Ad_Valorem_Dillon_B"])` rows out of `r nrow(ad_valorem)` are missing, so `r nrow(ad_valorem)` ad valorem tariffs. `r n_perc(ad_valorem$Ad_Valorem_Dillon_B == NA)` test2
 
 # How did liberalization vary across Schedules?
 
-Some summary stats for specific tariffs
+## Summary stats for specific tariffs
 ```{r echo=FALSE, warning=FALSE}
 sum_specific <- specific %>%   
   group_by(Sched) %>%  
   summarize(SH_mean = mean(Specific_SH, na.rm=TRUE),
             DB_mean = mean(Specific_Dillon_B, na.rm=TRUE),
-            SH_median = median(Specific_SH, na.rm=TRUE),
-            DB_median = median(Specific_Dillon_B, na.rm=TRUE),
+            SH_med = median(Specific_SH, na.rm=TRUE),
+            DB_med = median(Specific_Dillon_B, na.rm=TRUE),
             SH_max = max(Specific_SH,na.rm=TRUE),
             DB_max = max(Specific_Dillon_B,na.rm=TRUE),
-            SH_nonmissing = sum(!is.na(Specific_SH)),
-            DB_nonmissing = sum(!is.na(Specific_Dillon_B)),
-            n_samples = n()) %>%
+            SH_obs = sum(!is.na(Specific_SH)),
+            DB_obs = sum(!is.na(Specific_Dillon_B)),
+            n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
-kable(sum_specific)
+
+kbl(sum_specific,digits=2,booktabs=T) %>% kable_styling(position = "center")
 ```
 
 Schedule 12 must be all ad valorem
 
-Some summary stats for ad valorem tariffs
+## Summary stats for ad valorem tariffs
 ```{r echo=FALSE, warning=FALSE}
 sum_av <- ad_valorem %>%   
   group_by(Sched) %>%  
   summarize(SH_mean = mean(Ad_Valorem_SH, na.rm=TRUE),
             DB_mean = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
-            SH_median = median(Ad_Valorem_SH, na.rm=TRUE),
-            DB_median = median(Ad_Valorem_Dillon_B, na.rm=TRUE),
+            SH_med = median(Ad_Valorem_SH, na.rm=TRUE),
+            DB_med = median(Ad_Valorem_Dillon_B, na.rm=TRUE),
             SH_max = max(Ad_Valorem_SH,na.rm=TRUE),
             DB_max = max(Ad_Valorem_Dillon_B,na.rm=TRUE),
-            SH_nonmissing = sum(!is.na(Ad_Valorem_SH)),
-            DB_nonmissing = sum(!is.na(Ad_Valorem_Dillon_B)),
-            n_samples = n()) %>%
+            SH_obs = sum(!is.na(Ad_Valorem_SH)),
+            DB_obs = sum(!is.na(Ad_Valorem_Dillon_B)),
+            n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
-kable(sum_av)
+kbl(sum_av,digits=2,booktabs=T) %>% kable_styling(position = "center")
 ```
 
 # What was the total reduction in negotiated tariffs under the GATT in each round? 
 
 Mean and median of specific tariffs in each round
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
-library(kableExtra)
-sp_mean_time <- specific %>%   
-  summarize(Smoot_Hawley = mean(Specific_SH, na.rm=TRUE),
-            Geneva = mean(Specific_Geneva, na.rm=TRUE),
-            Annecy = mean(Specific_Annecy, na.rm=TRUE),
-            Torquay = mean(Specific_Torquay, na.rm=TRUE),
-            Geneva56A = mean(Specific_Geneva56_A, na.rm=TRUE),
-            Geneva56B = mean(Specific_Geneva56_B, na.rm=TRUE),
-            Geneva56C = mean(Specific_Geneva56_C, na.rm=TRUE),
-            DillonA = mean(Specific_Dillon_A, na.rm=TRUE),
-            DillonB = mean(Specific_Dillon_B, na.rm=TRUE)
-            )
-spmeant = data.frame(t(sp_mean_time))
-spmeant = cbind(spmeant, c(0,-diff(spmeant$t.sp_mean_time.)/spmeant[-nrow(spmeant),] * 100))
 
-sp_med_time <- specific %>%   
-  summarize(SH_med = median(Specific_SH, na.rm=TRUE),
-            G_med = median(Specific_Geneva, na.rm=TRUE),
-            An_med = median(Specific_Annecy, na.rm=TRUE),
-            Tor_med = median(Specific_Torquay, na.rm=TRUE),
-            GA_med = median(Specific_Geneva56_A, na.rm=TRUE),
-            GB_med = median(Specific_Geneva56_B, na.rm=TRUE),
-            GC_med = median(Specific_Geneva56_C, na.rm=TRUE),
-            DA_med = median(Specific_Dillon_A, na.rm=TRUE),
-            DB_med = median(Specific_Dillon_B, na.rm=TRUE)
-            )
+sp_mt = cbind(data.frame(sp_mean),c(0,-diff(sp_mean)/data.frame(sp_mean)[-nrow(data.frame(sp_mean)),]*100),data.frame(sp_med),c(0,-diff(sp_med)/data.frame(sp_med)[-nrow(data.frame(sp_med)),]*100))
 
-spmt = data.frame(t(sp_med_time))
-spmt = cbind(spmeant,spmt, c(0,-diff(spmt$t.sp_med_time.)/spmt[-nrow(spmt),] * 100))
-names(spmt)<-c('Mean','% Decrease','Median','% Decrease')
+names(sp_mt)<-c('Mean','% decrease','Median','% decrease')
+rownames(sp_mt) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+x <- kbl(sp_mt,digits=2,booktabs=T) %>% kable_styling(position = "center")
+add_header_above(x, c(" " = 1,c("Decrease in specific tariffs by round"=4)),font_size = 12)
 
-x <- kable(spmt,digits=2, "html")  %>%
-  kable_styling(full_width = F)
-add_header_above(x, c("Mean and median of specific tariffs by round
-"=5),font_size = "large")
 
-av_mean_time <- ad_valorem %>%   
-  summarize(Smoot_Hawley = mean(Ad_Valorem_SH, na.rm=TRUE),
-            Geneva = mean(Ad_Valorem_Geneva, na.rm=TRUE),
-            Annecy = mean(Ad_Valorem_Annecy, na.rm=TRUE),
-            Torquay = mean(Ad_Valorem_Torquay, na.rm=TRUE),
-            Geneva56A = mean(Ad_Valorem_Geneva56_A, na.rm=TRUE),
-            Geneva56B = mean(Ad_Valorem_Geneva56_B, na.rm=TRUE),
-            Geneva56C = mean(Ad_Valorem_Geneva56_C, na.rm=TRUE),
-            DillonA = mean(Ad_Valorem_Dillon_A, na.rm=TRUE),
-            DillonB = mean(Ad_Valorem_Dillon_B, na.rm=TRUE)
-            )
-avmeant = data.frame(t(av_mean_time))
-avmeant = cbind(avmeant, c(0,-diff(avmeant$t.av_mean_time.)/avmeant[-nrow(avmeant),] * 100))
+av_mt = cbind(data.frame(av_mean),c(0,-diff(av_mean)/data.frame(av_mean)[-nrow(data.frame(av_mean)),]*100),data.frame(av_med),c(0,-diff(av_med)/data.frame(av_med)[-nrow(data.frame(av_med)),]*100))
 
-av_med_time <- ad_valorem %>%   
-  summarize(SH_med = median(Ad_Valorem_SH, na.rm=TRUE),
-            G_med = median(Ad_Valorem_Geneva, na.rm=TRUE),
-            An_med = median(Ad_Valorem_Annecy, na.rm=TRUE),
-            Tor_med = median(Ad_Valorem_Torquay, na.rm=TRUE),
-            GA_med = median(Ad_Valorem_Geneva56_A, na.rm=TRUE),
-            GB_med = median(Ad_Valorem_Geneva56_B, na.rm=TRUE),
-            GC_med = median(Ad_Valorem_Geneva56_C, na.rm=TRUE),
-            DA_med = median(Ad_Valorem_Dillon_A, na.rm=TRUE),
-            DB_med = median(Ad_Valorem_Dillon_B, na.rm=TRUE)
-            )
+names(av_mt)<-c('Mean','% decrease','Median','% decrease')
+rownames(av_mt) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+y <- kbl(av_mt,digits=2,booktabs=T) %>% kable_styling(position = "center")
+add_header_above(y, c(" " = 1,c("Decrease in ad valorem tariffs by round"=4)),font_size = 12)
 
-avmt = data.frame(t(av_med_time))
-avmt = cbind(avmeant,avmt, c(0,-diff(avmt$t.av_med_time.)/avmt[-nrow(avmt),] * 100))
-names(avmt)<-c('Mean','% Decrease','Median','% Decrease')
-
-y <- kable(avmt,digits=2, "html")  %>%
-  kable_styling(full_width = F)
-add_header_above(y, c("Mean and median of ad valorem tariffs by round
-"=5),font_size = "large")
 ```
 # Which lines were only ad valorem, only specific, or both?
 
