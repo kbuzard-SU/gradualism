@@ -1,7 +1,7 @@
 ---
 title: "Quantifying GATT Trade Liberalization"
 author: "Kristy Buzard and Zeyuan (Victor) Xiong"
-date: "2/7/2021"
+date: "2/10/2021"
 output: pdf_document
 fontsize: 12pt
 ## linestretch: 1.5
@@ -36,9 +36,17 @@ specific_med <- data.frame(sapply(specific, median, na.rm=TRUE))
 
 ```
 
-We find that from the Smoot-Hawley tariffs in 1930 to the last phase in of the Dillon Round in 1964, both specific and *ad valorem* tariffs were cut roughly in half. The mean *Ad valorem* tariff binding decreases from 38.6% in 1930 to 19.1% in 1964. For ad valorem tariffs the medians are quite close to the means: the median drops from 35% to 15%. *Ad valorem* tariffs cover roughly two-thirds of tariff lines.
+We find that from the Smoot-Hawley tariffs in 1930 to the last phase in of the Dillon Round in 1964, both specific and *ad valorem* tariffs were cut roughly in half. The mean *ad valorem* tariff binding decreases from 38.6% in 1930 to 19.1% in 1964. For *ad valorem* tariffs the medians are quite close to the means: the median drops from 35% to 15%. *Ad valorem* tariffs cover roughly two-thirds of tariff lines.
 
-Things look a bit different for specific tariffs. The mean specific tariff binding decreases from `r round(specific_mean["Specific_SH",],2)` cents in 1930 to `r round(specific_mean["Specific_Dillon_B",],2)` cents in 1964, while the median bindings are much smaller, dropping from `r round(specific_med["Specific_SH",],2)` cents to `r round(specific_med["Specific_Dillon_B",],2)` cents. Specific tariffs are present for roughly half of tariff lines. About 450 lines have both an ad valorem and specific tariff in a given round.
+Things look a bit different for specific tariffs. The mean specific tariff binding decreases from `r round(specific_mean["Specific_SH",],2)` cents in 1930 to `r round(specific_mean["Specific_Dillon_B",],2)` cents in 1964, while the median bindings are much smaller, dropping from `r round(specific_med["Specific_SH",],2)` cents to `r round(specific_med["Specific_Dillon_B",],2)` cents. Specific tariffs are present for roughly half of tariff lines. About 450 lines have both an *ad valorem* and specific tariff in a given round.
+
+In terms of the time pattern of liberalization, we can confirm a well-known stylized fact: the largest proportional cuts took place between the Smoot-Hawley tariffs and the first round of the GATT in Geneva: average tariffs, both specific and *ad valorem*, were reduced by about 30%. From Geneva I to Annecy, the reduction in means was much smaller at about 4% with the reduction in medians being about 10%. Annecy saw small tariff cuts on average in large part because this round was focused on accession: countries like the United States that had joined in Geneva only negotiated with those countries that were newly acceding in the Annecy Round.
+
+In percentage terms, the Torquay round saw cuts about half the size of those in Geneva 1947. Geneva 1956 saw percentage cuts closer to those in Annecy, and for the first time these were phased in--over three years in the case of Geneva 1956. The cuts in tariff averages in the Dillon round were once again about 10%, but the median for specific tariffs did not decrease while the median *ad valorem* tariff decreased by about 15%.
+
+These headline numbers hide important variations in magnitude and speed of liberalization across types of products. This will be explored in detail in the paper, but a few interesting details are in order here.
+
+
 
 \vskip.4in
 \begin{enumerate}
