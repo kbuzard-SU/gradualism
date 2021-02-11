@@ -8,46 +8,28 @@ library(dplyr)
 library(readr)
 library(tidyselect)
 
-#setwd("C:/Users/victo/OneDrive/桌面/code for gradualism")#Set working directory
+# setwd("C:/Users/victo/OneDrive/桌面/code for gradualism")#Set working directory
 
+# file is saved as csv "UTF-8" and thus needs encoding to avoid garbled
+# It appears that during the transformation to CSV file, some cells contain "space" or invisible dots which could be easily taken as empty, and they are not. Also since the "fill" function is applicable iff the cases are NA but not empty. Replace them all by NA.
 
-
-
-#file is saved as csv "UTF-8" and thus needs encoding to avoid garbled
-      #It appears that during the transformation to CSV file, some cells contain "space" or invisible dots which could be easily taken as empty, and they are not. Also since the "fill" function is applicable iff the cases 
-# are NA but not empty. Replace them all by NA. (Locate the invisible space and dots by visual check in specific, ad_valorem.)
-
-##### Keynotes here ##### During the transition from Excel to CSV, some cases will contain invisible blanks (space), they might need manually fixing, the "na.string" function cannot get rid of all of them.
-##### But luckily only small amount of them remain, ex: paragraph 11 in the paragraph column.
-
-
+# Select the desired columns from the csv by names
 data_set <- read.csv(file='C:/Users/krist/Downloads/test_1.csv', encoding="UTF-8",na.string=c(""," ","" ,"" ,"NA","\u00A0"))[,c('X.U.FEFF.Schedule','Paragraph','Description','Specific_SH','Units_SH','Ad_Valorem_SH','Specific_Geneva',
                                                                 'Units_Geneva','Ad_Valorem_Geneva','Specific_Annecy','Units_Annecy','Ad_Valorem_Annecy','Specific_Torquay','Units_Torquay','Ad_Valorem_Torquay',
                                                                   'Specific_Geneva56_A','Units_Geneva56_A','Ad_Valorem_Geneva56_A','Specific_Geneva56_B','Units_Geneva56_B','Ad_Valorem_Geneva56_B',
                                                                 'Specific_Geneva56_C','Units_Geneva56_C','Ad_Valorem_Geneva56_C','Specific_Dillon_A','Units_Dillon_A','Ad_Valorem_Dillon_A',
-                                                                'Specific_Dillon_B','Units_Dillon_B','Ad_Valorem_Dillon_B')]
+                                                                'Specific_Dillon_B','Units_Dillon_B','Ad_Valorem_Dillon_B','Interval')]
 
 
-# Select the above columns by names
-
-
-
-
-###### Or drop selected column names
-# drop <- c("New_S.H","Dillon","Geneva56","New_Geneva1","Extra_SH","Extra_Geneva","Extra_Annecy","Extra_Torquay","Extra_Geneva56","Extra_Dillon")
-# data_set = data_set[,!(names(data_set) %in% drop)]
-
-
-
+# Fill the paragraph and schedule numbers in
 data_set<-fill(data_set, X.U.FEFF.Schedule, .direction="down")
 data_set<-fill(data_set, Paragraph, .direction="down")
 
+# Create product number so that every line can be located as, "Paragraph X, Product Y". Note the schedule information is contained in the paragraph number. 'id' is just a running count throught the full data set.
 data_set<-data_set %>%
-  mutate(id=row_number()) #id represents the number of observation 
-data_set<-data_set %>%
+  mutate(id=row_number()) %>%
   group_by(Paragraph) %>%
-  mutate(Product=row_number()) %>% ungroup() # Now every line can be located as, "Paragraph. X, No. Y product", while the schedule information is contained in the paragraph number. 
-
+  mutate(Product=row_number()) %>% ungroup()
 
 
 
@@ -903,12 +885,12 @@ remove(arr) #delete arr
 
 colnames(data_set)[1] <- "Sched"
 
-specific <- data_set[, c("Sched","Paragraph","Product","Specific_SH","Specific_Geneva","Specific_Annecy","Specific_Torquay","Specific_Geneva56_A","Specific_Geneva56_B","Specific_Geneva56_C","Specific_Dillon_A","Specific_Dillon_B")]
-specific2 <- data.frame(t(specific[,]))
+specific <- data_set[, c("id","Sched","Paragraph","Product","Interval","Specific_SH","Specific_Geneva","Specific_Annecy","Specific_Torquay","Specific_Geneva56_A","Specific_Geneva56_B","Specific_Geneva56_C","Specific_Dillon_A","Specific_Dillon_B")]
+#specific2 <- data.frame(t(specific[,]))
 
-ad_valorem <-data_set[,c("Sched","Paragraph", "Product","Ad_Valorem_SH", "Ad_Valorem_Geneva","Ad_Valorem_Annecy", "Ad_Valorem_Torquay", "Ad_Valorem_Geneva56_A", "Ad_Valorem_Geneva56_B", "Ad_Valorem_Geneva56_C","Ad_Valorem_Dillon_A", "Ad_Valorem_Dillon_B")]
-ad_valorem2<-data.frame(t(ad_valorem[,]))
+ad_valorem <-data_set[,c("id","Sched","Paragraph", "Product","Interval","Ad_Valorem_SH", "Ad_Valorem_Geneva","Ad_Valorem_Annecy", "Ad_Valorem_Torquay", "Ad_Valorem_Geneva56_A", "Ad_Valorem_Geneva56_B", "Ad_Valorem_Geneva56_C","Ad_Valorem_Dillon_A", "Ad_Valorem_Dillon_B")]
+#ad_valorem2<-data.frame(t(ad_valorem[,]))
 
-units<-data_set[, c("Sched","Paragraph","Product","Units_SH", "Units_Geneva", "Units_Annecy", "Units_Torquay", "Units_Geneva56_A", "Units_Geneva56_B", "Units_Geneva56_C", "Units_Dillon_A", "Units_Dillon_B")]
-units2<-data.frame(t(units[,]))
+#units<-data_set[, c("Sched","Paragraph","Product","Units_SH", "Units_Geneva", "Units_Annecy", "Units_Torquay", "Units_Geneva56_A", "Units_Geneva56_B", "Units_Geneva56_C", "Units_Dillon_A", "Units_Dillon_B")]
+#units2<-data.frame(t(units[,]))
 
