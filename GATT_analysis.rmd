@@ -144,7 +144,7 @@ kbl(sum_specific_nI_pc,digits=2,booktabs=T) %>% kable_styling(position = "center
 
 Schedule 12 must be all ad valorem
 
-### Mean by schedule and round
+### Mean of specific tariffs by schedule and round
 ```{r}
 sum_specific_bySched <- specific %>%   
   group_by(Sched) %>%  
@@ -235,7 +235,7 @@ sum_av_nI_pc <- subset(ad_valorem, is.na(Interval)) %>%
 kbl(sum_av_nI_pc,digits=2,booktabs=T) %>% kable_styling(position = "center")
 ```
 
-### Mean by schedule and round
+### Mean of ad valorem tariffs by schedule and round
 ```{r}
 sum_av_bySched <- ad_valorem %>%   
   group_by(Sched) %>%  
