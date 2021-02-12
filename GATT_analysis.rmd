@@ -123,7 +123,7 @@ sum_specific_pc <- specific %>%
 kbl(sum_specific_pc,digits=2,booktabs=T) %>% kable_styling(position = "center")
 ```
 
-The table below is exactly the same as the one above EXCEPT it drops the 169 lines that are impacted by the "tax interval" issue
+The table below is exactly the same as the one above EXCEPT it drops the `r sum(!is.na(data_set$Interval))` lines that are impacted by the "tax interval" issue
 ```{r echo=FALSE, warning=FALSE}
 sum_specific_nI_pc <- subset(specific, is.na(Interval)) %>%   
   group_by(Sched) %>%  
@@ -250,6 +250,16 @@ print.data.frame(neither[which(neither$neitherSH==TRUE),c("Sched","Product","Par
 # print.data.frame(neither[which(neither$neitherAnnecy==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
 
 print.data.frame(neither[which(neither$neitherDillonB==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
+```
+
+# How many lines see no change from Smoot Hawley to Dillon B?
+The code below produces 391 lines that were the same
+```{r echo=TRUE}
+lines <- data_set %>%
+        mutate(av_pc =((Ad_Valorem_SH - Ad_Valorem_Dillon_B)/Ad_Valorem_SH)*100,sp_pc
+        =((Specific_SH - Specific_Dillon_B)/Specific_SH)*100)
+
+lines2 <- subset(lines,is.na(sp_pc) | sp_pc==0) %>% subset(is.na(av_pc) | av_pc==0)
 ```
 
 # Summarizing the impact of tax intervals
