@@ -144,6 +144,49 @@ kbl(sum_specific_nI_pc,digits=2,booktabs=T) %>% kable_styling(position = "center
 
 Schedule 12 must be all ad valorem
 
+### Mean by schedule and round
+```{r}
+sum_specific_bySched <- specific %>%   
+  group_by(Sched) %>%  
+  summarize(SH = mean(Specific_SH, na.rm=TRUE),
+            G1 = mean(Specific_Geneva, na.rm=TRUE),
+            An = mean(Specific_Annecy, na.rm=TRUE),
+            To = mean(Specific_Torquay, na.rm=TRUE),
+            GC = mean(Specific_Geneva56_C, na.rm=TRUE),
+            DB = mean(Specific_Dillon_B, na.rm=TRUE),
+            chgG1 = ((SH - G1)/SH)*100,
+            chgAn = ((G1 - An)/G1)*100,
+            chgTo = ((An - To)/An)*100,
+            chgGC = ((To - GC)/To)*100,
+            chgDB = ((GC - DB)/GC)*100,
+            ) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+
+kbl(sum_specific_bySched,digits=2,booktabs=T) %>% kable_styling(position = "center")
+```
+
+Removing tax interval lines
+```{r}
+sum_specific_bySched_nI <-  subset(specific, is.na(Interval)) %>%   
+  group_by(Sched) %>%  
+  summarize(SH = mean(Specific_SH, na.rm=TRUE),
+            G1 = mean(Specific_Geneva, na.rm=TRUE),
+            An = mean(Specific_Annecy, na.rm=TRUE),
+            To = mean(Specific_Torquay, na.rm=TRUE),
+            GC = mean(Specific_Geneva56_C, na.rm=TRUE),
+            DB = mean(Specific_Dillon_B, na.rm=TRUE),
+            chgG1 = ((SH - G1)/SH)*100,
+            chgAn = ((G1 - An)/G1)*100,
+            chgTo = ((An - To)/An)*100,
+            chgGC = ((To - GC)/To)*100,
+            chgDB = ((GC - DB)/GC)*100,
+            ) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+
+kbl(sum_specific_bySched_nI,digits=2,booktabs=T) %>% kable_styling(position = "center")
+```
+
+
 ## Summary stats for ad valorem tariffs
 ```{r echo=FALSE, warning=FALSE}
 # sum_av <- ad_valorem %>%   
@@ -190,6 +233,48 @@ sum_av_nI_pc <- subset(ad_valorem, is.na(Interval)) %>%
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 kbl(sum_av_nI_pc,digits=2,booktabs=T) %>% kable_styling(position = "center")
+```
+
+### Mean by schedule and round
+```{r}
+sum_av_bySched <- ad_valorem %>%   
+  group_by(Sched) %>%  
+  summarize(SH = mean(Ad_Valorem_SH, na.rm=TRUE),
+            G1 = mean(Ad_Valorem_Geneva, na.rm=TRUE),
+            An = mean(Ad_Valorem_Annecy, na.rm=TRUE),
+            To = mean(Ad_Valorem_Torquay, na.rm=TRUE),
+            GC = mean(Ad_Valorem_Geneva56_C, na.rm=TRUE),
+            DB = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
+            chgG1 = ((SH - G1)/SH)*100,
+            chgAn = ((G1 - An)/G1)*100,
+            chgTo = ((An - To)/An)*100,
+            chgGC = ((To - GC)/To)*100,
+            chgDB = ((GC - DB)/GC)*100,
+            ) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+
+kbl(sum_av_bySched,digits=2,booktabs=T) %>% kable_styling(position = "center")
+```
+
+Removing tax interval lines
+```{r}
+sum_av_bySched_nI <-  subset(ad_valorem, is.na(Interval)) %>%   
+  group_by(Sched) %>%  
+  summarize(SH = mean(Ad_Valorem_SH, na.rm=TRUE),
+            G1 = mean(Ad_Valorem_Geneva, na.rm=TRUE),
+            An = mean(Ad_Valorem_Annecy, na.rm=TRUE),
+            To = mean(Ad_Valorem_Torquay, na.rm=TRUE),
+            GC = mean(Ad_Valorem_Geneva56_C, na.rm=TRUE),
+            DB = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
+            chgG1 = ((SH - G1)/SH)*100,
+            chgAn = ((G1 - An)/G1)*100,
+            chgTo = ((An - To)/An)*100,
+            chgGC = ((To - GC)/To)*100,
+            chgDB = ((GC - DB)/GC)*100,
+            ) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+
+kbl(sum_av_bySched_nI,digits=2,booktabs=T) %>% kable_styling(position = "center")
 ```
 
 # What was the total reduction in negotiated tariffs under the GATT in each round? 
