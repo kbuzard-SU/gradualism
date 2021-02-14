@@ -7,14 +7,63 @@ toc: yes
 number_sections: yes
 ---
 ```{r setup, include=FALSE}
+library(knitr)
 knitr::opts_chunk$set(echo = FALSE)
+
+#knitr::opts_chunk$set(cache=TRUE, autodep = TRUE)
+#dep_auto()
 ```
 
+# Next steps
+1. Program stats into abstract (after making Github version for CEA abstract)
+2. Can we add TOT analysis? Talk to Ross. If not, some other analysis?
+
+3. Kennedy, Tokyo, Uruguay
+    - Go back to questions in *Plan.docx* when last three rounds are finished
+
+4. Choose other countries -- first add # of pages for each schedule
+    - Refine *Members.in.GATT.xlsx*
+    - Focus on Benelux, Canada, Chile, France, India, U.K., Dominican Republic, Haiti, Italy, Germany, Peru, Japan
+
+11. Consolidate various notes in Github / One Drive / G drive -- create centralized documentation
+    - Clean up Github repo
+    - Resolve copyright issues, then (hopefully) post the correct schedules on Github
+    - Read through Victor's notes for ideas (what is status of emailed files from last week?)
+
+2. Make list of accuracy checks, run them, fix typos in data
+    - Resolve "complicated" paragraphs, including 9 that still have no tariffs
+    - Check for tariffs going up from round to round
+    - 30-40 more lines have both specific and ad valorem than they did  at the beginning of last week. Why?
+
+2. Condense data cleaning code
+16. Figure out how to source multiple code files
+
+2. Identify lines that switch between specific and ad valorem
+2. Look for gradualism in graphs
+3. 10 lines in Dillon that have more than 2 years
+
+17. Think about how variation in units affects specific summary stats
+    - Look into trade-weighting
+
+12. Find implementation years (maybe get answer from Doug Irwin)
+13. Contact the two people Bob Staiger suggested
+
+5. Get working draft together ASAP
+
+
+
 # Importing and cleaning the data
-Importing and cleaning the data is currently done with program "Cleaning the data in R .rmd" . It need to be reprogrammed before being added here because it is nearly 1000 lines long. The chunk below calls that program to make the processed data available to the rest of the commands in this document.
+Importing and cleaning the data is done in "data_cleaning.rmd". It needs to be reprogrammed before being added here because it is nearly 1000 lines long. The chunk below calls that program to make the processed data available to the rest of the commands in this document.
 
 ```{r data, message=FALSE, warning=FALSE, echo=TRUE}
+# both this source statement and the following "code" command work to include the data,
+#but I haven't yet figured out how to also include UnitsKeys.rmd below,
+#so I'm leaving them both here as future debugging options
 source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit_global())
+
+#```{r cleandata, code=readLines('C:/Users/krist/Github/Gradualism/data_cleaning.rmd'),eval=TRUE,message=FALSE,warning=FALSE}
+#```
+
 ```
 
 
@@ -28,7 +77,15 @@ We see below that the specific tariffs come down by roughly half from Smoot Hawl
 
 But this could be deceptive since different lines use different units
 
-- Victor has standardized everything to be in cents (per U.S. dollar) -- add UnitsKey.rmd code here so that it is accessible when needed within the knitr session
+- Victor has standardized everything to be in cents (per U.S. dollar) in UnitsKey.rmd
+
+```{r unitskey, message=FALSE, warning=FALSE, echo=FALSE}
+#source("C:/Users/krist/Github/Gradualism/UnitsKey.r", local = knitr::knit_global())
+#```{r unitskey, code= readLines('C:/Users/krist/Github/Gradualism/UnitsKey.r'),eval=TRUE}
+#```
+```
+
+
 
 ```{r echo=FALSE, message=FALSE}
 library(knitr)
@@ -71,9 +128,23 @@ a <- kbl(adval_table,digits=2,booktabs=T) %>% kable_styling(position = "center")
 add_header_above(a, c(" " = 1,"Summary Statistics of Ad Valorem Tariffs by Round"=7),font_size = 12)
 ```
 
-- Roughly 2/3 of the lines have an ad valorem tariff. In Dillon, `r max(ad_valorem[,"Ad_Valorem_Dillon_B"])` rows out of `r nrow(ad_valorem)` are missing, so `r nrow(ad_valorem)` ad valorem tariffs. `r n_perc(ad_valorem$Ad_Valorem_Dillon_B == NA)` test2
+- In Dillon, `r sum(is.na(ad_valorem$Ad_Valorem_Dillon_B))` rows out of `r nrow(ad_valorem)` are missing, so there are `r nrow(ad_valorem) - sum(is.na(ad_valorem$Ad_Valorem_Dillon_B))` ad valorem tariffs. So `r round(sum(!is.na(ad_valorem$Ad_Valorem_Dillon_B))/nrow(ad_valorem)*100,2)`% of lines have *ad valorem* tariffs.
 
 # How did liberalization vary across Schedules?
+
+First, descriptions of each schedule:
+```{r}
+para_count <- data_set %>% group_by(Sched) %>% summarize(n=n()) %>% ungroup()
+
+schedule_names<-c('Chemicals, Oil, and Paints', 'Earths, Earthenware, and Glassware', 'Metals and Manufactures of', ' Wood and Manufactures of', 'Sugar, Molasses, and Manufactures of', 'Tobacco and Manufactures of', 'Agricultural Products and Provisions', 'Spirits, Wines, and other Beverages','Cotton Manufactures','Flax, Hemp, Jute, and Manufactures of','Wool and Manufactures of', 'Silk Manufactures','Manufactures of Rayon or Other Synthetic Textile', 'Papers and Books', 'Sundries')
+
+data_schedules<-data.frame(para_count,schedule_names)
+names(data_schedules)<-c('Schedule','# Lines','Title')
+
+s <- kable(data_schedules, align= 'ccl',booktabs=T) %>%
+  kable_styling(full_width = F)
+add_header_above(s, c("Smoot Hawley Schedule Titles"=3),font_size = 12)
+```
 
 ## Summary stats for specific tariffs
 ```{r echo=FALSE, warning=FALSE}
@@ -141,8 +212,12 @@ sum_specific_nI_pc <- subset(specific, is.na(Interval)) %>%
 kbl(sum_specific_nI_pc,digits=2,booktabs=T) %>% kable_styling(position = "center")
 
 ```
+Notes:
 
-Schedule 12 must be all ad valorem
+- 8 (spirits) largest, and consistent across rounds (1 ad valorem only)
+- 5 (sugar) unambiguously smallest cuts, had some of the highest ad-valorem
+- Reduction in median vs. mean: split exactly half and half as to which reduction was smaller
+- Schedule 12 must be all ad valorem
 
 ### Mean of specific tariffs by schedule and round
 ```{r}
@@ -218,7 +293,7 @@ sum_av_pc <- ad_valorem %>%
 kbl(sum_av_pc,digits=2,booktabs=T) %>% kable_styling(position = "center")
 ```
 
-For several paragraphs, the maximum tariff for Dillon B is ``lost'' when we get rid of the tax interval lines (2,9,11). Still I'm not going to print the tables with the maxes in them for now.
+For several paragraphs, the maximum tariff for Dillon B changes when we get rid of the tax interval lines (2,9,11). Still I'm not going to print the tables with the maxes in them for now.
 ```{r}
 sum_av_nI_pc <- subset(ad_valorem, is.na(Interval)) %>%   
   group_by(Sched) %>% 
@@ -302,43 +377,45 @@ add_header_above(y, c(" " = 1,c("Decrease in ad valorem tariffs by round"=4)),fo
 
 ## Mixed
 
-Next need to know about the lines that have both ad valorem and specific (or take them out from above); at least quantify them to start
+Next we need to know about the lines that have both ad valorem and specific (or take them out from above); at least quantify them to start
 
 ```{r}
 both <- data_set %>% mutate(bothSH=!is.na(data_set[,"Specific_SH"])&!is.na(data_set[,"Ad_Valorem_SH"]),bothGeneva=!is.na(data_set[,"Specific_Geneva"])&!is.na(data_set[,"Ad_Valorem_Geneva"]),bothAnnecy=!is.na(data_set[,"Specific_Annecy"])&!is.na(data_set[,"Ad_Valorem_Annecy"]),bothTorquay=!is.na(data_set[,"Specific_Torquay"])&!is.na(data_set[,"Ad_Valorem_Torquay"]),bothGeneva56A=!is.na(data_set[,"Specific_Geneva56_A"])&!is.na(data_set[,"Ad_Valorem_Geneva56_A"]),bothGeneva56B=!is.na(data_set[,"Specific_Geneva56_B"])&!is.na(data_set[,"Ad_Valorem_Geneva56_B"]),bothGeneva56C=!is.na(data_set[,"Specific_Geneva56_C"])&!is.na(data_set[,"Ad_Valorem_Geneva56_C"]),bothDillonA=!is.na(data_set[,"Specific_Dillon_A"])&!is.na(data_set[,"Ad_Valorem_Dillon_A"]),bothDillonB=!is.na(data_set[,"Specific_Dillon_B"])&!is.na(data_set[,"Ad_Valorem_Dillon_B"]))
-
-sum(both$bothSH, na.rm = TRUE)
-sum(both$bothGeneva, na.rm = TRUE)
-sum(both$bothAnnecy, na.rm = TRUE)
-sum(both$bothTorquay, na.rm = TRUE)
-sum(both$bothGeneva56A, na.rm = TRUE)
-sum(both$bothGeneva56B, na.rm = TRUE)
-sum(both$bothGeneva56C, na.rm = TRUE)
-sum(both$bothDillonA, na.rm = TRUE)
-sum(both$bothDillonB, na.rm = TRUE)
-
 ```
+
+How many lines have both ad valorem and specific in each round?
+
+- Smoot Hawley: `r sum(both$bothSH, na.rm = TRUE)`
+- Geneva 1947: `r sum(both$bothGeneva, na.rm = TRUE)`
+- Annecy: `r sum(both$bothAnnecy, na.rm = TRUE)`
+- Torquay: `r sum(both$bothTorquay, na.rm = TRUE)`
+- Geneva56A: `r sum(both$bothGeneva56A, na.rm = TRUE)`
+- Geneva56B: `r sum(both$bothGeneva56B, na.rm = TRUE)`
+- Geneva56C: `r sum(both$bothGeneva56C, na.rm = TRUE)`
+- DillonA: `r sum(both$bothDillonA, na.rm = TRUE)`
+- DillonB: `r sum(both$bothDillonB, na.rm = TRUE)`
+
 
 ### Victor's intuition on mixed lines
 I believe many of the changes from specific tax to ad valorem or otherwise is because of the tax intervals. You could search the keywords “tax boundaries” and “tax interval(s)” in Extra column of every round to locate them.
 
 ### Proportions of specific, ad valorem, mixed
 
-#### Smoot Hawley
-`r nrow(data_set)` total lines minus 451 lines with both specific and ad valorem leaves `r 2956 - 451` that have at most one or the other. 1417 ad valorem only; 1013 specific only. This leave 75 with neither. Why?
+A few lines in each round have neither specific nor ad valorem. Matt is working on fixing this
 
-```{r}
+```{r comment=NA}
 neither <- data_set %>% mutate(neitherSH=is.na(data_set[,"Specific_SH"])&is.na(data_set[,"Ad_Valorem_SH"]),neitherAnnecy=is.na(data_set[,"Specific_Annecy"])&is.na(data_set[,"Ad_Valorem_Annecy"]),neitherDillonB=is.na(data_set[,"Specific_Dillon_B"])&is.na(data_set[,"Ad_Valorem_Dillon_B"]))
 
-print.data.frame(neither[which(neither$neitherSH==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
+print("Smoot-Hawley")
+print.data.frame(neither[which(neither$neitherSH==TRUE),c("Sched","Product","Paragraph","id")],row.names = FALSE)
 
-# print.data.frame(neither[which(neither$neitherAnnecy==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
+# print.data.frame(neither[which(neither$neitherAnnecy==TRUE),c("Sched","Product","Paragraph","id")],row.names = FALSE)
 
-print.data.frame(neither[which(neither$neitherDillonB==TRUE),c("Sched","Product","Paragraph","Description")],row.names = FALSE)
+print("Dillon B")
+print.data.frame(neither[which(neither$neitherDillonB==TRUE),c("Sched","Product","Paragraph","id")],row.names = FALSE)
 ```
 
 # How many lines see no change from Smoot Hawley to Dillon B?
-The code below produces 391 lines that were the same
 ```{r echo=TRUE}
 lines <- data_set %>%
         mutate(av_pc =((Ad_Valorem_SH - Ad_Valorem_Dillon_B)/Ad_Valorem_SH)*100,sp_pc
@@ -346,6 +423,7 @@ lines <- data_set %>%
 
 lines2 <- subset(lines,is.na(sp_pc) | sp_pc==0) %>% subset(is.na(av_pc) | av_pc==0)
 ```
+The code above produces `r nrow(lines2)` lines that are the same in Smoot Hawley and Dillon B (i.e. that don't change at all through these five rounds of negotiations--we assume. We still need a check for rates going up.)
 
 # Summarizing the impact of tax intervals
 
