@@ -25,17 +25,18 @@ knitr::opts_chunk$set(echo = FALSE)
     - Refine *Members.in.GATT.xlsx*
     - Focus on Benelux, Canada, Chile, France, India, U.K., Dominican Republic, Haiti, Italy, Germany, Peru, Japan
 
-11. Consolidate various notes in Github / One Drive / G drive -- create centralized documentation
+5. Consolidate various notes in Github / One Drive / G drive -- create centralized documentation
     - Clean up Github repo
     - Resolve copyright issues, then (hopefully) post the correct schedules on Github
     - Read through Victor's notes for ideas (what is status of emailed files from last week?)
 
-2. Make list of accuracy checks, run them, fix typos in data
+6. Make list of accuracy checks, run them, fix typos in data
     - Resolve "complicated" paragraphs, including 9 that still have no tariffs
     - Check for tariffs going up from round to round
     - 30-40 more lines have both specific and ad valorem than they did  at the beginning of last week. Why?
 
-2. Condense data cleaning code
+7. Figure out how to integrate "free" list
+8. Condense data cleaning code
 16. Figure out how to source multiple code files
 
 2. Identify lines that switch between specific and ad valorem
