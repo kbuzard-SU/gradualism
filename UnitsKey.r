@@ -1,13 +1,4 @@
-#This is the test code for cleaning the excel data
-
 rm(list = ls())# clear all
-
-library(tidyverse)
-library(foreign)
-library(dplyr)
-library(readr)
-library(tidyselect)
-
 
 # Create elements based on sheet "Units Key"
 
