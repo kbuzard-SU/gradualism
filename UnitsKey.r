@@ -1,4 +1,4 @@
-rm(list = ls())# clear all
+#rm(list = ls())# clear all
 
 # Create elements based on sheet "Units Key"
 
@@ -18,5 +18,3 @@ b<-c('Units: =1','Units: =2','Units: =4','Units: =6','Units: =7','Units: =10','U
 
 data_units<-data.frame(a,b)
 names(data_units)<-c('Units','Keys')
-remove (a,b)
-print(data_units,right=F)

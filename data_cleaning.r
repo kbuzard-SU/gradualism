@@ -1,6 +1,6 @@
 #This is the test code for cleaning the excel data
 
-rm(list = ls())# clear all
+#rm(list = ls())# clear all
 
 library(tidyverse)
 library(foreign)

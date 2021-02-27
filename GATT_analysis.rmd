@@ -6,17 +6,18 @@ output: pdf_document
 toc: yes
 number_sections: yes
 ---
+
 ```{r setup, include=FALSE}
 library(knitr)
-knitr::opts_chunk$set(echo = FALSE)
-
-#knitr::opts_chunk$set(cache=TRUE, autodep = TRUE)
-#dep_auto()
+knitr::opts_chunk$set(include = FALSE)
 ```
 
 # Next steps
-1. Program stats into abstract (after making Github version for CEA abstract)
-2. Can we add TOT analysis? Talk to Ross. If not, some other analysis?
+
+## To do
+
+1. Program stats into abstract, start at line 41
+2. Can we add TOT analysis? Talk to Ross. If not, some other analysis? *Kristy meets with Ross on 3/3/21*
 
 3. Kennedy, Tokyo, Uruguay
     - Go back to questions in *Plan.docx* when last three rounds are finished
@@ -27,7 +28,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 5. Consolidate various notes in Github / One Drive / G drive -- create centralized documentation
     - Clean up Github repo
-    - Resolve copyright issues, then (hopefully) post the correct schedules on Github
+    - ~~Resolve copyright issues, then (hopefully) post the correct schedules on Github~~
     - Read through Victor's notes for ideas (what is status of emailed files from last week?)
 
 6. Make list of accuracy checks, run them, fix typos in data
@@ -37,7 +38,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 7. Figure out how to integrate "free" list
 8. Condense data cleaning code
-16. Figure out how to source multiple code files
 
 2. Identify lines that switch between specific and ad valorem
 2. Look for gradualism in graphs
@@ -47,26 +47,22 @@ knitr::opts_chunk$set(echo = FALSE)
     - Look into trade-weighting
 
 12. Find implementation years (maybe get answer from Doug Irwin)
-13. Contact the two people Bob Staiger suggested
 
 5. Get working draft together ASAP
 
+## Done
+
+1. ~~Make Github version for CEA abstract~~
+2. ~~Contact Tricia Mueller (USITC) and Roy Santana (WTO) [Bob Staiger's suggestions] [Feb 24]~~
+3. ~~Figure out how to source multiple code files~~
 
 
 # Importing and cleaning the data
 Importing and cleaning the data is done in "data_cleaning.rmd". It needs to be reprogrammed before being added here because it is nearly 1000 lines long. The chunk below calls that program to make the processed data available to the rest of the commands in this document.
 
-```{r data, message=FALSE, warning=FALSE, echo=TRUE}
-# both this source statement and the following "code" command work to include the data,
-#but I haven't yet figured out how to also include UnitsKeys.rmd below,
-#so I'm leaving them both here as future debugging options
-source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit_global())
-
-#```{r cleandata, code=readLines('C:/Users/krist/Github/Gradualism/data_cleaning.rmd'),eval=TRUE,message=FALSE,warning=FALSE}
-#```
-
+```{r createdata,include=TRUE,message=FALSE}
+source('data_cleaning.r')
 ```
-
 
 # Basic summary statistics
 
@@ -80,16 +76,11 @@ But this could be deceptive since different lines use different units
 
 - Victor has standardized everything to be in cents (per U.S. dollar) in UnitsKey.rmd
 
-```{r unitskey, message=FALSE, warning=FALSE, echo=FALSE}
-#source("C:/Users/krist/Github/Gradualism/UnitsKey.r", local = knitr::knit_global())
-#```{r unitskey, code= readLines('C:/Users/krist/Github/Gradualism/UnitsKey.r'),eval=TRUE}
-#```
+```{r createuk,include=TRUE}
+source('UnitsKey.r')
 ```
 
-
-
-```{r echo=FALSE, message=FALSE}
-library(knitr)
+```{r}
 library(qwraps2)
 library(kableExtra)
 
