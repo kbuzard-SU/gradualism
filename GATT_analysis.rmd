@@ -9,7 +9,7 @@ number_sections: yes
 
 ```{r setup, include=FALSE}
 library(knitr)
-knitr::opts_chunk$set(include = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # Next steps
@@ -76,11 +76,11 @@ But this could be deceptive since different lines use different units
 
 - Victor has standardized everything to be in cents (per U.S. dollar) in UnitsKey.rmd
 
-```{r createuk,include=TRUE}
+```{r echo=TRUE,warning=FALSE}
 source('UnitsKey.r')
 ```
 
-```{r}
+```{r warning=FALSE,message=FALSE}
 library(qwraps2)
 library(kableExtra)
 
