@@ -16,8 +16,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## To do
 
-1. Program stats into abstract, start at line 41
-2. Can we add TOT analysis? Talk to Ross. If not, some other analysis? *Kristy meets with Ross on 3/3/21*
+1. Can we add TOT analysis? Talk to Ross. If not, some other analysis? *Kristy meets with Ross on 3/3/21*
 
 3. Kennedy, Tokyo, Uruguay
     - Go back to questions in *Plan.docx* when last three rounds are finished
@@ -39,6 +38,9 @@ knitr::opts_chunk$set(echo = FALSE)
 7. Figure out how to integrate "free" list
 8. Condense data cleaning code
 
+9. Read and summarize "Tariff negotiations and renegotiations under the GATT and the WTO" (hard copy at SU library)
+10. Read and summarize "Two Centuries of Tariffs" (USITC, in G:drive folder)
+
 2. Identify lines that switch between specific and ad valorem
 2. Look for gradualism in graphs
 3. 10 lines in Dillon that have more than 2 years
@@ -55,6 +57,8 @@ knitr::opts_chunk$set(echo = FALSE)
 1. ~~Make Github version for CEA abstract~~
 2. ~~Contact Tricia Mueller (USITC) and Roy Santana (WTO) [Bob Staiger's suggestions] [Feb 24]~~
 3. ~~Figure out how to source multiple code files~~
+1. ~~Program stats into abstract, start at line 41~~
+
 
 
 # Importing and cleaning the data

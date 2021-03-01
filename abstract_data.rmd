@@ -9,6 +9,7 @@ linestretch: 1.25
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+library(english)
 ```
 
 
@@ -28,17 +29,26 @@ We have been able to locate the original documents that contain the consolidated
 
 Work is underway to add the Kennedy, Tokyo and Uruguay rounds for the U.S. and all rounds for several other countries. The sketch of preliminary findings reported herein is on the U.S. data on Smoot Hawley tariffs through the Dillon round.
 
-In standardizing the tariff lines across rounds, we end up `r nrow(data_set)` lines. The changes through time that require this standardization effort are often interesting in themselves. For instance, Paragraph 353, which covers ``electrical articles'' such as motors, tools, telegraphs, telephones and xray apparatus, is one line with a common 35 percent *ad valorem* tariff in 1930. By the end of the Dillon Round in 1964, this paragraph has been split into 30 distinct lines with tariffs ranging from 5.5% (xray: other) to 17.5% (wiring).
+In standardizing the tariff lines across rounds, we end up with `r nrow(data_set)` lines. The changes through time that require this standardization effort are often interesting in themselves. For instance, Paragraph 353, which covers ``electrical articles'' such as motors, tools, telegraphs, telephones and xray apparatus, is one line with a common 35 percent *ad valorem* tariff in 1930. By the end of the Dillon Round in 1964, this paragraph has been split into `r count(ad_valorem[which(ad_valorem$Paragraph == 353),])` distinct lines with tariffs ranging from `r ad_valorem %>% filter(Paragraph == 353) %>% summarize(minimum = min(Ad_Valorem_Dillon_B))`% (xray: other) to `r ad_valorem %>% filter(Paragraph == 353) %>% summarize(maximum = max(Ad_Valorem_Dillon_B))`% (wiring).
+
+```{r}
+#check these lines of code to make sure descriptions are right -- they have to be summarized so can't be hard-coded.
+
+#data_set %>% filter(Paragraph == 353) %>% slice(which.min(Ad_Valorem_Dillon_B))
+#data_set %>% filter(Paragraph == 353) %>% slice(which.max(Ad_Valorem_Dillon_B))
+```
 
 # Preliminary Results
 
 ```{r echo=FALSE, warning=FALSE}
 specific_mean <- data.frame(sapply(specific, mean, na.rm=TRUE))
 specific_med <- data.frame(sapply(specific, median, na.rm=TRUE))
+av_mean <- data.frame(sapply(ad_valorem, mean, na.rm=TRUE))
+av_med <- data.frame(sapply(ad_valorem, median, na.rm=TRUE))
 
 ```
 
-We find that from the Smoot-Hawley tariffs in 1930 to the last phase in of the Dillon Round in 1964, both specific and *ad valorem* tariffs were cut roughly in half. The mean *ad valorem* tariff binding decreases from 38.8% in 1930 to 18.9% in 1964. The medians are quite close to the means, dropping from 35% to 15%. *Ad valorem* tariffs cover roughly two-thirds of tariff lines.
+We find that from the Smoot-Hawley tariffs in 1930 to the last phase in of the Dillon Round in 1964, both specific and *ad valorem* tariffs were cut roughly in half. The mean *ad valorem* tariff binding decreases from `r round(av_mean["Ad_Valorem_SH",],1)`% in 1930 to `r round(av_mean["Ad_Valorem_Dillon_B",],1)`% in 1964. The medians are quite close to the means, dropping from `r round(av_med["Ad_Valorem_SH",],0)`% to `r round(av_med["Ad_Valorem_Dillon_B",],0)`%. *Ad valorem* tariffs cover roughly two-thirds of tariff lines.
 
 Things look a bit different for specific tariffs. The mean specific tariff binding decreases from `r round(specific_mean["Specific_SH",],2)` cents in 1930 to `r round(specific_mean["Specific_Dillon_B",],2)` cents in 1964, while the median bindings are much smaller, dropping from `r round(specific_med["Specific_SH",],2)` cents to `r round(specific_med["Specific_Dillon_B",],2)` cents. Specific tariffs are present for roughly half of tariff lines.
 
@@ -48,13 +58,16 @@ In terms of the time pattern of liberalization, we can confirm a well-known styl
 
 In percentage terms, the Torquay round saw cuts about half the size of those in Geneva 1947. Geneva 1956 saw percentage cuts closer to those in Annecy, and for the first time these were phased in--over three years in the case of Geneva 1956. The cuts in tariff averages in the Dillon round were once again about 10%, but the median for specific tariffs did not decrease while the median *ad valorem* tariff decreased by about 15%.
 
-These headline numbers hide variation in magnitude and speed of liberalization across types of products. This will be explored in detail in the paper, but a few interesting details are in order here. The data are grouped into 15 industries groups called *schedules* in Smoot Hawley. They range in length from 12 lines for Schedule 6 (Tobacco and Manufactures of) to 661 lines for Schedule 3 (Metals and Manufactures of).
+These headline numbers hide variation in magnitude and speed of liberalization across types of products. This will be explored in detail in the paper, but a few interesting details are in order here. The data are grouped into 15 industry groups called *schedules* in Smoot Hawley. They range in length from `r count(ad_valorem[which(ad_valorem$Sched == 6),])` lines for Schedule 6 (Tobacco and Manufactures of) to  `r count(ad_valorem[which(ad_valorem$Sched == 3),])` lines for Schedule 3 (Metals and Manufactures of).
 
-Schedule 8 (Spirits, Wines and other Beverages) has all but one of its 34 lines covered by a specific tariff and it sees the largest mean tariff in each round. The mean tariff cut is correspondingly largest here, with a decrease of more than 70% in the specific tariff from 227% in Smoot Hawley to 81% in Dillon.
 
-In contrast, the 11 lines with specific tariffs for Schedule 5 (Sugar, Molasses and Manufactures of) start at one of the lowest averages across schedules of 24.5% but decreases to only 23.3% by Dillon. The other six lines have *ad valorem* tariffs and have the smallest decrease across all schedules for mean *ad valorem* tariffs: from 50.8% to 31.9%, which is the largest mean across all schedules in the Dillon round. 
+Schedule 8 (Spirits, Wines and other Beverages) has all but `r as.character(english(sum(is.na(specific[which(specific$Sched == 8),"Specific_Dillon_B"]))))` of its `r count(ad_valorem[which(ad_valorem$Sched == 8),])` lines covered by a specific tariff and it sees the largest mean tariff in each round. The mean tariff cut is correspondingly largest here, with a decrease of more than `r floor((mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE) - mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE))/mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE)*100)`% in the average specific tariff from `r round(mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE),0)`% in Smoot Hawley to `r round(mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),0)`% in Dillon.
 
-Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) has the mean *ad valorem* tariff decrease by less than the median decrease *ad valorem* tariff, implying a reduction in tariff spikes. For specific tariffs, exactly half of the schedules show this pattern (Schedule 12 -- Silk Manufactures -- has no specific tariffs). 
+In contrast, the `r sum(!is.na(specific[which(specific$Sched == 5),"Specific_Dillon_B"]))` lines with specific tariffs for Schedule 5 (Sugar, Molasses and Manufactures of) start at one of the lowest averages across schedules of `r round(mean(specific[which(specific$Sched == 5),"Specific_SH"]$Specific_SH, na.rm = TRUE),1)`% but decreases to only `r round(mean(specific[which(specific$Sched == 5),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),1)`% by Dillon. The other `r as.character(english(sum(!is.na(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]))))` lines have *ad valorem* tariffs and have the smallest decrease across all schedules for mean *ad valorem* tariffs: from `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_SH"]$Ad_Valorem_SH, na.rm = TRUE),1)`% to `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]$Ad_Valorem_Dillon_B, na.rm = TRUE),1)`%, which is the largest mean *ad valorem* tariff across all schedules in the Dillon round. 
+
+<!-- check the facts in this next paragraph by hand--we need to be aware if this changes -->
+
+Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) has the mean *ad valorem* tariff decrease by less than the median decrease *ad valorem* tariff, implying a reduction in tariff spikes. For specific tariffs, exactly half of the schedules show this pattern (Schedule 12 -- Silk Manufactures has no specific tariffs). 
 
 # Results to come
 
