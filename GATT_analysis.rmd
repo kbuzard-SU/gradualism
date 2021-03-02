@@ -16,31 +16,39 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## To do
 
-1. Can we add TOT analysis? Talk to Ross. If not, some other analysis? *Kristy meets with Ross on 3/3/21*
+1. Can we add TOT analysis? Talk to Ross. If not, some other analysis?
+    - *Kristy meets with Ross on 3/3/21*
 
-3. Kennedy, Tokyo, Uruguay
-    - Go back to questions in *Plan.docx* when last three rounds are finished
+3. **Kennedy, Tokyo, Uruguay**
 
-4. Choose other countries -- first add # of pages for each schedule
+4. Choose other countries -- **first add # of pages for each schedule**
     - Refine *Members.in.GATT.xlsx*
     - Focus on Benelux, Canada, Chile, France, India, U.K., Dominican Republic, Haiti, Italy, Germany, Peru, Japan
 
-5. Consolidate various notes in Github / One Drive / G drive -- create centralized documentation
+5. **Consolidate various notes in Github / One Drive / G drive -- create centralized documentation**
     - Clean up Github repo
     - ~~Resolve copyright issues, then (hopefully) post the correct schedules on Github~~
-    - Read through Victor's notes for ideas (what is status of emailed files from last week?)
 
-6. Make list of accuracy checks, run them, fix typos in data
-    - Resolve "complicated" paragraphs, including 9 that still have no tariffs
+6. Resolve "complicated" paragraphs, including 9 that still have no tariffs
+    - *Matt is looking through last three rounds*
+
+6. **Make list of accuracy checks, run them, fix typos in data**
     - Check for tariffs going up from round to round
-    - 30-40 more lines have both specific and ad valorem than they did  at the beginning of last week. Why?
+    - **30-40 more lines have both specific and ad valorem than they did previously. Why?**
 
 7. Figure out how to integrate "free" list
+    - **For which rounds do we have the free list typed up? Where are they?**
+
 8. Condense data cleaning code
 
-9. Read and summarize "Tariff negotiations and renegotiations under the GATT and the WTO" (hard copy at SU library)
-10. Read and summarize "Two Centuries of Tariffs" (USITC, in G:drive folder)
+9. **Read and summarize "Tariff negotiations and renegotiations under the GATT and the WTO" (hard copy at SU library)**
 
+10. **Read and summarize "Two Centuries of Tariffs" (USITC, in G:drive folder)**
+
+11. Read through Victor's notes for ideas
+    - What is status of 'interesting paragraphs.pdf' and 'Splitting paragraphs in Dillon.pdf"?
+
+11. Go back to questions in *Plan.docx* when last three rounds are finished
 2. Identify lines that switch between specific and ad valorem
 2. Look for gradualism in graphs
 3. 10 lines in Dillon that have more than 2 years
