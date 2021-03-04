@@ -16,34 +16,34 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## To do
 
-1. Can we add TOT analysis? Talk to Ross. If not, some other analysis?
-    - *Kristy meets with Ross on 3/3/21*
-
-3. **Kennedy, Tokyo, Uruguay**
-
-4. Choose other countries -- **first add # of pages for each schedule**
-    - Refine *Members.in.GATT.xlsx*
-    - Focus on Benelux, Canada, Chile, France, India, U.K., Dominican Republic, Haiti, Italy, Germany, Peru, Japan
-
-5. **Consolidate various notes in Github / One Drive / G drive -- create centralized documentation**
+1. **Consolidate various notes in Github / One Drive / G drive -- create centralized documentation**
     - Clean up Github repo
     - ~~Resolve copyright issues, then (hopefully) post the correct schedules on Github~~
 
-6. Resolve "complicated" paragraphs, including 9 that still have no tariffs
+2. Resolve "complicated" paragraphs, including 9 that still have no tariffs
     - *Matt is looking through last three rounds*
+
+10. **Read and summarize "Two Centuries of Tariffs" (USITC, in G:drive folder)**
+
+3. **Kennedy, Tokyo, Uruguay**
+    - Kristy will look for SH --> TSUSA
+    - Victor will look for TSUSA --> HS
+
+4. Choose other countries
+    - Refine *Members.in.GATT.xlsx*
+    - Focus on Benelux, Canada, Chile, France, India, U.K., Dominican Republic, Haiti, Italy, Germany, Peru, Japan
+        - Matt is adding # of pages for each schedule
 
 6. **Make list of accuracy checks, run them, fix typos in data**
     - Check for tariffs going up from round to round
-    - **30-40 more lines have both specific and ad valorem than they did previously. Why?**
 
 7. Figure out how to integrate "free" list
-    - **For which rounds do we have the free list typed up? Where are they?**
+    - For which rounds do we have the free list typed up? Just Torquay Free List.xlsx on G: drive
 
 8. Condense data cleaning code
 
-9. **Read and summarize "Tariff negotiations and renegotiations under the GATT and the WTO" (hard copy at SU library)**
-
-10. **Read and summarize "Two Centuries of Tariffs" (USITC, in G:drive folder)**
+9. Read and summarize "Tariff negotiations and renegotiations under the GATT and the WTO" (hard copy at SU library)
+    - Victor will ask Matt to see if he can get the book from the library, let me know if not
 
 11. Read through Victor's notes for ideas
     - What is status of 'interesting paragraphs.pdf' and 'Splitting paragraphs in Dillon.pdf"?
@@ -55,6 +55,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 17. Think about how variation in units affects specific summary stats
     - Look into trade-weighting
+
+1. Can we add TOT analysis? 
+    - Kristy met with Ross on 3/3/21. Ross will explore data and get back in touch at end of March
 
 12. Find implementation years (maybe get answer from Doug Irwin)
 
@@ -445,3 +448,19 @@ intervals_total <- intervals[,c("Schedule","Paragraphs_affected","Lines_affected
 # Implementation dates
 
 Geneva 1: January 1, 1948 (Irwin 2017, p. 486)
+
+
+# TOT analysis
+
+We'll need measure of importer market power
+
+1. inverse foreign supply elasticities are at HS6 level, are much more recent
+    - Ross will look into the feasibility (data and code) of creating these measures for the 1930s/40s
+    - Would we want Broda, Limao, Weinstein version (requires trade flows only) or Anson Soderbery's [heterogeneous version](https://web.ics.purdue.edu/~asoderbe/Site/Elasticities.html)?
+    - Ross recalls he's seen a joint project between Anson Soderbery and Doug Irwin about the 1930s
+
+2. product differentiaton index (Rauch), also newer, but maybe less sensitive to changes over time
+
+3. market share might be credible enough, and easier to get
+
+We'll need to think about whether it's credible to try the identification strategy Ross has used in his work
