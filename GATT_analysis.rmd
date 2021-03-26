@@ -18,16 +18,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 1. **Consolidate various notes in Github / One Drive / G drive -- create centralized documentation**
     - Clean up Github repo
-    - ~~Resolve copyright issues, then (hopefully) post the correct schedules on Github~~
 
-2. Resolve "complicated" paragraphs, including 9 that still have no tariffs
+2. Resolve "complicated" paragraphs, including 4 that still have no tariffs
     - *Matt is looking through last three rounds*
 
-10. **Read and summarize "Two Centuries of Tariffs" (USITC, in G:drive folder)**
-
 3. **Kennedy, Tokyo, Uruguay**
-    - Kristy will look for SH --> TSUSA
-    - Victor will look for TSUSA --> HS
 
 4. Choose other countries
     - Refine *Members.in.GATT.xlsx*
@@ -37,7 +32,7 @@ knitr::opts_chunk$set(echo = FALSE)
 6. **Make list of accuracy checks, run them, fix typos in data**
     - Check for tariffs going up from round to round
 
-7. Figure out how to integrate "free" list
+7. **Figure out how to integrate "free" list**
     - For which rounds do we have the free list typed up? Just Torquay Free List.xlsx on G: drive
 
 8. Condense data cleaning code
@@ -63,14 +58,18 @@ knitr::opts_chunk$set(echo = FALSE)
 
 5. Get working draft together ASAP
 
+6. Add Schedule A tariff data from 1946 (last available before Geneva 1947)
+    - Are current Column 2 tariffs Smoot Hawley or the 1946 tariffs?
+
 ## Done
 
 1. ~~Make Github version for CEA abstract~~
 2. ~~Contact Tricia Mueller (USITC) and Roy Santana (WTO) [Bob Staiger's suggestions] [Feb 24]~~
 3. ~~Figure out how to source multiple code files~~
-1. ~~Program stats into abstract, start at line 41~~
-
-
+1. ~~Program stats into abstract~~
+2. ~~Resolve copyright issues, then (hopefully) post the correct schedules on Github~~
+3. ~~Determine that TSUS tariffs were always at 5 digit, so we can just use the 5-digit tariff for all of the 7-digit subcategories~~
+10. ~~Read and summarize "Two Centuries of Tariffs" (USITC, in G:drive folder)~~
 
 # Importing and cleaning the data
 Importing and cleaning the data is done in "data_cleaning.rmd". It needs to be reprogrammed before being added here because it is nearly 1000 lines long. The chunk below calls that program to make the processed data available to the rest of the commands in this document.
