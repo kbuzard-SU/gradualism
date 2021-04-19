@@ -16,8 +16,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## To do
 
-1. **Consolidate various notes in Github / One Drive / G drive -- create centralized documentation**
-    - Clean up Github repo
+1. Create centralized documentation
+    - Include history from Unsolved problems in coding.docx (OneDrive)
 
 2. Resolve "complicated" paragraphs, including 4 that still have no tariffs
     - *Matt is looking through last three rounds*
@@ -51,8 +51,7 @@ knitr::opts_chunk$set(echo = FALSE)
 17. Think about how variation in units affects specific summary stats
     - Look into trade-weighting
 
-1. Can we add TOT analysis? 
-    - Kristy met with Ross on 3/3/21. Ross will explore data and get back in touch at end of March
+1. TOT analysis
 
 12. Find implementation years (maybe get answer from Doug Irwin)
 
@@ -70,6 +69,7 @@ knitr::opts_chunk$set(echo = FALSE)
 2. ~~Resolve copyright issues, then (hopefully) post the correct schedules on Github~~
 3. ~~Determine that TSUS tariffs were always at 5 digit, so we can just use the 5-digit tariff for all of the 7-digit subcategories~~
 10. ~~Read and summarize "Two Centuries of Tariffs" (USITC, in G:drive folder)~~
+11. ~~Consolidate various notes in Github / One Drive / G drive~~
 
 # Importing and cleaning the data
 Importing and cleaning the data is done in "data_cleaning.rmd". It needs to be reprogrammed before being added here because it is nearly 1000 lines long. The chunk below calls that program to make the processed data available to the rest of the commands in this document.
