@@ -1,0 +1,23 @@
+---
+title: "results"
+author: "Kristy Buzard"
+date: "4/20/2021"
+output: pdf_document
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We have been able to locate the original documents that contain the consolidated GATT tariff schedules at the end of each of the eight round of negotiations. To date, we have digitalized and standardized the tariff data for the first five GATT rounds for the United States. We have done the same for the tariff schedule that was in effect in the United States before the start of the GATT---the so-called Smoot Hawley tariffs.
+
+We are currently adding the Kennedy, Tokyo and Uruguay rounds for the U.S. and all rounds for several other countries. The sketch of preliminary findings reported herein is on the U.S. data on Smoot Hawley tariffs through the Dillon round.
+
+In standardizing the tariff lines across rounds, we end up with `r nrow(data_set)` lines. The changes through time that require this standardization effort are often interesting in themselves. For instance, Paragraph 353, which covers ``electrical articles'' such as motors, tools, telegraphs, telephones and xray apparatus, is one line with a common 35 percent *ad valorem* tariff in 1930. By the end of the Dillon Round in 1964, this paragraph has been split into `r count(ad_valorem[which(ad_valorem$Paragraph == 353),])` distinct lines with tariffs ranging from `r ad_valorem %>% filter(Paragraph == 353) %>% summarize(minimum = min(Ad_Valorem_Dillon_B))`% (xray: other) to `r ad_valorem %>% filter(Paragraph == 353) %>% summarize(maximum = max(Ad_Valorem_Dillon_B))`% (wiring).
+
+```{r, echo=FALSE}
+#check these lines of code to make sure descriptions are right -- they have to be summarized so can't be hard-coded.
+
+#data_set %>% filter(Paragraph == 353) %>% slice(which.min(Ad_Valorem_Dillon_B))
+#data_set %>% filter(Paragraph == 353) %>% slice(which.max(Ad_Valorem_Dillon_B))
+```

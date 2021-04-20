@@ -1,0 +1,57 @@
+---
+title: "results"
+author: "Kristy Buzard"
+date: "4/20/2021"
+output: pdf_document
+---
+
+```{r,  include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Basic Facts
+
+```{r child = 'results.Rmd'}
+```
+
+```{r echo=FALSE, warning=FALSE}
+specific_mean <- data.frame(sapply(specific, mean, na.rm=TRUE))
+specific_med <- data.frame(sapply(specific, median, na.rm=TRUE))
+av_mean <- data.frame(sapply(ad_valorem, mean, na.rm=TRUE))
+av_med <- data.frame(sapply(ad_valorem, median, na.rm=TRUE))
+
+```
+
+We find that from the Smoot-Hawley tariffs in 1930 to the last phase in of the Dillon Round in 1964, both specific and *ad valorem* tariffs were cut roughly in half. The mean *ad valorem* tariff binding decreases from `r round(av_mean["Ad_Valorem_SH",],1)`% in 1930 to `r round(av_mean["Ad_Valorem_Dillon_B",],1)`% in 1964.\footnote{We will soon be adding the 1946 U.S. tariff schedule to the dataset in order to be able to say what part of these concessions came directly as a result of the GATT as opposed to trade liberalization between Smoot Hawley and the first round of the GATT.} The medians are quite close to the means, dropping from `r round(av_med["Ad_Valorem_SH",],0)`% to `r round(av_med["Ad_Valorem_Dillon_B",],0)`%. *Ad valorem* tariffs cover roughly two-thirds of tariff lines.
+
+Things look a bit different for specific tariffs. The mean specific tariff binding decreases from `r round(specific_mean["Specific_SH",],2)` cents in 1930 to `r round(specific_mean["Specific_Dillon_B",],2)` cents in 1964, while the median bindings are much smaller, dropping from `r round(specific_med["Specific_SH",],2)` cents to `r round(specific_med["Specific_Dillon_B",],2)` cents. Specific tariffs are present for roughly half of tariff lines.
+
+About 450 lines have both *ad valorem* and specific components to their tariff in a given round. These lines are included in the previous statistics, but we intend to analyze them separately and provide explanation for which lines get *ad valorem* protection, which lines get specific tariffs, and which get both. We know that the incidence of specific tariffs declines with inflation; this is an important and under-studied aspect of liberalization that we intend to explore.
+
+In terms of the time pattern of liberalization, we can confirm a well-known stylized fact: the largest proportional cuts took place between the Smoot-Hawley legislation and the first round of the GATT in Geneva in 1947: average tariffs, both specific and *ad valorem*, were reduced by about 30%. The pattern of reductions after Geneva 1947 is then somewhat uneven. From Geneva 1947 to Annecy, the reduction in means was much smaller at about 4% with the reduction in medians being about 10%. Annecy saw small tariff cuts on average in large part because this round was focused on accession: countries like the United States that had joined in Geneva only negotiated with those countries that were newly acceding in the Annecy Round.
+
+In percentage terms, the Torquay round saw cuts about half the size of those in Geneva 1947. Geneva 1956 saw percentage cuts closer to those in Annecy, and for the first time these were phased in--over three years in the case of Geneva 1956. The cuts in tariff averages in the Dillon round were once again about 10%, but the median for specific tariffs did not decrease while the median *ad valorem* tariff decreased by about 15%.
+
+These headline numbers hide variation in magnitude and speed of liberalization across types of products. This will be explored in detail in the paper, but a few interesting details are in order here. The data are grouped into 15 industry groups called *schedules* in Smoot Hawley. They range in length from `r count(ad_valorem[which(ad_valorem$Sched == 6),])` lines for Schedule 6 (Tobacco and Manufactures of) to  `r count(ad_valorem[which(ad_valorem$Sched == 3),])` lines for Schedule 3 (Metals and Manufactures of).
+
+Schedule 8 (Spirits, Wines and other Beverages) has all but `r as.character(english(sum(is.na(specific[which(specific$Sched == 8),"Specific_Dillon_B"]))))` of its `r count(ad_valorem[which(ad_valorem$Sched == 8),])` lines covered by a specific tariff and it sees the largest mean tariff in each round. The mean tariff cut is correspondingly largest here, with a decrease of more than `r floor((mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE) - mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE))/mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE)*100)`% in the average specific tariff from `r round(mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE),0)`% in Smoot Hawley to `r round(mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),0)`% in Dillon.
+
+In contrast, the `r sum(!is.na(specific[which(specific$Sched == 5),"Specific_Dillon_B"]))` lines with specific tariffs for Schedule 5 (Sugar, Molasses and Manufactures of) start at one of the lowest averages across schedules of `r round(mean(specific[which(specific$Sched == 5),"Specific_SH"]$Specific_SH, na.rm = TRUE),1)`% but decreases to only `r round(mean(specific[which(specific$Sched == 5),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),1)`% by Dillon. The other `r as.character(english(sum(!is.na(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]))))` lines have *ad valorem* tariffs and have the smallest decrease across all schedules for mean *ad valorem* tariffs: from `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_SH"]$Ad_Valorem_SH, na.rm = TRUE),1)`% to `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]$Ad_Valorem_Dillon_B, na.rm = TRUE),1)`%, which is the largest mean *ad valorem* tariff across all schedules in the Dillon round. 
+
+<!-- check the facts in this next paragraph by hand--we need to be aware if this changes -->
+
+Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) has the mean *ad valorem* tariff decrease by less than the median decrease *ad valorem* tariff, implying a reduction in tariff spikes. For specific tariffs, exactly half of the schedules show this pattern (Schedule 12 -- Silk Manufactures has no specific tariffs). 
+
+## Results to be developed
+
+While we plan to further explore the questions discussed in the last section, over the next couple months we will also answer the following questions:
+
+\begin{enumerate}
+	\item[1.] Which products `suffer' from large tariff cuts and which products continue to receive protection?
+	\item[2.] Can we posit an explanation for the variation in both the quantity and speed of liberalization across products?
+	\item[3.] Which types of products had ad-valorem versus specific tariffs, and how did this change over time? What role did the presence of specific tariffs, combined with inflation, have in reducing the total level of tariff protection?
+	\item[4.] Did any of these patterns change through the final three rounds (Kennedy, Tokyo and Uruguay)?
+	\item[5.] How did the commitments of other countries differ from those of the United States? We will digitize and analyze the schedules for several other countries, including Canada as an example of a small, resource-rich developed economy.
+\end{enumerate}
+
+We are exploring data availability and are hopeful that it will be possible to add a terms-of-trade analysis à la Broda, Limao and Weinstein (2008).
