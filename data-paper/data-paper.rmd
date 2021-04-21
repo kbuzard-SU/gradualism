@@ -21,11 +21,47 @@ library(english)
 
 # Literature
 
+- There is a large qualitative literature on what happened through the GATT
+  - Go back and list some of the books we read on, e.g., each round
+  - "Tariff negotiations and renegotiations under the GATT and the WTO"
+  - USITC history papers (two of them)
+  - Irwin's big book
+    - 1994 Irwin NBER working paper
+  - Petros' chapter on tariffs
+
+
+- Three strands of quantitative literature
+  - Old stuff
+    - Krause 1962, etc
+      - Go through reference list
+    - Dur, Balassa, Kreinin
+  - BSY (is there a second one?)
+  - Bown and Irwin (2017)
+
+- Need to include TOT literature if going to include TOT analysis
+
 # Data
 
 ```{r, include=FALSE}
 source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit_global())
 ```
+
+- Separate section first on institutional context?
+
+- Background, general info on GATT
+  - RTAA reductions between Smoot Hawley and 1946
+  - Where we got these files
+
+- How we digitized the data
+  - Dealing with two changes in coding
+    - Historical context on those changes
+    - Addition of new lines round-by-round
+  
+- Other issues that arose
+  - Specific vs. ad valorem vs. mixed
+  - Tariff intervals
+  - Free list
+  - Staging (starting with Geneva A/B/C)
 
 #```{r child = 'data.Rmd'}
 #```
@@ -35,9 +71,21 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 #```{r child = 'results.Rmd'}
 #```
 
+# Non-U.S. Contracting Parties
+
 # Conclusion
 
 # References
 
 #```{r child = 'references.Rmd'}
 #```
+
+# Data Appendix
+
+```{r child = 'data-appendix.Rmd'}
+```
+
+- include source table
+  - Victor is updating to include concordance sources
+  
+Where will GATT participants / lengths of schedules go? A separate appendix?
