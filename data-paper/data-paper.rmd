@@ -37,8 +37,18 @@ library(english)
     - Dur, Balassa, Kreinin
   - BSY (is there a second one?)
   - Bown and Irwin (2017)
+  - But what about "30 years of trade policy"?
 
 - Need to include TOT literature if going to include TOT analysis
+
+# Institutional Context
+
+- Background, general info on GATT
+  - RTAA reductions between Smoot Hawley and 1946
+    - How do the two different documents we have relate to each other
+
+#```{r child = 'context.Rmd'}
+#```
 
 # Data
 
@@ -46,11 +56,7 @@ library(english)
 source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit_global())
 ```
 
-- Separate section first on institutional context?
-
-- Background, general info on GATT
-  - RTAA reductions between Smoot Hawley and 1946
-  - Where we got these files
+- Where we got these files
 
 - How we digitized the data
   - Dealing with two changes in coding
@@ -59,19 +65,77 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
   
 - Other issues that arose
   - Specific vs. ad valorem vs. mixed
+  - Variation in units for specific tariffs, how we standardized them
   - Tariff intervals
   - Free list
   - Staging (starting with Geneva A/B/C)
+  - Ad valorem equivalents (AVE) and trade weighting
 
 #```{r child = 'data.Rmd'}
 #```
 
 # Results
 
+## Kristy's to-do for April 22-23
+
+- Read through the old notes that Victor sent
+- Read through my notes from the background reading for questions we want to address analytically
+- Look at Plan.docx questions
+
+## Basic Facts
+
+- Total tariff cuts from Smoot Hawley to last round we have
+  - Specific vs. ad valorem
+    - Overlap in ad valorem and specific
+
+- Round by round cuts (focus on end of round)
+
+- Magnitude and speed of liberalization across types of products
+
+## Spotlight on some interesting products
+
+- Round by round graphs for specific, interesting lines
+  - To do this the way I want to, need implementation dates
+
+- Which lines from Smoot Hawley don't see any action?
+
+- Are there differences in which lines get staging once that happens?
+  - Before Kennedy at least, where it was uniform...
+    - Was it *really* uniform?
+    
+- Can we quantify which types of products get a lot of splitting of lines?
+
+## Other things we learned
+
+- How important was RTAA between 1934 and 1946?
+
+- What do Column 2 tariffs really represent (1962)
+
+- Can we test:
+  - Trade Expansion Act of 1962 provided for removing the duty on articles for which the July 1, 1962, rate was 5 percent ad valorem or less, and reducing the rates on other articles by 50 percent of the July 1, 1962, rate. (Dobson)
+    - **The major trading countries made across-the-board cuts ranging from 36 to 39 percent of previous tariff rate levels on most products**
+	- Trade Act of 1974 grants the President a 5-year negotiating authority, allowing him to reduce by as much as 60 percent any tariff rate over 5 percent in force on January 1, 1975, and also allows him to remove the duty on any article for which the existing rate is 5 percent or less.
+- 1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 40 percent of the dutiable imports
+
+
+## Analysis
+
+- What can we say about which / why lines have ad valorem vs. specific?
+  - Is there variation over time?
+
+- Can we posit an explanation for the variation in both the quantity and speed of liberalization across products?
+
 #```{r child = 'results.Rmd'}
 #```
 
 # Non-U.S. Contracting Parties
+
+Need table that Matt is creating with number of pages for each schedule for each round
+
+# Terms of Trade Analysis
+
+At least include our plans, what data we're going to use
+- proof of concept using modern elasticity data would be great, even in a subset of lines
 
 # Conclusion
 

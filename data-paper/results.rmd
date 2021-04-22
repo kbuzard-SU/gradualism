@@ -11,9 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Basic Facts
 
-```{r child = 'results.Rmd'}
-```
-
 ```{r echo=FALSE, warning=FALSE}
 specific_mean <- data.frame(sapply(specific, mean, na.rm=TRUE))
 specific_med <- data.frame(sapply(specific, median, na.rm=TRUE))
