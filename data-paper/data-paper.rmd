@@ -62,7 +62,7 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
   - Dealing with paragraph splitting, new lines
   - Dealing with two changes in coding
     - Historical context on those changes
-    - Addition of new lines round-by-round
+    
   
 - Other issues that arose
   - Specific vs. ad valorem vs. mixed
@@ -82,6 +82,8 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 - Total tariff cuts from Smoot Hawley to last round we have
   - Specific vs. ad valorem
     - Overlap in ad valorem and specific
+
+- Addition of new lines round-by-round
 
 - Round by round cuts (focus on end of round)
 
