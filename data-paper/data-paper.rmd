@@ -20,10 +20,10 @@ library(english)
 #```
 
 # Literature
-
 - There is a large qualitative literature on what happened through the GATT
   - Go back and list some of the books we read on, e.g., each round
   - "Tariff negotiations and renegotiations under the GATT and the WTO"
+    - What is Matt's status with this?
   - USITC history papers (two of them)
   - Irwin's big book
     - 1994 Irwin NBER working paper
@@ -59,6 +59,7 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 - Where we got these files
 
 - How we digitized the data
+  - Dealing with paragraph splitting, new lines
   - Dealing with two changes in coding
     - Historical context on those changes
     - Addition of new lines round-by-round
@@ -76,12 +77,6 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 
 # Results
 
-## Kristy's to-do for April 22-23
-
-- Read through the old notes that Victor sent
-- Read through my notes from the background reading for questions we want to address analytically
-- Look at Plan.docx questions
-
 ## Basic Facts
 
 - Total tariff cuts from Smoot Hawley to last round we have
@@ -91,6 +86,7 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 - Round by round cuts (focus on end of round)
 
 - Magnitude and speed of liberalization across types of products
+  - Any obvious patterns to which lines have largest/smallest cuts?
 
 ## Spotlight on some interesting products
 
@@ -98,12 +94,28 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
   - To do this the way I want to, need implementation dates
 
 - Which lines from Smoot Hawley don't see any action?
+  - Victor says: 1014, 1530e, 1544,1104a, 81, 82,318,412
 
-- Are there differences in which lines get staging once that happens?
+- Are there differences in which lines get staging once staging starts?
   - Before Kennedy at least, where it was uniform...
     - Was it *really* uniform?
     
 - Can we quantify which types of products get a lot of splitting of lines?
+
+- Metallic magnesium and metallic magnesium scrap, para 375, swiches from specific to ad valorem in Geneva56C; reduced from 50 to 45% in Dillon
+  - 1102b (wools nspf) go from ad valorem in every round to specific in Dillon
+  - 202.a swiches from specific in S-H to ad valorem in Geneva
+
+- Need to look into bicycles (para 375)--every other one gets a new specific tariff in Geneva, but was ad valorem in S-H?
+
+- Para 209, item 6 has tariff double in Geneva56A
+  - 331 item 10 increases specific tariff from 3 to 4 in Torquay
+  - 911
+  - 1005.a.3 (something to do with hemp) S-H --> Geneva unchanged; then increase
+
+- Para 32, "change of tax formula"?
+  Also 202.a, 232.c,302.d, 
+  
 
 ## Other things we learned
 
@@ -115,7 +127,7 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
   - Trade Expansion Act of 1962 provided for removing the duty on articles for which the July 1, 1962, rate was 5 percent ad valorem or less, and reducing the rates on other articles by 50 percent of the July 1, 1962, rate. (Dobson)
     - **The major trading countries made across-the-board cuts ranging from 36 to 39 percent of previous tariff rate levels on most products**
 	- Trade Act of 1974 grants the President a 5-year negotiating authority, allowing him to reduce by as much as 60 percent any tariff rate over 5 percent in force on January 1, 1975, and also allows him to remove the duty on any article for which the existing rate is 5 percent or less.
-- 1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 40 percent of the dutiable imports
+  - 1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 40 percent of the dutiable imports
 
 
 ## Analysis
@@ -124,6 +136,8 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
   - Is there variation over time?
 
 - Can we posit an explanation for the variation in both the quantity and speed of liberalization across products?
+  - Perhaps the number of countries who are negotiating?
+    - Look at correlations between the number of pages for the schedule for each country?
 
 #```{r child = 'results.Rmd'}
 #```
@@ -139,6 +153,11 @@ At least include our plans, what data we're going to use
 
 # Conclusion
 
+Future plans
+
+- What role did the presence of specific tariffs, combined with inflation, have in reducing the total level of tariff protection?
+  - Need trade volume / value / price data
+
 # References
 
 #```{r child = 'references.Rmd'}
@@ -146,8 +165,10 @@ At least include our plans, what data we're going to use
 
 # Data Appendix
 
-```{r child = 'data-appendix.Rmd'}
-```
+#```{r child = 'data-appendix.Rmd'}
+#```
+
+- overflow from data section
 
 - include source table
   - Victor is updating to include concordance sources

@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ### RTAA	
 - Smoot Hawley was the last general congressional revision of the tariff
 - Reciprocal Trade Agreements Act of 1934 (and all the others until 1962) was framed as an amendment to the Smoot-Hawley Act
-  - I found documents that list all of them and put them in one of the folders, need to find
+  - Details at https://github.com/kbuzard-SU/gradualism/discussions/82
 - decided whom to offer a cut based the the principal supplier rule  
 	- Through the operation of the unconditional most-favored-nation principle, the concession would be automatically and freely extended to all other nonnegotiating suppliers.
 		- The bilateral negotiations were normally carried out with one of the top three suppliers of any commodity.
@@ -31,6 +31,8 @@ knitr::opts_chunk$set(echo = TRUE)
 	- required President to give public notice of his intention to negotiate a trade agreement and to "seek information and advice"
 	  - Then he could run individual rates up or down by as much as 50 percent
 Although the Geneva talks were ostensibly multilateral, the procedure differed only slightly from the one employed during the bilateral trade negotiations from 1934 through 1945.
+- The Commission provided U.S. negotiators with lists of articles where tariff reduction should be sought. [RSB, Ch. 7]
+  - The Commission prepared reports containing some 1,300 line items "on which the United States was prepared to offer concessions" [RSB, Ch. 7]
 - A team from each country conducted the day-to-day bargaining with representatives of another nation on a bilateral basis
 - Principal supplier rule was followed
 - Once the tariff concessions had been negotiated at the bilateral, level, each country consolidated the concessions it had agreed upon into a single schedule of concessions which was then annexed to, and became a part of, the General Agreement on Tariffs and Trade.
@@ -38,177 +40,99 @@ Although the Geneva talks were ostensibly multilateral, the procedure differed o
 	- The negotiation of these concessions required 7 months for completion
 As of January 1949, rates of duty applicable to 88 percent of dutiable imports into the United States had been reduced from the Smoot-Hawley levels as a result of the trade-agreement concessions negotiated since 1934, and an additional 6 percent were bound against increase.
 - Only the remaining 6 percent had not been subjected to either a reduction in rate or a binding restriction
-
+- The final product of the 1947 negotiations covered more than 45,000 items in the tariff schedules of the GATT member countries [RSB, Ch. 7]
+- *Executive Order No. 9832 also required that the Commission produce a yearly report documenting the changes that had occurred as a result of reciprocity activities, including a summary and analysis of concessions made by and to the United States. These reports began in 1948.* [RSB, Ch. 7]
 
 ### The Trade Agreements Extension Act of 1948
 - Added peril point requirement
+  - Under the 1948 act, an investigation specifically addressed to the potential of injury preceded the negotiation of the trade agreement.
 	- Revoked in 1949 and revived in 1951
 	- peril point was included in each subsequent trade agreements extension act until 1962, when the Tariff Commission was directed to advise the President of the probable economic effect of tariff modifications without reference to a peril point.
 - the United States began suffering an unfavorable balance of payments as a result of its heavy investments and expenditures overseas and the effects of an overvalued exchange rate for the dollar
+- In the fall of 1948 the Tariff Commission received a list of approximately 400 items in the U.S. tariff schedules that the President proposed to offer at the next round of GATT negotiations
 - The so-called Dillon Round at Geneva in 1961 and 1962 had only marginally reduced trade barriers. This disappointing result stemmed in part from the limited negotiating authority of the United States.
 
+### The Trade Agreements Extension Act of 1949
+- gave the President an additional 2 years of bargaining authority
+- repealed the peril-point investigations
+- Truman administration was able to participate in the third round of GA TT negotiations at Torquay without the concern over peril points that had characterized its activities at the previous round of negotiations
+
+### The Trade Agreements Extension Act of 1951
+
+- restored the Tariff Commission's responsibility to find peril points
+  - In practice, the peril points had the effect of restricting the flexibility of U.S. negotiators at international trade conferences
+  - The Commission was not permitted to weigh the general economic advantages that the reduction of rates on a particular commodity might bring in other sectors; it could consider only how the reduced rates would affect the U.S. industry specifically engaged in producing the commodity concerned.
+- At the fourth round of negotiations at Geneva in the mid-1950's, the U.S. representatives scrupulously avoided making any concessions below the peril points, but for the Dillon Round of negotiations, which took place in 1960-62, President Eisenhower authorized tariff reductions below the peril point on several commodities in order to obtain desirable concessions, particularly from the Common Market.
+
+### Tariff Simplification Act of 1954 (Public Law No. 83-768)
+The Tariff Simplification Act directed the Commission to compile a revision of the tariff under the following guidelines: 
+1. Establish schedules of tariff classifications which would be logical in arrangement and terminology and adapted to the changes that had occurred since 1930 in the character and importance of articles produced in and imported into the United States and in the market in which they were sold.
+2. Eliminate anomalies and illogical results in the classification of articles.
+3. Simplify the determination and application of tariff classifications. [RSB, Ch. 7]
+
+Tariff Classification Study (Nov. 15, 1960) comprised seven volumes and included the draft tariff itself, along with explanations and the record of proceedings. [RSB, Ch. 7]
+- Seven supplemental reports were issued through 1963. [RSB, Ch. 7]
+
 ### The Trade Expansion Act of 1962
+- was first trade act since Smoot Hawley that stood on its own (not framed as a revision of Smoot Hawley)
 - The law provided for removing the duty on articles for which the July 1, 1962, rate was 5 percent ad valorem or less, and reducing the rates on other articles by 50 percent of the July 1, 1962, rate.
 	- Reserved some articles from negotiations
+- Seeds were in The Trade Agreements Extension Act of 1953, which called for Randall Commission to conduct a thorough review of the entire trade situation
+  - Congress directed that the Tariff Commission make a comprehensive study of the laws relating to the tariff status of imported articles and to submit to the President and the House Ways and Means and Senate Finance Committees a revision and consolidation of those laws
+	  - May 1962, Congress authorized the President to implement the resulting rate schedules with the passage of the Tariff Classification Act.
+	    - The Tariff Commission then published in 1963 (effective August 31, 1963) the Tariff Schedules of the United States (TSUS), which by law are the official rate schedules.
+	    - The TSUS attempted to provide descriptions of articles by name, in categories designating one or a group of related products, and sought to avoid more general descriptions of goods, such as by material of manufacture. [RSB, Ch. 7]
+      - The eight schedules of product categories were set forth in a hierarchical arrangement, arranged by sectors from basic products to finished goods and broken into 5-digit primary or legal provisions and their duty rates. [RSB, Ch. 7]
+    	  - The annotated version of the tariff incorporated further product detail by adding 2 more digits to designate statistical categories, designed to gather data on particular goods. [RSB, Ch. 7]
+	      - Combining the tariff’s legal provisions with import statistical requirements in a single integrated nomenclature generally assured greater accuracy in reporting and publishing data. [RSB, Ch. 7]
+	      - To clarify the product scope of tariff provisions and to ensure that every imported good subject to the tariff was classified in one place and one place only, special legal rules, known as General or Schedule Headnotes, were inserted at appropriate places in the tariff. [RSB, Ch. 7]
+    	- Commission publishes the changes periodically in the Tariff Schedules of the United States Annotated (TSUSA)
+    - On October 22, 1963, President Kennedy submitted a list that included nearly every one of the articles enumerated in the TSUS. The Tariff Commission had to conduct a full-scale review and make its assessments of the probable economic effect of what amounted to a general rate revision.
+
 - Kennedy Round negotiations started in May 1964
+	- Sections 211 and 213 of the 1962 act had assigned to the Tariff Commission a number of specific duties in anticipation of these negotiations, including the identification of all commodities fitting the criteria listed in the law for which the duties could be reduced more than 50 percent or to zero, as well as the items to be withheld from the negotiation process
 	- The talks continued until the very day that the U.S. negotiating authority expired-June 30, 1967. (THREE YEARS!)
 	- The Kennedy Round was one of the most comprehensive rounds of international trade negotiations ever held.
 	- The major trading countries made across-the-board cuts ranging from 36 to 39 percent of previous tariff rate levels on most products
+		- had always been technically possible to conduct the negotiations in this manner under previous trade legislation, this was the first time that it had been seriously considered. The proposal was designed to expedite the negotiations.
 		- 53 participating countries
 	- Big failure: agricultural trade (EU import barriers remained intact)
+	- The final agreements called for a reduction in rates on most items, and the Tariff Commission was responsible for calculating the appropriate intermediate levels of the duties for the five annual stages in which the U.S. concessions were to be implemented
+    - The Commission had begun using automated data processing in its operation in the late 1960's, which increased its staff's productivity.
+
 
 ### The Trade Act of 1974
 - President lacked negotiating authority when Tokyo Round started in September 1973
 - 1974 act grants the President a 5-year negotiating authority, allowing him to reduce by as much as 60 percent any tariff rate over 5 percent in force on January 1, 1975, and also allows him to remove the duty on any article for which the existing rate is 5 percent or less.
+  - also residual 2 years of authority after first five expired
+  - the President was authorized to extend most-favored-nation (MFN) treatment to countries not then receiving it.
+	- The only countries not enjoying these low, nondiscriminatory tariff rates were the Communist nations, except Yugoslavia and Poland.
 - "Tariff policy has seldom remained static for long, nor has it ever been predictable"
 
+### Not sure of timing--Dobson was published in December 1976
+In the last few years the Customs Cooperation Council has been attempting to update the BTN, and the Commission has recently worked out a draft conversion of the TSUS into the structure of the BTN. The Commission is also working to create a classification structure that will allow the publication of comparable data on U.S. imports, production, and exports.
 
-
-
-
-## The Peril Points and Trade Policy in the 1950s
-
-The peril-point investigations reversed the escape-clause procedure.
-- Formerly, concessions were made and put into force; then escape-clause investigations were carried out to determine whether serious injury had occurred. - Under the 1948 act, an investigation specifically addressed to the potential of injury preceded the negotiation of the trade agreement. The agreement would, of course, contain an escape clause in any case to insure that the United States had an opportunity to reassess the effect of any concessions.
-
-In the fall of 1948 the Tariff Commission received a list of approximately 400 items in the U.S. tariff schedules that the President proposed to offer at the next round of GA TT negotiations.
-- The 1949 Trade Agreements Extension Act not only gave the President an additional 2 years of bargaining authority, but it also repealed the peril-point investigations and dropped the limitations on Commission employees' participation in interdepartmental trade committees
-- The Truman administration was able to participate in the third round of GA TT negotiations at Torquay, England, without the concern over peril points that had characterized its activities at the previous round of negotiations.
-
-The Trade Agreements Extension Act of 1951 restored the Tariff Commission's responsibility to find peril points
-- In practice, the peril points had the effect of restricting the flexibility of U.S. negotiators at international trade conferences, as negotiators attempted to avoid making any concessions below the peril points.
-- The Commission was not permitted to weigh the general economic advantages that the reduction of rates on a particular commodity might bring in other sectors; it could consider only how the reduced rates would affect the U.S. industry specifically engaged in producing the commodity concerned.
-
-At the fourth round of negotiations at Geneva in the mid-1950's, the U.S. representatives scrupulously avoided making any concessions below the peril points, but for the Dillon Round of negotiations, which took place in 1960-62, President Eisenhower authorized tariff reductions below the peril point on several commodities in order to obtain desirable concessions, particularly from the Common Market.
-
-At certain points during the 1950's, the Commission found itself devoting fully half of its time to escape clause investigations and reviews of escape-clause-relief measures.
-- The Commissioners had praised the passage of the Antidumping Act in 1921, but enforcement of the law originally fell to the Department of the Treasury.
-	- Section 301 of the Customs Simplification Act of 1954 amended the 1921 legislation, making Treasury responsibe for part ant the Tariff Commission responsible for part
-
-For a time under the Eisenhower administration, the Commission anticipated that the entire tariff structure and policy mechanism might be fundamentally altered. The Trade Agreements Extension Act of 1953 called for the appointment of the special, bipartisan Randall Commission on Foreign Economic Policy to conduct a thorough study of the entire international trade situation
-- Congress directed that the Tariff Commission make a comprehensive study of the laws relating to the tariff status of imported articles and to submit to the President and the House Ways and Means and Senate Finance Committees a revision and consolidation of those laws
-	- May 1962, Congress authorized the President to implement the resulting rate schedules with the passage of the Tariff Classification Act. The Tariff Commission then published in 1963 the Tariff Schedules of the United States (TSUS), which by law are the official rate schedules.
-	- Since then, the schedules have been amended and modified by legislation and trade agreements negotiations
-	- Commission publishes the changes periodically in the Tariff Schedules of the United States Annotated (TSUSA).
-
-## The Kennedy Round and Trade Policy in the 1960's
-The Trade Expansion Act of 1962 was first trade act since Smoot Hawley that stood on its own (not framed as a revision of Smoot Hawley)
-
-Officials planning the new round of negotiations proposed across-the-board reductions in the tariff schedules, a procedure that recalled the horizontal reduction schemes of the late 19th century.
-- Although it had always been technically possible to conduct the negotiations in this manner under previous trade legislation, this was the first time that it had been seriously considered. The proposal was designed to expedite the negotiations.
-- the Kennedy administration initiated a review of virtually all existing rates
-	- peril points had died with the previous act, but the Commission was still supposed to indicate which of the proposed concessions might injure domestic industries, as it had under the peril-point proviso, and the process the Commission followed in its study of the probable economic effects was almost identical with its peril-point investigations.
-		- No specific peril point was indicated, however.
-- On October 22, 1963, President Kennedy submitted a list that included nearly every one of the articles enumerated in the TSUS. The Tariff Commission had to conduct a full-scale review and make its assessments of the probable economic effect of what amounted to a general rate revision.
-
-The number and variety of import relief and adjustment assistance possibilities included in the 1962 act proved how sensitive U.S. trade policy had become to injury due to trade concessions.
-- On the one hand, the United States had committed itself to the gradual reduction of all trade barriers.
-- On the other, it was the intention of Congress to attempt to cushion the impact of tariff reductions through internal adjustment measures.
-
-Preparations for the approaching Kennedy Round of GATT negotiations took a great deal more time and energy. Sections 211 and 213 of the 1962 act had assigned to the Tariff Commission a number of specific duties in anticipation of these negotiations, including the identification of all commodities fitting the criteria listed in the law for which the duties could be reduced more than 50 percent or to zero, as well as the items to be withheld from the negotiation process
-- talks got underway in 1964
-- lasted for a full 3 years.
-- The final agreements called for a reduction in rates on most items, and the Tariff Commission was responsible for calculating the appropriate intermediate levels of the duties for the five annual stages in which the U.S. concessions were to be implemented
-
-The Commission had begun using automated data processing in its operation in the late 1960's, which increased its staff's productivity.
-
-## The United States International Trade Commission
-
-The Trade Act of 1974, which was not actually signed into law until
-January 3, 1975, renamed the United States Tariff Commission as the United States International Trade Commission
-
-Much of the debate in Congress in 1974 revolved around domestic trade policies with respect to the Soviet Union and other countries with nonmarket economies
-- the President was authorized to extend most-favored-nation (MFN) treatment to countries not then receiving it.
-	- The only countries not enjoying these low, nondiscriminatory tariff rates were the Communist nations, except Yugoslavia and Poland.
-
-The current round (Tokyo) of trade negotiations at Geneva.
-- The 1974 Trade Act gave the President a 5-year authorization to carry on these negotiations, as well as 2 additional years of residual authority after the original authorization has expired.
-
-In the last few years the Customs Cooperation Council has been attempting to update the BTN, and the Commission has recently worked out a draft conversion of the TSUS into tqe structure of the BTN. The Commission is also working to create a classification structure that will allow the publication of comparable data on U.S. imports, production, and exports.
-- Currently, data in these three areas are organized in separate and different
-ways,
 - The Commission must constantly revise the TSUSA and its fundamental reference series, Summaries of Trade and Tariff Information
 
-Throughout its 60-year history, the Commission has served as the Nation's major source of information about international trade.
+### The Harmonized Tariff System
 
+- Conversion of the Tariff Schedules of the United States Into the Nomenclature Structure of the Harmonized System, Report on Inv. No. 332-131 under Section 332 of the Tariff Act of 1930, Submitting Report, USITC Pub. 1400, at 15 [RSB, Ch. 7]
+- The International Convention on the Harmonized Commodity Description and Coding System required contracting parties to use and apply all the headings and subheadings of the system, without exception, addition, or modification [RSB, Ch. 7]
+  - Also, contracting parties had to make their import and export trade statistics available at least at the level of the HS 6-digit codes. [RSB, Ch. 7]
 
-*
-# [Tariff Activities](file://C:\Users\krist\OneDrive%20-%20Syracuse%20University\Research\Gradualism\Data%20paper\Tariff_Activities_of__USITC_(Centennial_Ch_7).pdf)
+In preparing the new tariff, the Commission was to avoid rate changes “to the extent practicable and consistent with sound nomenclature principles.” [RSB, Ch. 7]
 
+- In addition, the tariff was to be simplified “to the extent possible without rate changes significant for U.S. industry, workers, or trade.” [RSB, Ch. 7]
+  - hundreds of proposed rate changes. [RSB, Ch. 7]
+	  - Some resulted from combining tariff categories at trade-weighted average rates; [RSB, Ch. 7]
+	  - others were based on a preponderance of trade, in the case of a small trade category being combined into a larger category. [RSB, Ch. 7]
+	    - extensive formal notification to the WTO [RSB, Ch. 7]
+      - related negotiations with U.S. trading partners, which took several years to complete. [RSB, Ch. 7]
+- The Commission would not propose modifying a rate for which there was yearly trade of over $5 million—separate rate lines would be retained in those cases. Rate changes for imported goods generating less than $5 million per year would not be proposed unless an interested party raised a justifiable objection. [RSB, Ch. 7]
+- the President directed the Commission to reflect units of quantity in metric terms [RSB, Ch. 7]
 
-[Centennial History of the United States International Trade Commission, Chapter 7](https://www.usitc.gov/publications/other/centennial)
-By Gene Rosengarden, Janis Summers, and Arun Butcher
-November 2017
+### Omnibus Trade and Competitiveness Act, enacted in 1988 (1988 Act)
 
-## GATT, Geneva 1947
+Adoption of the new tariff was one of the cornerstones of the act.
 
-The Commission provided U.S. negotiators with lists of articles where tariff reduction should be sought.
-- The Commission prepared reports containing some 1,300 line items "on which the United States was prepared to offer concessions"
-- The final product of the 1947 negotiations covered more than 45,000 items in the tariff schedules of the GATT member countries
-- *Executive Order No. 9832 also required that the Commission produce a yearly report documenting the changes that had occurred as a result of reciprocity activities, including a summary and analysis of concessions made by and to the United States. These reports began in 1948.*
-
-
-## Peril Point Analysis
-The Trade Agreements Extension Act of 1948 ended the Commission’s direct involvement with trade agreement negotiations, but it initiated the Commission’s conduct of what became known as “peril-point analyses,”
-
-## Tariff Schedules of the United States
-
-### Tariff Simplification Act of 1954 (Public Law No. 83-768)
-The Tariff Simplification Act directed the Commission to compile a revision of the tariff under the following guidelines:
-1. Establish schedules of tariff classifications which would be logical in arrangement and terminology and adapted to the changes that had occurred since 1930 in the character and importance of articles produced in and imported into the United States and in the market in which they were sold.
-2. Eliminate anomalies and illogical results in the classification of articles.
-3. Simplify the determination and application of tariff classifications.
-
-#### Tariff Classification Study (Nov. 15, 1960)
-
-The report comprised seven volumes and included the draft tariff itself, along with explanations and the record of proceedings.
-- Seven supplemental reports were issued through 1963.
-
-#### Tariff Schedules of the United States (Aug. 31, 1963)
-The President proclaimed the new tariff, the Tariff Schedules of the United States (TSUS), effective August 31, 1963
-- The TSUS attempted to provide descriptions of articles by name, in categories designating one or a group of related products, and sought to avoid more general descriptions of goods, such as by material of manufacture.
-- The eight schedules of product categories were set forth in a hierarchical arrangement, arranged by sectors from basic products to finished goods and broken into 5-digit primary or legal provisions and their duty rates.
-	- The numbering system was consistently related to the overall organization of the system.
-	- The annotated version of the tariff incorporated further product detail by adding 2 more digits to designate statistical categories, designed to gather data on particular goods.
-	- Combining the tariff’s legal provisions with import statistical requirements in a single integrated nomenclature generally assured greater accuracy in reporting and publishing data.
-	- To clarify the product scope of tariff provisions and to ensure that every imported good subject to the tariff was classified in one place and one place only, special legal rules, known as General or Schedule Headnotes, were inserted at appropriate places in the tariff.
-
-
-## The Harmonized Tariff System
-
-Document to check out: Conversion of the Tariff Schedules of the United States, 1983
-
-Conversion of the Tariff Schedules of the United States Into the Nomenclature Structure of the Harmonized System, Report on Inv. No. 332-131 under Section 332 of the Tariff Act of 1930, Submitting Report, USITC Pub. 1400, at 15
-
-The International Convention on the Harmonized Commodity Description and Coding System required contracting parties to use and apply all the headings and subheadings of the system, without exception, addition, or modification
-- Also, contracting parties had to make their import and export trade statistics available at least at the level of the HS 6-digit codes.
-- Further subcategories beyond the 6-digit level of the HS could be included at the national level to reflect tariff and more detailed statistical requirements.
-- Duty rates are not part of the HS itself and are shown only in national schedules.
-
-In preparing the new tariff, the Commission was to avoid rate changes “to the extent practicable and consistent with sound nomenclature principles.”
-- In addition, the tariff was to be simplified “to the extent possible without rate changes significant for U.S. industry, workers, or trade.”
-- In his guidelines on the conduct of the investigation, the President, among other things, directed the Commission to reflect units of quantity in metric terms
-
-The drafts included cross-reference tables showing the derivation of the then-current tariff and statistical provisions to the converted schedule
-- hundreds of proposed rate changes.
-	- Some resulted from combining tariff categories at trade-weighted average rates;
-	- others were based on a preponderance of trade, in the case of a small trade category being combined into a larger category.
-- The Commission would not propose modifying a rate for which there was yearly trade of over $5 million—separate rate lines would be retained in those cases. Rate changes for imported goods generating less than $5 million per year would not be proposed unless an interested party raised a justifiable objection.
-
-### To Geneva they go...
-The draft proposed many rate changes that necessitated modifying the U.S. schedule of tariff concession obligations under the GATT in Geneva
-- extensive formal notification to the WTO
-- related negotiations with U.S. trading partners, which took several years to complete.
-
-### U.S. Adoption of the HTSUS
-Adoption of the new tariff was one of the cornerstones of the Omnibus Trade and Competitiveness Act, enacted in 1988 (1988 Act).
 - The HTS was made effective in section 1217 of the 1988 Act with respect to articles entered on and after January 1, 1989.
-
-Since enactment, the WCO practice has been to propose amendments every five years.
-- Since the HS was implemented in 1988, the United States has proposed a number of significant amendments to keep the system abreast of technology and trading patterns.
-	- These include, among others, new provisions for high-technology ceramic materials, antimalarial commodities, and machines for manufacturing integrated circuits.
-
-### 484 Committee
-Before the Tariff Schedule of the United States was enacted, the United States had maintained a statistical system for imports that was independent of the legal tariff.
-- *When the TSUS was enacted, it was decided to integrate the two systems by creating statistical annotations to the tariff, because it was then prepared as a tabular arrangement.*
-- The United States also maintained an export statistical nomenclature, but it was unrelated to the categories used for imports and was based on the United Nations product nomenclature.
