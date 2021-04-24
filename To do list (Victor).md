@@ -1,0 +1,57 @@
+# To-do list
+
+## First round concordance <font color=red>(April 27th)</font>
+
+- [ ] Integration of the files from various sources
+- [ ] Summary statistic for each schedules
+- [ ] Schedule 1,7,15 partial check based on the concordance reference information
+- [ ] Compare 2nd column with 1930 S-H
+- [ ] Report for meeting with Ross 
+
+
+
+## Kennedy and Tokyo <font color=red> (May 8th)</font>
+
+- [x] Construct frame to incorporate replacement (modification) of lines in Tokyo 
+- [ ] Sarah due May 4th (one month, 50~60 hours)
+- [ ] Typo check
+- [ ] Clear notes in the extra column
+- [ ] Code to clean the data
+
+
+## 1946 <font color=red> (May 6th)</font>
+
+- [ ] Finishing the data entry for WHOLE 1946 file 
+
+
+
+## S-H
+
+- [ ] Accuracy check in R 
+> 1. empty lines
+> 2. specific & ad valorem
+> 3. complicated paragraphs 
+> 4. tax intervals
+> 5. special notes, tax rate formula
+> 6. splitting lines
+
+- Excel data file cleaning
+
+## BSY <font color=red>(due April 27)</font>
+
+- [ ] Track Torquay bargain data description (target=US)
+- [ ] Check citation and related literature
+
+
+## Background <font color=red>(due April 29)</font>
+
+- [ ] Check the "pages" for other (major) participant countries in Geneva 47 and later rounds if possible
+- [ ] Create new version of data source (data appendix)
+- [ ] History books notes (Matt)
+
+
+
+## Free list
+
+- [ ] Figure out why only some of the free list product show up in Geneva47 not all
+- [x] Compare the free list product in TSUSA and S-H
