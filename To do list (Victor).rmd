@@ -28,14 +28,14 @@
 ## S-H
 
 - [ ] Accuracy check in R 
-> 1. empty lines
-> 2. specific & ad valorem
-> 3. complicated paragraphs 
-> 4. tax intervals
-> 5. special notes, tax rate formula
-> 6. splitting lines
+  1. empty lines
+  2. specific & ad valorem
+  3. complicated paragraphs 
+  4. tax intervals
+  5. special notes, tax rate formula
+  6. splitting lines
 
-- Excel data file cleaning
+- [ ] Excel data file cleaning
 
 ## BSY <font color=red>(due April 27)</font>
 

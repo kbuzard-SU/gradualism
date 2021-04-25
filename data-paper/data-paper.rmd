@@ -81,6 +81,8 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
     -   Dealing with two changes in coding
 
         -   Historical context on those changes
+        
+        - The 1962 document we have represent the US tariff rate under TSUSA for the Dillon B round (I assume we will include this round data in the analysis, namely 1962->Kennedy->Tokyo)
 
 -   Other issues that arose
 
@@ -103,6 +105,9 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
     -   Specific vs. ad valorem
 
         -   Overlap in ad valorem and specific
+
+- How many lines were simply bound at the Smoot Hawley level
+    - This is in contrast in particular to lines that are free under Smoot Hawley but do not show up in a later negotiation--they are not *bound* to be free.
 
 -   Addition of new lines round-by-round
 
