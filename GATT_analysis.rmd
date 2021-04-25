@@ -497,6 +497,7 @@ print("Increased tariff from Geneva56_C to Dillon_B")
 print.data.frame(increaseD,row.names = FALSE, digits = 2)
 ```
 
+
 # No change from Smoot Hawley to Dillon B
 
 ```{r echo=TRUE}
@@ -508,6 +509,85 @@ lines2 <- subset(lines,is.na(sp_pc) | sp_pc==0) %>% subset(is.na(av_pc) | av_pc=
 ```
 
 The code above produces `r nrow(lines2)` lines that are the same in Smoot Hawley and Dillon B (i.e. that don't change at all through these five rounds of negotiations--we assume. We still need a check for rates going up.)
+
+# Lines that switch between specific, ad valorem, or both
+
+Below are the lines that either change units or change between specific only, ad valorem only or both specific and ad valorem. Indicator variables for each round (G for Geneva, A for Annecy, etc.) show in which round the change(s) occurred. Variable "unit_ch" equals 1 if the unit changed.
+
+```{r}
+change_G <-
+  data_set %>%
+  filter(
+    is.na(Specific_SH) != is.na(Specific_Geneva) | 
+      is.na(Ad_Valorem_SH) != is.na(Ad_Valorem_Geneva) | Units_SH != Units_Geneva 
+  ) %>%
+  mutate(G = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+         
+change_A <-
+  data_set %>%
+  filter(
+    is.na(Specific_Annecy) != is.na(Specific_Geneva) | 
+      is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Geneva) | Units_Annecy != Units_Geneva
+  ) %>%
+  mutate(A = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+
+change_T <-
+  data_set %>%
+  filter(
+    is.na(Specific_Annecy) != is.na(Specific_Torquay) | 
+      is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Torquay) | Units_Annecy != Units_Torquay
+  ) %>%
+  mutate(T = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+
+change_GA <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_A) != is.na(Specific_Torquay) | 
+      is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Torquay) | Units_Geneva56_A != Units_Torquay
+  ) %>%
+  mutate(GA = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+
+change_GB <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_A) != is.na(Specific_Geneva56_B) | 
+      is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_A != Units_Geneva56_B
+  ) %>%
+  mutate(GB = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+
+change_GC <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_C) != is.na(Specific_Geneva56_B) | 
+      is.na(Ad_Valorem_Geneva56_C) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_C != Units_Geneva56_B
+  ) %>%
+  mutate(GC = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+
+change_DA <-
+  data_set %>%
+  filter(
+    is.na(Specific_Dillon_A) != is.na(Specific_Geneva56_C) | 
+      is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Geneva56_C) | Units_Dillon_A != Units_Geneva56_C
+  ) %>%
+  mutate(DA = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+
+change_DB <-
+  data_set %>%
+  filter(
+    is.na(Specific_Dillon_A) != is.na(Specific_Dillon_B) | 
+      is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Dillon_B) | Units_Dillon_A != Units_Dillon_B
+  ) %>%
+  mutate(DB = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+
+mergeCols <- c(colnames(data_set),"unit_ch")
+changes <- change_G %>% full_join(change_A,  by = mergeCols) %>% full_join(change_T,  by = mergeCols) %>% 
+                   full_join(change_GA,  by = mergeCols) %>% full_join(change_GB,  by = mergeCols) %>% 
+                   full_join(change_GC,  by = mergeCols) %>% full_join(change_DA,  by = mergeCols) %>%
+                   full_join(change_DB,  by = mergeCols) %>% arrange(id)
+
+print.data.frame(changes[,c("Sched","Product","Paragraph","id","G","A","T","GA","GB","GC","DA","DB","unit_ch","Interval")],row.names = FALSE)
+```
+
 
 # Summarizing the impact of tax intervals
 
