@@ -284,7 +284,8 @@ sum_specific_bySched_nI <-  subset(specific, is.na(Interval)) %>%
             ) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_specific_bySched_nI,digits=2,booktabs=T) %>% kable_styling(position = "center")
+kbl(sum_specific_bySched_nI,digits=2,booktabs=T) %>% kable_styling(position = "center") %>%
+  kable_styling(latex_options = "hold_position")
 ```
 
 ## Summary stats for ad valorem tariffs
@@ -316,7 +317,8 @@ sum_av_pc <- ad_valorem %>%
             DB_obs = sum(!is.na(Ad_Valorem_Dillon_B)),
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
-kbl(sum_av_pc,digits=2,booktabs=T) %>% kable_styling(position = "center")
+kbl(sum_av_pc,digits=2,booktabs=T) %>% kable_styling(position = "center") %>% kable_styling(position = "center") %>%
+  kable_styling(latex_options = "hold_position")
 ```
 
 For several paragraphs, the maximum tariff for Dillon B changes when we get rid of the tax interval lines (2,9,11). Still I'm not going to print the tables with the maxes in them for now.
@@ -497,20 +499,29 @@ print("Increased tariff from Geneva56_C to Dillon_B")
 print.data.frame(increaseD,row.names = FALSE, digits = 2)
 ```
 
-
 # No change from Smoot Hawley to Dillon B
 
 ```{r echo=TRUE}
-lines <- data_set %>%
+sm_db <- data_set %>%
         mutate(av_pc =((Ad_Valorem_SH - Ad_Valorem_Dillon_B)/Ad_Valorem_SH)*100,sp_pc
         =((Specific_SH - Specific_Dillon_B)/Specific_SH)*100)
 
-lines2 <- subset(lines,is.na(sp_pc) | sp_pc==0) %>% subset(is.na(av_pc) | av_pc==0)
+sm_db2 <- subset(sm_db,is.na(sp_pc) | sp_pc==0) %>% subset(is.na(av_pc) | av_pc==0)
 ```
 
-The code above produces `r nrow(lines2)` lines that are the same in Smoot Hawley and Dillon B (i.e. that don't change at all through these five rounds of negotiations--we assume. We still need a check for rates going up.)
+The code above produces `r nrow(sm_db2)` lines that are the same in Smoot Hawley and Dillon B (i.e. that don't change at all through these five rounds of negotiations--we assume. We still need a check for rates going up.)
 
-# Lines that switch between specific, ad valorem, or both
+```{r echo=TRUE}
+sm_g <- data_set %>%
+        mutate(av_pc =((Ad_Valorem_SH - Ad_Valorem_Geneva)/Ad_Valorem_SH)*100,sp_pc
+        =((Specific_SH - Specific_Geneva)/Specific_SH)*100)
+
+sm_g2 <- subset(sm_g,is.na(sp_pc) | sp_pc==0) %>% subset(is.na(av_pc) | av_pc==0)
+```
+
+The code above produces `r nrow(sm_g2)` lines that are the same in Smoot Hawley and Geneva.
+
+# Lines that switch between specific, ad valorem, and compound
 
 Below are the lines that either change units or change between specific only, ad valorem only or both specific and ad valorem. Indicator variables for each round (G for Geneva, A for Annecy, etc.) show in which round the change(s) occurred. Variable "unit_ch" equals 1 if the unit changed.
 
@@ -587,7 +598,6 @@ changes <- change_G %>% full_join(change_A,  by = mergeCols) %>% full_join(chang
 
 print.data.frame(changes[,c("Sched","Product","Paragraph","id","G","A","T","GA","GB","GC","DA","DB","unit_ch","Interval")],row.names = FALSE)
 ```
-
 
 # Summarizing the impact of tax intervals
 

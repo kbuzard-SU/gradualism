@@ -52,3 +52,15 @@ While we plan to further explore the questions discussed in the last section, ov
 \end{enumerate}
 
 We are exploring data availability and are hopeful that it will be possible to add a terms-of-trade analysis à la Broda, Limao and Weinstein (2008).
+
+## Ideas from Teti (2020)
+
+First, remember she's looking mainly at applied tariffs, with some analysis that compares to bound tariffs
+
+1. Columns (9) and (10) of Table 3 examines the probability of occurrence of the sameMFNtariff within all tariff headings (HS4-digits, column 10) and within all tariff chapters (HS2-digits) (column 11). In these types of regressions, the dependent variable equals one if the tariff is the same within the respective product group
+
+2. [this is in 2017] Both the fact that countries have a preference for certain tariff levels, i.e. multiples of five and zero, as well as the fact that countries often set the same tariff for entire tariff headings, yield to a relatively low number of unique tariffs. For HICs it equals on average 567, which is compared to a total number of 5,018 HS6-products relatively low. Further, it decreases signicantly with income resulting in on average only 48 unique tariff levels in LDCs (compare column (11)). Even the country with the largest number of unique tariffs, Liechtenstein, only has 1,710 unique levels; the European Union has the second highest number of unique tariffs (670), the United States place third (662) 
+
+3. Changes over time: "The reduction is not due to compositional changes of the sample, neither with respect to countries nor products, as the algorithm used to fill the missing data fully balances the panel"
+
+4. Patterns of Reduction Countries can reduce tariffs in many different ways. Assuming that changes in tariffs are governed by the objective of increasing welfare, the literature puts forward two types of tariff reforms (for example Neary (1998)). Countries can either implement a uniform radial reduction (reduce all tariffs by the same proportion) or a concertina reform (reduce the highest tariff rates). The concertina reform compresses the tariff structure—lower and more uniform tariffs are the result of reducing the extremely high tariffs the most and making only small cuts to the already low tariffs. In case of a radial reform, the tariff structure remains the same. In multilateral tariff negotiations both reforms are applied, albeit the concertina reform has become more popular in recent years (Hoda 2001).

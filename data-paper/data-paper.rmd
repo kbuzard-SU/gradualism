@@ -20,39 +20,8 @@ library(english)
 
 # Literature
 
--   There is a large qualitative literature on what happened through the GATT
-
-    -   Go back and list some of the books we read on, e.g., each round
-
-    -   "Tariff negotiations and renegotiations under the GATT and the WTO"
-
-        -   What is Matt's status with this?
-
-    -   USITC history papers (two of them)
-
-    -   Irwin's big book
-
-        -   1994 Irwin NBER working paper
-
-    -   Petros' chapter on tariffs
-
--   Three strands of quantitative literature
-
-    -   Old stuff
-
-        -   Krause 1962, etc
-
-            -   Go through reference list
-
-        -   Dur, Balassa, Kreinin
-
-    -   BSY (is there a second one?)
-
-    -   Bown and Irwin (2017)
-
-    -   But what about "30 years of trade policy"?
-
--   Need to include TOT literature if going to include TOT analysis
+```{r child = 'literature.Rmd'}
+```
 
 # Institutional Context
 
@@ -72,7 +41,7 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 
 -   Where we got these files
 
-    -   
+    -   Victor to update source data table, will include in appendix
 
 -   How we digitized the data
 
@@ -86,12 +55,15 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 
 -   Other issues that arose
 
-    -   Specific vs. ad valorem vs. mixed
+    -   Specific vs. ad valorem vs. compound (both specific and ad valorem)
+        - Teti (2020) reports that 8% of U.S. tariffs were specific in 1988-2017
+        - Teti (2020) also reports: "Mixed tariffs are expressed as either a specific or an ad valorem rate, depending on which generates the most (or sometimes the least) revenue. Then there are technical tariffs that depend on certain product characteristics for example duties might be 8% for butter with fat content between 9-40%. Tariff rate quotas are made up of a low tariff rate on the initial imports (the within-quota quantity) and a very high tariff rate on imports entering above the initial amount (outside-quota quantity).
     -   Variation in units for specific tariffs, how we standardized them
     -   Tariff intervals
     -   Free list
     -   Staging (starting with Geneva A/B/C)
     -   Ad valorem equivalents (AVE) and trade weighting
+        - See Appedix C of Teti (2020)
 
 ```{r child = 'data.Rmd'}
 ```
