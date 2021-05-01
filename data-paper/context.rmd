@@ -40,31 +40,49 @@ In the midst of the Great Depression, U.S. President Herbert Hoover's proposal t
 
     -   Congress responded with an extension of his negotiating authority, allowing him to reduce any tariff rate by 50 percent of the rate existing on January 1, 1945
 
-        -   1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 40 percent of the dutiable imports
+        -   1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 42 percent of the dutiable imports (also in Irwin 2017)
         -   To provide U.S. negotiators with an indication of what the conditions were, the Commission published United States Import Duties, June 1946, a new compilation showing the current rates of duty on all U.S. imports, including the changes that had resulted from the President's delegated authority to negotiate reductions
 
     -   required President to give public notice of his intention to negotiate a trade agreement and to "seek information and advice"
 
         -   Then he could run individual rates up or down by as much as 50 percent Although the Geneva talks were ostensibly multilateral, the procedure differed only slightly from the one employed during the bilateral trade negotiations from 1934 through 1945.
+        -   A failed amendment would have required Congress to ratify any trade agreement (Irwin 2017)
+
+    -   Irwin 2017: this was the high point of legislative support for the trade agreements program, against the backdrop of the war where supply shortages were the main issue
 
 -   The Commission provided U.S. negotiators with lists of articles where tariff reduction should be sought. [RSB, Ch. 7]
 
     -   The Commission prepared reports containing some 1,300 line items "on which the United States was prepared to offer concessions" [RSB, Ch. 7]
 
--   A team from each country conducted the day-to-day bargaining with representatives of another nation on a bilateral basis
+-   A team from each country conducted the day-to-day bargaining with representatives of another nation on a bilateral basis (Irwin 2017: round opened in April 1947 in Geneva)
+
+    -   Irwin 2017: horizontal cuts were not allowed by the legislation, had to be product-by-product
+    -   Zinc, woolen goods and cotton textiles expected in particular to push back (Irwin 2017, p. 478)
 
 -   Principal supplier rule was followed
 
 -   Once the tariff concessions had been negotiated at the bilateral, level, each country consolidated the concessions it had agreed upon into a single schedule of concessions which was then annexed to, and became a part of, the General Agreement on Tariffs and Trade.
 
     -   The negotiators at Geneva worked out approximately 123 bilateral agreements.
-    -   The negotiation of these concessions required 7 months for completion As of January 1949, rates of duty applicable to 88 percent of dutiable imports into the United States had been reduced from the Smoot-Hawley levels as a result of the trade-agreement concessions negotiated since 1934, and an additional 6 percent were bound against increase.
+    -   The negotiation of these concessions required 7 months for completion, until Oct. 19, 1947 (Irwin p. 482)
 
--   Only the remaining 6 percent had not been subjected to either a reduction in rate or a binding restriction
+-   As of January 1949, rates of duty applicable to 88 percent of dutiable imports into the United States had been reduced from the Smoot-Hawley levels as a result of the trade-agreement concessions negotiated since 1934, and an additional 6 percent were bound against increase.
 
--   The final product of the 1947 negotiations covered more than 45,000 items in the tariff schedules of the GATT member countries [RSB, Ch. 7]
+    -   Only the remaining 6 percent had not been subjected to either a reduction in rate or a binding restriction
 
--   *Executive Order No. 9832 also required that the Commission produce a yearly report documenting the changes that had occurred as a result of reciprocity activities, including a summary and analysis of concessions made by and to the United States. These reports began in 1948.* [RSB, Ch. 7]
+    -   Irwin 2017, p 485: Geneva reduced tariffs by 21%
+
+        -   p\. 486: half of dutiable imports saw reduction, ave. reduction of 35%
+
+            -   Effective Jan 1 1948 by exec order
+
+    -   The final product of the 1947 negotiations covered more than 45,000 items in the tariff schedules of the GATT member countries [RSB, Ch. 7]
+
+    -   GATT is a trade agreement put into effect by executive order (not a treaty or an organization). "Contracting parties" instead of members (Irwin 2017 p. 484)
+
+    -   *Executive Order No. 9832 also required that the Commission produce a yearly report documenting the changes that had occurred as a result of reciprocity activities, including a summary and analysis of concessions made by and to the United States. These reports began in 1948.* [RSB, Ch. 7]
+
+-   Irwin 2017 lists the most sensitive import interests (p.493-494) as glassware, pottery and tiles, textiles and apparel, bicycles, watches, paper and pulp, cutlery, coal, ball bearings, copper, lead and zinc, milk, mushrooms, umbrellas and wool.
 
 ### The Trade Agreements Extension Act of 1948
 
@@ -85,11 +103,19 @@ In the midst of the Great Depression, U.S. President Herbert Hoover's proposal t
 
 -   The special relationship between Geneve47 and Annecy, that is some round was designed to mainly absorb more participant countries
 
+    -   11 new contracting parties (Irwin 2017 p. 506); existing didn't negotiate with each other, but they did negotiate with the new adherents
+
 ### The Trade Agreements Extension Act of 1949
 
 -   gave the President an additional 2 years of bargaining authority
+
 -   repealed the peril-point investigations
+
 -   Truman administration was able to participate in the third round of GATT negotiations at Torquay without the concern over peril points that had characterized its activities at the previous round of negotiations
+
+    -   exchange of concessions among old and new, 7 new adherents (West Germany most important) (Irwin 2017 p. 506)
+
+        -   34 contracting parties accounting for 80% of world trade by 1952
 
 ### The Trade Agreements Extension Act of 1951
 
@@ -106,9 +132,29 @@ The Tariff Simplification Act directed the Commission to compile a revision of t
 
 Tariff Classification Study (Nov. 15, 1960) comprised seven volumes and included the draft tariff itself, along with explanations and the record of proceedings. [RSB, Ch. 7] - Seven supplemental reports were issued through 1963. [RSB, Ch. 7]
 
+### 1950s Tariff Acts
+
+-   One year renewal for Eisenhower in 1953
+
+<!-- -->
+
+-   Again in 1954, one year renewal (Irwin 2017, p. 513-4)
+
+-   1955: introduced phase in, with 15% reduction allowed in 3 5% installments. Also could bring down very high tariffs to 50% (Irwin 2017 p. 515)
+
+    -   Geneva 1955-56 Round: added Japan
+
+-   1958 renewal: 4 years, 20%, larger reductions for tariffs above 50% allowed
+
+    -   Dillon 1961-62: still had peril points, required to negotiate on a product-by-product basis (Irwin 2017 p. 521)
+
+        -   Ended June 1962 before just negotiating authority authority expired
+
+        -   4% weighted average cut (Irwin 2017 p. 521)
+
 ### The Trade Expansion Act of 1962
 
--   was first trade act since Smoot Hawley that stood on its own (not framed as a revision of Smoot Hawley)
+-   First trade act since Smoot Hawley that stood on its own (not framed as a revision of Smoot Hawley)
 
 -   The law provided for removing the duty on articles for which the July 1, 1962, rate was 5 percent ad valorem or less, and reducing the rates on other articles by 50 percent of the July 1, 1962, rate.
 
@@ -140,6 +186,8 @@ Tariff Classification Study (Nov. 15, 1960) comprised seven volumes and included
 
     -   The Kennedy Round was one of the most comprehensive rounds of international trade negotiations ever held.
 
+        -   46 countries (Irwin 2017 p 528); 70 contracting parties by the end of the round; developing countries did not negotiate
+
     -   The major trading countries made across-the-board cuts ranging from 36 to 39 percent of previous tariff rate levels on most products
 
         -   had always been technically possible to conduct the negotiations in this manner under previous trade legislation, this was the first time that it had been seriously considered. The proposal was designed to expedite the negotiations.
@@ -149,11 +197,27 @@ Tariff Classification Study (Nov. 15, 1960) comprised seven volumes and included
 
     -   The final agreements called for a reduction in rates on most items, and the Tariff Commission was responsible for calculating the appropriate intermediate levels of the duties for the five annual stages in which the U.S. concessions were to be implemented
 
+        -   largest cuts in machinery, transportation equipment, chemicals; then steel and iron
+
+        -   Again, effective by executive order, staging started in 1968 and ran through 1972 (Irwin 2017, p529)
+
     -   The Commission had begun using automated data processing in its operation in the late 1960's, which increased its staff's productivity.
+
+## Nixon
+
+-   Containerization started to have an impact in the early 1970s (introduced in mid 1960s) (Irwin 2017 p535)
+
+-   Footwear vs. textiles as similar in terms of import competition, but footwear didn't get the protection textiles did because fewer workers and less regionally concentrated (Irwin 2017 p. 536)
+
+-   1971 report said mounting import protection pressures from textiles, clothing, shoes, steel, elecronic products, automobiles (Irwin 2017 p539)
+
+-   Multifiber Arrangement (MFA) created in 1974, after Long Term Arrangement on textiles
 
 ### The Trade Act of 1974
 
 -   President lacked negotiating authority when Tokyo Round started in September 1973
+
+    -   it had lapsed in 1967 (Irwin 2017 p549)
 
 -   1974 act grants the President a 5-year negotiating authority, allowing him to reduce by as much as 60 percent any tariff rate over 5 percent in force on January 1, 1975, and also allows him to remove the duty on any article for which the existing rate is 5 percent or less.
 
@@ -163,7 +227,49 @@ Tariff Classification Study (Nov. 15, 1960) comprised seven volumes and included
 
         -   The only countries not enjoying these low, nondiscriminatory tariff rates were the Communist nations, except Yugoslavia and Poland.
 
+    -   Included fast track after Kennedy Round concessions on non-tariff issues were not implemented (Irwin 2017 551)--EEC reluctant to negotiate without fast track
+
+    -   By the time it took effect Ford had taken over after Watergate (Irwin 2017 p.551). Signed the act in January 1975
+
 -   "Tariff policy has seldom remained static for long, nor has it ever been predictable"
+
+## Tokyo Round
+
+-   Tariffs were reduced by formula as in Kennedy
+
+    -   higher duties cut proportionately more than lower ones instead of bilateral bargaining (Irwin 2017 p556)
+
+-   Failed to deal with agri trade (Irwin 2017 p556)
+
+-   Concluded April 1979
+
+    -   Seems like it was passed as the "Trade Agreements Act of 1979" (Irwin 2017 p558)
+
+-   Second FMA was concluded in 1977 in the middle of the round
+
+## Reagan era
+
+Trade and Tariff Act of 1984: withheld negotiating authority, but surprisingly moderate given the protectionist pressures of the time (Irwin 2017 p598)
+
+### Omnibus Trade and Competitiveness Act of 1988
+
+-   President could reduce tariffs up to 50% (three year window, with two year extension unless Congress objected, p627), guaranteed fast track (Irwin 2017 p612)
+
+    -   Its provisions were needed to conclude Uruguay round, which had started in 1986
+
+    -   The bills to object to the two-year extension in 1991 were defeated in both houses of Congress (p.628)
+
+### Uruguay Round
+
+-   Concluded in 1993 (December 15) (Irwin 2017 p619/44)
+
+-   117 countries, 7 years
+
+-   MFA abolished (on Jan 1, 2005, p. 653)
+
+-   Signed by 177 nations in April 1994 and scheduled to take effect Jan 1 1995 (Irwin 2017 p651)
+
+## Shift to harmonized system
 
 ### Not sure of timing--Dobson was published in December 1976
 
