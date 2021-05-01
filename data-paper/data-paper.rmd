@@ -173,12 +173,12 @@ Future plans
 
 # Data Appendix
 
-\#`{r child = 'data-appendix.Rmd'} #`
-
--   overflow from data section
-
 -   include source table
 
     -   Victor is updating to include concordance sources
 
 Where will GATT participants / lengths of schedules go? A separate appendix?
+
+```{r child = 'data-appendix.Rmd'}
+```
+
