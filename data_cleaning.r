@@ -187,6 +187,10 @@ data_set$Units_Dillon_B[which(!is.na(data_set$Specific_Dillon_B) & is.na(data_se
 
 ################################################################################ Step 1, replace the units without change of the values.
 
+# Replace the following set of lines with:
+
+# data_set <- data_set %>% 
+#             mutate(across(starts_with("Units"), function(x) x = replace(x, x == 11,6)))
 
 data_set$Units_SH[data_set$Units_SH==11]<-6 #################################### 11 to 6
 data_set$Units_Geneva[data_set$Units_Geneva==11]<-6
@@ -198,6 +202,11 @@ data_set$Units_Geneva56_C[data_set$Units_Geneva56_C==11]<-6
 data_set$Units_Dillon_A[data_set$Units_Dillon_A==11]<-6
 data_set$Units_Dillon_B[data_set$Units_Dillon_B==11]<-6
 
+# It also appears that you can then chain them all together into one pipe, e.g.
+# data_set <- data_set %>% 
+#   mutate(across(starts_with("Units"), function(x) x = replace(x, x == 11,6))) %>%
+#   mutate(across(starts_with("Units"), function(x) x = replace(x, x == 12,19)))
+# BUT CHECK THIS CAREFULLY TO MAKE SURE
 
 data_set$Units_SH[data_set$Units_SH==12]<-19 #################################### 12 to 19
 data_set$Units_Geneva[data_set$Units_Geneva==12]<-19
