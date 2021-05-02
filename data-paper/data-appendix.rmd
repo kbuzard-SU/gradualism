@@ -30,69 +30,97 @@ knitr::opts_chunk$set(echo = TRUE)
 |US pre-GATT tariff schedule|United States Import Duties, June 1946.|University of Minnesota, Hathitrust Online Library: ^[<https://catalog.hathitrust.org/Record/100721221?type%5B%5D=all&lookfor%5B%5D=united%20states%20import%20duties%20june&ft=>] <br>Citation information:<br> United States Tariff Commission. (1946). United States import duties, June 1946. Washington: U.S. Govt. Print. Off.
 |Tariff Classification Study volume 9|Cross reference schedule between TSUSA system and Smoot-Hawley system in 1962|The Ohio State University, Hathitrust Online Library: ^[<https://catalog.hathitrust.org/Record/102256592>] <br> Citation information:<br>United States Tariff Commission. (196061). Tariff classification study. Washington: U.S. Govt. Print. Off..|
 |US 1962 Tariff Act|The first TSUSA tariff schedule system that bridged Dillon round and Kennedy round|The document can be found in various sources, the one we used for digitization is uploaded by University of Illinois at Urbana-Champaign, on Hathitrust Online Library ^[<https://babel.hathitrust.org/cgi/pt?id=uiug.30112105143967&view=1up&seq=3>]|
+
+
 \newpage
+
 ## Examples
 
-Listed below are the pictures of our source file. In particular, we presented the product **"Hexamethylenetetramine"** in three files, it has paragraph number 40 in the Smoot Hawley tariff system (In file Torquay consolidated and Geneva47) and is assigned code 425.73 in the TSUSA system. As we can see in the below figures, the schedules usually consist of three parts: Tariff paragraph (TSUSA code), Product description and Rate of duty, and the structure of our data set also follows this framework.
+Here we share images of our source files for an illustrative example. The product displayed is the pharmaceutical chemical *Hexamethylenetetramine*. Under the Smoot Hawley enumeration, it is assigned paragraph number 40, as shown in both the Geneva 1947 tariff schedule and the consolidated file from Torquay. Under the TSUSA system, it is assigned code 425.73.
 
-![Example of an item in Torquay_consolidated schedule](Torquay.png)
+As the figures below illustrate, the schedules usually consist of three parts: the item number (Smoot Hawley paragraph number or TSUSA code), the product description, and the rate of duty. We structure our data to follow this framework.
 
 ![Example of an item in Geneva 1947 schedule](Geneva47.png)
 
+![Example of an item in Torquay_consolidated schedule](Torquay.png)
 
 ![Example of an item in 1962 Tariff Act](TSUSA.png)
- 
-\newpage
-## Schedule contents of Smoot-Hawley system
-
-Schedule | Category | Tariff Act of 1930 Paragraph Number 
--------- | -------- | ----------------------------------
-1 | Chemicals, Oils, and Paints | 1 to 97
-2 | Earths, Earthenware, and Glassware | 201 to 236
-3 | Metals and Manufactures of | 301 to 398
-4 | Wood and Manufactures of | 401 to 412
-5 | Sugar, Molasses, and Manufactures of | 501 to 506
-6 | Tobacco and Manufactures of | 601 to 605
-7 | Agricultural Products and Provisions | 701 to 783
-8 | Spirits, Wines, and Other Beverages | 801 to 815
-9 | Cotton Manufactures | 901 to 924
-10 | Flax, Hemp, Jute, and Manufactures of | 1001 to 1022
-11 | Wool and Manufactures of | 1101 to 1122
-12 | Silk Manufactures | 1201 to 1211
-13 | Manufactures of Rayon or Other Synthetic Textile | 1301 to 1313
-14 | Papers and Books | 1401 to 1413
-15 | Sundries | 1501 to 1559
-16 | Title II - Free List | 1601 to 1814
-
-## Sections contents of TSUSA system
-
-Section | Category | TSUSA Code Number
--------- | ------------------------ | ------------------
-1 | Animal and Vegetable Products | 100.01 to 193.25
-2 | Wood and Paper; Printed Matter | 200.03 to 274.90
-3 | Textile Fibers and Textile Products | 300.10 to 390.60
-4 | Chemicals and Related Products | 401.02 to 495.20
-5 | Nonmetallic Minerals and Products | 511.11 to 548.05
-6 | Metals and Metal Products | 601.03 to 696.60
-7 | Specified Products: Miscellaneous and Nonemunerated Products | 700.05 to 799.00
-8 | Special Classification Provisions | 800 to 870.25
-
-
-
-## Free list product
-
-The free list schedule is relatively special compared to previous schedules. The products in the free list all are free of duty, and more importantly unlike the normal products in previous schedules 1-15, the free list products cover across many industries, the similarity they share is the industrial characteristic of the product itself, the the common feature of "free of duty". Therefore we have not included them in the main data set but documented them in a separate file. However this arrangement of specifying "free list" was changed in the TSUSA system, by both keyword search and cross-reference table, we identified most of the free list products from Smoot-Hawley in TSUSA and found out that they are now within the industrial section, among the normal products, despite of the unchanged "free of duty" tax rate.
-
-One more interesting observation about the free list product is that they actually entered the GATT negotiation gradually. To be more specific, in each round only some of the free list products are included in the tariff schedule, but how about the rest of the free list products, are they "free of duty" as well? If so, why not including them in the negotiated tariff schedule? So far we don't have a solid answer for this question, our best guess is that the 1930 Tariff Act is more of a unilateral tariff schedule that was only bounded or dependent by (on) the US government which means that the president of US, or other related authorities can adjust the rate when necessary; however the negotiated GATT schedules are multi-national MFN tariff which have strict restrictions on unilateral tariff changes. This implies that if  a free list product was free in the 1930 Tariff Act, but not included in the free list in the GATT negotiated schedules, then the reason behind it could be that the US government wanted to have more control and flexibility on this product even it was free of duty at that moment. We found most of the free list products were included (and still free) in the TSUSA system, but we still lack of the information on these products within the period of the first round of Geneva and Dillon round. More work will be done with respect to this part in the near future.  
 
 \newpage
+
+## Smoot-Hawley Industrial Classification System: Schedule
+
+| Schedule | Category                                         | Tariff Act of 1930 Paragraph Number |
+|----------|--------------------------------------------------|-------------------------------------|
+| 1        | Chemicals, Oils, and Paints                      | 1 to 97                             |
+| 2        | Earths, Earthenware, and Glassware               | 201 to 236                          |
+| 3        | Metals and Manufactures of                       | 301 to 398                          |
+| 4        | Wood and Manufactures of                         | 401 to 412                          |
+| 5        | Sugar, Molasses, and Manufactures of             | 501 to 506                          |
+| 6        | Tobacco and Manufactures of                      | 601 to 605                          |
+| 7        | Agricultural Products and Provisions             | 701 to 783                          |
+| 8        | Spirits, Wines, and Other Beverages              | 801 to 815                          |
+| 9        | Cotton Manufactures                              | 901 to 924                          |
+| 10       | Flax, Hemp, Jute, and Manufactures of            | 1001 to 1022                        |
+| 11       | Wool and Manufactures of                         | 1101 to 1122                        |
+| 12       | Silk Manufactures                                | 1201 to 1211                        |
+| 13       | Manufactures of Rayon or Other Synthetic Textile | 1301 to 1313                        |
+| 14       | Papers and Books                                 | 1401 to 1413                        |
+| 15       | Sundries                                         | 1501 to 1559                        |
+| 16       | Title II - Free List                             | 1601 to 1814                        |
+
+## TSUSA Industrial Classification System: Section
+
++---------+--------------------------------------------------------------+-------------------+
+| Section | Category                                                     | TSUSA Code Number |
++=========+==============================================================+===================+
+| 1       | Animal and Vegetable Products                                | 100.01 to 193.25  |
++---------+--------------------------------------------------------------+-------------------+
+| 2       | Wood and Paper; Printed Matter                               | 200.03 to 274.90  |
++---------+--------------------------------------------------------------+-------------------+
+| 3       | Textile Fibers and Textile Products                          | 300.10 to 390.60  |
++---------+--------------------------------------------------------------+-------------------+
+| 4       | Chemicals and Related Products                               | 401.02 to 495.20  |
++---------+--------------------------------------------------------------+-------------------+
+| 5       | Nonmetallic Minerals and Products                            | 511.11 to 548.05  |
++---------+--------------------------------------------------------------+-------------------+
+| 6       | Metals and Metal Products                                    | 601.03 to 696.60  |
++---------+--------------------------------------------------------------+-------------------+
+| 7       | Specified Products: Miscellaneous and Nonemunerated Products | 700.05 to 799.00  |
++---------+--------------------------------------------------------------+-------------------+
+| 8       | Special Classification Provisions                            | 800 to 870.25     |
++---------+--------------------------------------------------------------+-------------------+
+
+## Free lists
+
+Under the Smoot Hawley classification system, items that were free of duty were gathered together into Schedule 16 instead of being integrated into a schedule with like products. That is, the products in Schedule 16 all are free of duty, and unlike the products in Schedules 1-15, the free list products come from many industries. For now, we have not included Schedule 16 in the main data. 
+
+Products free-of-duty were organized differently under the TSUSA system. Using both keyword searches and the cross-reference table in Volume 9 of the 1962 Tariff Classification Study, it appears that almost all of the free-of-duty item from Smoot-Hawley are included in the section of TSUSA that corresponds to the industrial characteristics of the product. We will thus integrate the free-of-duty products once we have finished the concordances to the TSUSA Harmonized System classification systems.
+
+Interestingly, the products in the free-of-duty Schedule 16 under the Smoot Hawley classification system entered the tariff schedule gradually. To be more specific, in each round only some of the free-of-duty products from the Tariff Act of 1930 (Smoot Hawley) are included in the tariff schedule.
+
+Between 1930 and when a product enters one of the GATT schedules, the status is not entirely clear. We have not found conclusive evidence to resolve this issue. Given that the Smoot Hawley Act unilaterally set tariff policy free of international commitments, our educated guess is that the U.S. authorities could increase the duty on these products unilaterally. What is clear is that once these products enter a GATT schedule, the U.S. was committed to not subsequently charge a duty on these products. We thus infer that if a product was  free of duty in the Tariff Act of 1930 but not included in the free list in the GATT negotiated schedules, the US government either wanted to have more flexibility on this product or had not yet found a negotiating partner who was willing to exchange commitments involving the product.
+
 
 ## Special lines
 
-There are several interesting cases of special lines during the data collection work, we will discuss them in this section:
+Here we discuss several issues we encountered while coding the data.
 
- 1. **Tariff intervals**: one interesting type of description is the tariff interval, to be more specific, the tax rates for certain products have extra maximum and minimum tax rate besides their usually rates. For example Paragraph 210 210 Rockingham earthenware in the Geneva 1947 document has its tax rate description as *"20 cents per doz. articles, but not less 7.5% nor more than 25%"*. To incorporate this kind of narrative tax rate formula, we followed the same approach used in **Torquay consolidated** when also in later TSUSA round, that is to divide the single line of product into multiple lines based on different values of the product. For the same product in **Torquay consolidated**, it is documented in three separate lines: *"Rockingham earthenware, valued per dozen articles: under 80 cents - 25% ad valorem"*,  *"Rockingham earthenware, valued per dozen articles: over 80 cents and under 266.67 cents - 20 cents per doz, articles"* and  *"Rockingham earthenware, valued per dozen articles: over 266.67 cents - 7.5% ad valorem"*. Notice that the threshold value for each line is calculated based on the minimum and maximum of applied tax rate. With this method, we manually transformed all the tax interval type lines into separate lines based on their values. One thing to notice is that, as the tax rates were reduced across rounds, some of the threshold value of these rounds may also change, however these changes are usually trivial and it will add unnecessary lines to the structure we created, therefore we will just the original line and threshold value unless the tax interval fomula itself changed over time.
- 
- 2. **Splitting lines**: another typical situation we dealt with during the digitization process is the splitting line. Since the original product description in 1930 Tariff Act is relatively general and ambiguous, we find some more specified lines in later round. An example of this is Paragraph 24 *"Flavoring extracts, and natural or synthetic fruit flavors, fruit esters, oils, and essences, all the foregoing and their combinations:"* was not specified in Geneva 1947 document (which is the same description as in 1930 Tariff Act), but in Dillon round the paragraph is further divided into *"Flavoring extracts, and natural or synthetic fruit flavors, fruit esters, oils, and essences, all the foregoing and their combinations: unfit for beverage purposes, containing of alcohol ..."* and *"Flavoring extracts, and natural or synthetic fruit flavors, fruit esters, oils, and essences, all the foregoing and their combinations: fit for beverage purposes, containing of alcohol ..."*. More restrictions or new types were introduced as the tariff system improved. To deal with these splitting lines, we first create new lines for them, and also entered uniform tax rate for them before the round of the splitting or new lines showed up, in this way we keep the completeness of the schedule and avoid losing information on differentiated products.
- 
- 3. **Staging**: in Dillon round and Geneva 1956 round, the tax reduction happened in multiple stages. There are plural columns in the schedule indicating that the tax rate will be lower and lower in every period^[Geneva 1956 has 3 stages while Dillon round has two stages], usually there is one year period of effectiveness between the two stages, that means for every tax rate in the first stage, it should be at least to be effective for year and then the tax rate of that product goes to the rate of the next column. Although most of the products went through this staging process, some products remain the same tax rate for more than one stages. To deal with this staging problem, we created separated columns for these stages and track the tariff reduction aross stages, but when comparing the tax reduction across rounds, we will only compare the tax rate in the final stage.
+**Tariff intervals**: When, in addition to the usual ad valorem or specific tariff, a line also has a minimum or maximum tariff, we classify the line as being of the"tariff interval" type. For example Paragraph 210 *Rockingham earthenware* in the Geneva 1947 schedule has its rate description as *"20 cents per doz. articles, but not less 7.5% nor more than 25%."*
+
+To incorporate this type of tariff formula, we followed the approach used in the consolidated Torquay schedule and the TSUSA system, that is to divide the single line for that product into multiple lines according to the values of the minimums and maximums. In the consolidated Torquay schedule, *Rockingham earthenware* is listed as three separate lines: *"Rockingham earthenware, valued per dozen articles: under 80 cents - 25% ad valorem"*, *"Rockingham earthenware, valued per dozen articles: over 80 cents and under 266.67 cents - 20 cents per doz, articles"* and *"Rockingham earthenware, valued per dozen articles: over 266.67 cents - 7.5% ad valorem"*. Notice that the threshold value for each line is calculated based on the minimum and maximum of tariff rate. With this method, we manually transformed all the tariff interval type lines into separate lines based on their values.
+
+One thing to note is that, as the tariff rates were reduced across rounds, some of the threshold values may also change. Usually these changes are trivial and adding more lines for each newly-calculated threshold would induce more distortion to the data than using the original thresholds. Therefore we use the original threshold value unless the tariff interval formula itself changed over time. We created an "Intervals" dummy variable to keep track of lines that are affected by the tariff interval issue.
+
+**Line splitting**: Another frequent issue in aligning the tariff schedules through time is what we call line splitting. The original product descriptions in the Tariff Act of 1930 paragraphs are often quite general and sometimes ambiguous and we find that the descriptions are often split in later schedules to create product lines whose descriptions are narrower. This seems to happen when the negotiators wanted to apply two different tariffs to what was formerly a single line.
+
+An example of this is Paragraph 24, which is described in the Tariff Act of 1930 as *"Flavoring extracts, and natural or synthetic fruit flavors, fruit esters, oils, and essences, all the foregoing and their combinations."* In the Dillon round tariff schedule, the paragraph is divided into *"Flavoring extracts, and natural or synthetic fruit flavors, fruit esters, oils, and essences, all the foregoing and their combinations: unfit for beverage purposes, containing of alcohol ..."* and *"Flavoring extracts, and natural or synthetic fruit flavors, fruit esters, oils, and essences, all the foregoing and their combinations: fit for beverage purposes, containing of alcohol ..."*.
+
+More restrictions on the descriptions or new types of delineation were introduced as the tariff system evolved. To deal with these splitting lines, we create new lines for each split and enter a uniform tariff rate in earlier schedules for any line that was previously included in the more general (un-split) line. In this way we keep the completeness of the schedule and avoid losing information on differentiated products.
+
+**Staging**: Beginning in the Geneva 1956 round, the tariff reductions were made in multiple stages. In the source documents for Geneva 1956 and Dillon, there is a column for each stage.^[Geneva 1956 has three stages while Dillon has two stages.] Typically there is one year between implementation of each stage. Although most products that are negotiated in each round have different tariffs in each stage, some products do have the tariff rate for more than one stage. To deal with staging, we created separate columns for these stages and track the tariff reduction across stages. However, when comparing the tariff reduction across rounds, we focus on the tariff rate in the final stage.
+
+
+## GATT contracting parties
+
+\textcolor{red}{TO BE ADDED WHEN READY}
