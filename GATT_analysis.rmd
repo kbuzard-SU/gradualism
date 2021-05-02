@@ -268,23 +268,19 @@ kbl(sum_specific_bySched,digits=2,booktabs=T) %>% kable_styling(position = "cent
 Removing tax interval lines
 
 ```{r}
-sum_specific_bySched_nI <-  subset(specific, is.na(Interval)) %>%   
-  group_by(Sched) %>%  
-  summarize(SH = mean(Specific_SH, na.rm=TRUE),
-            G1 = mean(Specific_Geneva, na.rm=TRUE),
-            An = mean(Specific_Annecy, na.rm=TRUE),
-            To = mean(Specific_Torquay, na.rm=TRUE),
-            GC = mean(Specific_Geneva56_C, na.rm=TRUE),
-            DB = mean(Specific_Dillon_B, na.rm=TRUE),
-            chgG1 = ((SH - G1)/SH)*100,
-            chgAn = ((G1 - An)/G1)*100,
-            chgTo = ((An - To)/An)*100,
-            chgGC = ((To - GC)/To)*100,
-            chgDB = ((GC - DB)/GC)*100,
-            ) %>%
+sum_specific_bySched_nI <-  subset(shortnames, is.na(Interval)) %>% 
+  group_by(Sched) %>%
+  summarize(across(starts_with("Sp"), mean, na.rm=TRUE),
+            chgGe = ((Sp_SH - Sp_Ge)/Sp_SH)*100,
+            chgAn = ((Sp_Ge - Sp_An)/Sp_Ge)*100,
+            chgTo = ((Sp_An - Sp_To)/Sp_An)*100,
+            chgGC = ((Sp_To - Sp_GC)/Sp_To)*100,
+            chgDB = ((Sp_GC - Sp_DB)/Sp_GC)*100) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_specific_bySched_nI,digits=2,booktabs=T) %>% kable_styling(position = "center") %>%
+sum_specific_bySched_nI %>% select(- c(Sp_GA, Sp_GB, Sp_DA))%>%
+  kbl(digits=2,booktabs=T) %>% 
+  kable_styling(position = "center") %>%
   kable_styling(latex_options = "hold_position")
 ```
 
@@ -511,15 +507,44 @@ sm_db2 <- subset(sm_db,is.na(sp_pc) | sp_pc==0) %>% subset(is.na(av_pc) | av_pc=
 
 The code above produces `r nrow(sm_db2)` lines that are the same in Smoot Hawley and Dillon B (i.e. that don't change at all through these five rounds of negotiations--we assume. We still need a check for rates going up.)
 
-```{r echo=TRUE}
-sm_g <- data_set %>%
-        mutate(av_pc =((Ad_Valorem_SH - Ad_Valorem_Geneva)/Ad_Valorem_SH)*100,sp_pc
-        =((Specific_SH - Specific_Geneva)/Specific_SH)*100)
+## No change from Smoot Hawley to Geneva
 
-sm_g2 <- subset(sm_g,is.na(sp_pc) | sp_pc==0) %>% subset(is.na(av_pc) | av_pc==0)
+```{r echo=TRUE}
+
+# all the lines that are exactly the same in Smoot Hawley and Geneva
+same <- data_set %>%
+         filter( ((is.na(Specific_SH) == is.na(Specific_Geneva) & is.na(Specific_SH)) | Specific_SH == Specific_Geneva) 
+                  & ((is.na(Ad_Valorem_SH) == is.na(Ad_Valorem_Geneva) & is.na(Ad_Valorem_SH)) | Ad_Valorem_SH == Ad_Valorem_Geneva)
+                  & ((is.na(Units_SH) == is.na(Units_Geneva) & is.na(Units_SH)) | Units_SH == Units_Geneva))
+
+# supposed to be all the lines that have any difference, but misses lines that switch
+# between ad valorem and specific. Almost certainly is because of treatment of NAs
+diff <- data_set %>%
+         filter( Specific_SH != Specific_Geneva | Ad_Valorem_SH != Ad_Valorem_Geneva |
+                  Units_SH != Units_Geneva )
+
+# lines that are NOT in "same" 
+t <- setdiff(data_set$id,same$id)
+same_removed <- data_set[t,]
+
+# lines that are NOT in either "same" or "diff"
+t3 <- setdiff(same_removed$id,diff$id)
+samediff_removed <- data_set[t3,]
+
+# both these methods miss out on the ones that are not equal because one is an NA
+units_diff <- data_set %>%
+         filter( (Units_SH != Units_Geneva) )
+
+units_diff2 <- data_set[which(data_set$Units_SH != data_set$Units_Geneva), ]
+
+# tbl %>% rowwise(id) %>% mutate(s = sum(c_across(x:w)) %>% ungroup()
+# all(is.na(x))
+# all(is.na(c_across(stuff)))
+
+
 ```
 
-The code above produces `r nrow(sm_g2)` lines that are the same in Smoot Hawley and Geneva.
+The code above produces `r nrow(same)` lines that are the same in Smoot Hawley and Geneva.
 
 # Lines that switch between specific, ad valorem, and compound
 
