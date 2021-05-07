@@ -93,6 +93,17 @@ Importing and cleaning the data is done in "data_cleaning.rmd". It needs to be r
 source('data_cleaning.r')
 ```
 
+## Sanity checks
+
+```{r}
+c <- shortnames %>%
+  filter( is.na(Sp_SH) != is.na(Un_SH) & is.na(Sp_A) != is.na(Un_A) & is.na(Sp_Ge) != is.na(Un_Ge) &
+            is.na(Sp_An) != is.na(Un_An) & is.na(Sp_To) != is.na(Un_To) & is.na(Sp_GA) != is.na(Un_GA) &
+            is.na(Sp_GB) != is.na(Un_GB) & is.na(Sp_GC) != is.na(Un_GC) & is.na(Sp_DA) != is.na(Un_DA) &
+            is.na(Sp_DB) != is.na(Un_DB))
+```
+`r nrow(c)` rows have either a specific tariff and no unit or a unit with no specific tariff for some round.
+
 # Basic summary statistics
 
 ## Specific tariffs
@@ -510,6 +521,13 @@ The code above produces `r nrow(sm_db2)` lines that are the same in Smoot Hawley
 ## No change from Smoot Hawley to Geneva
 
 ```{r echo=TRUE}
+
+# all the lines that are exactly the same in Smoot Hawley and 1946_before
+same <- shortnames %>%
+         filter( ((is.na(Sp_SH) == is.na(Sp_B) & is.na(Sp_SH)) | Sp_SH == Sp_B) 
+                  & ((is.na(AV_SH) == is.na(AV_B) & is.na(AV_SH)) | AV_SH == AV_B)
+                  & ((is.na(Un_SH) == is.na(Un_B) & is.na(Un_SH)) | Un_SH == Un_B))
+
 
 # all the lines that are exactly the same in Smoot Hawley and Geneva
 same <- data_set %>%
