@@ -44,14 +44,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 7.  Condense data cleaning code
 
-8.  Read and summarize "Tariff negotiations and renegotiations under the GATT and the WTO" (hard copy at SU library)
-
-    -   Victor will ask Matt to see if he can get the book from the library, let me know if not
-
-9.  Read through Victor's notes for ideas
-
-    -   What is status of 'interesting paragraphs.pdf' and 'Splitting paragraphs in Dillon.pdf"?
-
 10. Go back to questions in *Plan.docx* when last three rounds are finished
 
 11. Identify lines that switch between specific and ad valorem
@@ -70,9 +62,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 17. Get working draft together ASAP
 
-18. Add Schedule A tariff data from 1946 (last available before Geneva 1947)
-
-    -   Are current Column 2 tariffs Smoot Hawley or the 1946 tariffs?
+18. Are current Column 2 tariffs in 1962 Smoot Hawley or the 1946 tariffs?
 
 ## Done
 
@@ -84,6 +74,11 @@ knitr::opts_chunk$set(echo = FALSE)
 6.  ~~Determine that TSUS tariffs were always at 5 digit, so we can just use the 5-digit tariff for all of the 7-digit subcategories~~
 7.  ~~Read and summarize "Two Centuries of Tariffs" (USITC, in G:drive folder)~~
 8.  ~~Consolidate various notes in Github / One Drive / G drive~~
+8.  ~~Read and summarize "Tariff negotiations and renegotiations under the GATT and the WTO" (hard copy at SU library)~~
+9.  ~~Read through Victor's notes for ideas~~
+10. ~~Add Schedule A tariff data from 1946 (last available before Geneva 1947)~~
+
+
 
 # Importing and cleaning the data
 
@@ -135,7 +130,8 @@ sp_75p <- specific[,6:14] %>% sapply(function(x) quantile(x,probs=0.75,na.rm = T
 sp_table = cbind(data.frame(sp_min),data.frame(sp_25p),data.frame(sp_mean),data.frame(sp_med),data.frame(sp_75p),data.frame(sp_max),data.frame(sp_count))
 names(sp_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
 rownames(sp_table) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-s <- kbl(sp_table,digits=2,booktabs=T) %>% kable_styling(position = "center")
+s <- kbl(sp_table,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
 add_header_above(s, c(" " = 1,"Summary Statistics of Specific Tariffs by Round"=7),font_size = 12)
 ```
 
@@ -155,7 +151,8 @@ av_75p <- ad_valorem[,6:14] %>% sapply(function(x) quantile(x,probs=0.75,na.rm =
 adval_table = cbind(data.frame(av_min),data.frame(av_25p),data.frame(av_mean),data.frame(av_med),data.frame(av_75p),data.frame(av_max),data.frame(av_count))
 names(adval_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
 rownames(adval_table) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-a <- kbl(adval_table,digits=2,booktabs=T) %>% kable_styling(position = "center")
+a <- kbl(adval_table,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
 add_header_above(a, c(" " = 1,"Summary Statistics of Ad Valorem Tariffs by Round"=7),font_size = 12)
 ```
 
@@ -174,7 +171,7 @@ data_schedules<-data.frame(para_count,schedule_names)
 names(data_schedules)<-c('Schedule','# Lines','Title')
 
 s <- kable(data_schedules, align= 'ccl',booktabs=T) %>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F, latex_options = "hold_position")
 add_header_above(s, c("Smoot Hawley Schedule Titles"=3),font_size = 12)
 ```
 
@@ -224,7 +221,8 @@ sum_specific_pc <- specific %>%
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_specific_pc,digits=2,booktabs=T) %>% kable_styling(position = "center")
+kbl(sum_specific_pc,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
 ```
 
 The table below is exactly the same as the one above EXCEPT it drops the `r sum(!is.na(data_set$Interval))` lines that are impacted by the "tax interval" issue
@@ -243,7 +241,8 @@ sum_specific_nI_pc <- subset(specific, is.na(Interval)) %>%
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_specific_nI_pc,digits=2,booktabs=T) %>% kable_styling(position = "center")
+kbl(sum_specific_nI_pc,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
 
 ```
 
@@ -273,7 +272,8 @@ sum_specific_bySched <- specific %>%
             ) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_specific_bySched,digits=2,booktabs=T) %>% kable_styling(position = "center")
+kbl(sum_specific_bySched,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
 ```
 
 Removing tax interval lines
@@ -324,7 +324,7 @@ sum_av_pc <- ad_valorem %>%
             DB_obs = sum(!is.na(Ad_Valorem_Dillon_B)),
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
-kbl(sum_av_pc,digits=2,booktabs=T) %>% kable_styling(position = "center") %>% kable_styling(position = "center") %>%
+kbl(sum_av_pc,digits=2,booktabs=T) %>% kable_styling(position = "center") %>% 
   kable_styling(latex_options = "hold_position")
 ```
 
@@ -343,7 +343,8 @@ sum_av_nI_pc <- subset(ad_valorem, is.na(Interval)) %>%
             DB_obs = sum(!is.na(Ad_Valorem_Dillon_B)),
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
-kbl(sum_av_nI_pc,digits=2,booktabs=T) %>% kable_styling(position = "center")
+kbl(sum_av_nI_pc,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
 ```
 
 ### Mean of ad valorem tariffs by schedule and round
@@ -365,7 +366,8 @@ sum_av_bySched <- ad_valorem %>%
             ) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_av_bySched,digits=2,booktabs=T) %>% kable_styling(position = "center")
+kbl(sum_av_bySched,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
 ```
 
 Removing tax interval lines
@@ -387,7 +389,8 @@ sum_av_bySched_nI <-  subset(ad_valorem, is.na(Interval)) %>%
             ) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_av_bySched_nI,digits=2,booktabs=T) %>% kable_styling(position = "center")
+kbl(sum_av_bySched_nI,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
 ```
 
 # What was the total reduction in negotiated tariffs under the GATT in each round?
@@ -400,7 +403,8 @@ sp_mt = cbind(data.frame(sp_mean),c(0,-diff(sp_mean)/data.frame(sp_mean)[-nrow(d
 
 names(sp_mt)<-c('Mean','% decrease','Median','% decrease')
 rownames(sp_mt) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-x <- kbl(sp_mt,digits=2,booktabs=T) %>% kable_styling(position = "center")
+x <- kbl(sp_mt,digits=2,booktabs=T) %>% 
+  kable_styling(position = "center", latex_options = "hold_position")
 add_header_above(x, c(" " = 1,c("Decrease in specific tariffs by round"=4)),font_size = 12)
 
 
@@ -408,7 +412,8 @@ av_mt = cbind(data.frame(av_mean),c(0,-diff(av_mean)/data.frame(av_mean)[-nrow(d
 
 names(av_mt)<-c('Mean','% decrease','Median','% decrease')
 rownames(av_mt) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-y <- kbl(av_mt,digits=2,booktabs=T) %>% kable_styling(position = "center")
+y <- kbl(av_mt,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
 add_header_above(y, c(" " = 1,c("Decrease in ad valorem tariffs by round"=4)),font_size = 12)
 
 ```
@@ -521,12 +526,12 @@ The code above produces `r nrow(sm_db2)` lines that are the same in Smoot Hawley
 ## No change from Smoot Hawley to Geneva
 
 ```{r echo=TRUE}
-
+# we removed the "before" variables once we verified that they were exactly the same as Smoot Hawley
 # all the lines that are exactly the same in Smoot Hawley and 1946_before
-same <- shortnames %>%
-         filter( ((is.na(Sp_SH) == is.na(Sp_B) & is.na(Sp_SH)) | Sp_SH == Sp_B) 
-                  & ((is.na(AV_SH) == is.na(AV_B) & is.na(AV_SH)) | AV_SH == AV_B)
-                  & ((is.na(Un_SH) == is.na(Un_B) & is.na(Un_SH)) | Un_SH == Un_B))
+#same <- shortnames %>%
+#         filter( ((is.na(Sp_SH) == is.na(Sp_B) & is.na(Sp_SH)) | Sp_SH == Sp_B) 
+#                  & ((is.na(AV_SH) == is.na(AV_B) & is.na(AV_SH)) | AV_SH == AV_B)
+#                  & ((is.na(Un_SH) == is.na(Un_B) & is.na(Un_SH)) | Un_SH == Un_B))
 
 
 # all the lines that are exactly the same in Smoot Hawley and Geneva
@@ -644,14 +649,16 @@ print.data.frame(changes[,c("Sched","Product","Paragraph","id","G","A","T","GA",
 
 # Summarizing the impact of tax intervals
 
+PUT THIS BACK IN WHEN I'M AT HOME AND CAN FIGURE OUT THE BETTER WAY TO WORK WITH THE INTERVALS
+
 ```{r}
 # I think I could do this natively now without having to rely on Victor's excel spreadsheet
-library(readxl)
-intervals <- read_excel("C:/Users/krist/Downloads/tax_intervals_list (1).xlsx",range = "A1:M46")
+#library(readxl)
+#intervals <- read_excel("C:/Users/krist/Downloads/tax_intervals_list (1).xlsx",range = "A1:M46")
 
-intervals<-fill(intervals, Schedule, .direction="down")
+#intervals<-fill(intervals, Schedule, .direction="down")
 
-intervals_total <- intervals[,c("Schedule","Paragraphs_affected","Lines_affected")] %>% group_by(Schedule) %>% summarise_all(sum) %>% ungroup()
+#intervals_total <- intervals[,c("Schedule","Paragraphs_affected","Lines_affected")] %>% #group_by(Schedule) %>% summarise_all(sum) %>% ungroup()
 
 ```
 
