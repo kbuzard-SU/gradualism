@@ -15,7 +15,7 @@ library(kableExtra)
 # It appears that during the transformation to CSV file, some cells contain "space" or invisible dots which could be easily taken as empty, and they are not. Also since the "fill" function is applicable iff the cases are NA but not empty. Replace them all by NA.
 
 # Select the desired columns from the csv by names
-data_set <- read.csv(file='C:/Users/kristy/Downloads/test_1.csv', encoding="UTF-8",na.string=c(""," ","" ,"" ,"NA","\u00A0"))[,c('X.U.FEFF.Schedule','Paragraph','Description','Specific_SH','Units_SH','Ad_Valorem_SH',
+data_set <- read.csv(file='C:/Users/krist/Downloads/test_1.csv', encoding="UTF-8",na.string=c(""," ","" ,"" ,"NA","\u00A0"))[,c('X.U.FEFF.Schedule','Paragraph','Description','Specific_SH','Units_SH','Ad_Valorem_SH',
                                                                                                                                 'Specific_1946_after','Units_1946_after','Ad_Valorem_1946_after',
                                                                                                                                 'Specific_Geneva','Units_Geneva','Ad_Valorem_Geneva','Specific_Annecy','Units_Annecy','Ad_Valorem_Annecy','Specific_Torquay','Units_Torquay','Ad_Valorem_Torquay',
                                                                                                                                 'Specific_Geneva56_A','Units_Geneva56_A','Ad_Valorem_Geneva56_A','Specific_Geneva56_B','Units_Geneva56_B','Ad_Valorem_Geneva56_B',

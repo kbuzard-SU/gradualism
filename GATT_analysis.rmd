@@ -8,6 +8,7 @@ number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
+library(tinytex)
 library(knitr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
@@ -82,7 +83,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Importing and cleaning the data
 
-Importing and cleaning the data is done in "data_cleaning.rmd". It needs to be reprogrammed before being added here because it is nearly 1000 lines long. The chunk below calls that program to make the processed data available to the rest of the commands in this document.
+Importing and cleaning the data is done in "data_cleaning.rmd". It needs to be reprogrammed before being added here because it is still not as compact and readable as I want it to be. The chunk below calls that program to make the processed data available to the rest of the commands in this document.
 
 ```{r createdata,include=TRUE,message=FALSE}
 source('data_cleaning.r')
@@ -119,20 +120,21 @@ source('UnitsKey.r')
 library(qwraps2)
 library(kableExtra)
 
-sp_mean <- specific[,6:14] %>% sapply(mean, na.rm=TRUE)
-sp_med <- specific[,6:14] %>% sapply(median, na.rm=TRUE)
-sp_count <- specific[,6:14] %>% sapply(function(x) sum(!is.na(x)))
-sp_min <- specific[,6:14] %>% sapply(min, na.rm=TRUE)
-sp_max <- specific[,6:14] %>% sapply(max, na.rm=TRUE)
-sp_25p <- specific[,6:14] %>% sapply(function(x) quantile(x,probs=0.25,na.rm = TRUE))
-sp_75p <- specific[,6:14] %>% sapply(function(x) quantile(x,probs=0.75,na.rm = TRUE))
+sp_mean <- specific[,6:15] %>% sapply(mean, na.rm=TRUE)
+sp_med <- specific[,6:15] %>% sapply(median, na.rm=TRUE)
+sp_count <- specific[,6:15] %>% sapply(function(x) sum(!is.na(x)))
+sp_min <- specific[,6:15] %>% sapply(min, na.rm=TRUE)
+sp_max <- specific[,6:15] %>% sapply(max, na.rm=TRUE)
+sp_25p <- specific[,6:15] %>% sapply(function(x) quantile(x,probs=0.25,na.rm = TRUE))
+sp_75p <- specific[,6:15] %>% sapply(function(x) quantile(x,probs=0.75,na.rm = TRUE))
 
 sp_table = cbind(data.frame(sp_min),data.frame(sp_25p),data.frame(sp_mean),data.frame(sp_med),data.frame(sp_75p),data.frame(sp_max),data.frame(sp_count))
 names(sp_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
-rownames(sp_table) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+rownames(sp_table) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
 s <- kbl(sp_table,digits=2,booktabs=T) %>%
   kable_styling(position = "center", latex_options = "hold_position")
-add_header_above(s, c(" " = 1,"Summary Statistics of Specific Tariffs by Round"=7),font_size = 12)
+add_header_above(s, c(" " = 1,"Summary Statistics of Specific Tariffs by Round"=7),
+                 font_size = 12)
 ```
 
 ## Ad valorem tariffs
@@ -140,17 +142,17 @@ add_header_above(s, c(" " = 1,"Summary Statistics of Specific Tariffs by Round"=
 Strikingly, the reductions look to be of the same magnitude for Ad valorem, again with Geneva doing about half the work.
 
 ```{r echo=FALSE}
-av_mean <- ad_valorem[,6:14] %>% sapply(mean, na.rm=TRUE)
-av_med <- ad_valorem[,6:14] %>% sapply(median, na.rm=TRUE)
-av_count <- ad_valorem[,6:14] %>% sapply(function(x) sum(!is.na(x)))
-av_min <- ad_valorem[,6:14] %>% sapply(min, na.rm=TRUE)
-av_max <- ad_valorem[,6:14] %>% sapply(max, na.rm=TRUE)
-av_25p <- ad_valorem[,6:14] %>% sapply(function(x) quantile(x,probs=0.25,na.rm = TRUE))
-av_75p <- ad_valorem[,6:14] %>% sapply(function(x) quantile(x,probs=0.75,na.rm = TRUE))
+av_mean <- ad_valorem[,6:15] %>% sapply(mean, na.rm=TRUE)
+av_med <- ad_valorem[,6:15] %>% sapply(median, na.rm=TRUE)
+av_count <- ad_valorem[,6:15] %>% sapply(function(x) sum(!is.na(x)))
+av_min <- ad_valorem[,6:15] %>% sapply(min, na.rm=TRUE)
+av_max <- ad_valorem[,6:15] %>% sapply(max, na.rm=TRUE)
+av_25p <- ad_valorem[,6:15] %>% sapply(function(x) quantile(x,probs=0.25,na.rm = TRUE))
+av_75p <- ad_valorem[,6:15] %>% sapply(function(x) quantile(x,probs=0.75,na.rm = TRUE))
 
 adval_table = cbind(data.frame(av_min),data.frame(av_25p),data.frame(av_mean),data.frame(av_med),data.frame(av_75p),data.frame(av_max),data.frame(av_count))
 names(adval_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
-rownames(adval_table) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+rownames(adval_table) <- c("Smoot Hawley","1946", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
 a <- kbl(adval_table,digits=2,booktabs=T) %>%
   kable_styling(position = "center", latex_options = "hold_position")
 add_header_above(a, c(" " = 1,"Summary Statistics of Ad Valorem Tariffs by Round"=7),font_size = 12)
@@ -259,12 +261,14 @@ Notes:
 sum_specific_bySched <- specific %>%   
   group_by(Sched) %>%  
   summarize(SH = mean(Specific_SH, na.rm=TRUE),
+            A = mean(Specific_1946_after, na.rm=TRUE),
             G1 = mean(Specific_Geneva, na.rm=TRUE),
             An = mean(Specific_Annecy, na.rm=TRUE),
             To = mean(Specific_Torquay, na.rm=TRUE),
             GC = mean(Specific_Geneva56_C, na.rm=TRUE),
             DB = mean(Specific_Dillon_B, na.rm=TRUE),
-            chgG1 = ((SH - G1)/SH)*100,
+            chgA = ((SH - A)/SH)*100,
+            chgG1 = ((A - G1)/A)*100,
             chgAn = ((G1 - An)/G1)*100,
             chgTo = ((An - To)/An)*100,
             chgGC = ((To - GC)/To)*100,
@@ -402,7 +406,7 @@ Mean and median of specific tariffs in each round
 sp_mt = cbind(data.frame(sp_mean),c(0,-diff(sp_mean)/data.frame(sp_mean)[-nrow(data.frame(sp_mean)),]*100),data.frame(sp_med),c(0,-diff(sp_med)/data.frame(sp_med)[-nrow(data.frame(sp_med)),]*100))
 
 names(sp_mt)<-c('Mean','% decrease','Median','% decrease')
-rownames(sp_mt) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+rownames(sp_mt) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
 x <- kbl(sp_mt,digits=2,booktabs=T) %>% 
   kable_styling(position = "center", latex_options = "hold_position")
 add_header_above(x, c(" " = 1,c("Decrease in specific tariffs by round"=4)),font_size = 12)
@@ -411,7 +415,7 @@ add_header_above(x, c(" " = 1,c("Decrease in specific tariffs by round"=4)),font
 av_mt = cbind(data.frame(av_mean),c(0,-diff(av_mean)/data.frame(av_mean)[-nrow(data.frame(av_mean)),]*100),data.frame(av_med),c(0,-diff(av_med)/data.frame(av_med)[-nrow(data.frame(av_med)),]*100))
 
 names(av_mt)<-c('Mean','% decrease','Median','% decrease')
-rownames(av_mt) <- c("Smoot Hawley", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+rownames(av_mt) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
 y <- kbl(av_mt,digits=2,booktabs=T) %>%
   kable_styling(position = "center", latex_options = "hold_position")
 add_header_above(y, c(" " = 1,c("Decrease in ad valorem tariffs by round"=4)),font_size = 12)
