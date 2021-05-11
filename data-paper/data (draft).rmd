@@ -19,7 +19,7 @@ We collected our data from various sources: the US GATT tariff schedule data is 
 
 ### Digitization process
 
-The tax schedules of United States went through two systematically tariff schedules changes from the first round of GATT negotiation, Geneva 1947, to the last round of negotiation, Uruguay 1992. The initial tariff schedule that US adopted is the Smoot-Hawley system developed in 1930, it was used in the first five rounds of the GATT negotiation. In the year of 1962, the US government shifted its tariff system from Smoot-Hawley to Tariff Schedule of United States Annotated (henceforth TSUSA) through the Tariff Act of 1962. Later before the Uruguay round, the Harmonized system was adopted for the negotiation. The periods of system in each round are listed below:
+The tariff schedules of United States went through two systematically tariff schedules changes from the first round of GATT negotiation, Geneva 1947, to the last round of negotiation, Uruguay 1992. The initial tariff schedule that US adopted is the Smoot-Hawley system developed in 1930, it was used in the first five rounds of the GATT negotiation. In the year of 1962, the US government shifted its tariff system from Smoot-Hawley to Tariff Schedule of United States Annotated (henceforth TSUSA) through the Tariff Act of 1962. Later before the Uruguay round, the Harmonized system was adopted for the negotiation. The periods of system in each round are listed below:
 
 - Smoot-Hawley system: Geneva 1947, Annecy 1948, Torquay 1950, Geneva 1956 and  Dillon 1960, altogether 5 rounds;
 - TSUSA system: Kennedy 1964, Tokyo 1979, altogether two rounds;
@@ -50,9 +50,16 @@ So far we have fully digitized all the rounds for the Smoot-Hawley system and th
 4. Finally we conducted the same data cleaning and units normalization process, save the document as csv file and import it in R.
 
 
+
+#### Units
+
+Within the Smoot_Hawley tariff system, we have identified 59 types of units (based on the description showing up in the original document), we have done the normalization process to narrow down the total number to 27 units keys. The reason of normalization has two layers: first we want to keep the framework as simple as possible, second we want to make sure the values of tax rate are comparable so that statistical inference based on the specific tax rates will not be affected by the units. The normalization process contains steps including integrating units that have similar descriptive meanings, integrating units that have different basic units (cents per each, cents per 100 and cents per 1000), and finally transform all dollars based units to cents based units. The units keys system we created for Smoot-Hawley system also applies for the TSUSA system in later rounds. The detailed mappings of normalization process can be found in our data package.
+
 #### Other issues
 
-Some other issues arose during the digitization process, including dealing with tax intervals, more specified product description and staging process for certain products (that products facing tax reduction through multiple stages), since these issues are mostly related to the robustness and completeness check of our data and relatively trivial, we include the detailed explanation and examples in the data appendix section. Also in order to compare the tax reduction statistically, we unified all of our units to "cents" level and construct a unit key sheet which demonstrates the unique code we have for every type of the unit we have and its original notation before the unit normalization process ^[More details can be found in description in our data set].  
+Some other issues arose during the digitization process, including dealing with tax intervals, more specified product description and staging process for certain products facing tax reduction through multiple stages. Since these issues are mostly related to the robustness and completeness check of our data and relatively trivial, we include the detailed explanation, examples and corresponding solutions in the data appendix section.
+
+
 
 
 
