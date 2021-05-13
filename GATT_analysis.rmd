@@ -650,20 +650,22 @@ change_DB <-
   ) %>%
   mutate(DB = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
 
-mergeCols <- c(colnames(data_set),"unit_ch")
-changes <- change_BG %>% full_join(change_G,  by = mergeCols) %>%
-                        full_join(change_A,  by = mergeCols) %>%
-  full_join(change_T,  by = mergeCols) %>% 
-  full_join(change_GA,  by = mergeCols) %>%
-  full_join(change_GB,  by = mergeCols) %>% 
-  full_join(change_GC,  by = mergeCols) %>%
-  full_join(change_DA,  by = mergeCols) %>%
-  full_join(change_DB,  by = mergeCols) %>% arrange(id)
+mergeCols <- colnames(data_set)
+mC <- mergeCols[mergeCols != "unit_ch"]
+changes <- select(change_BG,-unit_ch) %>% 
+  full_join(select(change_G,-unit_ch),  by = mergeCols)%>%
+  full_join(select(change_A,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_T,-unit_ch),  by = mergeCols) %>% 
+  full_join(select(change_GA,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_GB,-unit_ch),  by = mergeCols) %>% 
+  full_join(select(change_GC,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_DA,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_DB,-unit_ch),  by = mergeCols) %>% arrange(id)
 ```
 In all, `r nrow(changes)` lines are affected by some change in the form of the tariff.
 
 ```{r}
-print.data.frame(changes[,c("Sched","Product","Paragraph","id","G","A","T","GA","GB","GC","DA","DB","unit_ch","Interval")],row.names = FALSE)
+print.data.frame(changes[,c("Sched","Product","Paragraph","id","G","A","T","GA","GB","GC","DA","DB","Interval")],row.names = FALSE)
 ```
 
 
