@@ -93,7 +93,7 @@ source('data_cleaning.r')
 
 ```{r}
 c <- shortnames %>%
-  filter( is.na(Sp_SH) != is.na(Un_SH) & is.na(Sp_A) != is.na(Un_A) & is.na(Sp_Ge) != is.na(Un_Ge) &
+  filter( is.na(Sp_SH) != is.na(Un_SH) & is.na(Sp_BG) != is.na(Un_BG) & is.na(Sp_Ge) != is.na(Un_Ge) &
             is.na(Sp_An) != is.na(Un_An) & is.na(Sp_To) != is.na(Un_To) & is.na(Sp_GA) != is.na(Un_GA) &
             is.na(Sp_GB) != is.na(Un_GB) & is.na(Sp_GC) != is.na(Un_GC) & is.na(Sp_DA) != is.na(Un_DA) &
             is.na(Sp_DB) != is.na(Un_DB))
@@ -283,7 +283,7 @@ kbl(sum_specific_bySched,digits=2,booktabs=T) %>%
 Removing tax interval lines
 
 ```{r}
-sum_specific_bySched_nI <-  subset(shortnames, is.na(Interval)) %>% 
+sum_specific_bySched_nI <-  subset(shortnames, is.na(Int)) %>% 
   group_by(Sched) %>%
   summarize(across(starts_with("Sp"), mean, na.rm=TRUE),
             chgGe = ((Sp_SH - Sp_Ge)/Sp_SH)*100,
@@ -469,47 +469,57 @@ print.data.frame(neither[which(neither$neitherDillonB==TRUE),c("Sched","Product"
 Here we are looking round by round for lines that had an increase in either the ad valorem or specific tariff (or both). Later we will look at lines that switch from one type of tariff to the other.
 
 ```{r echo=FALSE}
-increaseG1 <- data_set %>% 
-  mutate(av_pc =((Ad_Valorem_SH - Ad_Valorem_Geneva)/Ad_Valorem_SH)*100,sp_pc
-         =((Specific_SH - Specific_Geneva)/Specific_SH)*100) %>%
-  select(Paragraph,id,Product,av_pc,sp_pc,Ad_Valorem_SH,Ad_Valorem_Geneva,
-         Specific_SH,Specific_Geneva,Units_SH,Units_Geneva,Interval) %>%
+increaseBG <- shortnames %>% 
+  mutate(av_pc =((AV_SH - AV_BG)/AV_SH)*100,sp_pc =((Sp_SH - Sp_BG)/Sp_SH)*100) %>%
+  select(Para,id,Prod,av_pc,sp_pc,AV_SH,AV_BG,Sp_SH,Sp_BG,Un_SH,Un_BG,Int) %>%
+  filter(is.na(Sp_SH) == is.na(Sp_BG) & is.na(AV_SH) == is.na(AV_BG) & 
+           is.na(Un_SH) == is.na(Un_BG)) %>%
   subset(sp_pc < 0 | av_pc < 0)
-print("Increased tariff from Smoot Hawley to Geneva")
-print.data.frame(increaseG1,row.names = FALSE,digits = 2)
+print("Increased tariff from Smoot Hawley to 1946 (Before Geneva)")
+print.data.frame(increaseBG,row.names = FALSE,digits = 2)
 
-increaseA <- data_set %>% 
-  mutate(av_pc =((Ad_Valorem_Geneva - Ad_Valorem_Annecy)/Ad_Valorem_Geneva)*100,sp_pc
-         =((Specific_Geneva - Specific_Annecy)/Specific_Geneva)*100) %>%
-  select(Paragraph,id,Product,av_pc,sp_pc,Ad_Valorem_Geneva,Ad_Valorem_Annecy,
-         Specific_Geneva,Specific_Annecy, Units_Geneva,Units_Annecy,Interval) %>%
+
+increaseGe <- shortnames %>% 
+  mutate(av_pc =((AV_BG - AV_Ge)/AV_BG)*100,sp_pc =((Sp_BG - Sp_Ge)/Sp_BG)*100) %>%
+  select(Para,id,Prod,av_pc,sp_pc,AV_BG,AV_Ge,Sp_BG,Sp_Ge,Un_BG,Un_Ge,Int) %>%
+  filter(is.na(Sp_BG) == is.na(Sp_Ge) & is.na(AV_BG) == is.na(AV_Ge) & 
+           is.na(Un_BG) == is.na(Un_Ge)) %>%
+  subset(sp_pc < 0 | av_pc < 0)
+print("Increased tariff from 1946 to Geneva")
+print.data.frame(increaseGe,row.names = FALSE,digits = 2)
+
+increaseA <- shortnames %>% 
+  mutate(av_pc =((AV_Ge - AV_An)/AV_Ge)*100,sp_pc =((Sp_Ge - Sp_An)/Sp_Ge)*100) %>%
+  select(Para,id,Prod,av_pc,sp_pc,AV_Ge,AV_An,Sp_Ge,Sp_An,Un_Ge,Un_An,Int) %>%
+  filter(is.na(Sp_Ge) == is.na(Sp_An) & is.na(AV_Ge) == is.na(AV_An) & 
+           is.na(Un_Ge) == is.na(Un_An)) %>%
   subset(sp_pc < 0 | av_pc < 0)
 print("Increased tariff from Geneva to Annecy")
 print.data.frame(increaseA,row.names = FALSE,digits = 2)
 
-increaseT <- data_set %>% 
-  mutate(av_pc =((Ad_Valorem_Annecy - Ad_Valorem_Torquay)/Ad_Valorem_Annecy)*100,sp_pc
-         =((Specific_Annecy - Specific_Torquay)/Specific_Annecy)*100) %>%
-  select(Paragraph,id,Product,av_pc,sp_pc,Ad_Valorem_Annecy,Ad_Valorem_Torquay,
-         Specific_Annecy,Specific_Torquay,Units_Annecy,Units_Torquay,Interval)%>%
+increaseT <- shortnames %>%
+  mutate(av_pc =((AV_An - AV_To)/AV_An)*100,sp_pc =((Sp_An - Sp_To)/Sp_An)*100) %>%
+  select(Para,id,Prod,av_pc,sp_pc,AV_An,AV_To,Sp_An,Sp_To,Un_An,Un_To,Int) %>%
+  filter(is.na(Sp_An) == is.na(Sp_To) & is.na(AV_An) == is.na(AV_To) & 
+           is.na(Un_An) == is.na(Un_To)) %>%
   subset(sp_pc < 0 | av_pc < 0)
 print("Increased tariff from Annecy to Torquay")
 print.data.frame(increaseT,row.names = FALSE,digits = 2)
 
-increaseGC <- data_set %>% 
-  mutate(av_pc =((Ad_Valorem_Torquay - Ad_Valorem_Geneva56_C)/Ad_Valorem_Torquay)*100,sp_pc
-         =((Specific_Torquay - Specific_Geneva56_C)/Specific_Torquay)*100) %>%
-  select(Paragraph,id,Product,av_pc,sp_pc,Ad_Valorem_Torquay,Ad_Valorem_Geneva56_C,
-         Specific_Torquay,Specific_Geneva56_C,Units_Torquay,Units_Geneva56_C,Interval)%>%
+increaseGC <- shortnames %>%
+  mutate(av_pc =((AV_To - AV_GC)/AV_To)*100,sp_pc =((Sp_To - Sp_GC)/Sp_To)*100) %>%
+  select(Para,id,Prod,av_pc,sp_pc,AV_To,AV_GC,Sp_To,Sp_GC,Un_To,Un_GC,Int) %>%
+  filter(is.na(Sp_To) == is.na(Sp_GC) & is.na(AV_To) == is.na(AV_GC) & 
+           is.na(Un_To) == is.na(Un_GC)) %>%
   subset(sp_pc < 0 | av_pc < 0)
 print("Increased tariff from Torquay to Geneva56_C")
 print.data.frame(increaseGC,row.names = FALSE,digits = 2)
 
-increaseD <- data_set %>% 
-  mutate(av_pc =((Ad_Valorem_Geneva56_C - Ad_Valorem_Dillon_B)/Ad_Valorem_Geneva56_C)*100,sp_pc
-         =((Specific_Geneva56_C - Specific_Dillon_B)/Specific_Geneva56_C)*100) %>%
-  select(Paragraph,id,Product,av_pc,sp_pc,Ad_Valorem_Geneva56_C,Ad_Valorem_Dillon_B,
-         Specific_Geneva56_C,Specific_Dillon_B,Units_Geneva56_C,Units_Dillon_B,Interval)%>%
+increaseD <- shortnames %>%
+  mutate(av_pc =((AV_GC - AV_DB)/AV_GC)*100,sp_pc =((Sp_GC - Sp_DB)/Sp_GC)*100) %>%
+  select(Para,id,Prod,av_pc,sp_pc,AV_GC,AV_DB,Sp_GC,Sp_DB,Un_GC,Un_DB,Int) %>%
+  filter(is.na(Sp_GC) == is.na(Sp_DB) & is.na(AV_GC) == is.na(AV_DB) & 
+           is.na(Un_GC) == is.na(Un_DB)) %>%
   subset(sp_pc < 0 | av_pc < 0)
 print("Increased tariff from Geneva56_C to Dillon_B")
 print.data.frame(increaseD,row.names = FALSE, digits = 2)

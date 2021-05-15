@@ -318,15 +318,16 @@ ad_valorem <-data_set[,c("id","Sched","Paragraph", "Product","Interval","Ad_Valo
 #units2<-data.frame(t(units[,]))
 
 shortnames <- data_set %>%
-  rename( Sp_SH = Specific_SH, Sp_A=Specific_1946_after, Sp_Ge = Specific_Geneva, Sp_An = Specific_Annecy, 
+  rename( Para = Paragraph, Prod = Product, Desc = Description, Int = Interval,
+          Sp_SH = Specific_SH, Sp_BG=Specific_1946_after, Sp_Ge = Specific_Geneva, Sp_An = Specific_Annecy, 
           Sp_To = Specific_Torquay, Sp_To = Specific_Torquay, Sp_GA = Specific_Geneva56_A,
           Sp_GB = Specific_Geneva56_B, Sp_GC = Specific_Geneva56_C, Sp_DA = Specific_Dillon_A,
           Sp_DB = Specific_Dillon_B,
-          AV_SH = Ad_Valorem_SH,AV_A=Ad_Valorem_1946_after, AV_Ge = Ad_Valorem_Geneva, AV_An = Ad_Valorem_Annecy, 
+          AV_SH = Ad_Valorem_SH,AV_BG=Ad_Valorem_1946_after, AV_Ge = Ad_Valorem_Geneva, AV_An = Ad_Valorem_Annecy, 
           AV_To = Ad_Valorem_Torquay, AV_To = Ad_Valorem_Torquay, AV_GA = Ad_Valorem_Geneva56_A,
           AV_GB = Ad_Valorem_Geneva56_B, AV_GC = Ad_Valorem_Geneva56_C, AV_DA = Ad_Valorem_Dillon_A,
           AV_DB = Ad_Valorem_Dillon_B,
-          Un_SH = Units_SH,Un_A=Units_1946_after, Un_Ge = Units_Geneva, Un_An = Units_Annecy, 
+          Un_SH = Units_SH,Un_BG=Units_1946_after, Un_Ge = Units_Geneva, Un_An = Units_Annecy, 
           Un_To = Units_Torquay, Un_To = Units_Torquay, Un_GA = Units_Geneva56_A,
           Un_GB = Units_Geneva56_B, Un_GC = Units_Geneva56_C, Un_DA = Units_Dillon_A,
           Un_DB = Units_Dillon_B)
