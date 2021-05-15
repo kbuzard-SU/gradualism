@@ -138,9 +138,6 @@ Need table that Matt is creating with number of pages for each schedule for each
 
 -   remember that time series doesn't make sense
 
-# Terms of Trade Analysis
-
-At least include our plans, what data we're going to use - proof of concept using modern elasticity data would be great, even in a subset of lines
 
 # Conclusion
 
@@ -149,6 +146,9 @@ Future plans
 -   What role did the presence of specific tariffs, combined with inflation, have in reducing the total level of tariff protection?
 
     -   Need trade volume / value / price data
+    
+    -   include our plans for TOT analysis, what data we're going to use - proof of concept using modern elasticity data would be great, even in a subset of lines
+
 
 # References
 
