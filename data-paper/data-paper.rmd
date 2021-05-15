@@ -62,6 +62,10 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 
     -   Variation in units for specific tariffs, how we standardized them
 
+        -   Within the Smoot_Hawley tariff system, we have identified 59 types of units (based on the description showing up in the original document), we have done the normalization process to narrow down the total number to 27 units keys.
+
+            -   The normalization process contains steps including integrating units that have similar descriptive meanings, integrating units that have different basic units (cents per each, cents per 100 and cents per 1000), and finally transform all dollars based units to cents based units. The units keys system we created for Smoot-Hawley system also applies for the TSUSA system in later rounds.
+
     -   Tariff intervals
 
     -   Free list
@@ -162,6 +166,8 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 # Non-U.S. Contracting Parties
 
 Need table that Matt is creating with number of pages for each schedule for each round
+
+-   remember that time series doesn't make sense
 
 # Terms of Trade Analysis
 
