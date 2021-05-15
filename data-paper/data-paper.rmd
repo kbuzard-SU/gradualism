@@ -39,10 +39,6 @@ library(english)
 source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit_global())
 ```
 
--   Where we got these files
-
-    -   Victor to update source data table, will include in appendix
-
 -   How we digitized the data
 
     -   Dealing with paragraph splitting, new lines
@@ -185,7 +181,7 @@ Future plans
 
 \#`{r child = 'references.Rmd'} #`
 
-# Data Appendix
+# Data Appendix{#dataappendix}
 
 ```{r child = 'data-appendix.Rmd'}
 ```

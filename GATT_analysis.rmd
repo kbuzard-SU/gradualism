@@ -450,7 +450,7 @@ I believe many of the changes from specific tax to ad valorem or otherwise is be
 
 ### Proportions of specific, ad valorem, mixed
 
-A few lines in each round have neither specific nor ad valorem. Matt is working on fixing this
+A few lines in each round had neither specific nor ad valorem. These were all fixed as of 5/15/21, but we keep this here to check in case things pop up.
 
 ```{r comment=NA}
 neither <- data_set %>% mutate(neitherSH=is.na(data_set[,"Specific_SH"])&is.na(data_set[,"Ad_Valorem_SH"]),neitherAnnecy=is.na(data_set[,"Specific_Annecy"])&is.na(data_set[,"Ad_Valorem_Annecy"]),neitherDillonB=is.na(data_set[,"Specific_Dillon_B"])&is.na(data_set[,"Ad_Valorem_Dillon_B"]))

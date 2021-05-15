@@ -48,7 +48,34 @@ As the figures below illustrate, the schedules usually consist of three parts: t
 
 \newpage
 
-## Smoot-Hawley Industrial Classification System: Schedule
+## Details of Digitization Process{#digdetails}
+
+### The Smoot-Hawley System
+
+We refer to the first document we found---a tariff schedule for the United States that consolidates the concessions in the Geneva, Annecy and Torquay rounds---as "Torquay (black white)." This document was in hard copy, borrowed from the University of Texas Libraries. We scanned the hard copy, conducted optical character recognition (OCR) and digitized the file in R. By running the R package *pdftools*,^[<https://cran.r-project.org/web/packages/pdftools/pdftools.pdf>] we obtain an editable Microsoft Excel file that consists of detailed product descriptions and their corresponding tariff rates. Since "Torquay (black white)" contains the schedules of the first three rounds, we were able to construct a benchmark schedule that includes most of the products from Smoot-Hawley through the Dillon Round.
+
+Subsequently, we found more complete and systematic data in the United Nations Treaty Collection (UNTC). Here there are schedules for each round individually. For these we manually entered the United States tariff rate for each round line by line based on the framework we had constructed via "Torquay (black white)." To check the reliability of our benchmark file, we compared the three individual rounds we have from the UNTC (i.e., "Geneva47_UNTC," "Annecy_UNTC" and "Torquay_UNTC") with the consolidated version "Torquay (black white)" and found no differences in tariff rates. 
+
+Next, we located the original 1930 Tariff Act document ("Tariff Act of 1930 cleaner") and entered its tariff rates in order to identify the Smoot-Hawley tariffs as a benchmark. The Smoot-Hawley tariffs make sense as a benchmark because they continued to be the prevailing legal tariffs of the U.S. unless modified by subsequent agreement or legislation. We therefore made sure to enter all products in the original Smoot-Hawley into our database. That is, even if some products did not show up in later rounds, they are still included for completeness. 
+
+To pin down more precisely the magnitude of the tariff reductions of the first round of GATT negotiations (Geneva 1947), we also digitized the US tariff schedule of the year 1946, using the file "United State Import Duties June 1946." The file contains all tariff changes between 1930 and 1946, both unilaterally and through bilateral negotiations.
+
+With the information above, we are able to identify the magnitude of tariff reductions of every GATT round that uses the Smoot-Hawley tariff system. 
+
+After manually cleaning the data in Excel, we save the file as a comma separated values file (csv) in the UTF-8 format and import into R for further data clean, standardizing units for specific tariffs and analysis.
+
+### TSUS system
+
+The TSUS system was first utilized in GATT negotiations in the Kennedy round (1964). To incorporate this new system, we started a separate file for the TSUSA tariffs by digitizing the schedule in the Tariff Act of 1962.^[This act formally changed the tariff system and became effective on August 31, 1963.]
+
+The Tariff Act of 1962 is not related to GATT negotiations. Rather, we digitized it because it provides a comprehensive framework for the TSUS system and helps to fill the gap between the last round under the Smoot-Hawley system (Dillon) and the first round under the TSUS system (Kennedy). Everything we've learned so far indicates that the schedule associated with the Tariff Act 1962 represents the US tariff level after the Dillon round but organized under TSUSA system.^[Two main facts support our belief: (1) we observe that the tariff rates for similar products are exactly the same in the Tariff Act 1962 and the second stage of the Dillon round; (2) the time span between the effective dates of two documents is short: the second stage of Dillon round was effective in 1962 and the Tariff Act of 1962 was effective on August 31, 1963. We will be able to say something more definitive once we have completed the concordance between the Smoot-Hawley and TSUS systems.] 
+
+Here we used an approach similar to the one described in the previous subsection. We began with the document "Tariff Act 1962" from United States International Trade Commission.^[Several pages are missing in this document, so we also used files from the Hathitrust Digital Library to complete the schedule.] We applied the same optical character recognition tools and constructed the framework of the tariff schedule system in Excel. We then used the tariff schedule files of the Kennedy and Tokyo rounds collected from the UNTC website to manually enter the tariff rate data for each product, line by line. In the Tokyo round, some tariff codes from 1962 and the Kennedy Round are replaced by the introduction of new codes, so we also created an "exit and entry" column in our dataset to record these changes. Finally, we followed the same data cleaning and unit-normalization process as in the previous section.
+
+
+## Industrial Classification Systems
+
+### Smoot-Hawley: Schedule
 
 | Schedule | Category                                         | Tariff Act of 1930 Paragraph Number |
 |----------|--------------------------------------------------|-------------------------------------|
@@ -69,7 +96,7 @@ As the figures below illustrate, the schedules usually consist of three parts: t
 | 15       | Sundries                                         | 1501 to 1559                        |
 | 16       | Title II - Free List                             | 1601 to 1814                        |
 
-## TSUSA Industrial Classification System: Section
+### TSUSA: Section
 
 +---------+--------------------------------------------------------------+-------------------+
 | Section | Category                                                     | TSUSA Code Number |
