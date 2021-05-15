@@ -48,7 +48,7 @@ As the figures below illustrate, the schedules usually consist of three parts: t
 
 \newpage
 
-## Details of Digitization Process{#digdetails}
+## Details of the Digitization Process{#digdetails}
 
 ### The Smoot-Hawley System
 
@@ -77,8 +77,8 @@ Here we used an approach similar to the one described in the previous subsection
 
 ### Smoot-Hawley: Schedule
 
-| Schedule | Category                                         | Tariff Act of 1930 Paragraph Number |
-|----------|--------------------------------------------------|-------------------------------------|
+| Schedule | Category                                         | Smoot-Hawley Paragraph |
+|----------|--------------------------------------------------|------------------------|
 | 1        | Chemicals, Oils, and Paints                      | 1 to 97                             |
 | 2        | Earths, Earthenware, and Glassware               | 201 to 236                          |
 | 3        | Metals and Manufactures of                       | 301 to 398                          |
@@ -99,7 +99,7 @@ Here we used an approach similar to the one described in the previous subsection
 ### TSUSA: Section
 
 +---------+--------------------------------------------------------------+-------------------+
-| Section | Category                                                     | TSUSA Code Number |
+| Section | Category                                                     | TSUSA Code        |
 +=========+==============================================================+===================+
 | 1       | Animal and Vegetable Products                                | 100.01 to 193.25  |
 +---------+--------------------------------------------------------------+-------------------+
@@ -129,23 +129,25 @@ Interestingly, the products in the free-of-duty Schedule 16 under the Smoot Hawl
 Between 1930 and when a product enters one of the GATT schedules, the status is not entirely clear. We have not found conclusive evidence to resolve this issue. Given that the Smoot Hawley Act unilaterally set tariff policy free of international commitments, our educated guess is that the U.S. authorities could increase the duty on these products unilaterally. What is clear is that once these products enter a GATT schedule, the U.S. was committed to not subsequently charge a duty on these products. We thus infer that if a product was  free of duty in the Tariff Act of 1930 but not included in the free list in the GATT negotiated schedules, the US government either wanted to have more flexibility on this product or had not yet found a negotiating partner who was willing to exchange commitments involving the product.
 
 
-## Special lines
+## Tariff intervals{#int}
 
-Here we discuss several issues we encountered while coding the data.
-
-**Tariff intervals**: When, in addition to the usual ad valorem or specific tariff, a line also has a minimum or maximum tariff, we classify the line as being of the"tariff interval" type. For example Paragraph 210 *Rockingham earthenware* in the Geneva 1947 schedule has its rate description as *"20 cents per doz. articles, but not less 7.5% nor more than 25%."*
+When, in addition to the usual ad valorem or specific tariff, a line also has a minimum or maximum tariff, we classify the line as being of the"tariff interval" type. For example Paragraph 210 *Rockingham earthenware* in the Geneva 1947 schedule has its rate description as *"20 cents per doz. articles, but not less 7.5% nor more than 25%."*
 
 To incorporate this type of tariff formula, we followed the approach used in the consolidated Torquay schedule and the TSUSA system, that is to divide the single line for that product into multiple lines according to the values of the minimums and maximums. In the consolidated Torquay schedule, *Rockingham earthenware* is listed as three separate lines: *"Rockingham earthenware, valued per dozen articles: under 80 cents - 25% ad valorem"*, *"Rockingham earthenware, valued per dozen articles: over 80 cents and under 266.67 cents - 20 cents per doz, articles"* and *"Rockingham earthenware, valued per dozen articles: over 266.67 cents - 7.5% ad valorem"*. Notice that the threshold value for each line is calculated based on the minimum and maximum of tariff rate. With this method, we manually transformed all the tariff interval type lines into separate lines based on their values.
 
 One thing to note is that, as the tariff rates were reduced across rounds, some of the threshold values may also change. Usually these changes are trivial and adding more lines for each newly-calculated threshold would induce more distortion to the data than using the original thresholds. Therefore we use the original threshold value unless the tariff interval formula itself changed over time. We created an "Intervals" dummy variable to keep track of lines that are affected by the tariff interval issue.
 
-**Line splitting**: Another frequent issue in aligning the tariff schedules through time is what we call line splitting. The original product descriptions in the Tariff Act of 1930 paragraphs are often quite general and sometimes ambiguous and we find that the descriptions are often split in later schedules to create product lines whose descriptions are narrower. This seems to happen when the negotiators wanted to apply two different tariffs to what was formerly a single line.
+## Line splitting{#split}
+
+Another frequent issue in aligning the tariff schedules through time is what we call line splitting. The original product descriptions in the Tariff Act of 1930 paragraphs are often quite general and sometimes ambiguous and we find that the descriptions are often split in later schedules to create product lines whose descriptions are narrower. This seems to happen when the negotiators wanted to apply two different tariffs to what was formerly a single line.
 
 An example of this is Paragraph 24, which is described in the Tariff Act of 1930 as *"Flavoring extracts, and natural or synthetic fruit flavors, fruit esters, oils, and essences, all the foregoing and their combinations."* In the Dillon round tariff schedule, the paragraph is divided into *"Flavoring extracts, and natural or synthetic fruit flavors, fruit esters, oils, and essences, all the foregoing and their combinations: unfit for beverage purposes, containing of alcohol ..."* and *"Flavoring extracts, and natural or synthetic fruit flavors, fruit esters, oils, and essences, all the foregoing and their combinations: fit for beverage purposes, containing of alcohol ..."*.
 
 More restrictions on the descriptions or new types of delineation were introduced as the tariff system evolved. To deal with these splitting lines, we create new lines for each split and enter a uniform tariff rate in earlier schedules for any line that was previously included in the more general (un-split) line. In this way we keep the completeness of the schedule and avoid losing information on differentiated products.
 
-**Staging**: Beginning in the Geneva 1956 round, the tariff reductions were made in multiple stages. In the source documents for Geneva 1956 and Dillon, there is a column for each stage.^[Geneva 1956 has three stages while Dillon has two stages.] Typically there is one year between implementation of each stage. Although most products that are negotiated in each round have different tariffs in each stage, some products do have the tariff rate for more than one stage. To deal with staging, we created separate columns for these stages and track the tariff reduction across stages. However, when comparing the tariff reduction across rounds, we focus on the tariff rate in the final stage.
+## Staging{#staging}
+
+Beginning in the Geneva 1956 round, the tariff reductions were made in multiple stages. In the source documents for Geneva 1956 and Dillon, there is a column for each stage.^[Geneva 1956 has three stages while Dillon has two stages.] Typically there is one year between implementation of each stage. Although most products that are negotiated in each round have different tariffs in each stage, some products do have the tariff rate for more than one stage. To deal with staging, we created separate columns for these stages and track the tariff reduction across stages. However, when comparing the tariff reduction across rounds, we focus on the tariff rate in the final stage.
 
 
 ## GATT contracting parties

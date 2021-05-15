@@ -43,16 +43,27 @@ To date, we have digitalized and standardized the tariff data for the first five
 We have also digitized the two rounds under the TSUSA system with work on the standardization between these rounds and the earlier rounds ongoing. For more details, see [Details of the Digitization Process](#digdetails). 
 
 
+## Concordance
+
+We are building a concordance between the Smoot-Hawley and TSUS systems in order to create a consistent time series up through the Tokyo round. First we executed a keyword match line by line between the two. This gives us good matches for many lines, especially for the products that have relatively short and specific descriptions; The second step is to use the cross-reference table in Volume 9 of the US ITC's *Tariff Classification Study.*^[See more details about this document in "data sources", data appendix.] The cross-reference table provides linkage information between the paragraphs in Smoot-Hawley and the tariff item code in TSUSA, and we use this to assign TSUSA code(s) to each product in the Smoot-Hawley system schedule.
+
+The second stage of the concordance building is both time and skill intensive and is still in process. When it is completed, we will move on to using the concordance between TSUS and HTS provided by the USITC^["Cross-Reference Between the Harmonized System and TSUSA Schedule" courtesy of Robert Feenstra at https://cid.econ.ucdavis.edu/usixd/wp5515d.html .] in order to integrate the Uruguay round into the dataset.
+
+
+## Trade weighting and *ad valorem* equivalents (AVEs)
+
+We are in the early stages of collecting contemporaneous data on the volume and value of trade. This requires both digitizing the data (annual data is available from 1930-1946 in the U.S. Census Bureau's "Foreign commerce and navigation of the United States" report on HathiTrust) and creating a digital concordance between the Smoot-Hawley paragraph system used to determine tariff rates and the import classification system of that era.
+
+Once this is completed, we will be able to (a) trade-weight our summary statistics and (b) compute *ad valorem* equivalents for all specific tariffs.^[See Appedix C of Teti (2020) for a clear, concise explanation of conversion of specific tariffs into *ad valorem* equivalents.] For the time being, we analyze *ad valorem* and *specific* tariffs separately.
+
 
 ## Units
 
-Within the Smoot_Hawley tariff system, we have identified 59 types of units (based on the description showing up in the original document), we have done the normalization process to narrow down the total number to 27 units keys. The reason of normalization has two layers: first we want to keep the framework as simple as possible, second we want to make sure the values of tax rate are comparable so that statistical inference based on the specific tax rates will not be affected by the units. The normalization process contains steps including integrating units that have similar descriptive meanings, integrating units that have different basic units (cents per each, cents per 100 and cents per 1000), and finally transform all dollars based units to cents based units. The units keys system we created for Smoot-Hawley system also applies for the TSUSA system in later rounds. The detailed mappings of normalization process can be found in our data package.
+Any analysis of specific tariffs will be complicated by differences in units. We find that the Smoot-Hawley tariff system employed 59 types of units for specific tariffs. We have reduced the number of units to 27 through a standardization and normalization process.
+
+The reason of normalization has two layers: first we want to keep the framework as simple as possible, second we want to make sure the values of tariff rate are comparable so that statistical inference based on the specific tariff rates will not be affected by the units. The normalization process contains steps including integrating units that have similar descriptive meanings, integrating units that have different basic units (cents per each, cents per 100 and cents per 1000), and finally transform all dollars based units to cents based units. The units keys system we created for Smoot-Hawley system also applies for the TSUSA system in later rounds. The detailed mappings of normalization process can be found in our data package.
+
 
 ## Other issues
 
-Some other issues arose during the digitization process, including dealing with tax intervals, more specified product description and staging process for certain products facing tax reduction through multiple stages. Since these issues are mostly related to the robustness and completeness check of our data and relatively trivial, we include the detailed explanation, examples and corresponding solutions in the data appendix section.
-
-
-## Concordance
-
-We built our concordance work between the TSUSA system and Smoot-Hawley system mainly in two steps: first we construct line by line keyword match method across the two schedules we have, this gives us good matches for many lines, especially for the products that have relative short and specific description; the second step is to use the cross-reference table in the **Tariff Classification Study** file ^[See more details about this document in "data sources", data appendix]. The cross-reference table provides linkage information between the paragraphs in Smoot-Hawley and the tariff item code in TSUSA, and through this way we are able to assign TSUSA code(s) to each product in the Smoot-Hawley system schedule^[The first round of concordance work has been finished and the second round more detailed matching is still in process]. 
+Some other issues arose during the digitization process, including dealing with [tariff intervals](#int), increasing detail in product description that necessitated [splitting paragraphs](#split) and the occurrence of [multiple stages](#staging) of tariff reductions over time. These issues are mostly important for robustness and completeness of our data, so we include the detailed explanations, examples and corresponding solutions in the Data Appendix.

@@ -7,6 +7,7 @@ output:
     number_sections: true
 fontsize: 12pt
 linestretch: 1.25
+urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
@@ -39,39 +40,6 @@ library(english)
 source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit_global())
 ```
 
--   How we digitized the data
-
-    -   Dealing with paragraph splitting, new lines
-
-    -   Dealing with two changes in coding
-
-        -   Historical context on those changes
-
-        -   The 1962 document we have represent the US tariff rate under TSUSA for the Dillon B round (I assume we will include this round data in the analysis, namely 1962-\>Kennedy-\>Tokyo)
-
--   Other issues that arose
-
-    -   Specific vs. ad valorem vs. compound (both specific and ad valorem)
-
-        -   Teti (2020) reports that 8% of U.S. tariffs were specific in 1988-2017
-        -   Teti (2020) also reports: "Mixed tariffs are expressed as either a specific or an ad valorem rate, depending on which generates the most (or sometimes the least) revenue. Then there are technical tariffs that depend on certain product characteristics for example duties might be 8% for butter with fat content between 9-40%. Tariff rate quotas are made up of a low tariff rate on the initial imports (the within-quota quantity) and a very high tariff rate on imports entering above the initial amount (outside-quota quantity).
-
-    -   Variation in units for specific tariffs, how we standardized them
-
-        -   Within the Smoot_Hawley tariff system, we have identified 59 types of units (based on the description showing up in the original document), we have done the normalization process to narrow down the total number to 27 units keys.
-
-            -   The normalization process contains steps including integrating units that have similar descriptive meanings, integrating units that have different basic units (cents per each, cents per 100 and cents per 1000), and finally transform all dollars based units to cents based units. The units keys system we created for Smoot-Hawley system also applies for the TSUSA system in later rounds.
-
-    -   Tariff intervals
-
-    -   Free list
-
-    -   Staging (starting with Geneva A/B/C)
-
-    -   Ad valorem equivalents (AVE) and trade weighting
-
-        -   See Appedix C of Teti (2020)
-
 ```{r child = 'data.Rmd'}
 ```
 
@@ -84,6 +52,11 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
     -   Specific vs. ad valorem
 
         -   Overlap in ad valorem and specific
+
+        -   Specific vs. ad valorem vs. compound (both specific and ad valorem)
+
+          -   Teti (2020) reports that 8% of U.S. tariffs were specific in 1988-2017
+          -   Teti (2020) also reports: "Mixed tariffs are expressed as either a specific or an ad valorem rate, depending on which generates the most (or sometimes the least) revenue. Then there are technical tariffs that depend on certain product characteristics for example duties might be 8% for butter with fat content between 9-40%. Tariff rate quotas are made up of a low tariff rate on the initial imports (the within-quota quantity) and a very high tariff rate on imports entering above the initial amount (outside-quota quantity).
 
 -   How many lines were simply bound at the Smoot Hawley level
 
