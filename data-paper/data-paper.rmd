@@ -26,13 +26,8 @@ library(english)
 
 # Institutional Context
 
--   Background, general info on GATT
-
-    -   RTAA reductions between Smoot Hawley and 1946
-
-        -   How do the two different documents we have relate to each other
-
-\#`{r child = 'context.Rmd'} #`
+```{r child = 'context.Rmd'}
+```
 
 # Data
 
