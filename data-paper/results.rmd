@@ -1,7 +1,7 @@
 ---
 title: "results"
 author: "Kristy Buzard"
-date: "4/20/2021"
+date: 'last edited `r Sys.Date()` '
 output: pdf_document
 ---
 
@@ -9,13 +9,80 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Line by line
+
+```{r echo=F}
+
+same <- function(b,e){
+  beg <- shortnames %>% select(ends_with(b))
+  end <- shortnames %>% select(ends_with(e))
+  name <- substitute(e)
+  z <- as.name(paste0("same",name))
+  assign(deparse(substitute(z)), shortnames %>%
+           filter(((is.na(end[,3]) == T & is.na(beg[,3]) == T) | beg[,3] == end[,3])
+                & ((is.na(end[,2]) == T & is.na(beg[,2]) == T) | beg[,2] == end[,2])
+                & ((is.na(end[,1]) == T & is.na(beg[,1]) == T) | beg[,1] == end[,1]) )
+         , envir=.GlobalEnv)
+}  
+
+same("SH","DB")
+
+# below we get the sets of lines for each round compared to SH
+same("SH","BG")
+same("SH","Ge")
+same("SH","An")
+same("SH","To")
+same("SH","GA")
+same("SH","GB")
+same("SH","GC")
+same("SH","DA")
+
+nr = nrow(shortnames)
+num_sameSH <- c(nr,nrow(sameBG),nrow(sameGe),nrow(sameAn),
+                nrow(sameTo),nrow(sameGA),nrow(sameGB),
+                nrow(sameGC),nrow(sameDA),nrow(sameDB))
+
+# all the lines that are exactly the same in Smoot Hawley and Before Geneva
+same("SH","BG")
+
+# below we get the sets of lines for each round compared to the previou round
+same("BG","Ge")
+same("Ge","An")
+same("An","To")
+same("To","GA")
+same("GA","GB")
+same("GB","GC")
+same("GC","DA")
+same("DA","DB")
+
+year <- c(1930,1946,1947,1949,1951,1956,1957,1958,1963,1964)
+num_nego <- c(0,nr-nrow(sameBG),nr-nrow(sameGe),nr-nrow(sameAn),nr-nrow(sameTo),
+            nr-nrow(sameGA),nr-nrow(sameGB),nr-nrow(sameGC),nr-nrow(sameDA),nr-nrow(sameDB))
+plot1_data <- data.frame(year,num_nego,num_sameSH)
+
+# Plot
+ggplot() + 
+  geom_line(data = plot1_data, aes(x=year, y= num_sameSH), color = "blue") +
+  annotate("text", label = "No. of lines Still at Smoot-Hawley level", x = 1947, y = 2700, size = 5, colour = "blue") +
+  geom_point(data = plot1_data, aes(x=year, y= num_nego), color = "red") +
+  annotate("text", label = "No. of lines reduced since previous round", x = 1955, y = 50, size = 5, colour = "red") +
+  labs(x="Year", y= NULL) +
+  ggtitle("Tariff Reductions by Number of Tariff Lines") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_x_continuous(breaks = seq(1930, 1965, by = 5)) +
+  scale_y_continuous(breaks = seq(0, 3000, by = 500))
+
+```
+
+The code above produces `r nrow(same)` lines that are the same in Smoot Hawley and Geneva.
+
 ## Basic Facts
 
 ```{r echo=FALSE, warning=FALSE}
-specific_mean <- data.frame(sapply(specific, mean, na.rm=TRUE))
-specific_med <- data.frame(sapply(specific, median, na.rm=TRUE))
-av_mean <- data.frame(sapply(ad_valorem, mean, na.rm=TRUE))
-av_med <- data.frame(sapply(ad_valorem, median, na.rm=TRUE))
+specific_mean <- data.frame(sapply(specific[,6:15], mean, na.rm=TRUE))
+specific_med <- data.frame(sapply(specific[,6:15], median, na.rm=TRUE))
+av_mean <- data.frame(sapply(ad_valorem[,6:15], mean, na.rm=TRUE))
+av_med <- data.frame(sapply(ad_valorem[,6:15], median, na.rm=TRUE))
 
 ```
 
@@ -26,6 +93,10 @@ Things look a bit different for specific tariffs. The mean specific tariff bindi
 About 450 lines have both *ad valorem* and specific components to their tariff in a given round. These lines are included in the previous statistics, but we intend to analyze them separately and provide explanation for which lines get *ad valorem* protection, which lines get specific tariffs, and which get both. We know that the incidence of specific tariffs declines with inflation; this is an important and under-studied aspect of liberalization that we intend to explore.
 
 In terms of the time pattern of liberalization, we can confirm a well-known stylized fact: the largest proportional cuts took place between the Smoot-Hawley legislation and the first round of the GATT in Geneva in 1947: average tariffs, both specific and *ad valorem*, were reduced by about 30%. The pattern of reductions after Geneva 1947 is then somewhat uneven. From Geneva 1947 to Annecy, the reduction in means was much smaller at about 4% with the reduction in medians being about 10%. Annecy saw small tariff cuts on average in large part because this round was focused on accession: countries like the United States that had joined in Geneva only negotiated with those countries that were newly acceding in the Annecy Round.
+
+- Irwin 2017, p 485: Geneva reduced tariffs by 21%
+
+  - p. 486: half of dutiable imports saw reduction, ave. reduction of 35%
 
 In percentage terms, the Torquay round saw cuts about half the size of those in Geneva 1947. Geneva 1956 saw percentage cuts closer to those in Annecy, and for the first time these were phased in--over three years in the case of Geneva 1956. The cuts in tariff averages in the Dillon round were once again about 10%, but the median for specific tariffs did not decrease while the median *ad valorem* tariff decreased by about 15%.
 
@@ -59,7 +130,7 @@ First, remember she's looking mainly at applied tariffs, with some analysis that
 
 1. Columns (9) and (10) of Table 3 examines the probability of occurrence of the sameMFNtariff within all tariff headings (HS4-digits, column 10) and within all tariff chapters (HS2-digits) (column 11). In these types of regressions, the dependent variable equals one if the tariff is the same within the respective product group
 
-2. [this is in 2017] Both the fact that countries have a preference for certain tariff levels, i.e. multiples of five and zero, as well as the fact that countries often set the same tariff for entire tariff headings, yield to a relatively low number of unique tariffs. For HICs it equals on average 567, which is compared to a total number of 5,018 HS6-products relatively low. Further, it decreases signicantly with income resulting in on average only 48 unique tariff levels in LDCs (compare column (11)). Even the country with the largest number of unique tariffs, Liechtenstein, only has 1,710 unique levels; the European Union has the second highest number of unique tariffs (670), the United States place third (662) 
+2. [this is in 2017] Both the fact that countries have a preference for certain tariff levels, i.e. multiples of five and zero, as well as the fact that countries often set the same tariff for entire tariff headings, yield to a relatively low number of unique tariffs. For HICs it equals on average 567, which is compared to a total number of 5,018 HS6-products relatively low. Further, it decreases signicantly with income resulting in on average only 48 unique tariff levels in LDCs (compare column (11)). Even the country with the largest number of unique tariffs, Liechtenstein, only has 1,710 unique levels; the European Union has the second highest number of unique tariffs (670), the United States place third (662) 
 
 3. Changes over time: "The reduction is not due to compositional changes of the sample, neither with respect to countries nor products, as the algorithm used to fill the missing data fully balances the panel"
 
