@@ -1,6 +1,6 @@
 ---
 title: "Context"
-date: "4/22/2021"
+date: 'last edited `r Sys.Date()` '
 output: pdf_document
 fontsize: 12pt
 linestretch: 1.25
@@ -12,43 +12,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In this paper, we are examining the extended episode of tariff liberalization that took place in the post-World War II period primarily from the point of view of the United States of America. The U.S. was arguably *the* driving force behind the GATT, and it was responding to a very specific sequence of events both at home and on the world stage.
 
-In the midst of the Great Depression, U.S. President Herbert Hoover's proposal to increase tariffs to protect the agricultural sector turned into the large and general upward revision of the U.S. tariff schedule in the Tariff Act of 1930, known as the Smoot Hawley Tariff.
+## The Smoot-Hawley Tariffs of 1930 and the Reciprocal Trade Agreements Act of 1934
 
--   Hoover argued that the Act's "revitalized flexible tariff provision" would resolve the objections to higher tariffs by creating a process for their reduction
+In the midst of the Great Depression, U.S. President Herbert Hoover's proposal to increase tariffs to protect the agricultural sector turned into the large and general upward revision of the U.S. tariff schedule in the Tariff Act of 1930, known as the Smoot-Hawley Tariff. President Hoover intended that tariffs would be reduced under the flexible tariff provisions of Smoot-Hawley. However, regret at the economic damage wrought by the tariff increases as well as frustration with the cumbersome and time consuming process for reducing those tariffs, led to calls for a change (Dobson 1976).
 
-    -   But the process was cumbersome and time-consuming, led to demand for RTAA
+That change came in the form of the Reciprocal Trade Agreements Act of 1934 (RTAA). Framed as an amendment to the Smoot-Hawley Act---as would all tariff bills be until 1962--the RTAA authorized the President of the United States to change tariff rates by as much as 50% with only the need to notify the public of his intentions. With this delegation of tariff setting powers to the president, the Smoot-Hawley act was Congress's last general revision of the U.S. tariff.
 
-### RTAA
+Twenty eight country subcommittees were created to formulate tariff cut proposals based on the principal supplier rule. One of the top three suppliers of a commodity would be offered a tariff cut in return for reciprocal liberalization for U.S. goods. Then---somewhat surprisingly in retrospect---the unconditional most-favored-nation principle would be applied to any tariff concession so that it was automatically and freely extended to all other suppliers, with the exception of a few communist countries (Dobson 1976).
 
--   Smoot Hawley was the last general congressional revision of the tariff
+## The General Agreement on Tariffs and Trade (GATT)
 
--   Reciprocal Trade Agreements Act of 1934 (and all the others until 1962) was framed as an amendment to the Smoot-Hawley Act
+By the mid 1940's, the United States had negotiated bilateral trade agreements with more than twenty countries and wished to continue the reciprocal trade agreements program. Because it had already made the maximum allowable reduction---50 percent---under the RTAA for about 42 percent of dutiable imports (also in Irwin 2017), President Truman asked for additional authority to cut tariffs. In the Trade Agreements Extension Act of 1945, Congress gave the president the authority to reduce any tariff by 50 percent of the January 1, 1945 rate. Irwin (2017) argues that this was the "high point of legislative support for the trade agreements program," facilitated in part because supply shortages---not import competition---were the focal issue in the midst of World War II.
 
-    -   Details at <https://github.com/kbuzard-SU/gradualism/discussions/82>
+With this negotiating authority in hand, President Truman's administration organized multilateral trade negotiations
 
--   decided whom to offer a cut based the the principal supplier rule
-
-    -   Through the operation of the unconditional most-favored-nation principle, the concession would be automatically and freely extended to all other nonnegotiating suppliers.
-
-        -   The bilateral negotiations were normally carried out with one of the top three suppliers of any commodity.
-
--   28 country subcommittees were formed
-
-### The Trade Agreements Extension Act of 1945
-
--   The administration wished to continue FTA negotiations, so President Truman sought additional bargaining power.
-
-    -   Congress responded with an extension of his negotiating authority, allowing him to reduce any tariff rate by 50 percent of the rate existing on January 1, 1945
-
-        -   1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 42 percent of the dutiable imports (also in Irwin 2017)
-        -   To provide U.S. negotiators with an indication of what the conditions were, the Commission published United States Import Duties, June 1946, a new compilation showing the current rates of duty on all U.S. imports, including the changes that had resulted from the President's delegated authority to negotiate reductions
+-   To provide U.S. negotiators with an indication of what the conditions were, the Commission published United States Import Duties, June 1946, a new compilation showing the current rates of duty on all U.S. imports, including the changes that had resulted from the President's delegated authority to negotiate reductions
 
     -   required President to give public notice of his intention to negotiate a trade agreement and to "seek information and advice"
 
         -   Then he could run individual rates up or down by as much as 50 percent Although the Geneva talks were ostensibly multilateral, the procedure differed only slightly from the one employed during the bilateral trade negotiations from 1934 through 1945.
         -   A failed amendment would have required Congress to ratify any trade agreement (Irwin 2017)
-
-    -   Irwin 2017: this was the high point of legislative support for the trade agreements program, against the backdrop of the war where supply shortages were the main issue
 
 -   The Commission provided U.S. negotiators with lists of articles where tariff reduction should be sought. [RSB, Ch. 7]
 
@@ -84,7 +67,7 @@ In the midst of the Great Depression, U.S. President Herbert Hoover's proposal t
 
 -   Irwin 2017 lists the most sensitive import interests (p.493-494) as glassware, pottery and tiles, textiles and apparel, bicycles, watches, paper and pulp, cutlery, coal, ball bearings, copper, lead and zinc, milk, mushrooms, umbrellas and wool.
 
-### The Trade Agreements Extension Act of 1948
+## The Trade Agreements Extension Act of 1948
 
 -   Added peril point requirement
 
@@ -99,13 +82,13 @@ In the midst of the Great Depression, U.S. President Herbert Hoover's proposal t
 
 -   The so-called Dillon Round at Geneva in 1961 and 1962 had only marginally reduced trade barriers. This disappointing result stemmed in part from the limited negotiating authority of the United States.
 
-### Annecy
+## Annecy
 
 -   The special relationship between Geneve47 and Annecy, that is some round was designed to mainly absorb more participant countries
 
     -   11 new contracting parties (Irwin 2017 p. 506); existing didn't negotiate with each other, but they did negotiate with the new adherents
 
-### The Trade Agreements Extension Act of 1949
+## The Trade Agreements Extension Act of 1949
 
 -   gave the President an additional 2 years of bargaining authority
 
@@ -117,7 +100,7 @@ In the midst of the Great Depression, U.S. President Herbert Hoover's proposal t
 
         -   34 contracting parties accounting for 80% of world trade by 1952
 
-### The Trade Agreements Extension Act of 1951
+## The Trade Agreements Extension Act of 1951
 
 -   restored the Tariff Commission's responsibility to find peril points
 
@@ -126,13 +109,13 @@ In the midst of the Great Depression, U.S. President Herbert Hoover's proposal t
 
 -   At the fourth round of negotiations at Geneva in the mid-1950's, the U.S. representatives scrupulously avoided making any concessions below the peril points, but for the Dillon Round of negotiations, which took place in 1960-62, President Eisenhower authorized tariff reductions below the peril point on several commodities in order to obtain desirable concessions, particularly from the Common Market.
 
-### Tariff Simplification Act of 1954 (Public Law No. 83-768)
+## Tariff Simplification Act of 1954 (Public Law No. 83-768)
 
 The Tariff Simplification Act directed the Commission to compile a revision of the tariff under the following guidelines: 1. Establish schedules of tariff classifications which would be logical in arrangement and terminology and adapted to the changes that had occurred since 1930 in the character and importance of articles produced in and imported into the United States and in the market in which they were sold. 2. Eliminate anomalies and illogical results in the classification of articles. 3. Simplify the determination and application of tariff classifications. [RSB, Ch. 7]
 
 Tariff Classification Study (Nov. 15, 1960) comprised seven volumes and included the draft tariff itself, along with explanations and the record of proceedings. [RSB, Ch. 7] - Seven supplemental reports were issued through 1963. [RSB, Ch. 7]
 
-### 1950s Tariff Acts
+## 1950s Tariff Acts
 
 -   One year renewal for Eisenhower in 1953
 
@@ -152,7 +135,7 @@ Tariff Classification Study (Nov. 15, 1960) comprised seven volumes and included
 
         -   4% weighted average cut (Irwin 2017 p. 521)
 
-### The Trade Expansion Act of 1962
+## The Trade Expansion Act of 1962
 
 -   First trade act since Smoot Hawley that stood on its own (not framed as a revision of Smoot Hawley)
 

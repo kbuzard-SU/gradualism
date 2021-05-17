@@ -332,6 +332,7 @@ shortnames <- data_set %>%
           Un_GB = Units_Geneva56_B, Un_GC = Units_Geneva56_C, Un_DA = Units_Dillon_A,
           Un_DB = Units_Dillon_B)
 
+rm(f_replace)
 
 
 ##############################################################                 ############################################################## 
