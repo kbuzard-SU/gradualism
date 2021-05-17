@@ -1,7 +1,7 @@
 ---
 title: "GATT Analysis"
 author: "Kristy Buzard"
-date: "5/11/2021"
+date: 'last edited `r Sys.Date()` '
 output: pdf_document
 toc: yes
 number_sections: yes
@@ -525,59 +525,85 @@ print("Increased tariff from Geneva56_C to Dillon_B")
 print.data.frame(increaseD,row.names = FALSE, digits = 2)
 ```
 
-# No change from Smoot Hawley to Dillon B
+# No changes
+
+## No change from Smoot Hawley to Dillon B
 
 ```{r echo=TRUE}
-sm_db <- data_set %>%
-        mutate(av_pc =((Ad_Valorem_SH - Ad_Valorem_Dillon_B)/Ad_Valorem_SH)*100,sp_pc
-        =((Specific_SH - Specific_Dillon_B)/Specific_SH)*100)
 
-sm_db2 <- subset(sm_db,is.na(sp_pc) | sp_pc==0) %>% subset(is.na(av_pc) | av_pc==0)
+same <- function(b,e){
+  beg <- shortnames %>% select(ends_with(b))
+  end <- shortnames %>% select(ends_with(e))
+  name <- substitute(e)
+  z <- as.name(paste0("same",name))
+  assign(deparse(substitute(z)), shortnames %>%
+           filter(((is.na(end[,3]) == T & is.na(beg[,3]) == T) | beg[,3] == end[,3])
+                & ((is.na(end[,2]) == T & is.na(beg[,2]) == T) | beg[,2] == end[,2])
+                & ((is.na(end[,1]) == T & is.na(beg[,1]) == T) | beg[,1] == end[,1]) )
+         , envir=.GlobalEnv)
+}  
+
+same("SH","DB")
+
+# below we get the sets of lines for each round compared to SH
+same("SH","BG")
+same("SH","Ge")
+same("SH","An")
+same("SH","To")
+same("SH","GA")
+same("SH","GB")
+same("SH","GC")
+same("SH","DA")
+
+nr = nrow(shortnames)
+num_sameSH <- c(nr,nrow(sameBG),nrow(sameGe),nrow(sameAn),
+                nrow(sameTo),nrow(sameGA),nrow(sameGB),
+                nrow(sameGC),nrow(sameDA),nrow(sameDB))
+
 ```
 
-The code above produces `r nrow(sm_db2)` lines that are the same in Smoot Hawley and Dillon B (i.e. that don't change at all through these five rounds of negotiations--we assume. We still need a check for rates going up.)
+The code above produces `r nrow(sameDB)` lines that are the same in Smoot-Hawley and Dillon B (i.e. that don't change at all through these five rounds of negotiations--we assume. We still need a check for rates going up.)
 
 ## No change from Smoot Hawley to Geneva
 
 ```{r echo=TRUE}
-# we removed the "before" variables once we verified that they were exactly the same as Smoot Hawley
+# we removed the "1946_before" variables once we verified that they were exactly the same as Smoot Hawley
 # all the lines that are exactly the same in Smoot Hawley and 1946_before
 #same <- shortnames %>%
 #         filter( ((is.na(Sp_SH) == is.na(Sp_B) & is.na(Sp_SH)) | Sp_SH == Sp_B) 
-#                  & ((is.na(AV_SH) == is.na(AV_B) & is.na(AV_SH)) | AV_SH == AV_B)
-#                  & ((is.na(Un_SH) == is.na(Un_B) & is.na(Un_SH)) | Un_SH == Un_B))
+#                & ((is.na(AV_SH) == is.na(AV_B) & is.na(AV_SH)) | AV_SH == AV_B)
+#                & ((is.na(Un_SH) == is.na(Un_B) & is.na(Un_SH)) | Un_SH == Un_B))
 
 
-# all the lines that are exactly the same in Smoot Hawley and Geneva
-same <- data_set %>%
-         filter( ((is.na(Specific_SH) == is.na(Specific_Geneva) & is.na(Specific_SH)) | Specific_SH == Specific_Geneva) 
-                  & ((is.na(Ad_Valorem_SH) == is.na(Ad_Valorem_Geneva) & is.na(Ad_Valorem_SH)) | Ad_Valorem_SH == Ad_Valorem_Geneva)
-                  & ((is.na(Units_SH) == is.na(Units_Geneva) & is.na(Units_SH)) | Units_SH == Units_Geneva))
+# all the lines that are exactly the same in Smoot Hawley and Before Geneva
+same("SH","BG")
 
-# supposed to be all the lines that have any difference, but misses lines that switch
-# between ad valorem and specific. Almost certainly is because of treatment of NAs
-diff <- data_set %>%
-         filter( Specific_SH != Specific_Geneva | Ad_Valorem_SH != Ad_Valorem_Geneva |
-                  Units_SH != Units_Geneva )
+# below we get the sets of lines for each round compared to the previou round
+same("BG","Ge")
+same("Ge","An")
+same("An","To")
+same("To","GA")
+same("GA","GB")
+same("GB","GC")
+same("GC","DA")
+same("DA","DB")
 
-# lines that are NOT in "same" 
-t <- setdiff(data_set$id,same$id)
-same_removed <- data_set[t,]
+year <- c(1930,1946,1947,1949,1951,1956,1957,1958,1963,1964)
+num_nego <- c(0,nr-nrow(sameBG),nr-nrow(sameGe),nr-nrow(sameAn),nr-nrow(sameTo),
+            nr-nrow(sameGA),nr-nrow(sameGB),nr-nrow(sameGC),nr-nrow(sameDA),nr-nrow(sameDB))
+plot1_data <- data.frame(year,num_nego,num_sameSH)
 
-# lines that are NOT in either "same" or "diff"
-t3 <- setdiff(same_removed$id,diff$id)
-samediff_removed <- data_set[t3,]
-
-# both these methods miss out on the ones that are not equal because one is an NA
-units_diff <- data_set %>%
-         filter( (Units_SH != Units_Geneva) )
-
-units_diff2 <- data_set[which(data_set$Units_SH != data_set$Units_Geneva), ]
-
-# tbl %>% rowwise(id) %>% mutate(s = sum(c_across(x:w)) %>% ungroup()
-# all(is.na(x))
-# all(is.na(c_across(stuff)))
-
+# Plot
+ggplot() + 
+  geom_line(data = plot1_data, aes(x=year, y= num_sameSH), color = "blue") +
+  annotate("text", label = "No. of lines Still at Smoot-Hawley level", x = 1947, y = 2700, size = 5, colour = "blue") +
+  geom_point(data = plot1_data, aes(x=year, y= num_nego), color = "red") +
+  annotate("text", label = "No. of lines reduced since previous round", x = 1955, y = 50, size = 5, colour = "red") +
+  labs(x="Year", y= NULL) +
+  ggtitle("Tariff Reductions by Number of Tariff Lines") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_x_continuous(breaks = seq(1930, 1965, by = 5)) +
+  scale_y_continuous(breaks = seq(0, 3000, by = 500))
 
 ```
 
