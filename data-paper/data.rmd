@@ -25,6 +25,8 @@ In standardizing the tariff lines across rounds, we end up with `r nrow(data_set
 
 We have been able to locate the original documents that contain the consolidated GATT tariff schedules at the end of each of the eight round of negotiations. The GATT tariff schedule data is collected from the United Nation Treaty Collection (UNTC) website, which offers detailed tariff schedule of every country of each round of GATT negotiation from the first round of Geneva to the last Uruguay round.
 
+We add to this the tariff rates from the original text of the Smoot-Hawley Act as well as those from *United States Import Duties (June 1946)*, which is a list of all the rates of duty as of that time. It had been compiled by the forerunner to the US International Trade Commission in order to give U.S. negotiators the correct baseline from which to make concessions in Geneva for the first round of the GATT.
+
 We also collected data and background documents to support the process of aligning tariff lines across rounds from official U.S. government documents, some of which are publicly available and a few that we access using an institutional subscription to HathiTrust Digital Library (https://www.hathitrust.org/). Details for all data sources are in the [Data Appendix](#dataappendix).
 
 ## Digitization process

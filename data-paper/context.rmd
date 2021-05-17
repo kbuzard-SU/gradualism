@@ -20,274 +20,60 @@ That change came in the form of the Reciprocal Trade Agreements Act of 1934 (RTA
 
 Twenty eight country subcommittees were created to formulate tariff cut proposals based on the principal supplier rule. One of the top three suppliers of a commodity would be offered a tariff cut in return for reciprocal liberalization for U.S. goods. Then---somewhat surprisingly in retrospect---the unconditional most-favored-nation principle would be applied to any tariff concession so that it was automatically and freely extended to all other suppliers, with the exception of a few communist countries (Dobson 1976).
 
-## The General Agreement on Tariffs and Trade (GATT)
+## The General Agreement on Tariffs and Trade (GATT) / Geneva 1947
 
 By the mid 1940's, the United States had negotiated bilateral trade agreements with more than twenty countries and wished to continue the reciprocal trade agreements program. Because it had already made the maximum allowable reduction---50 percent---under the RTAA for about 42 percent of dutiable imports (also in Irwin 2017), President Truman asked for additional authority to cut tariffs. In the Trade Agreements Extension Act of 1945, Congress gave the president the authority to reduce any tariff by 50 percent of the January 1, 1945 rate. Irwin (2017) argues that this was the "high point of legislative support for the trade agreements program," facilitated in part because supply shortages---not import competition---were the focal issue in the midst of World War II.
 
-With this negotiating authority in hand, President Truman's administration organized multilateral trade negotiations
+With this negotiating authority in hand, President Truman's administration instigated multilateral trade negotiations in Geneva, Switzerland starting in April 1947. The talks lasted until October 19, 1947 and produced the General Agreement on Tariffs and Trade (GATT).
 
--   To provide U.S. negotiators with an indication of what the conditions were, the Commission published United States Import Duties, June 1946, a new compilation showing the current rates of duty on all U.S. imports, including the changes that had resulted from the President's delegated authority to negotiate reductions
+The negotiations in Geneva were multilateral in principle, but in fact the way they were carried out was similar to the way the U.S. had operated since 1934 under the RTAA: a team from each country negotiated bilaterally with the representatives of several other countries on a product-by-product basis using the principal supplier rule (Irwin 2017). Once these bilateral talks were complete, each country created a single, consolidated schedule of tariffs that would be granted to all other contracting parties on a most-favored-nation basis. These schedules were annexed to the GATT.
 
-    -   required President to give public notice of his intention to negotiate a trade agreement and to "seek information and advice"
+As U.S. legislation only required the president to give public notice of his intention to negotiate a trade agreement and then to "seek information and advice," the United States made its concessions effective as of January 1948 by executive order (Dobson 1976). The GATT was purely a trade agreement, not a treaty or an organization, and thus instead of members it has "contracting parties" (Irwin 2017).
 
-        -   Then he could run individual rates up or down by as much as 50 percent Although the Geneva talks were ostensibly multilateral, the procedure differed only slightly from the one employed during the bilateral trade negotiations from 1934 through 1945.
-        -   A failed amendment would have required Congress to ratify any trade agreement (Irwin 2017)
+## The Annecy Round
 
--   The Commission provided U.S. negotiators with lists of articles where tariff reduction should be sought. [RSB, Ch. 7]
+The second round of GATT negotiations in April to October 1949---known as the Annecy Round---was decidedly different from the first. Most notably, this round was focused on the accession of eleven new contracting parties. The parties to the original GATT only negotiated with the new members and not with each other (Irwin 2017).
 
-    -   The Commission prepared reports containing some 1,300 line items "on which the United States was prepared to offer concessions" [RSB, Ch. 7]
+This is not the only reason, however, that the U.S. made far fewer concessions than in the Geneva Round. As its overseas expenditures related to the war had led to a difficult balance of payments situation, there was more political opposition by the time the president's negotiating authority had to be renewed in 1948. For the first time, Congress instituted the 'peril point' procedure, by which trade negotiations had to be preceded by an investigation into the potential harms to industry of trade liberalization (Dobson 1976).
 
--   A team from each country conducted the day-to-day bargaining with representatives of another nation on a bilateral basis (Irwin 2017: round opened in April 1947 in Geneva)
+## The Torquay Round
 
-    -   Irwin 2017: horizontal cuts were not allowed by the legislation, had to be product-by-product
-    -   Zinc, woolen goods and cotton textiles expected in particular to push back (Irwin 2017, p. 478)
+U.S. negotiators were able to work with less constraints in the third GATT round at Torquay from late 1950 to the spring of 1951, as The Trade Agreements Extension Act of 1949 extended negotiating authority for two years and also revoked the peril point rules. Seven new contracting parties were added---including West Germany---and concessions were exchanged among both the old and new adherents. When the Torquay agreement went into effect, the GATT had 34 contracting parties who accounted for about 80% of world trade (Irwin 2017).
 
--   Principal supplier rule was followed
+## The Second Geneva Round ("Geneva 1956")
 
--   Once the tariff concessions had been negotiated at the bilateral, level, each country consolidated the concessions it had agreed upon into a single schedule of concessions which was then annexed to, and became a part of, the General Agreement on Tariffs and Trade.
+Congress re-implemented the peril point provision in 1951 and it was not revoked until 1962 so that both Geneva 1956 and the Dillon Rounds were negotiated under the peril point constraint, reducing the flexibility of U.S. trade negotiators. The 1955 Extension of the RTAA allowed only a 15% reduction in tariffs---except for very high tariffs that could be reduced to 50%---and required that the reductions be phased-in in 3 installments. This was the first time under the RTAA that tariff cuts were phased in (Irwin 2017). Geneva 1956 notably added Japan as a contracting party.
 
-    -   The negotiators at Geneva worked out approximately 123 bilateral agreements.
-    -   The negotiation of these concessions required 7 months for completion, until Oct. 19, 1947 (Irwin p. 482)
+## The Dillon Round
 
--   As of January 1949, rates of duty applicable to 88 percent of dutiable imports into the United States had been reduced from the Smoot-Hawley levels as a result of the trade-agreement concessions negotiated since 1934, and an additional 6 percent were bound against increase.
+The Dillon Round took place from 1960 to 1962 and differed from the second Geneva round in that President Eisenhower occasionally allowed the negotiators to make tariff cuts below the peril point levels in order to get key concessions. These tariff cuts had to be justified to Congress, but did not threaten implementation of the agreement via executive order.
 
-    -   Only the remaining 6 percent had not been subjected to either a reduction in rate or a binding restriction
+The 1958 renewal of the RTAA again granted limited negotiating authority: it allowed 20% reductions in tariffs with larger reductions for tariffs that remained about 50%. Negotiating authority under this renewal lasted for four years; the Dillon Round ended in June 1962 just before time ran out.
 
-    -   Irwin 2017, p 485: Geneva reduced tariffs by 21%
+## The Trade Expansion Act of 1962 and the Kennedy Round
 
-        -   p\. 486: half of dutiable imports saw reduction, ave. reduction of 35%
+The Trade Expansion Act of 1962 was the first trade bill since 1930 to stand on its own instead of being cast as a revision of the Smoot-Hawley Act. It authorized President Kennedy's administration to reduce tariff rates by 50 percent of the July 1, 1962 rate, except for a few excluded products and products that already had a rate of 5 percent *ad valorem* or less. For the latter, the tariff could be removed entirely. It also removed the peril point requirement.
 
-            -   Effective Jan 1 1948 by exec order
+Taken together, this meant that U.S. trade negotiators would have far more flexibility in the Kennedy Round than in any round since Geneva 1947. Another difference between Kennedy and preceding rounds is that it would be negotiated using a new tariff classification system. The Tariff Classification Act of 1962 replaced the Smoot-Hawley paragraph system with the Tariff System of the United States (TSUS), effective August 31, 1963 (Dobson 1976). This was the culmination of a process that started with the Trade Agreement Extension Act of 1953, which directed the Tariff Commission (the predecessor to the USITC) to make a proposal to revise and consolidate U.S. trade laws after producing a comprehensive study of those laws.
 
-    -   The final product of the 1947 negotiations covered more than 45,000 items in the tariff schedules of the GATT member countries [RSB, Ch. 7]
+In contrast to the Smoot-Hawley system, the TSUS was hierarchical. It was arranged into eight *sectors* in contrast to Smoot-Hawley's fifteen *schedules*, moving from unprocessed goods to finished goods and then broken into 5-digit codes. The Tariff Schedules of the Unites States Annotated (TSUSA) added two further digits as statistical---as opposed to legal---categories. That is, tariffs did not vary below the five-digit level; rather, the additional digits applied to the collection of import data. The TSUS provided descriptions of articles by name, seeking to avoid the more general descriptions found in the Smoot-Hawley paragraphs, such as by material of manufacture (Rosengarten et. al 2017).
 
-    -   GATT is a trade agreement put into effect by executive order (not a treaty or an organization). "Contracting parties" instead of members (Irwin 2017 p. 484)
+With the new tariff nomenclature in place, in October 1963 President Kennedy asked the Tariff Commission to provide a study of the possible economic effects of liberalizing nearly every article in the new TSUS in a new round of GATT negotiations. Talks got underway in May 1964 for what became known as the Kennedy Round and ran until June 30, 1967, the day that U.S. negotiating authority under the Trade Expansion Act expired (Dobson 1976).
 
-    -   *Executive Order No. 9832 also required that the Commission produce a yearly report documenting the changes that had occurred as a result of reciprocity activities, including a summary and analysis of concessions made by and to the United States. These reports began in 1948.* [RSB, Ch. 7]
+The Kennedy round began with 46 countries participating and ended with 70, although developing countries did not negotiate (Irwin 2017). For the first time, the major trading countries made across-the-board cuts instead of negotiating item-by-item, which resulted in it being "one of the most comprehensive rounds of international trade negotiations ever held" (Dobson 1976) up to that time. Cuts were to be staged over five years from 1968 to 1972 and covered most items, although separate provisions for trade in textiles had been carved out in the 1962 Long Term Arrangement Regarding International Trade in Cotton Textiles (LTA).
 
--   Irwin 2017 lists the most sensitive import interests (p.493-494) as glassware, pottery and tiles, textiles and apparel, bicycles, watches, paper and pulp, cutlery, coal, ball bearings, copper, lead and zinc, milk, mushrooms, umbrellas and wool.
+## The Tokyo Round
 
-## The Trade Agreements Extension Act of 1948
+Negotiating authority had lapsed in 1967 (Irwin 2017), so President Nixon was without authority to negotiate when the Tokyo Round began in September 1973. The Trade Act of 1974 granted five years of authority to negotiate tariff reductions of as much as 60 percent and to reduce to zero any tariff whose rate was less than five percent on January 1, 1975.\^[Note that by the time the act passed, Gerald R Ford had become president.]
 
--   Added peril point requirement
+The Trade Act of 1974 authorized the president to grant most-favored-nation status to countries who were not already receiving it and also instituted the fast track procedure. Fast track required Congress to give an up/down vote on legislation implementing non-tariff provisions, which still could be instituted by executive order. After the non-tariff provisions of the Kennedy Round were not able to be passed through Congress, the countries affected were loathe to negotiate with the U.S. without such a procedure in place.
 
-    -   Under the 1948 act, an investigation specifically addressed to the potential of injury preceded the negotiation of the trade agreement.
+Tariffs were again reduced by formula instead of item-by-item, and talks concluded in April 1979. During the course of the negotiations, the LTA had been replaced by the Multifiber Arrangement (MFA) in 1974. A second MFA was concluded in 1977.
 
-        -   Revoked in 1949 and revived in 1951
-        -   peril point was included in each subsequent trade agreements extension act until 1962, when the Tariff Commission was directed to advise the President of the probable economic effect of tariff modifications without reference to a peril point.
+## The Uruguay Round
 
--   the United States began suffering an unfavorable balance of payments as a result of its heavy investments and expenditures overseas and the effects of an overvalued exchange rate for the dollar
+Amidst strong protectionist pressures, the Trade and Tariff Act of 1984 withheld negotiating authority from President Regan. The Uruguay Round therefore began in 1986 without the U.S having the authority to negotiate. However, the Omnibus Trade and Competitiveness Act of 1988 guaranteed fast track procedures and provided authority to reduce tariffs by up to 50 percent within three years with a two-year extension unless Congress objected (Irwin 2017).\^[Several bills to object to the two-year extension were defeated in in 1991 (Irwin 2017).]
 
--   In the fall of 1948 the Tariff Commission received a list of approximately 400 items in the U.S. tariff schedules that the President proposed to offer at the next round of GATT negotiations
+The 1988 act also replaced the TSUS, effective January 1, 1989, with a new tariff system. The Harmonized Tariff Schedule (HTS) was the U.S.'s implementation of the new international Harmonized System (HS). Although the Uruguay Round was underway, the tariff that were in place at the time had to be aligned with the new system, requiring extensive notifications and negotiations with GATT partners since some rate changes were necessary to complete the alignment (Rosengarten et. al 2017).
 
--   The so-called Dillon Round at Geneva in 1961 and 1962 had only marginally reduced trade barriers. This disappointing result stemmed in part from the limited negotiating authority of the United States.
-
-## Annecy
-
--   The special relationship between Geneve47 and Annecy, that is some round was designed to mainly absorb more participant countries
-
-    -   11 new contracting parties (Irwin 2017 p. 506); existing didn't negotiate with each other, but they did negotiate with the new adherents
-
-## The Trade Agreements Extension Act of 1949
-
--   gave the President an additional 2 years of bargaining authority
-
--   repealed the peril-point investigations
-
--   Truman administration was able to participate in the third round of GATT negotiations at Torquay without the concern over peril points that had characterized its activities at the previous round of negotiations
-
-    -   exchange of concessions among old and new, 7 new adherents (West Germany most important) (Irwin 2017 p. 506)
-
-        -   34 contracting parties accounting for 80% of world trade by 1952
-
-## The Trade Agreements Extension Act of 1951
-
--   restored the Tariff Commission's responsibility to find peril points
-
-    -   In practice, the peril points had the effect of restricting the flexibility of U.S. negotiators at international trade conferences
-    -   The Commission was not permitted to weigh the general economic advantages that the reduction of rates on a particular commodity might bring in other sectors; it could consider only how the reduced rates would affect the U.S. industry specifically engaged in producing the commodity concerned.
-
--   At the fourth round of negotiations at Geneva in the mid-1950's, the U.S. representatives scrupulously avoided making any concessions below the peril points, but for the Dillon Round of negotiations, which took place in 1960-62, President Eisenhower authorized tariff reductions below the peril point on several commodities in order to obtain desirable concessions, particularly from the Common Market.
-
-## Tariff Simplification Act of 1954 (Public Law No. 83-768)
-
-The Tariff Simplification Act directed the Commission to compile a revision of the tariff under the following guidelines: 1. Establish schedules of tariff classifications which would be logical in arrangement and terminology and adapted to the changes that had occurred since 1930 in the character and importance of articles produced in and imported into the United States and in the market in which they were sold. 2. Eliminate anomalies and illogical results in the classification of articles. 3. Simplify the determination and application of tariff classifications. [RSB, Ch. 7]
-
-Tariff Classification Study (Nov. 15, 1960) comprised seven volumes and included the draft tariff itself, along with explanations and the record of proceedings. [RSB, Ch. 7] - Seven supplemental reports were issued through 1963. [RSB, Ch. 7]
-
-## 1950s Tariff Acts
-
--   One year renewal for Eisenhower in 1953
-
-<!-- -->
-
--   Again in 1954, one year renewal (Irwin 2017, p. 513-4)
-
--   1955: introduced phase in, with 15% reduction allowed in 3 5% installments. Also could bring down very high tariffs to 50% (Irwin 2017 p. 515)
-
-    -   Geneva 1955-56 Round: added Japan
-
--   1958 renewal: 4 years, 20%, larger reductions for tariffs above 50% allowed
-
-    -   Dillon 1961-62: still had peril points, required to negotiate on a product-by-product basis (Irwin 2017 p. 521)
-
-        -   Ended June 1962 before just negotiating authority authority expired
-
-        -   4% weighted average cut (Irwin 2017 p. 521)
-
-## The Trade Expansion Act of 1962
-
--   First trade act since Smoot Hawley that stood on its own (not framed as a revision of Smoot Hawley)
-
--   The law provided for removing the duty on articles for which the July 1, 1962, rate was 5 percent ad valorem or less, and reducing the rates on other articles by 50 percent of the July 1, 1962, rate.
-
-    -   Reserved some articles from negotiations
-
--   Seeds were in The Trade Agreements Extension Act of 1953, which called for Randall Commission to conduct a thorough review of the entire trade situation
-
-    -   Congress directed that the Tariff Commission make a comprehensive study of the laws relating to the tariff status of imported articles and to submit to the President and the House Ways and Means and Senate Finance Committees a revision and consolidation of those laws
-
-        -   May 1962, Congress authorized the President to implement the resulting rate schedules with the passage of the Tariff Classification Act.
-
-            -   The Tariff Commission then published in 1963 (effective August 31, 1963) the Tariff Schedules of the United States (TSUS), which by law are the official rate schedules.
-            -   The TSUS attempted to provide descriptions of articles by name, in categories designating one or a group of related products, and sought to avoid more general descriptions of goods, such as by material of manufacture. [RSB, Ch. 7]
-
-        -   The eight schedules of product categories were set forth in a hierarchical arrangement, arranged by sectors from basic products to finished goods and broken into 5-digit primary or legal provisions and their duty rates. [RSB, Ch. 7]
-
-            -   The annotated version of the tariff incorporated further product detail by adding 2 more digits to designate statistical categories, designed to gather data on particular goods. [RSB, Ch. 7]
-            -   Combining the tariff's legal provisions with import statistical requirements in a single integrated nomenclature generally assured greater accuracy in reporting and publishing data. [RSB, Ch. 7]
-            -   To clarify the product scope of tariff provisions and to ensure that every imported good subject to the tariff was classified in one place and one place only, special legal rules, known as General or Schedule Headnotes, were inserted at appropriate places in the tariff. [RSB, Ch. 7]
-            -   Commission publishes the changes periodically in the Tariff Schedules of the United States Annotated (TSUSA)
-
-        -   On October 22, 1963, President Kennedy submitted a list that included nearly every one of the articles enumerated in the TSUS. The Tariff Commission had to conduct a full-scale review and make its assessments of the probable economic effect of what amounted to a general rate revision.
-
--   Kennedy Round negotiations started in May 1964
-
-    -   Sections 211 and 213 of the 1962 act had assigned to the Tariff Commission a number of specific duties in anticipation of these negotiations, including the identification of all commodities fitting the criteria listed in the law for which the duties could be reduced more than 50 percent or to zero, as well as the items to be withheld from the negotiation process
-
-    -   The talks continued until the very day that the U.S. negotiating authority expired-June 30, 1967. (THREE YEARS!)
-
-    -   The Kennedy Round was one of the most comprehensive rounds of international trade negotiations ever held.
-
-        -   46 countries (Irwin 2017 p 528); 70 contracting parties by the end of the round; developing countries did not negotiate
-
-    -   The major trading countries made across-the-board cuts ranging from 36 to 39 percent of previous tariff rate levels on most products
-
-        -   had always been technically possible to conduct the negotiations in this manner under previous trade legislation, this was the first time that it had been seriously considered. The proposal was designed to expedite the negotiations.
-        -   53 participating countries
-
-    -   Big failure: agricultural trade (EU import barriers remained intact)
-
-    -   The final agreements called for a reduction in rates on most items, and the Tariff Commission was responsible for calculating the appropriate intermediate levels of the duties for the five annual stages in which the U.S. concessions were to be implemented
-
-        -   largest cuts in machinery, transportation equipment, chemicals; then steel and iron
-
-        -   Again, effective by executive order, staging started in 1968 and ran through 1972 (Irwin 2017, p529)
-
-    -   The Commission had begun using automated data processing in its operation in the late 1960's, which increased its staff's productivity.
-
-## Nixon
-
--   Containerization started to have an impact in the early 1970s (introduced in mid 1960s) (Irwin 2017 p535)
-
--   Footwear vs. textiles as similar in terms of import competition, but footwear didn't get the protection textiles did because fewer workers and less regionally concentrated (Irwin 2017 p. 536)
-
--   1971 report said mounting import protection pressures from textiles, clothing, shoes, steel, elecronic products, automobiles (Irwin 2017 p539)
-
--   Multifiber Arrangement (MFA) created in 1974, after Long Term Arrangement on textiles
-
-### The Trade Act of 1974
-
--   President lacked negotiating authority when Tokyo Round started in September 1973
-
-    -   it had lapsed in 1967 (Irwin 2017 p549)
-
--   1974 act grants the President a 5-year negotiating authority, allowing him to reduce by as much as 60 percent any tariff rate over 5 percent in force on January 1, 1975, and also allows him to remove the duty on any article for which the existing rate is 5 percent or less.
-
-    -   also residual 2 years of authority after first five expired
-
-    -   the President was authorized to extend most-favored-nation (MFN) treatment to countries not then receiving it.
-
-        -   The only countries not enjoying these low, nondiscriminatory tariff rates were the Communist nations, except Yugoslavia and Poland.
-
-    -   Included fast track after Kennedy Round concessions on non-tariff issues were not implemented (Irwin 2017 551)--EEC reluctant to negotiate without fast track
-
-    -   By the time it took effect Ford had taken over after Watergate (Irwin 2017 p.551). Signed the act in January 1975
-
--   "Tariff policy has seldom remained static for long, nor has it ever been predictable"
-
-## Tokyo Round
-
--   Tariffs were reduced by formula as in Kennedy
-
-    -   higher duties cut proportionately more than lower ones instead of bilateral bargaining (Irwin 2017 p556)
-
--   Failed to deal with agri trade (Irwin 2017 p556)
-
--   Concluded April 1979
-
-    -   Seems like it was passed as the "Trade Agreements Act of 1979" (Irwin 2017 p558)
-
--   Second FMA was concluded in 1977 in the middle of the round
-
-## Reagan era
-
-Trade and Tariff Act of 1984: withheld negotiating authority, but surprisingly moderate given the protectionist pressures of the time (Irwin 2017 p598)
-
-### Omnibus Trade and Competitiveness Act of 1988
-
--   President could reduce tariffs up to 50% (three year window, with two year extension unless Congress objected, p627), guaranteed fast track (Irwin 2017 p612)
-
-    -   Its provisions were needed to conclude Uruguay round, which had started in 1986
-
-    -   The bills to object to the two-year extension in 1991 were defeated in both houses of Congress (p.628)
-
-### Uruguay Round
-
--   Concluded in 1993 (December 15) (Irwin 2017 p619/44)
-
--   117 countries, 7 years
-
--   MFA abolished (on Jan 1, 2005, p. 653)
-
--   Signed by 177 nations in April 1994 and scheduled to take effect Jan 1 1995 (Irwin 2017 p651)
-
-## Shift to harmonized system
-
-### Not sure of timing--Dobson was published in December 1976
-
-In the last few years the Customs Cooperation Council has been attempting to update the BTN, and the Commission has recently worked out a draft conversion of the TSUS into the structure of the BTN. The Commission is also working to create a classification structure that will allow the publication of comparable data on U.S. imports, production, and exports.
-
--   The Commission must constantly revise the TSUSA and its fundamental reference series, Summaries of Trade and Tariff Information
-
-### The Harmonized Tariff System
-
--   Conversion of the Tariff Schedules of the United States Into the Nomenclature Structure of the Harmonized System, Report on Inv. No. 332-131 under Section 332 of the Tariff Act of 1930, Submitting Report, USITC Pub. 1400, at 15 [RSB, Ch. 7]
-
--   The International Convention on the Harmonized Commodity Description and Coding System required contracting parties to use and apply all the headings and subheadings of the system, without exception, addition, or modification [RSB, Ch. 7]
-
-    -   Also, contracting parties had to make their import and export trade statistics available at least at the level of the HS 6-digit codes. [RSB, Ch. 7]
-
-In preparing the new tariff, the Commission was to avoid rate changes "to the extent practicable and consistent with sound nomenclature principles." [RSB, Ch. 7]
-
--   In addition, the tariff was to be simplified "to the extent possible without rate changes significant for U.S. industry, workers, or trade." [RSB, Ch. 7]
-
-    -   hundreds of proposed rate changes. [RSB, Ch. 7]
-
-        -   Some resulted from combining tariff categories at trade-weighted average rates; [RSB, Ch. 7]
-
-        -   others were based on a preponderance of trade, in the case of a small trade category being combined into a larger category. [RSB, Ch. 7]
-
-            -   extensive formal notification to the WTO [RSB, Ch. 7]
-
-        -   related negotiations with U.S. trading partners, which took several years to complete. [RSB, Ch. 7]
-
--   The Commission would not propose modifying a rate for which there was yearly trade of over \$5 million---separate rate lines would be retained in those cases. Rate changes for imported goods generating less than \$5 million per year would not be proposed unless an interested party raised a justifiable objection. [RSB, Ch. 7]
-
--   the President directed the Commission to reflect units of quantity in metric terms [RSB, Ch. 7]
-
-### Omnibus Trade and Competitiveness Act, enacted in 1988 (1988 Act)
-
-Adoption of the new tariff was one of the cornerstones of the act.
-
--   The HTS was made effective in section 1217 of the 1988 Act with respect to articles entered on and after January 1, 1989.
+The Uruguay Round was concluded on December 15, 1993 after seven years of negotiations. The resulting agreement updated the GATT, abolished the MFA, and formed the World Trade Organization (among other achievements). It was signed by 117 nations in April 1994 and took effect on January 1, 1995 (Irwin 2017).

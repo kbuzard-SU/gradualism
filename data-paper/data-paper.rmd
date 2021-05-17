@@ -32,7 +32,7 @@ library(english)
 # Data
 
 ```{r, include=FALSE}
-source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit_global())
+source("C:/Users/krist/Github/Gradualism/data_cleaning.r", local = knitr::knit_global())
 ```
 
 ```{r child = 'data.Rmd'}
@@ -113,6 +113,9 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 
     -   1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 40 percent of the dutiable imports
 
+```{r child = 'results.Rmd'}
+```
+
 ## Analysis
 
 -   What can we say about which / why lines have ad valorem vs. specific?
@@ -125,7 +128,7 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.rmd", local = knitr::knit
 
         -   Look at correlations between the number of pages for the schedule for each country?
 
-\#`{r child = 'results.Rmd'} #`
+
 
 # Non-U.S. Contracting Parties
 
