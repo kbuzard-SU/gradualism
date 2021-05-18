@@ -3,7 +3,11 @@ title: "Quantifying GATT Trade Liberalization"
 author: "Kristy Buzard, Ross Jestrab and Zeyuan (Victor) Xiong"
 date: "May 20, 2021"
 output:
-  pdf_document:
+  bookdown::pdf_document2:
+    keep_tex: true
+    toc: false
+    extra_dependencies: ["float"]
+  pdf_document2:
     number_sections: true
 fontsize: 12pt
 linestretch: 1.25
@@ -12,7 +16,9 @@ urlcolor: blue
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+knitr::opts_chunk$set(fig.pos = "!h", out.extra = "")
 library(english)
+library(bookdown)
 ```
 
 # Introduction
