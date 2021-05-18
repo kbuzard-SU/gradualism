@@ -9,10 +9,16 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-"The reduction is not due to compositional changes of the sample, neither with respect to countries nor products, as the algorithm used to fill the missing data fully balances the panel"
+[add roadmap for this section]
 
+## Summarizing U.S. tariff liberalization: 1930-1964
 
-## Line by line
+### Line by line
+
+- Total number of lines in our dataset, how they were constructed
+  -   "The reduction is not due to compositional changes of the sample, neither with respect to countries nor products, as the algorithm used to fill the missing data fully balances the panel"
+
+  -   Victor: how many in Smoot Hawley?
 
 ```{r echo=F}
 
@@ -79,8 +85,20 @@ ggplot() +
 
 The code above produces `r nrow(same)` lines that are the same in Smoot Hawley and Geneva.
 
+-   How many lines were simply bound at the Smoot Hawley level
 
-## Basic Facts
+    -   This is in contrast in particular to lines that are free under Smoot Hawley but do not show up in a later negotiation--they are not *bound* to be free.
+
+-   Addition of new lines round-by-round
+
+-   Which lines from Smoot Hawley don't see any action?
+
+    -   Victor says: 1014, 1530e, 1544,1104a, 81, 82,318,412
+
+
+
+### From Smoot-Hawley to Dillon: what was accomplished?
+
 
 ```{r echo=FALSE, warning=FALSE}
 specific_mean <- data.frame(sapply(specific[,6:15], mean, na.rm=TRUE))
@@ -96,6 +114,9 @@ Things look a bit different for specific tariffs. The mean specific tariff bindi
 
 About 450 lines have both *ad valorem* and specific components to their tariff in a given round. These lines are included in the previous statistics, but we intend to analyze them separately and provide explanation for which lines get *ad valorem* protection, which lines get specific tariffs, and which get both. We know that the incidence of specific tariffs declines with inflation; this is an important and under-studied aspect of liberalization that we intend to explore.
 
+
+### Heterogeneity over time: Round-by-Round liberalization
+
 In terms of the time pattern of liberalization, we can confirm a well-known stylized fact: the largest proportional cuts took place between the Smoot-Hawley legislation and the first round of the GATT in Geneva in 1947: average tariffs, both specific and *ad valorem*, were reduced by about 30%. The pattern of reductions after Geneva 1947 is then somewhat uneven. From Geneva 1947 to Annecy, the reduction in means was much smaller at about 4% with the reduction in medians being about 10%. Annecy saw small tariff cuts on average in large part because this round was focused on accession: countries like the United States that had joined in Geneva only negotiated with those countries that were newly acceding in the Annecy Round.
 
 - Irwin 2017, p 485: Geneva reduced tariffs by 21%
@@ -103,6 +124,11 @@ In terms of the time pattern of liberalization, we can confirm a well-known styl
   - p. 486: half of dutiable imports saw reduction, ave. reduction of 35%
 
 In percentage terms, the Torquay round saw cuts about half the size of those in Geneva 1947. Geneva 1956 saw percentage cuts closer to those in Annecy, and for the first time these were phased in--over three years in the case of Geneva 1956. The cuts in tariff averages in the Dillon round were once again about 10%, but the median for specific tariffs did not decrease while the median *ad valorem* tariff decreased by about 15%.
+
+-   Round by round graphs for specific, interesting lines
+
+
+### Heterogeneity across products: Schedule-by-Schedule liberalization 
 
 These headline numbers hide variation in magnitude and speed of liberalization across types of products. This will be explored in detail in the paper, but a few interesting details are in order here. The data are grouped into 15 industry groups called *schedules* in Smoot Hawley. They range in length from `r count(ad_valorem[which(ad_valorem$Sched == 6),])` lines for Schedule 6 (Tobacco and Manufactures of) to  `r count(ad_valorem[which(ad_valorem$Sched == 3),])` lines for Schedule 3 (Metals and Manufactures of).
 
@@ -114,47 +140,25 @@ In contrast, the `r sum(!is.na(specific[which(specific$Sched == 5),"Specific_Dil
 
 Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) has the mean *ad valorem* tariff decrease by less than the median decrease *ad valorem* tariff, implying a reduction in tariff spikes. For specific tariffs, exactly half of the schedules show this pattern (Schedule 12 -- Silk Manufactures has no specific tariffs). 
 
--   Total tariff cuts from Smoot Hawley to last round we have
+-   Any obvious patterns to which lines have largest/smallest cuts?
 
-    -   Specific vs. ad valorem
-
-        -   Overlap in ad valorem and specific
-
-        -   Specific vs. ad valorem vs. compound (both specific and ad valorem)
-
-          -   Teti (2020) reports that 8% of U.S. tariffs were specific in 1988-2017
-          -   Teti (2020) also reports: "Mixed tariffs are expressed as either a specific or an ad valorem rate, depending on which generates the most (or sometimes the least) revenue. Then there are technical tariffs that depend on certain product characteristics for example duties might be 8% for butter with fat content between 9-40%. Tariff rate quotas are made up of a low tariff rate on the initial imports (the within-quota quantity) and a very high tariff rate on imports entering above the initial amount (outside-quota quantity).
-
--   How many lines were simply bound at the Smoot Hawley level
-
-    -   This is in contrast in particular to lines that are free under Smoot Hawley but do not show up in a later negotiation--they are not *bound* to be free.
-
--   Addition of new lines round-by-round
-
--   Round by round cuts (focus on end of round)
-
--   Magnitude and speed of liberalization across types of products
-
-    -   Any obvious patterns to which lines have largest/smallest cuts?
-
-## Spotlight on some interesting products
-
--   Round by round graphs for specific, interesting lines
-
--   Which lines from Smoot Hawley don't see any action?
-
-    -   Victor says: 1014, 1530e, 1544,1104a, 81, 82,318,412
+### Staging
 
 -   Are there differences in which lines get staging once staging starts?
 
     -   Before Kennedy at least, where it was uniform...
 
-        -   Was it *really* uniform?
+            -   Was it *really* uniform?
 
--   Metallic magnesium and metallic magnesium scrap, para 375, switches from specific to ad valorem in Geneva56C; reduced from 50 to 45% in Dillon
+## Unexpected
 
-    -   1102b (wools nspf) go from ad valorem in every round to specific in Dillon
-    -   202.a swiches from specific in S-H to ad valorem in Geneva
+### How important was RTAA between 1934 and 1946?
+
+-   Can we test:
+
+    -   1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 40 percent of the dutiable imports
+    
+### Some lines see tariff increases
 
 -   Para 209, item 6 has tariff double in Geneva56A
 
@@ -162,16 +166,23 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
     -   911
     -   1005.a.3 (something to do with hemp) S-H --\> Geneva unchanged; then increase
 
--   Para 32, "change of tax formula"? Also 202.a, 232.c,302.d,
 
-## Other things we learned
+### Switching from *ad valorem* to specific is rare
 
--   How important was RTAA between 1934 and 1946?
+-   Metallic magnesium and metallic magnesium scrap, para 375, switches from specific to ad valorem in Geneva56C; reduced from 50 to 45% in Dillon
 
--   Can we test:
-
-    -   1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 40 percent of the dutiable imports
+    -   1102b (wools nspf) go from ad valorem in every round to specific in Dillon
+    -   202.a swiches from specific in S-H to ad valorem in Geneva
     
+    -   Specific vs. ad valorem vs. compound (both specific and ad valorem)
+
+    -   Teti (2020) reports that 8% of U.S. tariffs were specific in 1988-2017
+    -   Teti (2020) also reports: "Mixed tariffs are expressed as either a specific or an ad valorem rate, depending on which generates the most (or sometimes the least) revenue. Then there are technical tariffs that depend on certain product characteristics for example duties might be 8% for butter with fat content between 9-40%. Tariff rate quotas are made up of a low tariff rate on the initial imports (the within-quota quantity) and a very high tariff rate on imports entering above the initial amount (outside-quota quantity).
+
+    -   Para 32, "change of tax formula"? Also 202.a, 232.c,302.d,
+
+### Is this "certain tariff levels" the same as Teti?
+
 - [this is in 2017] Both the fact that countries have a preference for certain tariff levels, i.e. multiples of five and zero, as well as the fact that countries often set the same tariff for entire tariff headings, yield to a relatively low number of unique tariffs. For HICs it equals on average 567, which is compared to a total number of 5,018 HS6-products relatively low. Even the country with the largest number of unique tariffs, Liechtenstein, only has 1,710 unique levels; the European Union has the second highest number of unique tariffs (670), the United States place third (662) (Teti 2020)
 
 
@@ -181,26 +192,15 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
 
     -   Is there variation over time?
 
+-   Which products `suffer' from large tariff cuts and which products continue to receive protection?
+
 -   Can we posit an explanation for the variation in both the quantity and speed of liberalization across products?
 
     -   Perhaps the number of countries who are negotiating?
 
         -   Look at correlations between the number of pages for the schedule for each country?
 
-
-
-## Results to be developed
-
-While we plan to further explore the questions discussed in the last section, over the next couple months we will also answer the following questions:
-
-\begin{enumerate}
-	\item[1.] Which products `suffer' from large tariff cuts and which products continue to receive protection?
-	\item[2.] Can we posit an explanation for the variation in both the quantity and speed of liberalization across products?
-	\item[3.] Which types of products had ad-valorem versus specific tariffs, and how did this change over time? What role did the presence of specific tariffs, combined with inflation, have in reducing the total level of tariff protection?
-	\item[4.] Did any of these patterns change through the final three rounds (Kennedy, Tokyo and Uruguay)?
-	\item[5.] How did the commitments of other countries differ from those of the United States? We will digitize and analyze the schedules for several other countries, including Canada as an example of a small, resource-rich developed economy.
-	\item[6.] Patterns of Reduction: Countries can reduce tariffs in many different ways. Assuming that changes in tariffs are governed by the objective of increasing welfare, the literature puts forward two types of tariff reforms (for example Neary (1998)). Countries can either implement a uniform radial reduction (reduce all tariffs by the same proportion) or a concertina reform (reduce the highest tariff rates). The concertina reform compresses the tariff structure—lower and more uniform tariffs are the result of reducing the extremely high tariffs the most and making only small cuts to the already low tariffs. In case of a radial reform, the tariff structure remains the same. In multilateral tariff negotiations both reforms are applied, albeit the concertina reform has become more popular in recent years (Hoda 2001). (Teti 2020)
-\end{enumerate}
+- Patterns of Reduction: Countries can reduce tariffs in many different ways. Assuming that changes in tariffs are governed by the objective of increasing welfare, the literature puts forward two types of tariff reforms (for example Neary (1998)). Countries can either implement a uniform radial reduction (reduce all tariffs by the same proportion) or a concertina reform (reduce the highest tariff rates). The concertina reform compresses the tariff structure—lower and more uniform tariffs are the result of reducing the extremely high tariffs the most and making only small cuts to the already low tariffs. In case of a radial reform, the tariff structure remains the same. In multilateral tariff negotiations both reforms are applied, albeit the concertina reform has become more popular in recent years (Hoda 2001). (Teti 2020)
 
 
 
