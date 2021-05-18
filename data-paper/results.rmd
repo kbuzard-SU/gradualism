@@ -9,6 +9,9 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+"The reduction is not due to compositional changes of the sample, neither with respect to countries nor products, as the algorithm used to fill the missing data fully balances the panel"
+
+
 ## Line by line
 
 ```{r echo=F}
@@ -76,6 +79,7 @@ ggplot() +
 
 The code above produces `r nrow(same)` lines that are the same in Smoot Hawley and Geneva.
 
+
 ## Basic Facts
 
 ```{r echo=FALSE, warning=FALSE}
@@ -110,6 +114,81 @@ In contrast, the `r sum(!is.na(specific[which(specific$Sched == 5),"Specific_Dil
 
 Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) has the mean *ad valorem* tariff decrease by less than the median decrease *ad valorem* tariff, implying a reduction in tariff spikes. For specific tariffs, exactly half of the schedules show this pattern (Schedule 12 -- Silk Manufactures has no specific tariffs). 
 
+-   Total tariff cuts from Smoot Hawley to last round we have
+
+    -   Specific vs. ad valorem
+
+        -   Overlap in ad valorem and specific
+
+        -   Specific vs. ad valorem vs. compound (both specific and ad valorem)
+
+          -   Teti (2020) reports that 8% of U.S. tariffs were specific in 1988-2017
+          -   Teti (2020) also reports: "Mixed tariffs are expressed as either a specific or an ad valorem rate, depending on which generates the most (or sometimes the least) revenue. Then there are technical tariffs that depend on certain product characteristics for example duties might be 8% for butter with fat content between 9-40%. Tariff rate quotas are made up of a low tariff rate on the initial imports (the within-quota quantity) and a very high tariff rate on imports entering above the initial amount (outside-quota quantity).
+
+-   How many lines were simply bound at the Smoot Hawley level
+
+    -   This is in contrast in particular to lines that are free under Smoot Hawley but do not show up in a later negotiation--they are not *bound* to be free.
+
+-   Addition of new lines round-by-round
+
+-   Round by round cuts (focus on end of round)
+
+-   Magnitude and speed of liberalization across types of products
+
+    -   Any obvious patterns to which lines have largest/smallest cuts?
+
+## Spotlight on some interesting products
+
+-   Round by round graphs for specific, interesting lines
+
+-   Which lines from Smoot Hawley don't see any action?
+
+    -   Victor says: 1014, 1530e, 1544,1104a, 81, 82,318,412
+
+-   Are there differences in which lines get staging once staging starts?
+
+    -   Before Kennedy at least, where it was uniform...
+
+        -   Was it *really* uniform?
+
+-   Metallic magnesium and metallic magnesium scrap, para 375, switches from specific to ad valorem in Geneva56C; reduced from 50 to 45% in Dillon
+
+    -   1102b (wools nspf) go from ad valorem in every round to specific in Dillon
+    -   202.a swiches from specific in S-H to ad valorem in Geneva
+
+-   Para 209, item 6 has tariff double in Geneva56A
+
+    -   331 item 10 increases specific tariff from 3 to 4 in Torquay
+    -   911
+    -   1005.a.3 (something to do with hemp) S-H --\> Geneva unchanged; then increase
+
+-   Para 32, "change of tax formula"? Also 202.a, 232.c,302.d,
+
+## Other things we learned
+
+-   How important was RTAA between 1934 and 1946?
+
+-   Can we test:
+
+    -   1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 40 percent of the dutiable imports
+    
+- [this is in 2017] Both the fact that countries have a preference for certain tariff levels, i.e. multiples of five and zero, as well as the fact that countries often set the same tariff for entire tariff headings, yield to a relatively low number of unique tariffs. For HICs it equals on average 567, which is compared to a total number of 5,018 HS6-products relatively low. Even the country with the largest number of unique tariffs, Liechtenstein, only has 1,710 unique levels; the European Union has the second highest number of unique tariffs (670), the United States place third (662) (Teti 2020)
+
+
+## Analysis
+
+-   What can we say about which / why lines have ad valorem vs. specific?
+
+    -   Is there variation over time?
+
+-   Can we posit an explanation for the variation in both the quantity and speed of liberalization across products?
+
+    -   Perhaps the number of countries who are negotiating?
+
+        -   Look at correlations between the number of pages for the schedule for each country?
+
+
+
 ## Results to be developed
 
 While we plan to further explore the questions discussed in the last section, over the next couple months we will also answer the following questions:
@@ -120,18 +199,11 @@ While we plan to further explore the questions discussed in the last section, ov
 	\item[3.] Which types of products had ad-valorem versus specific tariffs, and how did this change over time? What role did the presence of specific tariffs, combined with inflation, have in reducing the total level of tariff protection?
 	\item[4.] Did any of these patterns change through the final three rounds (Kennedy, Tokyo and Uruguay)?
 	\item[5.] How did the commitments of other countries differ from those of the United States? We will digitize and analyze the schedules for several other countries, including Canada as an example of a small, resource-rich developed economy.
+	\item[6.] Patterns of Reduction: Countries can reduce tariffs in many different ways. Assuming that changes in tariffs are governed by the objective of increasing welfare, the literature puts forward two types of tariff reforms (for example Neary (1998)). Countries can either implement a uniform radial reduction (reduce all tariffs by the same proportion) or a concertina reform (reduce the highest tariff rates). The concertina reform compresses the tariff structure—lower and more uniform tariffs are the result of reducing the extremely high tariffs the most and making only small cuts to the already low tariffs. In case of a radial reform, the tariff structure remains the same. In multilateral tariff negotiations both reforms are applied, albeit the concertina reform has become more popular in recent years (Hoda 2001). (Teti 2020)
 \end{enumerate}
 
-We are exploring data availability and are hopeful that it will be possible to add a terms-of-trade analysis à la Broda, Limao and Weinstein (2008).
 
-## Ideas from Teti (2020)
 
-First, remember she's looking mainly at applied tariffs, with some analysis that compares to bound tariffs
 
-1. Columns (9) and (10) of Table 3 examines the probability of occurrence of the sameMFNtariff within all tariff headings (HS4-digits, column 10) and within all tariff chapters (HS2-digits) (column 11). In these types of regressions, the dependent variable equals one if the tariff is the same within the respective product group
 
-2. [this is in 2017] Both the fact that countries have a preference for certain tariff levels, i.e. multiples of five and zero, as well as the fact that countries often set the same tariff for entire tariff headings, yield to a relatively low number of unique tariffs. For HICs it equals on average 567, which is compared to a total number of 5,018 HS6-products relatively low. Further, it decreases signicantly with income resulting in on average only 48 unique tariff levels in LDCs (compare column (11)). Even the country with the largest number of unique tariffs, Liechtenstein, only has 1,710 unique levels; the European Union has the second highest number of unique tariffs (670), the United States place third (662) 
 
-3. Changes over time: "The reduction is not due to compositional changes of the sample, neither with respect to countries nor products, as the algorithm used to fill the missing data fully balances the panel"
-
-4. Patterns of Reduction Countries can reduce tariffs in many different ways. Assuming that changes in tariffs are governed by the objective of increasing welfare, the literature puts forward two types of tariff reforms (for example Neary (1998)). Countries can either implement a uniform radial reduction (reduce all tariffs by the same proportion) or a concertina reform (reduce the highest tariff rates). The concertina reform compresses the tariff structure—lower and more uniform tariffs are the result of reducing the extremely high tariffs the most and making only small cuts to the already low tariffs. In case of a radial reform, the tariff structure remains the same. In multilateral tariff negotiations both reforms are applied, albeit the concertina reform has become more popular in recent years (Hoda 2001).
