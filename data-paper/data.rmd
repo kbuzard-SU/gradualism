@@ -61,7 +61,7 @@ Once this is completed, we will be able to (a) trade-weight our summary statisti
 
 ## Units
 
-Any analysis of specific tariffs will be complicated by differences in units. We find that the Smoot-Hawley tariff system employed 59 types of units for specific tariffs. We have reduced the number of units to 27 through a standardization and normalization process.
+Any analysis of specific tariffs will be complicated by differences in units. We find that the Smoot-Hawley tariff system employed 59 types of units for specific tariffs. We have reduced the number of units to 28 through a standardization and normalization process.
 
 The reason of normalization has two layers: first we want to keep the framework as simple as possible, second we want to make sure the values of tariff rate are comparable so that statistical inference based on the specific tariff rates will not be affected by the units. The normalization process contains steps including integrating units that have similar descriptive meanings, integrating units that have different basic units (cents per each, cents per 100 and cents per 1000), and finally transform all dollars based units to cents based units. The units keys system we created for Smoot-Hawley system also applies for the TSUSA system in later rounds. The detailed mappings of normalization process can be found in our data package.
 
