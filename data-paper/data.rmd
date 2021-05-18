@@ -27,7 +27,7 @@ We have been able to locate the original documents that contain the consolidated
 
 We add to this the tariff rates from the original text of the Smoot-Hawley Act as well as those from *United States Import Duties (June 1946)*, which is a list of all the rates of duty as of that time. It had been compiled by the forerunner to the US International Trade Commission in order to give U.S. negotiators the correct baseline from which to make concessions in Geneva for the first round of the GATT.
 
-We also collected data and background documents to support the process of aligning tariff lines across rounds from official U.S. government documents, some of which are publicly available and a few that we access using an institutional subscription to HathiTrust Digital Library (https://www.hathitrust.org/). Details for all data sources are in the [Data Appendix](#dataappendix).
+We also collected data and background documents to support the process of aligning tariff lines across rounds from official U.S. government documents, some of which are publicly available and a few that we access using an institutional subscription to HathiTrust Digital Library (https://www.hathitrust.org/). Details for all data sources are in Section \@ref(sources) of the Data Appendix.
 
 ## Digitization process
 
@@ -42,12 +42,12 @@ The classifications systems used for the various GATT round are:
 
 To date, we have digitalized and standardized the tariff data for the first five GATT rounds for the United States. We have done the same for the tariff schedule that was in effect in the United States before the start of the GATT---the so-called Smoot Hawley tariffs as well as 1946 tariff schedule that was published as the baseline for the GATT negotiations.
 
-We have also digitized the two rounds under the TSUSA system with work on the standardization between these rounds and the earlier rounds ongoing. For more details, see [Details of the Digitization Process](#digdetails). 
+We have also digitized the two rounds under the TSUSA system with work on the standardization between these rounds and the earlier rounds ongoing. For more details, see Section \@ref(digdetails) in the Appendix. 
 
 
 ## Concordance
 
-We are building a concordance between the Smoot-Hawley and TSUS systems in order to create a consistent time series up through the Tokyo round. First we executed a keyword match line by line between the two. This gives us good matches for many lines, especially for the products that have relatively short and specific descriptions; The second step is to use the cross-reference table in Volume 9 of the US ITC's *Tariff Classification Study.*^[See more details about this document in "data sources", data appendix.] The cross-reference table provides linkage information between the paragraphs in Smoot-Hawley and the tariff item code in TSUSA, and we use this to assign TSUSA code(s) to each product in the Smoot-Hawley system schedule.
+We are building a concordance between the Smoot-Hawley and TSUS systems in order to create a consistent time series up through the Tokyo round. First we executed a keyword match line by line between the last round under the Smoot-Hawley system (Dillon) and the Tariff Act of 1962 which established the TSUS system.^[See Sections \@ref(TSUS) and \@ref(sources) for details on the source document that established the TSUS system.] This gives us good matches for many lines, especially for the products that have relatively short and specific descriptions; The second step is to use the cross-reference table in Volume 9 of the US ITC's *Tariff Classification Study.*^[See more details about this document in "data sources", data appendix.] The cross-reference table provides linkage information between the paragraphs in Smoot-Hawley and the tariff item code in TSUSA, and we use this to assign TSUSA code(s) to each product in the Smoot-Hawley system schedule.
 
 The second stage of the concordance building is both time and skill intensive and is still in process. When it is completed, we will move on to using the concordance between TSUS and HTS provided by the USITC^["Cross-Reference Between the Harmonized System and TSUSA Schedule" courtesy of Robert Feenstra at https://cid.econ.ucdavis.edu/usixd/wp5515d.html .] in order to integrate the Uruguay round into the dataset.
 
