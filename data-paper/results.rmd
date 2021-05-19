@@ -142,6 +142,38 @@ The number of items that have both *ad valorem* and specific components to their
 
 In terms of the time pattern of liberalization, we can confirm a well-known stylized fact: the largest proportional cuts took place between the Smoot-Hawley legislation and the first round of the GATT in Geneva in 1947: average tariffs, both specific and *ad valorem*, were reduced by about 30% (see the following two tables).
 
+```{r}
+sp_mean <- specific[,6:15] %>% sapply(mean, na.rm=TRUE)
+sp_med <- specific[,6:15] %>% sapply(median, na.rm=TRUE)
+av_mean <- ad_valorem[,6:15] %>% sapply(mean, na.rm=TRUE)
+av_med <- ad_valorem[,6:15] %>% sapply(median, na.rm=TRUE)
+
+sp_mt = cbind(data.frame(sp_mean),c(0,-diff(sp_mean)/data.frame(sp_mean)[-nrow(data.frame(sp_mean)),]*100),data.frame(sp_med),c(0,-diff(sp_med)/data.frame(sp_med)[-nrow(data.frame(sp_med)),]*100))
+
+names(sp_mt)<-c('Mean','% decrease','Median','% decrease')
+rownames(sp_mt) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+x <- kbl(sp_mt,digits=2,booktabs=T) %>% 
+  kable_styling(position = "center", latex_options = "hold_position")
+add_header_above(x, c(" " = 1,c("Decrease in specific tariffs by round"=4)),font_size = 12)
+```
+
+```{r}
+av_mt = cbind(data.frame(av_mean),c(0,-diff(av_mean)/data.frame(av_mean)[-nrow(data.frame(av_mean)),]*100),data.frame(av_med),c(0,-diff(av_med)/data.frame(av_med)[-nrow(data.frame(av_med)),]*100))
+
+names(av_mt)<-c('Mean','% decrease','Median','% decrease')
+rownames(av_mt) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+y <- kbl(av_mt,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
+add_header_above(y, c(" " = 1,c("Decrease in ad valorem tariffs by round"=4)),font_size = 12)
+```
+
+What will be surprising to many is the the United States was *very* active in negotiating bilateral agreements between 1934 and the start of the GATT negotiations in Geneva in 1947. In terms of median tariffs, a little less than half of the 30% reduction between Smoot Hawley and Geneva 1947 is directly attributable to the bilateral trade agreements because the U.S. converted all its bilateral concessions into MFN tariffs.^[Only a few pre-existing agreements, such as with Cuba and Philippines, did not have their commitments extended in this way.] Taking into account the 1946 tariff levels, the reduction in *ad valorem* tariffs we find matches the figure of 21% from page 485 of Irwin (2017).  
+
+The pattern of reductions after Geneva 1947 is somewhat uneven. From Geneva 1947 to Annecy, the reduction in means was much smaller at about 3% with the reduction in medians being 20%. Annecy saw small tariff cuts on average in large part because this round was focused on accession: countries like the United States that had joined in Geneva only negotiated with those countries that were newly acceding in the Annecy Round.
+
+In percentage terms, the Torquay Round saw cuts about two-thirds of the size of those in Geneva 1947. Geneva 1956 saw percentage cuts closer to those in Annecy, and for the first time these were phased in. The cuts in tariff averages in the Dillon round were about 5% for specific tariffs and 10% for *ad valorem*, while the median for both types of tariffs decreased by about 15%.
+
+
 ```{r sp_sm-db, fig.cap = "Specific Tariff Reductions by Round"}
 sp_table = cbind(data.frame(sp_min),data.frame(sp_25p),data.frame(sp_mean),data.frame(sp_med),data.frame(sp_75p),data.frame(sp_max),data.frame(sp_count))
 names(sp_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
@@ -161,43 +193,13 @@ a <- kbl(adval_table,digits=2,booktabs=T) %>%
 add_header_above(a, c(" " = 1,"Summary Statistics of Ad Valorem Tariffs by Round"=7),font_size = 12)
 ```
 
-What will be surprising to many readers is the the United States was *very* active in negotiating bilateral agreements between 1934 and the start of the GATT negotiations in Geneva in 1947. In terms of median tariffs, a little less than half of the 30% reduction between Smoot Hawley and Geneva 1947 is directly attributable to the bilateral trade agreements because the U.S. converted all its bilateral concessions into MFN tariffs.^[Only a few pre-existing agreements, such as with Cuba and Philipines, did not have their commitments extended in this way.]
-
-The pattern of reductions after Geneva 1947 is somewhat uneven. From Geneva 1947 to Annecy, the reduction in means was much smaller at about 4% with the reduction in medians being about 10%. Annecy saw small tariff cuts on average in large part because this round was focused on accession: countries like the United States that had joined in Geneva only negotiated with those countries that were newly acceding in the Annecy Round.
-
-```{r echo=FALSE, warning=FALSE, message=FALSE}
-
-sp_mt = cbind(data.frame(sp_mean),c(0,-diff(sp_mean)/data.frame(sp_mean)[-nrow(data.frame(sp_mean)),]*100),data.frame(sp_med),c(0,-diff(sp_med)/data.frame(sp_med)[-nrow(data.frame(sp_med)),]*100))
-
-names(sp_mt)<-c('Mean','% decrease','Median','% decrease')
-rownames(sp_mt) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-x <- kbl(sp_mt,digits=2,booktabs=T) %>% 
-  kable_styling(position = "center", latex_options = "hold_position")
-add_header_above(x, c(" " = 1,c("Decrease in specific tariffs by round"=4)),font_size = 12)
-
-
-av_mt = cbind(data.frame(av_mean),c(0,-diff(av_mean)/data.frame(av_mean)[-nrow(data.frame(av_mean)),]*100),data.frame(av_med),c(0,-diff(av_med)/data.frame(av_med)[-nrow(data.frame(av_med)),]*100))
-
-names(av_mt)<-c('Mean','% decrease','Median','% decrease')
-rownames(av_mt) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-y <- kbl(av_mt,digits=2,booktabs=T) %>%
-  kable_styling(position = "center", latex_options = "hold_position")
-add_header_above(y, c(" " = 1,c("Decrease in ad valorem tariffs by round"=4)),font_size = 12)
-
-```
-
-- Irwin 2017, p 485: Geneva reduced tariffs by 21%
-
-  - p. 486: half of dutiable imports saw reduction, ave. reduction of 35%
-
-In percentage terms, the Torquay round saw cuts about half the size of those in Geneva 1947. Geneva 1956 saw percentage cuts closer to those in Annecy, and for the first time these were phased in--over three years in the case of Geneva 1956. The cuts in tariff averages in the Dillon round were once again about 10%, but the median for specific tariffs did not decrease while the median *ad valorem* tariff decreased by about 15%.
-
--   Round by round graphs for specific, interesting lines
-
 
 
 
 ### Heterogeneity across products: Schedule-by-Schedule liberalization 
+
+-   Round by round graphs for specific, interesting lines
+
 
 These headline numbers hide variation in magnitude and speed of liberalization across types of products. This will be explored in detail in the paper, but a few interesting details are in order here. The data are grouped into 15 industry groups called *schedules* in Smoot Hawley. They range in length from `r count(ad_valorem[which(ad_valorem$Sched == 6),])` lines for Schedule 6 (Tobacco and Manufactures of) to  `r count(ad_valorem[which(ad_valorem$Sched == 3),])` lines for Schedule 3 (Metals and Manufactures of).
 
