@@ -160,6 +160,102 @@ add_header_above(a, c(" " = 1,"Summary Statistics of Ad Valorem Tariffs by Round
 
 -   In Dillon, `r sum(is.na(ad_valorem$Ad_Valorem_Dillon_B))` rows out of `r nrow(ad_valorem)` are missing, so there are `r nrow(ad_valorem) - sum(is.na(ad_valorem$Ad_Valorem_Dillon_B))` ad valorem tariffs. So `r round(sum(!is.na(ad_valorem$Ad_Valorem_Dillon_B))/nrow(ad_valorem)*100,2)`% of lines have *ad valorem* tariffs.
 
+# Lines that switch between specific, ad valorem, and compound
+
+Below are the lines that either change units or change between specific only, ad valorem only or both specific and ad valorem. Indicator variables for each round (G for Geneva, A for Annecy, etc.) show in which round the change(s) occurred. Variable "unit_ch" equals 1 if the unit changed. 
+
+```{r}
+change_BG <-
+  data_set %>%
+  filter(
+    is.na(Specific_SH) != is.na(Specific_1946_after) | 
+      is.na(Ad_Valorem_SH) != is.na(Ad_Valorem_1946_after) | Units_SH != Units_1946_after 
+  ) %>%
+  mutate(BG = 1,unit_ch = ifelse(Units_SH != Units_1946_after, 1, 0))
+         
+change_G <-
+  data_set %>%
+  filter(
+    is.na(Specific_1946_after) != is.na(Specific_Geneva) | 
+      is.na(Ad_Valorem_1946_after) != is.na(Ad_Valorem_Geneva) | Units_1946_after != Units_Geneva 
+  ) %>%
+  mutate(G = 1,unit_ch = ifelse(Units_1946_after != Units_Geneva, 1, 0))
+         
+change_A <-
+  data_set %>%
+  filter(
+    is.na(Specific_Annecy) != is.na(Specific_Geneva) | 
+      is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Geneva) | Units_Annecy != Units_Geneva
+  ) %>%
+  mutate(A = 1,unit_ch = ifelse(Units_Annecy != Units_Geneva, 1, 0))
+
+change_T <-
+  data_set %>%
+  filter(
+    is.na(Specific_Annecy) != is.na(Specific_Torquay) | 
+      is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Torquay) | Units_Annecy != Units_Torquay
+  ) %>%
+  mutate(T = 1,unit_ch = ifelse(Units_Annecy != Units_Torquay, 1, 0))
+
+change_GA <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_A) != is.na(Specific_Torquay) | 
+      is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Torquay) | Units_Geneva56_A != Units_Torquay
+  ) %>%
+  mutate(GA = 1,unit_ch = ifelse(Units_Torquay != Units_Geneva56_A, 1, 0))
+
+change_GB <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_A) != is.na(Specific_Geneva56_B) | 
+      is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_A != Units_Geneva56_B
+  ) %>%
+  mutate(GB = 1,unit_ch = ifelse(Units_Geneva56_A != Units_Geneva56_B, 1, 0))
+
+change_GC <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_C) != is.na(Specific_Geneva56_B) | 
+      is.na(Ad_Valorem_Geneva56_C) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_C != Units_Geneva56_B
+  ) %>%
+  mutate(GC = 1,unit_ch = ifelse(Units_Geneva56_B != Units_Geneva56_C, 1, 0))
+
+change_DA <-
+  data_set %>%
+  filter(
+    is.na(Specific_Dillon_A) != is.na(Specific_Geneva56_C) | 
+      is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Geneva56_C) | Units_Dillon_A != Units_Geneva56_C
+  ) %>%
+  mutate(DA = 1,unit_ch = ifelse(Units_Geneva56_C != Units_Dillon_A, 1, 0))
+
+change_DB <-
+  data_set %>%
+  filter(
+    is.na(Specific_Dillon_A) != is.na(Specific_Dillon_B) | 
+      is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Dillon_B) | Units_Dillon_A != Units_Dillon_B
+  ) %>%
+  mutate(DB = 1,unit_ch = ifelse(Units_Dillon_B != Units_Dillon_B, 1, 0))
+
+mergeCols <- colnames(data_set)
+mC <- mergeCols[mergeCols != "unit_ch"]
+changes <- select(change_BG,-unit_ch) %>% 
+  full_join(select(change_G,-unit_ch),  by = mergeCols)%>%
+  full_join(select(change_A,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_T,-unit_ch),  by = mergeCols) %>% 
+  full_join(select(change_GA,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_GB,-unit_ch),  by = mergeCols) %>% 
+  full_join(select(change_GC,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_DA,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_DB,-unit_ch),  by = mergeCols) %>% arrange(id)
+```
+In all, `r nrow(changes)` lines are affected by some change in the form of the tariff.
+
+```{r}
+print.data.frame(changes[,c("Sched","Product","Paragraph","id","G","A","T","GA","GB","GC","DA","DB","Interval")],row.names = FALSE)
+```
+
+
 # How did liberalization vary across Schedules?
 
 First, descriptions of each schedule:
@@ -193,14 +289,41 @@ sum_specific_pc <- specific %>%
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_specific_pc,digits=2,booktabs=T) %>%
+sss <- kbl(sum_specific_pc,digits=2,booktabs=T) %>%
   kable_styling(position = "center", latex_options = "hold_position")
+add_header_above(sss, c("Specific Tariffs, all items"=10),font_size = 12)
+
 ```
 
-The table below is exactly the same as the one above EXCEPT it drops the `r sum(!is.na(data_set$Interval))` lines that are impacted by the "tax interval" issue
+<!-- The table below is exactly the same as the one above EXCEPT it drops the `r sum(!is.na(data_set$Interval))` lines that are impacted by the "tax interval" issue -->
+
+<!-- ```{r echo=FALSE, warning=FALSE} -->
+<!-- sum_specific_nI_pc <- subset(specific, is.na(Interval)) %>%    -->
+<!--   group_by(Sched) %>%   -->
+<!--   summarize(SH_mean = mean(Specific_SH, na.rm=TRUE), -->
+<!--             DB_mean = mean(Specific_Dillon_B, na.rm=TRUE), -->
+<!--             mean_chg = ((SH_mean - DB_mean)/SH_mean)*100, -->
+<!--             SH_med = median(Specific_SH, na.rm=TRUE), -->
+<!--             DB_med = median(Specific_Dillon_B, na.rm=TRUE), -->
+<!--             med_chg = ((SH_med - DB_med)/SH_med)*100, -->
+<!--             SH_obs = sum(!is.na(Specific_SH)), -->
+<!--             DB_obs = sum(!is.na(Specific_Dillon_B)), -->
+<!--             n = n()) %>% -->
+<!--   ungroup() # ungrouping variable is a good habit to prevent errors -->
+
+<!-- kbl(sum_specific_nI_pc,digits=2,booktabs=T) %>% -->
+<!--   kable_styling(position = "center", latex_options = "hold_position") -->
+
+<!-- ``` -->
+
+The table below is exactly the same as the one above EXCEPT it drops the `r nrow(changes)` lines that are impacted by the "switcher" issue
 
 ```{r echo=FALSE, warning=FALSE}
-sum_specific_nI_pc <- subset(specific, is.na(Interval)) %>%   
+
+changes2 <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Specific"))
+nochanges <- rows_delete(specific, changes2, by = "id")
+
+sum_specific_nC_pc <- nochanges %>%   
   group_by(Sched) %>%  
   summarize(SH_mean = mean(Specific_SH, na.rm=TRUE),
             DB_mean = mean(Specific_Dillon_B, na.rm=TRUE),
@@ -213,8 +336,9 @@ sum_specific_nI_pc <- subset(specific, is.na(Interval)) %>%
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_specific_nI_pc,digits=2,booktabs=T) %>%
+sss_nc <- kbl(sum_specific_nC_pc,digits=2,booktabs=T) %>%
   kable_styling(position = "center", latex_options = "hold_position")
+add_header_above(sss_nc, c("Specific Tariffs, switchers removed"=10),font_size = 12)
 
 ```
 
@@ -246,28 +370,32 @@ sum_specific_bySched <- specific %>%
             ) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_specific_bySched,digits=2,booktabs=T) %>%
+sss_byround <- kbl(sum_specific_bySched,digits=2,booktabs=T) %>%
   kable_styling(position = "center", latex_options = "hold_position")
+add_header_above(sss_byround, c("Mean Specific Tariffs, by round"=14),font_size = 12)
+
 ```
 
 Removing tax interval lines
 
-```{r}
-sum_specific_bySched_nI <-  subset(shortnames, is.na(Int)) %>% 
-  group_by(Sched) %>%
-  summarize(across(starts_with("Sp"), mean, na.rm=TRUE),
-            chgGe = ((Sp_SH - Sp_Ge)/Sp_SH)*100,
-            chgAn = ((Sp_Ge - Sp_An)/Sp_Ge)*100,
-            chgTo = ((Sp_An - Sp_To)/Sp_An)*100,
-            chgGC = ((Sp_To - Sp_GC)/Sp_To)*100,
-            chgDB = ((Sp_GC - Sp_DB)/Sp_GC)*100) %>%
-  ungroup() # ungrouping variable is a good habit to prevent errors
+<!--```{r} -->
+<!-- changes2 <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Specific")) -->
+<!-- nochanges <- rows_delete(specific, changes2, by = "id") -->
+<!-- sum_specific_bySched_nI <- nochanges %>%  -->
+<!--   group_by(Sched) %>% -->
+<!--   summarize(across(starts_with("Sp"), mean, na.rm=TRUE), -->
+<!--             chgGe = ((Sp_SH - Sp_Ge)/Sp_SH)*100, -->
+<!--             chgAn = ((Sp_Ge - Sp_An)/Sp_Ge)*100, -->
+<!--             chgTo = ((Sp_An - Sp_To)/Sp_An)*100, -->
+<!--             chgGC = ((Sp_To - Sp_GC)/Sp_To)*100, -->
+<!--             chgDB = ((Sp_GC - Sp_DB)/Sp_GC)*100) %>% -->
+<!--   ungroup() # ungrouping variable is a good habit to prevent errors -->
 
-sum_specific_bySched_nI %>% select(- c(Sp_GA, Sp_GB, Sp_DA))%>%
-  kbl(digits=2,booktabs=T) %>% 
-  kable_styling(position = "center") %>%
-  kable_styling(latex_options = "hold_position")
-```
+<!-- sum_specific_bySched_nI %>% select(- c(Sp_GA, Sp_GB, Sp_DA))%>% -->
+<!--   kbl(digits=2,booktabs=T) %>%  -->
+<!--   kable_styling(position = "center") %>% -->
+<!--   kable_styling(latex_options = "hold_position") -->
+<!-- ``` -->
 
 ## Summary stats for ad valorem tariffs
 
@@ -284,14 +412,19 @@ sum_av_pc <- ad_valorem %>%
             DB_obs = sum(!is.na(Ad_Valorem_Dillon_B)),
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
-kbl(sum_av_pc,digits=2,booktabs=T) %>% kable_styling(position = "center") %>% 
+ssav <- kbl(sum_av_pc,digits=2,booktabs=T) %>% kable_styling(position = "center") %>% 
   kable_styling(latex_options = "hold_position")
+add_header_above(ssav, c("Ad valorem Tariffs, all items"=10),font_size = 12)
+
 ```
 
 For several paragraphs, the maximum tariff for Dillon B changes when we get rid of the tax interval lines (2,9,11). Still I'm not going to print the tables with the maxes in them for now.
 
 ```{r}
-sum_av_nI_pc <- subset(ad_valorem, is.na(Interval)) %>%   
+changesav <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Ad_Valorem"))
+nochanges_av <- rows_delete(ad_valorem, changesav, by = "id")
+
+sum_av_nC_pc <- nochanges_av %>%   
   group_by(Sched) %>% 
   summarize(SH_mean = mean(Ad_Valorem_SH, na.rm=TRUE),
             DB_mean = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
@@ -303,37 +436,39 @@ sum_av_nI_pc <- subset(ad_valorem, is.na(Interval)) %>%
             DB_obs = sum(!is.na(Ad_Valorem_Dillon_B)),
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
-kbl(sum_av_nI_pc,digits=2,booktabs=T) %>%
+ssav_nC <- kbl(sum_av_nC_pc,digits=2,booktabs=T) %>%
   kable_styling(position = "center", latex_options = "hold_position")
+add_header_above(ssav_nC, c("Ad valorem Tariffs, switchers removed"=10),font_size = 12)
+
 ```
 
 ### Mean of ad valorem tariffs by schedule and round
 
-```{r}
-sum_av_bySched <- ad_valorem %>%   
-  group_by(Sched) %>%  
-  summarize(SH = mean(Ad_Valorem_SH, na.rm=TRUE),
-            G1 = mean(Ad_Valorem_Geneva, na.rm=TRUE),
-            An = mean(Ad_Valorem_Annecy, na.rm=TRUE),
-            To = mean(Ad_Valorem_Torquay, na.rm=TRUE),
-            GC = mean(Ad_Valorem_Geneva56_C, na.rm=TRUE),
-            DB = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
-            chgG1 = ((SH - G1)/SH)*100,
-            chgAn = ((G1 - An)/G1)*100,
-            chgTo = ((An - To)/An)*100,
-            chgGC = ((To - GC)/To)*100,
-            chgDB = ((GC - DB)/GC)*100,
-            ) %>%
-  ungroup() # ungrouping variable is a good habit to prevent errors
+<!-- ```{r}
+ sum_av_bySched <- ad_valorem %>%   
+   group_by(Sched) %>%
+   summarize(SH = mean(Ad_Valorem_SH, na.rm=TRUE),
+             G1 = mean(Ad_Valorem_Geneva, na.rm=TRUE),
+             An = mean(Ad_Valorem_Annecy, na.rm=TRUE),
+             To = mean(Ad_Valorem_Torquay, na.rm=TRUE),
+             GC = mean(Ad_Valorem_Geneva56_C, na.rm=TRUE),
+             DB = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
+             chgG1 = ((SH - G1)/SH)*100,
+             chgAn = ((G1 - An)/G1)*100,
+             chgTo = ((An - To)/An)*100,
+             chgGC = ((To - GC)/To)*100,
+             chgDB = ((GC - DB)/GC)*100,
+             ) %>%
+   ungroup() # ungrouping variable is a good habit to prevent errors
 
 kbl(sum_av_bySched,digits=2,booktabs=T) %>%
   kable_styling(position = "center", latex_options = "hold_position")
-```
+``` -->
 
-Removing tax interval lines
+Removing switchers lines
 
 ```{r}
-sum_av_bySched_nI <-  subset(ad_valorem, is.na(Interval)) %>%   
+sum_av_bySched_nC <- nochanges_av %>%   
   group_by(Sched) %>%  
   summarize(SH = mean(Ad_Valorem_SH, na.rm=TRUE),
             G1 = mean(Ad_Valorem_Geneva, na.rm=TRUE),
@@ -349,8 +484,10 @@ sum_av_bySched_nI <-  subset(ad_valorem, is.na(Interval)) %>%
             ) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_av_bySched_nI,digits=2,booktabs=T) %>%
+ssav_byround <- kbl(sum_av_bySched_nC,digits=2,booktabs=T) %>%
   kable_styling(position = "center", latex_options = "hold_position")
+add_header_above(ssav_byround, c("Mean Ad Valorem Tariffs, by round"=12),font_size = 12)
+
 ```
 
 # What was the total reduction in negotiated tariffs under the GATT in each round?
@@ -564,102 +701,6 @@ ggplot() +
 ```
 
 The code above produces `r nrow(same)` lines that are the same in Smoot Hawley and Geneva.
-
-# Lines that switch between specific, ad valorem, and compound
-
-Below are the lines that either change units or change between specific only, ad valorem only or both specific and ad valorem. Indicator variables for each round (G for Geneva, A for Annecy, etc.) show in which round the change(s) occurred. Variable "unit_ch" equals 1 if the unit changed. 
-
-```{r}
-change_BG <-
-  data_set %>%
-  filter(
-    is.na(Specific_SH) != is.na(Specific_1946_after) | 
-      is.na(Ad_Valorem_SH) != is.na(Ad_Valorem_1946_after) | Units_SH != Units_1946_after 
-  ) %>%
-  mutate(BG = 1,unit_ch = ifelse(Units_SH != Units_1946_after, 1, 0))
-         
-change_G <-
-  data_set %>%
-  filter(
-    is.na(Specific_1946_after) != is.na(Specific_Geneva) | 
-      is.na(Ad_Valorem_1946_after) != is.na(Ad_Valorem_Geneva) | Units_1946_after != Units_Geneva 
-  ) %>%
-  mutate(G = 1,unit_ch = ifelse(Units_1946_after != Units_Geneva, 1, 0))
-         
-change_A <-
-  data_set %>%
-  filter(
-    is.na(Specific_Annecy) != is.na(Specific_Geneva) | 
-      is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Geneva) | Units_Annecy != Units_Geneva
-  ) %>%
-  mutate(A = 1,unit_ch = ifelse(Units_Annecy != Units_Geneva, 1, 0))
-
-change_T <-
-  data_set %>%
-  filter(
-    is.na(Specific_Annecy) != is.na(Specific_Torquay) | 
-      is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Torquay) | Units_Annecy != Units_Torquay
-  ) %>%
-  mutate(T = 1,unit_ch = ifelse(Units_Annecy != Units_Torquay, 1, 0))
-
-change_GA <-
-  data_set %>%
-  filter(
-    is.na(Specific_Geneva56_A) != is.na(Specific_Torquay) | 
-      is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Torquay) | Units_Geneva56_A != Units_Torquay
-  ) %>%
-  mutate(GA = 1,unit_ch = ifelse(Units_Torquay != Units_Geneva56_A, 1, 0))
-
-change_GB <-
-  data_set %>%
-  filter(
-    is.na(Specific_Geneva56_A) != is.na(Specific_Geneva56_B) | 
-      is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_A != Units_Geneva56_B
-  ) %>%
-  mutate(GB = 1,unit_ch = ifelse(Units_Geneva56_A != Units_Geneva56_B, 1, 0))
-
-change_GC <-
-  data_set %>%
-  filter(
-    is.na(Specific_Geneva56_C) != is.na(Specific_Geneva56_B) | 
-      is.na(Ad_Valorem_Geneva56_C) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_C != Units_Geneva56_B
-  ) %>%
-  mutate(GC = 1,unit_ch = ifelse(Units_Geneva56_B != Units_Geneva56_C, 1, 0))
-
-change_DA <-
-  data_set %>%
-  filter(
-    is.na(Specific_Dillon_A) != is.na(Specific_Geneva56_C) | 
-      is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Geneva56_C) | Units_Dillon_A != Units_Geneva56_C
-  ) %>%
-  mutate(DA = 1,unit_ch = ifelse(Units_Geneva56_C != Units_Dillon_A, 1, 0))
-
-change_DB <-
-  data_set %>%
-  filter(
-    is.na(Specific_Dillon_A) != is.na(Specific_Dillon_B) | 
-      is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Dillon_B) | Units_Dillon_A != Units_Dillon_B
-  ) %>%
-  mutate(DB = 1,unit_ch = ifelse(Units_Dillon_B != Units_Dillon_B, 1, 0))
-
-mergeCols <- colnames(data_set)
-mC <- mergeCols[mergeCols != "unit_ch"]
-changes <- select(change_BG,-unit_ch) %>% 
-  full_join(select(change_G,-unit_ch),  by = mergeCols)%>%
-  full_join(select(change_A,-unit_ch),  by = mergeCols) %>%
-  full_join(select(change_T,-unit_ch),  by = mergeCols) %>% 
-  full_join(select(change_GA,-unit_ch),  by = mergeCols) %>%
-  full_join(select(change_GB,-unit_ch),  by = mergeCols) %>% 
-  full_join(select(change_GC,-unit_ch),  by = mergeCols) %>%
-  full_join(select(change_DA,-unit_ch),  by = mergeCols) %>%
-  full_join(select(change_DB,-unit_ch),  by = mergeCols) %>% arrange(id)
-```
-In all, `r nrow(changes)` lines are affected by some change in the form of the tariff.
-
-```{r}
-print.data.frame(changes[,c("Sched","Product","Paragraph","id","G","A","T","GA","GB","GC","DA","DB","Interval")],row.names = FALSE)
-```
-
 
 # Summarizing the impact of tax intervals
 
