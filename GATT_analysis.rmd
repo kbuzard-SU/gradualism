@@ -110,7 +110,7 @@ We see below that the specific tariffs come down by roughly half from Smoot Hawl
 
 But this could be deceptive since different lines use different units
 
--   Victor has standardized everything to be in cents (per U.S. dollar) in UnitsKey.rmd
+-   Victor has standardized everything to be in cents (per U.S. dollar) in UnitsKey.r
 
 ```{r echo=TRUE,warning=FALSE}
 source('UnitsKey.r')
@@ -180,36 +180,6 @@ add_header_above(s, c("Smoot Hawley Schedule Titles"=3),font_size = 12)
 ## Summary stats for specific tariffs
 
 ```{r echo=FALSE, warning=FALSE}
-#sum_specific <- specific %>%   
-#  group_by(Sched) %>%  
-#  summarize(SH_mean = mean(Specific_SH, na.rm=TRUE),
-#            DB_mean = mean(Specific_Dillon_B, na.rm=TRUE),
-#            SH_med = median(Specific_SH, na.rm=TRUE),
-#            DB_med = median(Specific_Dillon_B, na.rm=TRUE),
-#            SH_max = max(Specific_SH,na.rm=TRUE),
-#            DB_max = max(Specific_Dillon_B,na.rm=TRUE),
-#            SH_obs = sum(!is.na(Specific_SH)),
-#            DB_obs = sum(!is.na(Specific_Dillon_B)),
-#            n = n()) %>%
-#  ungroup() # ungrouping variable is a good habit to prevent errors
-
-#kbl(sum_specific,digits=2,booktabs=T) %>% kable_styling(position = "center")
-
-#sum_specific_nI <- subset(specific, is.na(Interval)) %>%   
-#  group_by(Sched) %>%  
-#  summarize(SH_mean = mean(Specific_SH, na.rm=TRUE),
-#            DB_mean = mean(Specific_Dillon_B, na.rm=TRUE),
-#            SH_med = median(Specific_SH, na.rm=TRUE),
-#            DB_med = median(Specific_Dillon_B, na.rm=TRUE),
-#            SH_max = max(Specific_SH,na.rm=TRUE),
-#            DB_max = max(Specific_Dillon_B,na.rm=TRUE),
-#            SH_obs = sum(!is.na(Specific_SH)),
-#            DB_obs = sum(!is.na(Specific_Dillon_B)),
-#            n = n()) %>%
-#  ungroup() # ungrouping variable is a good habit to prevent errors
-
-#kbl(sum_specific_nI,digits=2,booktabs=T) %>% kable_styling(position = "center")
-
 sum_specific_pc <- specific %>%   
   group_by(Sched) %>%  
   summarize(SH_mean = mean(Specific_SH, na.rm=TRUE),
@@ -302,20 +272,6 @@ sum_specific_bySched_nI %>% select(- c(Sp_GA, Sp_GB, Sp_DA))%>%
 ## Summary stats for ad valorem tariffs
 
 ```{r echo=FALSE, warning=FALSE}
-# sum_av <- ad_valorem %>%   
-#   group_by(Sched) %>%  
-#   summarize(SH_mean = mean(Ad_Valorem_SH, na.rm=TRUE),
-#             DB_mean = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
-#             SH_med = median(Ad_Valorem_SH, na.rm=TRUE),
-#             DB_med = median(Ad_Valorem_Dillon_B, na.rm=TRUE),
-#             SH_max = max(Ad_Valorem_SH,na.rm=TRUE),
-#             DB_max = max(Ad_Valorem_Dillon_B,na.rm=TRUE),
-#             SH_obs = sum(!is.na(Ad_Valorem_SH)),
-#             DB_obs = sum(!is.na(Ad_Valorem_Dillon_B)),
-#             n = n()) %>%
-#   ungroup() # ungrouping variable is a good habit to prevent errors
-# kbl(sum_av,digits=2,booktabs=T) %>% kable_styling(position = "center")
-
 sum_av_pc <- ad_valorem %>%   
   group_by(Sched) %>%  
   summarize(SH_mean = mean(Ad_Valorem_SH, na.rm=TRUE),
@@ -628,7 +584,7 @@ change_G <-
     is.na(Specific_1946_after) != is.na(Specific_Geneva) | 
       is.na(Ad_Valorem_1946_after) != is.na(Ad_Valorem_Geneva) | Units_1946_after != Units_Geneva 
   ) %>%
-  mutate(G = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+  mutate(G = 1,unit_ch = ifelse(Units_1946_after != Units_Geneva, 1, 0))
          
 change_A <-
   data_set %>%
@@ -636,7 +592,7 @@ change_A <-
     is.na(Specific_Annecy) != is.na(Specific_Geneva) | 
       is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Geneva) | Units_Annecy != Units_Geneva
   ) %>%
-  mutate(A = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+  mutate(A = 1,unit_ch = ifelse(Units_Annecy != Units_Geneva, 1, 0))
 
 change_T <-
   data_set %>%
@@ -644,7 +600,7 @@ change_T <-
     is.na(Specific_Annecy) != is.na(Specific_Torquay) | 
       is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Torquay) | Units_Annecy != Units_Torquay
   ) %>%
-  mutate(T = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+  mutate(T = 1,unit_ch = ifelse(Units_Annecy != Units_Torquay, 1, 0))
 
 change_GA <-
   data_set %>%
@@ -652,7 +608,7 @@ change_GA <-
     is.na(Specific_Geneva56_A) != is.na(Specific_Torquay) | 
       is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Torquay) | Units_Geneva56_A != Units_Torquay
   ) %>%
-  mutate(GA = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+  mutate(GA = 1,unit_ch = ifelse(Units_Torquay != Units_Geneva56_A, 1, 0))
 
 change_GB <-
   data_set %>%
@@ -660,7 +616,7 @@ change_GB <-
     is.na(Specific_Geneva56_A) != is.na(Specific_Geneva56_B) | 
       is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_A != Units_Geneva56_B
   ) %>%
-  mutate(GB = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+  mutate(GB = 1,unit_ch = ifelse(Units_Geneva56_A != Units_Geneva56_B, 1, 0))
 
 change_GC <-
   data_set %>%
@@ -668,7 +624,7 @@ change_GC <-
     is.na(Specific_Geneva56_C) != is.na(Specific_Geneva56_B) | 
       is.na(Ad_Valorem_Geneva56_C) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_C != Units_Geneva56_B
   ) %>%
-  mutate(GC = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+  mutate(GC = 1,unit_ch = ifelse(Units_Geneva56_B != Units_Geneva56_C, 1, 0))
 
 change_DA <-
   data_set %>%
@@ -676,7 +632,7 @@ change_DA <-
     is.na(Specific_Dillon_A) != is.na(Specific_Geneva56_C) | 
       is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Geneva56_C) | Units_Dillon_A != Units_Geneva56_C
   ) %>%
-  mutate(DA = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+  mutate(DA = 1,unit_ch = ifelse(Units_Geneva56_C != Units_Dillon_A, 1, 0))
 
 change_DB <-
   data_set %>%
@@ -684,7 +640,7 @@ change_DB <-
     is.na(Specific_Dillon_A) != is.na(Specific_Dillon_B) | 
       is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Dillon_B) | Units_Dillon_A != Units_Dillon_B
   ) %>%
-  mutate(DB = 1,unit_ch = ifelse(Units_SH != Units_Geneva, 1, 0))
+  mutate(DB = 1,unit_ch = ifelse(Units_Dillon_B != Units_Dillon_B, 1, 0))
 
 mergeCols <- colnames(data_set)
 mC <- mergeCols[mergeCols != "unit_ch"]
