@@ -1,6 +1,9 @@
 ---
 title: "Quantifying GATT Trade Liberalization"
-author: "Kristy Buzard, Ross Jestrab and Zeyuan (Victor) Xiong"
+author:
+  - Kristy Buzard^[Syracuse University, kbuzard@syr.edu, http://kristybuzard.com]
+  - Ross Jestrab^[Syracuse University, rcjestra@syr.edu]
+  - Zeyuan (Victor) Xiong^[Syracuse University, zxiong07@syr.edu ]
 date: "May 20, 2021"
 output:
   bookdown::pdf_document2:
@@ -12,6 +15,7 @@ output:
 fontsize: 12pt
 linestretch: 1.25
 urlcolor: blue
+abstract: Large-scale tariff reductions within the framework of the General Agreement on Tariffs and Trade (GATT) have come as a result of a series of eight rounds of negotiations that began in 1947. Bown and Irwin (2017) have documented the available data---all applied tariffs---and found it to be frustratingly sparse. Somewhat surprisingly, data on the tariff commitments made by the GATT signees has not been widely available, preventing empirical studies on the workings of the GATT and the dynamics of this important episode of trade liberalization. We have been able to locate the original documents that contain the consolidated tariff schedules for each GATT round. To date, we have digitalized and standardized the tariff data for the first five rounds for the United States as well as the Smoot Hawley tariffs that were in effect in the United States before the start of the GATT. Work is underway to add the Kennedy, Tokyo and Uruguay rounds for the U.S. and all rounds for several other countries. We summarize this rich data and study the patterns across time and industries and look for explanations for these patterns.
 ---
 
 ```{r setup, include=FALSE}
@@ -20,6 +24,7 @@ knitr::opts_chunk$set(fig.pos = "!h", out.extra = "")
 library(english)
 library(bookdown)
 ```
+
 
 # Introduction
 
@@ -70,7 +75,8 @@ Future plans
 
 # References
 
-\#`{r child = 'references.Rmd'} #`
+```{r child = 'references.Rmd'}
+```
 
 # Data Appendix{#dataappendix}
 

@@ -1,7 +1,5 @@
 ADD
-RSB, Ch. 7 Rosengarten 2017
-Dobson
-Irwin 2017
+
 
 Bagwell, K., Staiger, R.W. and Yurukoglu, A., 2020. ``Multilateral trade bargaining: A first look at the GATT bargaining records.'' American Economic Journal: Applied Economics, 12, 72-105.
 
@@ -21,12 +19,22 @@ Chisik, R., 2003. ``Gradualism in free trade agreements: a theoretical justifica
 Devereux, M., 1997. ``Growth, specialization, and trade liberalization.'' International Economic Review
 38, 565-585.
 
+Dobson, J.M., 1976. Two Centuries of Tariffs: The Background and Emergence of the U.S. International Trade Commission. US Government Printing Office.
+
+Hoda, A., 2018. Tariff Negotiations and Renegotiations under the GATT and the WTO: Procedures and Practices. Cambridge University Press.
+
+Irwin, D. A., 2017. Clashing over commerce: A history of US trade policy. University of Chicago Press.
+
 Kuenzel, D. J., 2020, ``WTO tariff commitments and temporary protection: Complements or substitutes?.'' European Economic Review, 121, 103-344.
 
 Mehlum, H., 1998. ``Why gradualism?'' The Journal of International Trade and Economic Development 7, 279-297.
 
 Mussa, M., 1986. ``The adjustment process and the timing of trade liberalization.'' In: Choksi, A., Papageorgiou, D. (Eds.), Economic Liberalization in Developing Countries. Basil Blackwell, Oxford.
 
+Rosengarten, G., Summers, J., and and A. Butcher, 2017. "Chapter 7: Tariff Activities" in \emph{A Centennial History of the United States International Trade Commission}, Benedetto, J., Gamache, L., Holbein, J., and C. Thomsen, eds., USITC Publication 4744, United States International Trade Commission.
+
 Staiger, R., 1995. ``A theory of gradual trade liberalization.'' In: Levinsohn, J., Deardorff, A., Stern, R. (Eds.), New Directions in Trade Theory. University of Michigan Press, Ann Arbor, MI, pp. 249-284.
+
+Teti, F. A., 2020. ``30 years of trade policy: Evidence from 5.7 billion tariffs,'' ifo Working Paper No. 334.
 
 Zissimos, B, 1997. ``The GATT and gradualism.'' The Journal of International Economics, 71, 410-433.

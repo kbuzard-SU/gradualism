@@ -10,20 +10,12 @@ linestretch: 1.25
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
--   There is a large qualitative literature on what happened through the GATT
+There is a large qualitative literature on the history of U.S. trade policy and the GATT. Irwin (2017) provides a comprehensive history of U.S. trade policy, while Hoda (2018) reports a general history of the GATT. Dobson (1976) focuses on the deep history of the USITC, while Rosengarten et al. (2017) focus on the USITCs tariff activities.
 
     -   Go back and list some of the books we read on, e.g., each round
 
-    -   "Tariff negotiations and renegotiations under the GATT and the WTO"
-
-        -   What is Matt's status with this?
-
-    -   USITC history papers (two of them)
-
-    -   Irwin's big book
-
-        -   1994 Irwin NBER working paper
-        -   Irwin (2020)?
+    -   1994 Irwin NBER working paper
+    -   Irwin (2020)?
 
     -   Petros' chapter on tariffs
 
@@ -44,5 +36,3 @@ knitr::opts_chunk$set(echo = TRUE)
         -   Bown and Irwin (2017)
 
         -   But what about "30 years of trade policy"?
-
--   Need to include TOT literature if going to include TOT analysis
