@@ -352,7 +352,7 @@ Notes:
 ### Mean of specific tariffs by schedule and round
 
 ```{r}
-sum_specific_bySched <- specific %>%   
+sum_specific_bySched <- nochanges %>%   
   group_by(Sched) %>%  
   summarize(SH = mean(Specific_SH, na.rm=TRUE),
             A = mean(Specific_1946_after, na.rm=TRUE),
@@ -372,7 +372,7 @@ sum_specific_bySched <- specific %>%
 
 sss_byround <- kbl(sum_specific_bySched,digits=2,booktabs=T) %>%
   kable_styling(position = "center", latex_options = "hold_position")
-add_header_above(sss_byround, c("Mean Specific Tariffs, by round"=14),font_size = 12)
+add_header_above(sss_byround, c("Mean Specific Tariffs (no changers), by round"=14),font_size = 12)
 
 ```
 
@@ -622,7 +622,7 @@ print.data.frame(increaseD,row.names = FALSE, digits = 2)
 
 ## No change from Smoot Hawley to Dillon B
 
-```{r echo=TRUE}
+```{r echo=F}
 
 same <- function(b,e){
   beg <- shortnames %>% select(ends_with(b))
@@ -659,7 +659,7 @@ The code above produces `r nrow(sameDB)` lines that are the same in Smoot-Hawley
 
 ## No change from Smoot Hawley to Geneva
 
-```{r echo=TRUE}
+```{r echo=F}
 # we removed the "1946_before" variables once we verified that they were exactly the same as Smoot Hawley
 # all the lines that are exactly the same in Smoot Hawley and 1946_before
 #same <- shortnames %>%

@@ -202,9 +202,9 @@ data_set$Units_Dillon_B[which(!is.na(data_set$Specific_Dillon_B) & is.na(data_se
 ########################################################################################## Step 1 Without value changes 
 
 data_set <- data_set %>% 
-  mutate(across(starts_with("Units"), function(x) x = replace(x, x == 11,58))) %>% #was 11,6
+  mutate(across(starts_with("Units"), function(x) x = replace(x, x == 11,58))) %>% 
   mutate(across(starts_with("Units"), function(x) x = replace(x, x == 12,19))) %>%
-  mutate(across(starts_with("Units"), function(x) x = replace(x, x == 13,19))) %>% #was 13,9
+  mutate(across(starts_with("Units"), function(x) x = replace(x, x == 13,19))) %>% 
   mutate(across(starts_with("Units"), function(x) x = replace(x, x == 16,20))) %>%
   mutate(across(starts_with("Units"), function(x) x = replace(x, x == 17,20))) %>%
   mutate(across(starts_with("Units"), function(x) x = replace(x, x == 21,20))) %>%
@@ -216,7 +216,7 @@ data_set <- data_set %>%
   mutate(across(starts_with("Units"), function(x) x = replace(x, x == 45,48))) %>%
   mutate(across(starts_with("Units"), function(x) x = replace(x, x == 51,19))) 
 
-# new: removed  mutate(across(starts_with("Units"), function(x) x = replace(x, x == 47,3))) 
+
 
 ########################################################################################## Step 2 With value changes 
 f_replace<-function(m,n,p){
@@ -270,17 +270,25 @@ f_replace<-function(m,n,p){
 }
 
 
-f_replace(1,4,1/16) #new
+f_replace(14,1,0.01) # moved from further down the list
 
-f_replace(2,4,1/128) #new
+f_replace(56,54,0.01) # moved from the bottom of the list
 
-f_replace(7,4,1/32000) #new
+f_replace(54,6,144) # moved from the bottom of the list
 
-f_replace(20,19,1/12) #new
+f_replace(18,19,1/144) #new
 
-f_replace(29,48,.001) #new
+f_replace(44,6,1/9) #new
 
-f_replace(14,1,0.01)
+f_replace(1,4,1/16) 
+
+f_replace(2,4,1/128) 
+
+f_replace(7,4,1/32000)
+
+f_replace(20,19,1/12) 
+
+f_replace(29,48,.001) 
 
 f_replace(15,19,0.001)
 
@@ -298,7 +306,6 @@ f_replace(47,3,0.0005)
 
 f_replace(50,19,0.001)
 
-f_replace(56,54,0.01)
 
 
 ########################################################### Step 3 replace dollar with cents
