@@ -303,13 +303,11 @@ f_replace(56,54,0.01)
 
 ########################################################### Step 3 replace dollar with cents
 
-
-f_replace(3,1,100)
-f_replace(8,7,100)
-f_replace(9,2,100)
-f_replace(25,19,100)
-f_replace(48,20,100)
-
+f_replace(3,4,100/16) # 3 to 1 to 4
+f_replace(8,4,100/32000) # 8 to 7 to 4
+f_replace(9,4,100/128) # 9 to 2 to 4
+f_replace(25,19,100) 
+f_replace(48,19,100/12) # 48 to 20 to 19
 
 ########################################################## Naming
 
