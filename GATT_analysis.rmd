@@ -263,14 +263,16 @@ First, descriptions of each schedule:
 ```{r}
 para_count <- data_set %>% group_by(Sched) %>% summarize(n=n()) %>% ungroup()
 
-schedule_names<-c('Chemicals, Oil, and Paints', 'Earths, Earthenware, and Glassware', 'Metals and Manufactures of', ' Wood and Manufactures of', 'Sugar, Molasses, and Manufactures of', 'Tobacco and Manufactures of', 'Agricultural Products and Provisions', 'Spirits, Wines, and other Beverages','Cotton Manufactures','Flax, Hemp, Jute, and Manufactures of','Wool and Manufactures of', 'Silk Manufactures','Manufactures of Rayon or Other Synthetic Textile', 'Papers and Books', 'Sundries')
+schedule_names<-c('Chemicals, Oil, and Paints', 'Earths, Earthenware, and Glassware', 'Metals and Manufactures of', 'Wood and Manufactures of', 'Sugar, Molasses, and Manufactures of', 'Tobacco and Manufactures of', 'Agricultural Products and Provisions', 'Spirits, Wines, and other Beverages','Cotton Manufactures','Flax, Hemp, Jute, and Manufactures of','Wool and Manufactures of', 'Silk Manufactures','Manufactures of Rayon or Other Synthetic Textile', 'Papers and Books', 'Sundries')
 
-data_schedules<-data.frame(para_count,schedule_names)
-names(data_schedules)<-c('Schedule','# Lines','Title')
+abbr <- c('Chem', 'Glass', 'Metals', 'Wood', 'Sugar', 'Tobacco', 'Agri', 'Spirits','Cotton','Flax','Wool', 'Silk','Rayon', 'Paper', 'Sundries')
+
+data_schedules<-data.frame(para_count,abbr,schedule_names)
+names(data_schedules)<-c('Schedule','# Lines','Abbreviation','Title')
 
 s <- kable(data_schedules, align= 'ccl',booktabs=T) %>%
   kable_styling(full_width = F, latex_options = "hold_position")
-add_header_above(s, c("Smoot Hawley Schedule Titles"=3),font_size = 12)
+add_header_above(s, c("Smoot Hawley Schedule Titles"=4),font_size = 12)
 ```
 
 ## Summary stats for specific tariffs

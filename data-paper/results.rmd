@@ -16,15 +16,13 @@ library(kableExtra)
 
 ### First look: item level
 
-Our dataset covers the Smoot-Hawley round up through the Dillon (fifth) round of GATT negotiations. We begin with the `r dplyr::n_distinct(data_set$Paragraph)` paragraphs in the Smoot-Hawley Act and then add observations to our dataset whenever more detail is required. As new negotiations take place, products listed as one item---and thus have a single tariff rate---are often split into multiple items with different tariff rates. It is this phenomenon that leads to virtually all the added observations in our final dataset, which has `r nrow(data_set)` observations. We refer to an observation in our dataset as an `item.'
+Our dataset covers the Smoot-Hawley round up through the Dillon (fifth) round of GATT negotiations. We begin with the `r dplyr::n_distinct(data_set$Paragraph)` paragraphs in the Smoot-Hawley Act and then add observations to our dataset whenever more detail is required.^[Note that there are more items than paragraphs because some paragraphs contain multiple tariff entries.] As new negotiations take place, products listed as one item---and thus have a single tariff rate---are often split into multiple items with different tariff rates. It is this phenomenon that leads to virtually all the added observations in our final dataset, which has `r nrow(data_set)` observations. We refer to an observation in our dataset as an `item.'
 
 When the schedule for a round does not have information for a given item, we assume that the previous tariff rate is in effect. That is, we copy forward an item's tariff rate until a new rate appears as we move chronologically through the schedules. Our dataset is therefore a balanced panel.
 
 This panel has ten variables that correspond to each of the available schedules: Smoot-Hawley (1930), the tariffs in place just before GATT negotiations began (1946), Geneva 1947, Annecy (1949), Torquay (1951), three phases for Geneva 1956 (1956, 1957, 1958) and two phases for Dillon (1963, 1964).
 
-
 ```{r echo=F}
-
 same <- function(b,e){
   beg <- shortnames %>% select(ends_with(b))
   end <- shortnames %>% select(ends_with(e))
@@ -37,9 +35,8 @@ same <- function(b,e){
          , envir=.GlobalEnv)
 }  
 
-same("SH","DB")
-
 # below we get the sets of lines for each round compared to SH
+same("SH","DB")
 same("SH","BG")
 same("SH","Ge")
 same("SH","An")
@@ -100,13 +97,13 @@ ggplot() +
   scale_y_continuous(breaks = seq(0, 3000, by = 500))
 ```
 
-The two related, but distinct measures shown in Figure \@ref(fig:ibi) provide a first glimpse into the breadth of negotiations.^[Note that the 1946---just pre-Geneva 1947---embodied bilateral negotiations with nearly twenty countries, the results of which were extended on an MFN basis.] The red dots show how many items saw new commitments in each round. Geneva 1947, at `r nrow(sameBG_Ge)`, saw the largest number of lines with commitments of any round. The Annecy round saw the fewest new commitments at `r nrow(sameGe_An)` as one would expect since the U.S. only negotiated with new contracting parties in this round.
+The two related, but distinct measures shown in Figure \@ref(fig:ibi) provide a first glimpse into the breadth of negotiations.^[Note that the 1946---just pre-Geneva 1947---embodied bilateral negotiations with nearly twenty countries, the results of which were extended on an MFN basis.] The red dots show how many items saw new commitments in each round. Geneva 1947 saw the largest number of items with commitments of any round: `r nr-nrow(sameBG_Ge)`. The Annecy round saw the fewest new commitments at `r nr-nrow(sameGe_An)`; this is in line with expectations since the U.S. only negotiated with new contracting parties in this round.
 
-The blue line connects the dots indicating the number of items that had no negotiated change from Smoot Hawley at each point in our data. For instance, between Smoot Halwey and the start of the Geneva talks in 1946, a little more than one-third of the items in our dataset had some negotiated commitment.^[Note that this does not imply that negotiators made 1000 commitments ] The Geneva 1947 Round saw just under one-third of the items with commitments for the first time. By the end of the Dillon Round phase-in, only `r nrow(sameDB)` items remained with no negotiated commitment.
+The blue line connects the dots indicating the number of items that had no negotiated change from Smoot Hawley at each point in our data. For instance, between Smoot Hawley and the start of the Geneva talks in 1946, a little more than one-third of the items in our dataset had some negotiated commitment.^[Note that this does not imply that negotiators made 1000 commitments, as many items were split after 1946.] In the Geneva 1947 round, just under one-third of the items received commitments for the first time. By the end of the Dillon Round phase-in, only `r nrow(sameDB)` items remained with no negotiated commitment.
 
-[ADD IF TIME: HOW MANY LINES SAW NEW COMMITMENTS IN EACH ROUND (THIS WOULD INCLUDE DUPLICATES)]
+[ADD IF TIME: HOW MANY ITEMS SAW NEW COMMITMENTS IN EACH ROUND (THIS WOULD INCLUDE DUPLICATES)]
 
-[ADD IF TIME: Which lines from Smoot Hawley don't see any action? THESE ARE IN sameDB]
+[ADD IF TIME: Which items from Smoot Hawley don't see any action? THESE ARE IN sameDB]
 
 
 ### From Smoot-Hawley to Dillon: what was accomplished?
@@ -133,14 +130,13 @@ We find that from the Smoot-Hawley tariffs in 1930 to the last phase in of the D
 
 Things look a bit different for specific tariffs. The mean specific tariff binding decreases from `r round(sp_mean["Specific_SH",],0)` cents in 1930 to `r round(sp_mean["Specific_Dillon_B",],0)` cents in 1964, while the median bindings are much smaller, dropping from `r round(sp_med["Specific_SH",],2)` cents to `r round(sp_med["Specific_Dillon_B",],2)` cents. Specific tariffs are present for roughly half of the items in our data. Note that summary statistics throughout the paper for specific tariffs are *not* trade weighted; we are in the process of acquiring the trade data required to both trade weight summary statistics and compute *ad valorem* equivalents.
 
-The number of items that have both *ad valorem* and specific components to their tariff in a given round varies from 475 to 505. These lines are included in the previous statistics.
+The number of items that have both *ad valorem* and specific components to their tariff in a given round varies from 475 to 505, or a little more than 15%. Following the categorization in Teti (2000), we refer to these items as *compound*. These items are included in the previous statistics. Also included are *mixed* tariffs, that are specified as having either an *ad valorem* or specific rate, depending on which is higher. Roughly 10% of our items have some *mixed component*. And about 2% of the items are *technical* in nature, that is, being defined in non-standard units like the proportion of content that meets some criteria. We do not analyze these categories separately because, insofar as possible, we have integrated them with the basic *ad valorem* and specific types.
 
 [ADD IF TIME: FROM 'BOTH'--PROPORTIONS IN EACH SCHEDULE THAT HAVE BOTH]
 
-
 ### Heterogeneity over time: Round-by-Round liberalization
 
-In terms of the time pattern of liberalization, we can confirm a well-known stylized fact: the largest proportional cuts took place between the Smoot-Hawley legislation and the first round of the GATT in Geneva in 1947: average tariffs, both specific and *ad valorem*, were reduced by about 30% (see the following two tables).
+In terms of the time pattern of liberalization, we can confirm a well-known stylized fact: the largest proportional cuts took place between the Smoot-Hawley legislation and the first round of the GATT in Geneva in 1947: average tariffs, both specific and *ad valorem*, fell by about 30% (see the following two tables).
 
 ```{r}
 sp_mean <- specific[,6:15] %>% sapply(mean, na.rm=TRUE)
@@ -167,9 +163,9 @@ y <- kbl(av_mt,digits=2,booktabs=T) %>%
 add_header_above(y, c(" " = 1,c("Decrease in ad valorem tariffs by round"=4)),font_size = 12)
 ```
 
-What will be surprising to many is the the United States was *very* active in negotiating bilateral agreements between 1934 and the start of the GATT negotiations in Geneva in 1947. In terms of median tariffs, a little less than half of the 30% reduction between Smoot Hawley and Geneva 1947 is directly attributable to the bilateral trade agreements because the U.S. converted all its bilateral concessions into MFN tariffs.^[Only a few pre-existing agreements, such as with Cuba and Philippines, did not have their commitments extended in this way.] Taking into account the 1946 tariff levels, the reduction in *ad valorem* tariffs we find matches the figure of 21% from page 485 of Irwin (2017).  
+What will be surprising to many is the the United States was *very* active in negotiating bilateral agreements between 1934 and the start of the GATT negotiations in Geneva in 1947. In terms of *ad valorem* tariffs, a little less than half of the 30% reduction between Smoot Hawley and Geneva 1947 is directly attributable to the bilateral trade agreements because the U.S. converted all its bilateral concessions into MFN tariffs.^[Only a few pre-existing agreements, such as with Cuba and Philippines, did not have their commitments extended in this way.] Taking into account the 1946 tariff levels, the reduction in *ad valorem* tariffs we find is very close to the figure reported in Irwin (2017 p. 485) of 21%.
 
-The pattern of reductions after Geneva 1947 is somewhat uneven. From Geneva 1947 to Annecy, the reduction in means was much smaller at about 3% with the reduction in medians being 20%. Annecy saw small tariff cuts on average in large part because this round was focused on accession: countries like the United States that had joined in Geneva only negotiated with those countries that were newly acceding in the Annecy Round.
+The pattern of reductions after Geneva 1947 is somewhat uneven. From Geneva 1947 to Annecy, the reduction in *ad valorem* tariffs was much smaller at about 3% for the mean and 20% for the medians. Reductions in specific tariffs were about half the size of the reductions in *ad valorem* tariffs. Annecy saw small tariff cuts on average in large part because this round was focused on accession: countries like the United States that had joined in Geneva only negotiated with those countries that were newly acceding in the Annecy Round.
 
 In percentage terms, the Torquay Round saw cuts about two-thirds of the size of those in Geneva 1947. Geneva 1956 saw percentage cuts closer to those in Annecy, and for the first time these were phased in. The cuts in tariff averages in the Dillon round were about 5% for specific tariffs and 10% for *ad valorem*, while the median for both types of tariffs decreased by about 15%.
 
@@ -198,24 +194,169 @@ add_header_above(a, c(" " = 1,"Summary Statistics of Ad Valorem Tariffs by Round
 
 ### Heterogeneity across products: Schedule-by-Schedule liberalization 
 
--   Round by round graphs for specific, interesting lines
+```{r}
+change_BG <-
+  data_set %>%
+  filter(
+    is.na(Specific_SH) != is.na(Specific_1946_after) | 
+      is.na(Ad_Valorem_SH) != is.na(Ad_Valorem_1946_after) | Units_SH != Units_1946_after 
+  ) %>%
+  mutate(BG = 1,unit_ch = ifelse(Units_SH != Units_1946_after, 1, 0))
+         
+change_G <-
+  data_set %>%
+  filter(
+    is.na(Specific_1946_after) != is.na(Specific_Geneva) | 
+      is.na(Ad_Valorem_1946_after) != is.na(Ad_Valorem_Geneva) | Units_1946_after != Units_Geneva 
+  ) %>%
+  mutate(G = 1,unit_ch = ifelse(Units_1946_after != Units_Geneva, 1, 0))
+         
+change_A <-
+  data_set %>%
+  filter(
+    is.na(Specific_Annecy) != is.na(Specific_Geneva) | 
+      is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Geneva) | Units_Annecy != Units_Geneva
+  ) %>%
+  mutate(A = 1,unit_ch = ifelse(Units_Annecy != Units_Geneva, 1, 0))
 
+change_T <-
+  data_set %>%
+  filter(
+    is.na(Specific_Annecy) != is.na(Specific_Torquay) | 
+      is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Torquay) | Units_Annecy != Units_Torquay
+  ) %>%
+  mutate(T = 1,unit_ch = ifelse(Units_Annecy != Units_Torquay, 1, 0))
 
-These headline numbers hide variation in magnitude and speed of liberalization across types of products. This will be explored in detail in the paper, but a few interesting details are in order here. The data are grouped into 15 industry groups called *schedules* in Smoot Hawley. They range in length from `r count(ad_valorem[which(ad_valorem$Sched == 6),])` lines for Schedule 6 (Tobacco and Manufactures of) to  `r count(ad_valorem[which(ad_valorem$Sched == 3),])` lines for Schedule 3 (Metals and Manufactures of).
+change_GA <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_A) != is.na(Specific_Torquay) | 
+      is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Torquay) | Units_Geneva56_A != Units_Torquay
+  ) %>%
+  mutate(GA = 1,unit_ch = ifelse(Units_Torquay != Units_Geneva56_A, 1, 0))
 
-Schedule 8 (Spirits, Wines and other Beverages) has all but `r as.character(english(sum(is.na(specific[which(specific$Sched == 8),"Specific_Dillon_B"]))))` of its `r count(ad_valorem[which(ad_valorem$Sched == 8),])` lines covered by a specific tariff and it sees the largest mean tariff in each round. The mean tariff cut is correspondingly largest here, with a decrease of more than `r floor((mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE) - mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE))/mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE)*100)`% in the average specific tariff from `r round(mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE),0)`% in Smoot Hawley to `r round(mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),0)`% in Dillon.
+change_GB <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_A) != is.na(Specific_Geneva56_B) | 
+      is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_A != Units_Geneva56_B
+  ) %>%
+  mutate(GB = 1,unit_ch = ifelse(Units_Geneva56_A != Units_Geneva56_B, 1, 0))
 
-In contrast, the `r sum(!is.na(specific[which(specific$Sched == 5),"Specific_Dillon_B"]))` lines with specific tariffs for Schedule 5 (Sugar, Molasses and Manufactures of) start at one of the lowest averages across schedules of `r round(mean(specific[which(specific$Sched == 5),"Specific_SH"]$Specific_SH, na.rm = TRUE),1)`% but decreases to only `r round(mean(specific[which(specific$Sched == 5),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),1)`% by Dillon. The other `r as.character(english(sum(!is.na(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]))))` lines have *ad valorem* tariffs and have the smallest decrease across all schedules for mean *ad valorem* tariffs: from `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_SH"]$Ad_Valorem_SH, na.rm = TRUE),1)`% to `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]$Ad_Valorem_Dillon_B, na.rm = TRUE),1)`%, which is the largest mean *ad valorem* tariff across all schedules in the Dillon round. 
+change_GC <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_C) != is.na(Specific_Geneva56_B) | 
+      is.na(Ad_Valorem_Geneva56_C) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_C != Units_Geneva56_B
+  ) %>%
+  mutate(GC = 1,unit_ch = ifelse(Units_Geneva56_B != Units_Geneva56_C, 1, 0))
+
+change_DA <-
+  data_set %>%
+  filter(
+    is.na(Specific_Dillon_A) != is.na(Specific_Geneva56_C) | 
+      is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Geneva56_C) | Units_Dillon_A != Units_Geneva56_C
+  ) %>%
+  mutate(DA = 1,unit_ch = ifelse(Units_Geneva56_C != Units_Dillon_A, 1, 0))
+
+change_DB <-
+  data_set %>%
+  filter(
+    is.na(Specific_Dillon_A) != is.na(Specific_Dillon_B) | 
+      is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Dillon_B) | Units_Dillon_A != Units_Dillon_B
+  ) %>%
+  mutate(DB = 1,unit_ch = ifelse(Units_Dillon_B != Units_Dillon_B, 1, 0))
+
+mergeCols <- colnames(data_set)
+mC <- mergeCols[mergeCols != "unit_ch"]
+changes <- select(change_BG,-unit_ch) %>% 
+  full_join(select(change_G,-unit_ch),  by = mergeCols)%>%
+  full_join(select(change_A,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_T,-unit_ch),  by = mergeCols) %>% 
+  full_join(select(change_GA,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_GB,-unit_ch),  by = mergeCols) %>% 
+  full_join(select(change_GC,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_DA,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_DB,-unit_ch),  by = mergeCols) %>% arrange(id)
+```
+
+These headline numbers hide variation in magnitude and speed of liberalization across types of products. The data are grouped into 15 industry groups called *schedules* in Smoot Hawley. They range in length from `r count(ad_valorem[which(ad_valorem$Sched == 6),])` items for Schedule 6 (Tobacco) to  `r count(ad_valorem[which(ad_valorem$Sched == 3),])` items for Schedule 3 (Metals).
+
+```{r}
+para_count <- data_set %>% group_by(Sched) %>% summarize(n=n()) %>% ungroup()
+
+schedule_names<-c('Chemicals, Oil, and Paints', 'Earths, Earthenware, and Glassware', 'Metals and Manufactures of', 'Wood and Manufactures of', 'Sugar, Molasses, and Manufactures of', 'Tobacco and Manufactures of', 'Agricultural Products and Provisions', 'Spirits, Wines, and other Beverages','Cotton Manufactures','Flax, Hemp, Jute, and Manufactures of','Wool and Manufactures of', 'Silk Manufactures','Manufactures of Rayon or Other Synthetic Textile', 'Papers and Books', 'Sundries')
+
+abbr <- c('Chemicals', 'Glass', 'Metals', 'Wood', 'Sugar', 'Tobacco', 'Ag', 'Spirits','Cotton','Flax','Wool', 'Silk','Rayon', 'Paper', 'Sundries')
+
+data_schedules<-data.frame(para_count,abbr,schedule_names)
+names(data_schedules)<-c('Schedule','Items','Abbreviation','Title')
+
+s <- kable(data_schedules, align= 'ccl',booktabs=T) %>%
+  kable_styling(full_width = F, latex_options = "hold_position")
+add_header_above(s, c("Schedule Titles"=4),font_size = 12)
+```
+
+Note that 98 items switch between *ad valorem* and *specific* at some point. We exclude these items from the analysis in this section because they can distort the summary statistics for small groups.
+
+```{r echo=FALSE, warning=FALSE}
+changes2 <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Specific"))
+nochanges <- rows_delete(specific, changes2, by = "id")
+
+sum_specific_nC_pc <- nochanges %>%   
+  group_by(Sched) %>%  
+  summarize(SH_mean = mean(Specific_SH, na.rm=TRUE),
+            DB_mean = mean(Specific_Dillon_B, na.rm=TRUE),
+            mean_chg = ((SH_mean - DB_mean)/SH_mean)*100,
+            SH_med = median(Specific_SH, na.rm=TRUE),
+            DB_med = median(Specific_Dillon_B, na.rm=TRUE),
+            med_chg = ((SH_med - DB_med)/SH_med)*100,
+            n_specific = sum(!is.na(Specific_SH)),
+            n = n()) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+
+sss_nc <- kbl(sum_specific_nC_pc,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
+add_header_above(sss_nc, c("Specific Tariffs, switchers removed"=9),font_size = 12)
+
+```
+
+```{r}
+changesav <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Ad_Valorem"))
+nochanges_av <- rows_delete(ad_valorem, changesav, by = "id")
+
+sum_av_nC_pc <- nochanges_av %>%   
+  group_by(Sched) %>% 
+  summarize(SH_mean = mean(Ad_Valorem_SH, na.rm=TRUE),
+            DB_mean = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
+            mean_chg = ((SH_mean - DB_mean)/SH_mean)*100,
+            SH_med = median(Ad_Valorem_SH, na.rm=TRUE),
+            DB_med = median(Ad_Valorem_Dillon_B, na.rm=TRUE),
+            med_chg = ((SH_med - DB_med)/SH_med)*100,
+            n_av = sum(!is.na(Ad_Valorem_SH)),
+            n = n()) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+ssav_nC <- kbl(sum_av_nC_pc,digits=2,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
+add_header_above(ssav_nC, c("Ad valorem Tariffs, switchers removed"=9),font_size = 12)
+
+```
+Schedule 8 (Spirits, Wines and other Beverages) has all but `r as.character(english(sum(is.na(specific[which(specific$Sched == 8),"Specific_Dillon_B"]))))` of its `r count(ad_valorem[which(ad_valorem$Sched == 8),])` items covered by a specific tariff and it sees the largest mean tariff in each round. The mean tariff cut is correspondingly largest here, with a decrease of more than `r floor((mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE) - mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE))/mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE)*100)`% in the average specific tariff from `r round(mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE),0)`% in Smoot Hawley to `r round(mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),0)`% in Dillon.
+
+In contrast, the `r sum(!is.na(specific[which(specific$Sched == 5),"Specific_Dillon_B"]))` items with specific tariffs for Schedule 5 (Sugar, Molasses and Manufactures of) start at one of the lowest averages across schedules of `r round(mean(specific[which(specific$Sched == 5),"Specific_SH"]$Specific_SH, na.rm = TRUE),1)`% but decreases to only `r round(mean(specific[which(specific$Sched == 5),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),1)`% by Dillon. The other `r as.character(english(sum(!is.na(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]))))` items have *ad valorem* tariffs and have the smallest decrease across all schedules for mean *ad valorem* tariffs: from `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_SH"]$Ad_Valorem_SH, na.rm = TRUE),1)`% to `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]$Ad_Valorem_Dillon_B, na.rm = TRUE),1)`%, which is the largest mean *ad valorem* tariff across all schedules in the Dillon round. 
 
 <!-- check the facts in this next paragraph by hand--we need to be aware if this changes -->
 
 Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) has the mean *ad valorem* tariff decrease by less than the median decrease *ad valorem* tariff, implying a reduction in tariff spikes. For specific tariffs, exactly half of the schedules show this pattern (Schedule 12 -- Silk Manufactures has no specific tariffs). 
 
--   Any obvious patterns to which lines have largest/smallest cuts?
+-   Any obvious patterns to which items have largest/smallest cuts?
+
+-   Round by round graphs for specific, interesting items
+
 
 ### Which items get staged tariff reductions?
 
--   Are there differences in which lines get staging once staging starts?
+-   Are there differences in which items get staging once staging starts?
 
     -   Before Kennedy at least, where it was uniform...
 
@@ -229,7 +370,7 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
 
     -   1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 40 percent of the dutiable imports
     
-### Some lines see tariff increases
+### Some items see tariff increases
 
 -   Para 209, item 6 has tariff double in Geneva56A
 
@@ -259,11 +400,11 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
 
 ## Analysis
 
--   What can we say about which / why lines have ad valorem vs. specific?
+-   What can we say about which / why items have ad valorem vs. specific?
 
     -   Is there variation over time?
     
-    , but we intend to analyze them separately and provide explanation for which lines get *ad valorem* protection, which lines get specific tariffs, and which get both. We know that the incidence of specific tariffs declines with inflation; this is an important and under-studied aspect of liberalization that we intend to explore.
+    , but we intend to analyze them separately and provide explanation for which items get *ad valorem* protection, which items get specific tariffs, and which get both. We know that the incidence of specific tariffs declines with inflation; this is an important and under-studied aspect of liberalization that we intend to explore.
 
 -   Which products `suffer' from large tariff cuts and which products continue to receive protection?
 

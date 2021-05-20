@@ -1,6 +1,6 @@
 ---
 title: "Literature"
-date: "4/22/2021"
+date: 'last edited `r Sys.Date()` '
 output: pdf_document
 fontsize: 12pt
 linestretch: 1.25
@@ -10,29 +10,8 @@ linestretch: 1.25
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-There is a large qualitative literature on the history of U.S. trade policy and the GATT. Irwin (2017) provides a comprehensive history of U.S. trade policy, while Hoda (2018) reports a general history of the GATT. Dobson (1976) focuses on the deep history of the USITC, while Rosengarten et al. (2017) focus on the USITCs tariff activities.
+There is a large qualitative literature on the history of U.S. trade policy and the GATT. Irwin (2017) provides a comprehensive history of U.S. trade policy, while Hoda (2018) reports a general history of the GATT. Other authors give a detailed account of specific GATT rounds, such as Evans (1971) on the Kennedy Round. Dobson (1976) focuses on the deep history of the USITC, while Rosengarten et al. (2017) focus on the USITC's tariff activities. Legal scholars provide views into the important institutional details of the GATT as an instrument of international law, e.g. Mavroidis (2016).
 
-    -   Go back and list some of the books we read on, e.g., each round
+There are three main strands of closely-related quantitative literature. The papers that study mid-20th century trade policy (Bagwell et al. (2020) and Bown and Irwin (2017)) have been discussed above. There is also an older literature that studies mid-20th century trade policy and its determination with a scope that was limited by the computing power (or lack thereof) of the time, e.g., Krause (1962) and Kreinin (1967). Finally, cataloguing of trade policy since the late 1980s/early 1990s is carried out by, for example, Teti (2020). 
 
-    -   1994 Irwin NBER working paper
-    -   Irwin (2020)?
-
-    -   Petros' chapter on tariffs
-
--   Three strands of quantitative literature
-
-    -   Old stuff
-
-        -   Krause 1962, etc
-
-            -   Go through reference list
-
-        -   Dur, Balassa, Kreinin
-
-    -   BSY (is there a second one?)
-
-    -   Data since HS (some TSUS from Feenstra?)
-
-        -   Bown and Irwin (2017)
-
-        -   But what about "30 years of trade policy"?
+A large theoretical literature also exists on trade policy determination in the context of the GATT/WTO.

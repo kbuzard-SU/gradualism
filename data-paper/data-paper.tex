@@ -39,7 +39,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Quantifying GATT Trade Liberalization},
+  pdftitle={Quantifying U.S. GATT Trade Liberalization},
   pdfauthor={Kristy Buzard; Ross Jestrab; Zeyuan (Victor) Xiong},
   colorlinks=true,
   linkcolor=Maroon,
@@ -94,7 +94,14 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
-\title{Quantifying GATT Trade Liberalization}
+\title{Quantifying U.S. GATT Trade Liberalization}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Preliminary; please do not circulate.}
 \author{Kristy Buzard\footnote{Syracuse University, \href{mailto:kbuzard@syr.edu}{\nolinkurl{kbuzard@syr.edu}}, \url{http://kristybuzard.com}} \and Ross Jestrab\footnote{Syracuse University, \href{mailto:rcjestra@syr.edu}{\nolinkurl{rcjestra@syr.edu}}} \and Zeyuan (Victor) Xiong\footnote{Syracuse University, \href{mailto:zxiong07@syr.edu}{\nolinkurl{zxiong07@syr.edu}}}}
 \date{May 20, 2021}
 
@@ -105,58 +112,25 @@ Large-scale tariff reductions within the framework of the General Agreement on T
 \end{abstract}
 
 \setstretch{1.25}
+\href{https://github.com/kbuzard-SU/gradualism/blob/master/data-paper/data-paper.pdf}{Click for latest version}
+
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-\#\texttt{\{r\ child\ =\ \textquotesingle{}intro.Rmd\textquotesingle{}\}\ \#}
+Large-scale tariff reductions within the framework of the General Agreement on Tariffs and Trade (GATT) have come as a result of a series of eight rounds of negotiations that began in 1947. Most of the literature that attempts to understand this phenomenon is theoretical, in large part because data availability has been a major barrier to empirical research on this massive dismantling of trade barriers.\footnote{See, for instance, the literature that seeks to explain the gradual nature of this liberalization, e.g. Devereaux (1997) and  Chisik (2003) who focus on exporters; Mussa (1986), Staiger (1995) or Mehlum (1998) on the import-competing story; or Zissimos (2007) on the role of the `withdrawal of equivalent concessions' rule.} Bown and Irwin (2017) have documented the available data, finding it to be frustratingly sparse. The data they find are applied tariffs--i.e.~those that are actually charged at the border---and are disaggregated to the level of ten broad sectors at most.
+
+As little as we know about applied tariffs in this context, we know even less about the negotiated tariff bindings. Somewhat surprisingly, data on the tariff commitments made by the GATT signees has not been widely available, preventing empirical studies on the workings of the GATT and the dynamics of this important episode of trade liberalization.\footnote{One notable exception is Bagwell et al. (2020) who digitize the bilateral negotiation records for the Torquay Round. In order to use the bilateral data they have, one would have to digitize and combine all of a country's bilateral commitments.}
+
+Both having more industrial detail about tariffs and having this detail be for negotiated tariffs is important. First, the negotiated tariff commitments allow us to study the political constraints that led to the GATT agreements. The negotiated tariffs are the cleanest data that exist for all negotiating parties since they are not complicated by the various processes that determine applied tariffs. Second, often the most relevant object in terms of policymaking is the gap between the negotiated tariff and the applied tariff; this is known as tariff overhang or ``water'\,' in the bindings.\footnote{See, for instance, Beshkar and Bond (2016), Bown and Crowley (2014), Busch and Pelc (2014), and Kuenzel (2020).} Even if we know what the applied tariffs were, we can't know how much water is in the bindings if we don't also know the negotiated tariff caps.
 
 \hypertarget{literature}{%
-\section{Literature}\label{literature}}
+\subsection{Literature}\label{literature}}
 
-There is a large qualitative literature on the history of U.S. trade policy and the GATT. Irwin (2017) provides a comprehensive history of U.S. trade policy, while Hoda (2018) reports a general history of the GATT. Dobson (1976) focuses on the deep history of the USITC, while Rosengarten et al.~(2017) focus on the USITCs tariff activities.
+There is a large qualitative literature on the history of U.S. trade policy and the GATT. Irwin (2017) provides a comprehensive history of U.S. trade policy, while Hoda (2018) reports a general history of the GATT. Other authors give a detailed account of specific GATT rounds, such as Evans (1971) on the Kennedy Round. Dobson (1976) focuses on the deep history of the USITC, while Rosengarten et al.~(2017) focus on the USITC's tariff activities. Legal scholars provide views into the important institutional details of the GATT as an instrument of international law, e.g.~Mavroidis (2016).
 
-\begin{verbatim}
--   Go back and list some of the books we read on, e.g., each round
+There are three main strands of closely-related quantitative literature. The papers that study mid-20th century trade policy (Bagwell et al.~(2020) and Bown and Irwin (2017)) have been discussed above. There is also an older literature that studies mid-20th century trade policy and its determination with a scope that was limited by the computing power (or lack thereof) of the time, e.g., Krause (1962) and Kreinin (1967). Finally, cataloguing of trade policy since the late 1980s/early 1990s is carried out by, for example, Teti (2020).
 
--   1994 Irwin NBER working paper
--   Irwin (2020)?
-
--   Petros' chapter on tariffs
-\end{verbatim}
-
-\begin{itemize}
-\item
-  Three strands of quantitative literature
-
-  \begin{itemize}
-  \item
-    Old stuff
-
-    \begin{itemize}
-    \item
-      Krause 1962, etc
-
-      \begin{itemize}
-      \tightlist
-      \item
-        Go through reference list
-      \end{itemize}
-    \item
-      Dur, Balassa, Kreinin
-    \end{itemize}
-  \item
-    BSY (is there a second one?)
-  \item
-    Data since HS (some TSUS from Feenstra?)
-
-    \begin{itemize}
-    \item
-      Bown and Irwin (2017)
-    \item
-      But what about ``30 years of trade policy''?
-    \end{itemize}
-  \end{itemize}
-\end{itemize}
+A large theoretical literature also exists on trade policy determination in the context of the GATT/WTO.
 
 \hypertarget{institutional-context}{%
 \section{Institutional Context}\label{institutional-context}}
@@ -287,7 +261,7 @@ Once this is completed, we will be able to (a) trade-weight our summary statisti
 \hypertarget{units}{%
 \subsection{Units}\label{units}}
 
-Any analysis of specific tariffs will be complicated by differences in units. We find that the Smoot-Hawley tariff system employed 59 types of units for specific tariffs. We have reduced the number of units to 27 through a standardization and normalization process.
+Any analysis of specific tariffs will be complicated by differences in units. We find that the Smoot-Hawley tariff system employed 59 types of units for specific tariffs. We have reduced the number of units to 23 through a standardization and normalization process. Only five units appear more than five times in our data: cents/ounce (1024), cents/each (262), cents/square foot (27), cents/board foot (11) and cents/cubic foot (8).
 
 The reason of normalization has two layers: first we want to keep the framework as simple as possible, second we want to make sure the values of tariff rate are comparable so that statistical inference based on the specific tariff rates will not be affected by the units. The normalization process contains steps including integrating units that have similar descriptive meanings, integrating units that have different basic units (cents per each, cents per 100 and cents per 1000), and finally transform all dollars based units to cents based units. The units keys system we created for Smoot-Hawley system also applies for the TSUSA system in later rounds. The detailed mappings of normalization process can be found in our data package.
 
@@ -307,7 +281,7 @@ Some other issues arose during the digitization process, including dealing with 
 \hypertarget{first-look-item-level}{%
 \subsubsection{First look: item level}\label{first-look-item-level}}
 
-Our dataset covers the Smoot-Hawley round up through the Dillon (fifth) round of GATT negotiations. We begin with the 671 paragraphs in the Smoot-Hawley Act and then add observations to our dataset whenever more detail is required. As new negotiations take place, products listed as one item---and thus have a single tariff rate---are often split into multiple items with different tariff rates. It is this phenomenon that leads to virtually all the added observations in our final dataset, which has 3031 observations. We refer to an observation in our dataset as an `item.'
+Our dataset covers the Smoot-Hawley round up through the Dillon (fifth) round of GATT negotiations. We begin with the 671 paragraphs in the Smoot-Hawley Act and then add observations to our dataset whenever more detail is required.\footnote{Note that there are more items than paragraphs because some paragraphs contain multiple tariff entries.} As new negotiations take place, products listed as one item---and thus have a single tariff rate---are often split into multiple items with different tariff rates. It is this phenomenon that leads to virtually all the added observations in our final dataset, which has 3031 observations. We refer to an observation in our dataset as an `item.'
 
 When the schedule for a round does not have information for a given item, we assume that the previous tariff rate is in effect. That is, we copy forward an item's tariff rate until a new rate appears as we move chronologically through the schedules. Our dataset is therefore a balanced panel.
 
@@ -317,29 +291,29 @@ This panel has ten variables that correspond to each of the available schedules:
 \includegraphics{data-paper_files/figure-latex/ibi-1} \caption{Tariff Reductions by Number of Items}\label{fig:ibi}
 \end{figure}
 
-The two related, but distinct measures shown in Figure \ref{fig:ibi} provide a first glimpse into the breadth of negotiations.\footnote{Note that the 1946---just pre-Geneva 1947---embodied bilateral negotiations with nearly twenty countries, the results of which were extended on an MFN basis.} The red dots show how many items saw new commitments in each round. Geneva 1947, at 1511, saw the largest number of lines with commitments of any round. The Annecy round saw the fewest new commitments at 2799 as one would expect since the U.S. only negotiated with new contracting parties in this round.
+The two related, but distinct measures shown in Figure \ref{fig:ibi} provide a first glimpse into the breadth of negotiations.\footnote{Note that the 1946---just pre-Geneva 1947---embodied bilateral negotiations with nearly twenty countries, the results of which were extended on an MFN basis.} The red dots show how many items saw new commitments in each round. Geneva 1947 saw the largest number of items with commitments of any round: 1520. The Annecy round saw the fewest new commitments at 232; this is in line with expectations since the U.S. only negotiated with new contracting parties in this round.
 
-The blue line connects the dots indicating the number of items that had no negotiated change from Smoot Hawley at each point in our data. For instance, between Smoot Halwey and the start of the Geneva talks in 1946, a little more than one-third of the items in our dataset had some negotiated commitment.\footnote{Note that this does not imply that negotiators made 1000 commitments} The Geneva 1947 Round saw just under one-third of the items with commitments for the first time. By the end of the Dillon Round phase-in, only 272 items remained with no negotiated commitment.
+The blue line connects the dots indicating the number of items that had no negotiated change from Smoot Hawley at each point in our data. For instance, between Smoot Hawley and the start of the Geneva talks in 1946, a little more than one-third of the items in our dataset had some negotiated commitment.\footnote{Note that this does not imply that negotiators made 1000 commitments, as many items were split after 1946.} In the Geneva 1947 round, just under one-third of the items received commitments for the first time. By the end of the Dillon Round phase-in, only 272 items remained with no negotiated commitment.
 
-{[}ADD IF TIME: HOW MANY LINES SAW NEW COMMITMENTS IN EACH ROUND (THIS WOULD INCLUDE DUPLICATES){]}
+{[}ADD IF TIME: HOW MANY ITEMS SAW NEW COMMITMENTS IN EACH ROUND (THIS WOULD INCLUDE DUPLICATES){]}
 
-{[}ADD IF TIME: Which lines from Smoot Hawley don't see any action? THESE ARE IN sameDB{]}
+{[}ADD IF TIME: Which items from Smoot Hawley don't see any action? THESE ARE IN sameDB{]}
 
 \hypertarget{from-smoot-hawley-to-dillon-what-was-accomplished}{%
 \subsubsection{From Smoot-Hawley to Dillon: what was accomplished?}\label{from-smoot-hawley-to-dillon-what-was-accomplished}}
 
 We find that from the Smoot-Hawley tariffs in 1930 to the last phase in of the Dillon Round in 1964, both specific and \emph{ad valorem} tariffs were cut roughly in half. The mean \emph{ad valorem} tariff binding decreases from 39\% in 1930 to 18.9\% in 1964. The medians are quite close to the means, dropping from 35\% to 15\%. Roughly two-thirds of the items in our dataset have an \emph{ad valorem} tariff.
 
-Things look a bit different for specific tariffs. The mean specific tariff binding decreases from 32 cents in 1930 to 15 cents in 1964, while the median bindings are much smaller, dropping from 0.44 cents to 0.25 cents. Specific tariffs are present for roughly half of the items in our data. Note that summary statistics throughout the paper for specific tariffs are \emph{not} trade weighted; we are in the process of acquiring the trade data required to both trade weight summary statistics and compute \emph{ad valorem} equivalents.
+Things look a bit different for specific tariffs. The mean specific tariff binding decreases from 14 cents in 1930 to 7 cents in 1964, while the median bindings are much smaller, dropping from 0.38 cents to 0.21 cents. Specific tariffs are present for roughly half of the items in our data. Note that summary statistics throughout the paper for specific tariffs are \emph{not} trade weighted; we are in the process of acquiring the trade data required to both trade weight summary statistics and compute \emph{ad valorem} equivalents.
 
-The number of items that have both \emph{ad valorem} and specific components to their tariff in a given round varies from 475 to 505. These lines are included in the previous statistics.
+The number of items that have both \emph{ad valorem} and specific components to their tariff in a given round varies from 475 to 505, or a little more than 15\%. Following the categorization in Teti (2000), we refer to these items as \emph{compound}. These items are included in the previous statistics. Also included are \emph{mixed} tariffs, that are specified as having either an \emph{ad valorem} or specific rate, depending on which is higher. Roughly 10\% of our items have some \emph{mixed component}. And about 2\% of the items are \emph{technical} in nature, that is, being defined in non-standard units like the proportion of content that meets some criteria. We do not analyze these categories separately because, insofar as possible, we have integrated them with the basic \emph{ad valorem} and specific types.
 
 {[}ADD IF TIME: FROM `BOTH'--PROPORTIONS IN EACH SCHEDULE THAT HAVE BOTH{]}
 
 \hypertarget{heterogeneity-over-time-round-by-round-liberalization}{%
 \subsubsection{Heterogeneity over time: Round-by-Round liberalization}\label{heterogeneity-over-time-round-by-round-liberalization}}
 
-In terms of the time pattern of liberalization, we can confirm a well-known stylized fact: the largest proportional cuts took place between the Smoot-Hawley legislation and the first round of the GATT in Geneva in 1947: average tariffs, both specific and \emph{ad valorem}, were reduced by about 30\% (see the following two tables).
+In terms of the time pattern of liberalization, we can confirm a well-known stylized fact: the largest proportional cuts took place between the Smoot-Hawley legislation and the first round of the GATT in Geneva in 1947: average tariffs, both specific and \emph{ad valorem}, fell by about 30\% (see the following two tables).
 
 \begin{table}[!h]
 \centering
@@ -349,17 +323,17 @@ In terms of the time pattern of liberalization, we can confirm a well-known styl
 \cmidrule(l{3pt}r{3pt}){2-5}
   & Mean & \% decrease & Median & \% decrease\\
 \midrule
-Smoot Hawley & 31.97 & 0.00 & 0.44 & 0.00\\
-1946 & 25.86 & 19.11 & 0.44 & 0.00\\
-Geneva & 19.65 & 24.03 & 0.38 & 14.29\\
-Annecy & 19.48 & 0.84 & 0.34 & 8.33\\
-Torquay & 17.33 & 11.06 & 0.29 & 14.96\\
+Smoot Hawley & 14.45 & 0.00 & 0.38 & 0.00\\
+1946 & 11.56 & 20.03 & 0.38 & 0.00\\
+Geneva & 9.12 & 21.10 & 0.31 & 16.67\\
+Annecy & 8.96 & 1.71 & 0.28 & 10.00\\
+Torquay & 8.06 & 10.08 & 0.24 & 14.93\\
 \addlinespace
-GenevaA & 17.05 & 1.59 & 0.29 & 2.00\\
-GenevaB & 16.78 & 1.56 & 0.28 & 1.82\\
-GenevaC & 16.54 & 1.47 & 0.27 & 2.78\\
-DillonA & 15.95 & 3.55 & 0.25 & 8.57\\
-DillonB & 15.45 & 3.13 & 0.25 & 0.00\\
+GenevaA & 7.95 & 1.35 & 0.23 & 2.04\\
+GenevaB & 7.85 & 1.30 & 0.22 & 4.00\\
+GenevaC & 7.75 & 1.25 & 0.22 & 2.78\\
+DillonA & 7.33 & 5.42 & 0.22 & 0.00\\
+DillonB & 7.05 & 3.79 & 0.21 & 2.86\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -387,9 +361,9 @@ DillonB & 18.88 & 2.95 & 15.00 & 3.23\\
 \end{tabular}
 \end{table}
 
-What will be surprising to many is the the United States was \emph{very} active in negotiating bilateral agreements between 1934 and the start of the GATT negotiations in Geneva in 1947. In terms of median tariffs, a little less than half of the 30\% reduction between Smoot Hawley and Geneva 1947 is directly attributable to the bilateral trade agreements because the U.S. converted all its bilateral concessions into MFN tariffs.\footnote{Only a few pre-existing agreements, such as with Cuba and Philippines, did not have their commitments extended in this way.} Taking into account the 1946 tariff levels, the reduction in \emph{ad valorem} tariffs we find matches the figure of 21\% from page 485 of Irwin (2017).
+What will be surprising to many is the the United States was \emph{very} active in negotiating bilateral agreements between 1934 and the start of the GATT negotiations in Geneva in 1947. In terms of \emph{ad valorem} tariffs, a little less than half of the 30\% reduction between Smoot Hawley and Geneva 1947 is directly attributable to the bilateral trade agreements because the U.S. converted all its bilateral concessions into MFN tariffs.\footnote{Only a few pre-existing agreements, such as with Cuba and Philippines, did not have their commitments extended in this way.} Taking into account the 1946 tariff levels, the reduction in \emph{ad valorem} tariffs we find is very close to the figure reported in Irwin (2017 p.~485) of 21\%.
 
-The pattern of reductions after Geneva 1947 is somewhat uneven. From Geneva 1947 to Annecy, the reduction in means was much smaller at about 3\% with the reduction in medians being 20\%. Annecy saw small tariff cuts on average in large part because this round was focused on accession: countries like the United States that had joined in Geneva only negotiated with those countries that were newly acceding in the Annecy Round.
+The pattern of reductions after Geneva 1947 is somewhat uneven. From Geneva 1947 to Annecy, the reduction in \emph{ad valorem} tariffs was much smaller at about 3\% for the mean and 20\% for the medians. Reductions in specific tariffs were about half the size of the reductions in \emph{ad valorem} tariffs. Annecy saw small tariff cuts on average in large part because this round was focused on accession: countries like the United States that had joined in Geneva only negotiated with those countries that were newly acceding in the Annecy Round.
 
 In percentage terms, the Torquay Round saw cuts about two-thirds of the size of those in Geneva 1947. Geneva 1956 saw percentage cuts closer to those in Annecy, and for the first time these were phased in. The cuts in tariff averages in the Dillon round were about 5\% for specific tariffs and 10\% for \emph{ad valorem}, while the median for both types of tariffs decreased by about 15\%.
 
@@ -401,17 +375,17 @@ In percentage terms, the Torquay Round saw cuts about two-thirds of the size of 
 \cmidrule(l{3pt}r{3pt}){2-8}
   & Min & 1st Quartile & Mean & Median & 3rd Quartile & Max & N\\
 \midrule
-Smoot Hawley & 0 & 0.12 & 31.97 & 0.44 & 2.81 & 3000 & 1554\\
-1946 & 0 & 0.12 & 25.86 & 0.44 & 2.50 & 1600 & 1541\\
-Geneva & 0 & 0.09 & 19.65 & 0.38 & 2.08 & 1000 & 1543\\
-Annecy & 0 & 0.09 & 19.48 & 0.34 & 2.00 & 1000 & 1542\\
-Torquay & 0 & 0.08 & 17.33 & 0.29 & 1.88 & 1000 & 1542\\
+Smoot Hawley & 0 & 0.12 & 14.45 & 0.38 & 2.50 & 3000 & 1554\\
+1946 & 0 & 0.10 & 11.56 & 0.38 & 2.31 & 1500 & 1541\\
+Geneva & 0 & 0.07 & 9.12 & 0.31 & 1.88 & 1000 & 1543\\
+Annecy & 0 & 0.07 & 8.96 & 0.28 & 1.75 & 1000 & 1542\\
+Torquay & 0 & 0.06 & 8.06 & 0.24 & 1.56 & 750 & 1542\\
 \addlinespace
-GenevaA & 0 & 0.07 & 17.05 & 0.29 & 1.88 & 1000 & 1542\\
-GenevaB & 0 & 0.07 & 16.78 & 0.28 & 1.88 & 1000 & 1542\\
-GenevaC & 0 & 0.07 & 16.54 & 0.27 & 1.88 & 1000 & 1539\\
-DillonA & 0 & 0.07 & 15.95 & 0.25 & 1.88 & 1000 & 1541\\
-DillonB & 0 & 0.06 & 15.45 & 0.25 & 1.88 & 1000 & 1541\\
+GenevaA & 0 & 0.06 & 7.95 & 0.23 & 1.56 & 750 & 1542\\
+GenevaB & 0 & 0.06 & 7.85 & 0.22 & 1.56 & 750 & 1542\\
+GenevaC & 0 & 0.06 & 7.75 & 0.22 & 1.56 & 750 & 1539\\
+DillonA & 0 & 0.06 & 7.33 & 0.22 & 1.56 & 650 & 1541\\
+DillonB & 0 & 0.06 & 7.05 & 0.21 & 1.50 & 550 & 1541\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -442,24 +416,108 @@ DillonB & 0.50 & 10.0 & 18.88 & 15.00 & 25.00 & 90 & 1965\\
 \hypertarget{heterogeneity-across-products-schedule-by-schedule-liberalization}{%
 \subsubsection{Heterogeneity across products: Schedule-by-Schedule liberalization}\label{heterogeneity-across-products-schedule-by-schedule-liberalization}}
 
-\begin{itemize}
-\tightlist
-\item
-  Round by round graphs for specific, interesting lines
-\end{itemize}
+These headline numbers hide variation in magnitude and speed of liberalization across types of products. The data are grouped into 15 industry groups called \emph{schedules} in Smoot Hawley. They range in length from 12 items for Schedule 6 (Tobacco) to 660 items for Schedule 3 (Metals).
 
-These headline numbers hide variation in magnitude and speed of liberalization across types of products. This will be explored in detail in the paper, but a few interesting details are in order here. The data are grouped into 15 industry groups called \emph{schedules} in Smoot Hawley. They range in length from 12 lines for Schedule 6 (Tobacco and Manufactures of) to 660 lines for Schedule 3 (Metals and Manufactures of).
+\begin{table}[!h]
+\centering
+\begin{tabular}{cclc}
+\toprule
+\multicolumn{4}{c}{\bgroup\fontsize{12}{14}\selectfont Schedule Titles\egroup{}} \\
+\cmidrule(l{3pt}r{3pt}){1-4}{}
+Schedule & Items & Abbreviation & Title\\
+\midrule{}
+1 & 399 & Chemicals & Chemicals, Oil, and Paints\\
+2 & 247 & Glass & Earths, Earthenware, and Glassware\\
+3 & 660 & Metals & Metals and Manufactures of\\
+4 & 53 & Wood & Wood and Manufactures of\\
+5 & 17 & Sugar & Sugar, Molasses, and Manufactures of\\
+\addlinespace
+6 & 12 & Tobacco & Tobacco and Manufactures of\\
+7 & 471 & Ag & Agricultural Products and Provisions\\
+8 & 34 & Spirits & Spirits, Wines, and other Beverages\\
+9 & 118 & Cotton & Cotton Manufactures\\
+10 & 91 & Flax & Flax, Hemp, Jute, and Manufactures of\\
+\addlinespace
+11 & 161 & Wool & Wool and Manufactures of\\
+12 & 38 & Silk & Silk Manufactures\\
+13 & 48 & Rayon & Manufactures of Rayon or Other Synthetic Textile\\
+14 & 144 & Paper & Papers and Books\\
+15 & 538 & Sundries & Sundries\\
+\bottomrule{}
+\end{tabular}
+\end{table}
 
-Schedule 8 (Spirits, Wines and other Beverages) has all but one of its 34 lines covered by a specific tariff and it sees the largest mean tariff in each round. The mean tariff cut is correspondingly largest here, with a decrease of more than 89\% in the average specific tariff from 49\% in Smoot Hawley to 5\% in Dillon.
+Note that 98 items switch between \emph{ad valorem} and \emph{specific} at some point. We exclude these items from the analysis in this section because they can distort the summary statistics for small groups.
 
-In contrast, the 11 lines with specific tariffs for Schedule 5 (Sugar, Molasses and Manufactures of) start at one of the lowest averages across schedules of 22.9\% but decreases to only 22.8\% by Dillon. The other six lines have \emph{ad valorem} tariffs and have the smallest decrease across all schedules for mean \emph{ad valorem} tariffs: from 50.8\% to 31.9\%, which is the largest mean \emph{ad valorem} tariff across all schedules in the Dillon round.
+\begin{table}[!h]
+\centering
+\begin{tabular}[t]{rrrrrrrrr}
+\toprule
+\multicolumn{9}{c}{\bgroup\fontsize{12}{14}\selectfont Specific Tariffs, switchers removed\egroup{}} \\
+\cmidrule(l{3pt}r{3pt}){1-9}
+Sched & SH\_mean & DB\_mean & mean\_chg & SH\_med & DB\_med & med\_chg & n\_specific & n\\
+\midrule
+1 & 1.18 & 0.68 & 42.23 & 0.25 & 0.13 & 46.88 & 264 & 396\\
+2 & 6.07 & 2.67 & 56.05 & 0.25 & 0.15 & 40.00 & 101 & 232\\
+3 & 49.69 & 18.86 & 62.04 & 0.31 & 0.16 & 50.00 & 288 & 620\\
+4 & 0.46 & 0.21 & 54.61 & 0.49 & 0.17 & 64.29 & 6 & 53\\
+5 & 0.15 & 0.06 & 62.44 & 0.11 & 0.03 & 75.00 & 11 & 17\\
+\addlinespace
+6 & 9.22 & 3.89 & 57.84 & 3.28 & 1.47 & 55.24 & 12 & 12\\
+7 & 11.87 & 3.50 & 70.49 & 0.19 & 0.09 & 50.00 & 355 & 470\\
+8 & 2.07 & 0.62 & 70.19 & 0.98 & 0.33 & 66.40 & 33 & 34\\
+9 & 0.80 & 0.46 & 42.45 & 0.59 & 0.36 & 39.36 & 8 & 111\\
+10 & 0.38 & 0.24 & 36.38 & 0.17 & 0.12 & 31.82 & 42 & 91\\
+\addlinespace
+11 & 3.15 & 1.96 & 37.82 & 2.50 & 1.94 & 22.50 & 138 & 156\\
+12 & NaN & NaN & NaN & NA & NA & NA & 0 & 37\\
+13 & 2.50 & 1.45 & 42.06 & 2.81 & 1.56 & 44.44 & 34 & 48\\
+14 & 0.85 & 0.49 & 41.57 & 0.31 & 0.12 & 60.00 & 84 & 143\\
+15 & 13.64 & 8.25 & 39.52 & 1.56 & 1.00 & 36.00 & 116 & 513\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}[t]{rrrrrrrrr}
+\toprule
+\multicolumn{9}{c}{\bgroup\fontsize{12}{14}\selectfont Ad valorem Tariffs, switchers removed\egroup{}} \\
+\cmidrule(l{3pt}r{3pt}){1-9}
+Sched & SH\_mean & DB\_mean & mean\_chg & SH\_med & DB\_med & med\_chg & n\_av & n\\
+\midrule
+1 & 29.85 & 14.11 & 52.75 & 25.00 & 12.50 & 50.00 & 204 & 396\\
+2 & 44.74 & 22.94 & 48.72 & 45.00 & 20.50 & 54.44 & 152 & 232\\
+3 & 37.68 & 17.48 & 53.60 & 35.00 & 14.00 & 60.00 & 451 & 620\\
+4 & 33.91 & 15.09 & 55.51 & 33.33 & 15.00 & 55.00 & 47 & 53\\
+5 & 50.83 & 31.92 & 37.21 & 50.00 & 22.50 & 55.00 & 6 & 17\\
+\addlinespace
+6 & 25.00 & 7.75 & 69.00 & 25.00 & 7.75 & 69.00 & 2 & 12\\
+7 & 31.74 & 14.25 & 55.09 & 35.00 & 13.50 & 61.43 & 119 & 470\\
+8 & 60.00 & 30.00 & 50.00 & 60.00 & 30.00 & 50.00 & 1 & 34\\
+9 & 36.64 & 22.26 & 39.25 & 37.50 & 20.00 & 46.67 & 105 & 111\\
+10 & 37.45 & 14.86 & 60.31 & 40.00 & 12.50 & 68.75 & 58 & 91\\
+\addlinespace
+11 & 49.20 & 24.93 & 49.33 & 50.00 & 23.75 & 52.50 & 110 & 156\\
+12 & 57.43 & 24.38 & 57.55 & 60.00 & 21.00 & 65.00 & 37 & 37\\
+13 & 52.64 & 26.47 & 49.71 & 57.50 & 23.25 & 59.57 & 36 & 48\\
+14 & 21.68 & 8.69 & 59.93 & 20.00 & 8.00 & 60.00 & 123 & 143\\
+15 & 44.09 & 21.54 & 51.14 & 40.00 & 17.00 & 57.50 & 460 & 513\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Schedule 8 (Spirits, Wines and other Beverages) has all but one of its 34 items covered by a specific tariff and it sees the largest mean tariff in each round. The mean tariff cut is correspondingly largest here, with a decrease of more than 70\% in the average specific tariff from 2\% in Smoot Hawley to 1\% in Dillon.
+
+In contrast, the 11 items with specific tariffs for Schedule 5 (Sugar, Molasses and Manufactures of) start at one of the lowest averages across schedules of 0.2\% but decreases to only 0.1\% by Dillon. The other six items have \emph{ad valorem} tariffs and have the smallest decrease across all schedules for mean \emph{ad valorem} tariffs: from 50.8\% to 31.9\%, which is the largest mean \emph{ad valorem} tariff across all schedules in the Dillon round.
 
 Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) has the mean \emph{ad valorem} tariff decrease by less than the median decrease \emph{ad valorem} tariff, implying a reduction in tariff spikes. For specific tariffs, exactly half of the schedules show this pattern (Schedule 12 -- Silk Manufactures has no specific tariffs).
 
 \begin{itemize}
-\tightlist
 \item
-  Any obvious patterns to which lines have largest/smallest cuts?
+  Any obvious patterns to which items have largest/smallest cuts?
+\item
+  Round by round graphs for specific, interesting items
 \end{itemize}
 
 \hypertarget{which-items-get-staged-tariff-reductions}{%
@@ -467,7 +525,7 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
 
 \begin{itemize}
 \item
-  Are there differences in which lines get staging once staging starts?
+  Are there differences in which items get staging once staging starts?
 
   \begin{itemize}
   \item
@@ -496,8 +554,8 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
   \end{itemize}
 \end{itemize}
 
-\hypertarget{some-lines-see-tariff-increases}{%
-\subsubsection{Some lines see tariff increases}\label{some-lines-see-tariff-increases}}
+\hypertarget{some-items-see-tariff-increases}{%
+\subsubsection{Some items see tariff increases}\label{some-items-see-tariff-increases}}
 
 \begin{itemize}
 \item
@@ -551,7 +609,7 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
 
 \begin{itemize}
 \item
-  What can we say about which / why lines have ad valorem vs.~specific?
+  What can we say about which / why items have ad valorem vs.~specific?
 
   \begin{itemize}
   \tightlist
@@ -559,7 +617,7 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
     Is there variation over time?
   \end{itemize}
 
-  , but we intend to analyze them separately and provide explanation for which lines get \emph{ad valorem} protection, which lines get specific tariffs, and which get both. We know that the incidence of specific tariffs declines with inflation; this is an important and under-studied aspect of liberalization that we intend to explore.
+  , but we intend to analyze them separately and provide explanation for which items get \emph{ad valorem} protection, which items get specific tariffs, and which get both. We know that the incidence of specific tariffs declines with inflation; this is an important and under-studied aspect of liberalization that we intend to explore.
 \item
   Which products `suffer' from large tariff cuts and which products continue to receive protection?
 \item
@@ -610,45 +668,51 @@ Future plans
 \hypertarget{references}{%
 \section{References}\label{references}}
 
-ADD
+Bagwell, K., Staiger, R.W. and Yurukoglu, A. (2020). ``Multilateral trade bargaining: A first look at the GATT bargaining records.'\,' American Economic Journal: Applied Economics, 12, 72-105.
 
-Bagwell, K., Staiger, R.W. and Yurukoglu, A., 2020. ``Multilateral trade bargaining: A first look at the GATT bargaining records.'\,' American Economic Journal: Applied Economics, 12, 72-105.
+Beshkar, M. and E. W. Bond (2016). ``The Escape Clause in Trade Agreements'\,' in Kyle W. Bagwell and Robert W. Staiger, eds., Handbook of Commerical Policy, Vol. 1B, Amsterdam: 69--106.
 
-Beshkar, M. and E. W. Bond, 2016. ``The Escape Clause in Trade Agreements'\,' in Kyle W. Bagwell and Robert W. Staiger, eds., Handbook of Commerical Policy, Vol. 1B, Amsterdam: 69--106.
+Bown, C.P. and M. A. Crowley (2014). ``Emerging Economies, Trade Policy, and Macroeconomic Shocks,'\,' Journal of Development Economics, 111, 261--273.
 
-Bown, C.P. and M. A. Crowley, 2014, ``Emerging Economies, Trade Policy, and Macroeconomic Shocks,'\,' Journal of Development Economics, 111, 261--273.
+Bown, C. P. and D. A. Irwin (2017). ``The GATT's Starting Point: Tariff Levels circa 1947,'\,' in Manfred Elsig, Bernard Hoekman, and Joost Pauwelyn (eds.), Assessing the World Trade Organization: Fit for Purpose? Cambridge, UK: Cambridge University Press, 45-74 (Chapter 3).
 
-Bown, C. P. and D. A. Irwin, 2017. ``The GATT's Starting Point: Tariff Levels circa 1947,'\,' in Manfred Elsig, Bernard Hoekman, and Joost Pauwelyn (eds.), Assessing the World Trade Organization: Fit for Purpose? Cambridge, UK: Cambridge University Press, 45-74 (Chapter 3).
-
-Broda, C., Limao, N., and D. E. Weinstein, 2008. ``Optimal tariffs and market power: The
+Broda, C., Limao, N., and D. E. Weinstein (2008). ``Optimal tariffs and market power: The
 evidence.'\,' American Economic Review, 98(5), 2032-2065.
 
-Busch, M. L. and K. J. Pelc, 2014, ``Law, Politics, and the True Cost of Protectionism: The Choice of Trade Remedies or Binding Overhang,'\,' World Trade Review, 13, 39--64
+Busch, M. L. and K. J. Pelc (2014). ``Law, Politics, and the True Cost of Protectionism: The Choice of Trade Remedies or Binding Overhang,'\,' World Trade Review, 13, 39--64
 
-Chisik, R., 2003. ``Gradualism in free trade agreements: a theoretical justification.'\,' Journal of International Economics, 59, 367-397.
+Chisik, R. (2003). ``Gradualism in free trade agreements: a theoretical justification.'\,' Journal of International Economics, 59, 367-397.
 
-Devereux, M., 1997. ``Growth, specialization, and trade liberalization.'\,' International Economic Review
+Devereux, M., (1997). ``Growth, specialization, and trade liberalization.'\,' International Economic Review
 38, 565-585.
 
-Dobson, J.M., 1976. Two Centuries of Tariffs: The Background and Emergence of the U.S. International Trade Commission. US Government Printing Office.
+Dobson, J.M. (1976). Two Centuries of Tariffs: The Background and Emergence of the U.S. International Trade Commission. US Government Printing Office.
 
-Hoda, A., 2018. Tariff Negotiations and Renegotiations under the GATT and the WTO: Procedures and Practices. Cambridge University Press.
+Evans, J.W. (1971). The Kennedy Round in American Trade Policy: The Twilight of the GATT? Harvard University Press, Cambridge.
 
-Irwin, D. A., 2017. Clashing over commerce: A history of US trade policy. University of Chicago Press.
+Hoda, A. (2018). Tariff Negotiations and Renegotiations under the GATT and the WTO: Procedures and Practices. Cambridge University Press.
 
-Kuenzel, D. J., 2020, ``WTO tariff commitments and temporary protection: Complements or substitutes?.'\,' European Economic Review, 121, 103-344.
+Irwin, D. A. (2017). Clashing over commerce: A history of US trade policy. University of Chicago Press.
 
-Mehlum, H., 1998. ``Why gradualism?'\,' The Journal of International Trade and Economic Development 7, 279-297.
+Krause, L. B. (1962). ``United States Imports, 1947-1958.'\,' Econometrica, 221-238.
 
-Mussa, M., 1986. ``The adjustment process and the timing of trade liberalization.'\,' In: Choksi, A., Papageorgiou, D. (Eds.), Economic Liberalization in Developing Countries. Basil Blackwell, Oxford.
+Kreinin, M. E. (1967). `\texttt{}Price' vs.~`Tariff' Elasticities In International Trade: A Suggested Reconciliation." The American Economic Review, 57(4), 891-894.
 
-Rosengarten, G., Summers, J., and and A. Butcher, 2017. ``Chapter 7: Tariff Activities'' in \emph{A Centennial History of the United States International Trade Commission}, Benedetto, J., Gamache, L., Holbein, J., and C. Thomsen, eds., USITC Publication 4744, United States International Trade Commission.
+Kuenzel, D. J. (2020). ``WTO tariff commitments and temporary protection: Complements or substitutes?.'\,' European Economic Review, 121, 103-344.
 
-Staiger, R., 1995. ``A theory of gradual trade liberalization.'\,' In: Levinsohn, J., Deardorff, A., Stern, R. (Eds.), New Directions in Trade Theory. University of Michigan Press, Ann Arbor, MI, pp.~249-284.
+Mavroidis, P. C. (2016). The Regulation of International Trade, Volume 1: GATT (Vol. 1). MIT Press.
 
-Teti, F. A., 2020. ``30 years of trade policy: Evidence from 5.7 billion tariffs,'\,' ifo Working Paper No.~334.
+Mehlum, H. (1998). ``Why gradualism?'\,' The Journal of International Trade and Economic Development 7, 279-297.
 
-Zissimos, B, 1997. ``The GATT and gradualism.'\,' The Journal of International Economics, 71, 410-433.
+Mussa, M. (1986). ``The adjustment process and the timing of trade liberalization.'\,' In: Choksi, A., Papageorgiou, D. (Eds.), Economic Liberalization in Developing Countries. Basil Blackwell, Oxford.
+
+Rosengarten, G., Summers, J., and and A. Butcher (2017). ``Chapter 7: Tariff Activities'' in \emph{A Centennial History of the United States International Trade Commission}, Benedetto, J., Gamache, L., Holbein, J., and C. Thomsen, eds., USITC Publication 4744, United States International Trade Commission.
+
+Staiger, R. (1995). ``A theory of gradual trade liberalization.'\,' In: Levinsohn, J., Deardorff, A., Stern, R. (Eds.), New Directions in Trade Theory. University of Michigan Press, Ann Arbor, MI, pp.~249-284.
+
+Teti, F. A., (2020). ``30 years of trade policy: Evidence from 5.7 billion tariffs,'\,' ifo Working Paper No.~334.
+
+Zissimos, B, (1997). ``The GATT and gradualism.'\,' The Journal of International Economics, 71, 410-433.
 
 \hypertarget{dataappendix}{%
 \section{Data Appendix}\label{dataappendix}}
