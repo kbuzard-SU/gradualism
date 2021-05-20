@@ -150,6 +150,6 @@ More restrictions on the descriptions or new types of delineation were introduce
 Beginning in the Geneva 1956 round, the tariff reductions were made in multiple stages. In the source documents for Geneva 1956 and Dillon, there is a column for each stage.^[Geneva 1956 has three stages while Dillon has two stages.] Typically there is one year between implementation of each stage. Although most products that are negotiated in each round have different tariffs in each stage, some products do have the tariff rate for more than one stage. To deal with staging, we created separate columns for these stages and track the tariff reduction across stages. However, when comparing the tariff reduction across rounds, we focus on the tariff rate in the final stage.
 
 
-## GATT contracting parties
+<!-- ## GATT contracting parties -->
 
-\textcolor{red}{TO BE ADDED WHEN READY}
+<!-- \textcolor{red}{TO BE ADDED WHEN READY} -->

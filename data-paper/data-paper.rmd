@@ -58,11 +58,11 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.r", local = knitr::knit_g
 ```
 
 
-# Non-U.S. Contracting Parties
+<!-- # Non-U.S. Contracting Parties -->
 
-Need table that Matt is creating with number of pages for each schedule for each round
+<!-- Need table that Matt is creating with number of pages for each schedule for each round -->
 
--   remember that time series doesn't make sense
+<!-- -   remember that time series doesn't make sense -->
 
 
 # Conclusion
@@ -81,6 +81,7 @@ Future plans
 ```{r child = 'references.Rmd'}
 ```
 
+\newpage
 # Data Appendix{#dataappendix}
 
 ```{r child = 'data-appendix.Rmd'}
