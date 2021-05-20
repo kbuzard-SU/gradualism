@@ -101,9 +101,9 @@ The two related, but distinct measures shown in Figure \@ref(fig:ibi) provide a 
 
 The blue line connects the dots indicating the number of items that had no negotiated change from Smoot Hawley at each point in our data. For instance, between Smoot Hawley and the start of the Geneva talks in 1946, a little more than one-third of the items in our dataset had some negotiated commitment.^[Note that this does not imply that negotiators made 1000 commitments, as many items were split after 1946.] In the Geneva 1947 round, just under one-third of the items received commitments for the first time. By the end of the Dillon Round phase-in, only `r nrow(sameDB)` items remained with no negotiated commitment.
 
-[ADD IF TIME: HOW MANY ITEMS SAW NEW COMMITMENTS IN EACH ROUND (THIS WOULD INCLUDE DUPLICATES)]
+<!-- [ADD IF TIME: HOW MANY ITEMS SAW NEW COMMITMENTS IN EACH ROUND (THIS WOULD INCLUDE DUPLICATES)] -->
 
-[ADD IF TIME: Which items from Smoot Hawley don't see any action? THESE ARE IN sameDB]
+<!-- [ADD IF TIME: Which items from Smoot Hawley don't see any action? THESE ARE IN sameDB] -->
 
 
 ### From Smoot-Hawley to Dillon: what was accomplished?
@@ -132,7 +132,7 @@ Things look a bit different for specific tariffs. The mean specific tariff bindi
 
 The number of items that have both *ad valorem* and specific components to their tariff in a given round varies from 475 to 505, or a little more than 15%. Following the categorization in Teti (2000), we refer to these items as *compound*. These items are included in the previous statistics. Also included are *mixed* tariffs, that are specified as having either an *ad valorem* or specific rate, depending on which is higher. Roughly 10% of our items have some *mixed component*. And about 2% of the items are *technical* in nature, that is, being defined in non-standard units like the proportion of content that meets some criteria. We do not analyze these categories separately because, insofar as possible, we have integrated them with the basic *ad valorem* and specific types.
 
-[ADD IF TIME: FROM 'BOTH'--PROPORTIONS IN EACH SCHEDULE THAT HAVE BOTH]
+<!-- [ADD IF TIME: FROM 'BOTH'--PROPORTIONS IN EACH SCHEDULE THAT HAVE BOTH] -->
 
 ### Heterogeneity over time: Round-by-Round liberalization
 
@@ -354,14 +354,6 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
 -   Round by round graphs for specific, interesting items
 
 
-### Which items get staged tariff reductions?
-
--   Are there differences in which items get staging once staging starts?
-
-    -   Before Kennedy at least, where it was uniform...
-
-            -   Was it *really* uniform?
-
 ## Unexpected
 
 ### How important was RTAA between 1934 and 1946?
@@ -393,10 +385,6 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
 
     -   Para 32, "change of tax formula"? Also 202.a, 232.c,302.d,
 
-### Is this "certain tariff levels" the same as Teti?
-
-- [this is in 2017] Both the fact that countries have a preference for certain tariff levels, i.e. multiples of five and zero, as well as the fact that countries often set the same tariff for entire tariff headings, yield to a relatively low number of unique tariffs. For HICs it equals on average 567, which is compared to a total number of 5,018 HS6-products relatively low. Even the country with the largest number of unique tariffs, Liechtenstein, only has 1,710 unique levels; the European Union has the second highest number of unique tariffs (670), the United States place third (662) (Teti 2020)
-
 
 ## Analysis
 
@@ -407,17 +395,4 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
     , but we intend to analyze them separately and provide explanation for which items get *ad valorem* protection, which items get specific tariffs, and which get both. We know that the incidence of specific tariffs declines with inflation; this is an important and under-studied aspect of liberalization that we intend to explore.
 
 -   Which products `suffer' from large tariff cuts and which products continue to receive protection?
-
--   Can we posit an explanation for the variation in both the quantity and speed of liberalization across products?
-
-    -   Perhaps the number of countries who are negotiating?
-
-        -   Look at correlations between the number of pages for the schedule for each country?
-
-- Patterns of Reduction: Countries can reduce tariffs in many different ways. Assuming that changes in tariffs are governed by the objective of increasing welfare, the literature puts forward two types of tariff reforms (for example Neary (1998)). Countries can either implement a uniform radial reduction (reduce all tariffs by the same proportion) or a concertina reform (reduce the highest tariff rates). The concertina reform compresses the tariff structure—lower and more uniform tariffs are the result of reducing the extremely high tariffs the most and making only small cuts to the already low tariffs. In case of a radial reform, the tariff structure remains the same. In multilateral tariff negotiations both reforms are applied, albeit the concertina reform has become more popular in recent years (Hoda 2001). (Teti 2020)
-
-
-
-
-
 
