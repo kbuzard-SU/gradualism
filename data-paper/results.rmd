@@ -138,7 +138,7 @@ The number of items that have both *ad valorem* and specific components to their
 
 In terms of the time pattern of liberalization, we can confirm a well-known stylized fact: the largest proportional cuts took place between the Smoot-Hawley legislation and the first round of the GATT in Geneva in 1947: average tariffs, both specific and *ad valorem*, fell by about 30% (see the following two tables).
 
-```{r}
+```{r sp-rd}
 sp_mean <- specific[,6:15] %>% sapply(mean, na.rm=TRUE)
 sp_med <- specific[,6:15] %>% sapply(median, na.rm=TRUE)
 av_mean <- ad_valorem[,6:15] %>% sapply(mean, na.rm=TRUE)
@@ -148,19 +148,17 @@ sp_mt = cbind(data.frame(sp_mean),c(0,-diff(sp_mean)/data.frame(sp_mean)[-nrow(d
 
 names(sp_mt)<-c('Mean','% decrease','Median','% decrease')
 rownames(sp_mt) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-x <- kbl(sp_mt,digits=2,booktabs=T) %>% 
+kbl(sp_mt,digits=2,booktabs=T, caption = "Decrease in Specific Tariffs by Round") %>% 
   kable_styling(position = "center", latex_options = "hold_position")
-add_header_above(x, c(" " = 1,c("Decrease in specific tariffs by round"=4)),font_size = 12)
 ```
 
-```{r}
+```{r av-rd}
 av_mt = cbind(data.frame(av_mean),c(0,-diff(av_mean)/data.frame(av_mean)[-nrow(data.frame(av_mean)),]*100),data.frame(av_med),c(0,-diff(av_med)/data.frame(av_med)[-nrow(data.frame(av_med)),]*100))
 
 names(av_mt)<-c('Mean','% decrease','Median','% decrease')
 rownames(av_mt) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-y <- kbl(av_mt,digits=2,booktabs=T) %>%
+kbl(av_mt,digits=2,booktabs=T, caption = "Decrease in Ad Valorem Tariffs by Round") %>%
   kable_styling(position = "center", latex_options = "hold_position")
-add_header_above(y, c(" " = 1,c("Decrease in ad valorem tariffs by round"=4)),font_size = 12)
 ```
 
 What will be surprising to many is the the United States was *very* active in negotiating bilateral agreements between 1934 and the start of the GATT negotiations in Geneva in 1947. In terms of *ad valorem* tariffs, a little less than half of the 30% reduction between Smoot Hawley and Geneva 1947 is directly attributable to the bilateral trade agreements because the U.S. converted all its bilateral concessions into MFN tariffs.^[Only a few pre-existing agreements, such as with Cuba and Philippines, did not have their commitments extended in this way.] Taking into account the 1946 tariff levels, the reduction in *ad valorem* tariffs we find is very close to the figure reported in Irwin (2017 p. 485) of 21%.
@@ -170,23 +168,20 @@ The pattern of reductions after Geneva 1947 is somewhat uneven. From Geneva 1947
 In percentage terms, the Torquay Round saw cuts about two-thirds of the size of those in Geneva 1947. Geneva 1956 saw percentage cuts closer to those in Annecy, and for the first time these were phased in. The cuts in tariff averages in the Dillon round were about 5% for specific tariffs and 10% for *ad valorem*, while the median for both types of tariffs decreased by about 15%.
 
 
-```{r sp_sm-db, fig.cap = "Specific Tariff Reductions by Round"}
+```{r sp-sm-db}
 sp_table = cbind(data.frame(sp_min),data.frame(sp_25p),data.frame(sp_mean),data.frame(sp_med),data.frame(sp_75p),data.frame(sp_max),data.frame(sp_count))
 names(sp_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
 rownames(sp_table) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-s <- kbl(sp_table,digits=2,booktabs=T) %>%
+kbl(sp_table,digits=2,booktabs=T,caption = "Summary Statistics for Specific Tariffs by Round") %>%
   kable_styling(position = "center", latex_options = "hold_position")
-add_header_above(s, c(" " = 1,"Summary Statistics of Specific Tariffs by Round"=7),
-                 font_size = 12)
 ```
 
-```{r av_sm-db, fig.cap = "*Ad valorem* Tariff Reductions by Round"}
+```{r av-sm-db}
 adval_table = cbind(data.frame(av_min),data.frame(av_25p),data.frame(av_mean),data.frame(av_med),data.frame(av_75p),data.frame(av_max),data.frame(av_count))
 names(adval_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
 rownames(adval_table) <- c("Smoot Hawley","1946", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-a <- kbl(adval_table,digits=2,booktabs=T) %>%
+kbl(adval_table,digits=2,booktabs=T,caption = "Summary Statistics of Ad Valorem Tariffs by Round") %>%
   kable_styling(position = "center", latex_options = "hold_position")
-add_header_above(a, c(" " = 1,"Summary Statistics of Ad Valorem Tariffs by Round"=7),font_size = 12)
 ```
 
 
@@ -299,7 +294,7 @@ add_header_above(s, c("Schedule Titles"=4),font_size = 12)
 
 Note that 98 items switch between *ad valorem* and *specific* at some point. We exclude these items from the analysis in this section because they can distort the summary statistics for small groups.
 
-```{r echo=FALSE, warning=FALSE}
+```{r sp-sc, echo=FALSE, warning=FALSE}
 changes2 <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Specific"))
 nochanges <- rows_delete(specific, changes2, by = "id")
 
@@ -315,13 +310,10 @@ sum_specific_nC_pc <- nochanges %>%
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-sss_nc <- kbl(sum_specific_nC_pc,digits=2,booktabs=T) %>%
-  kable_styling(position = "center", latex_options = "hold_position")
-add_header_above(sss_nc, c("Specific Tariffs, switchers removed"=9),font_size = 12)
-
+kbl(sum_specific_nC_pc,digits=2,booktabs=T, caption = "Reduction in Specific Tariffs by Schedule") %>% kable_styling(position = "center", latex_options = "hold_position")
 ```
 
-```{r}
+```{r av-sc}
 changesav <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Ad_Valorem"))
 nochanges_av <- rows_delete(ad_valorem, changesav, by = "id")
 
@@ -336,10 +328,8 @@ sum_av_nC_pc <- nochanges_av %>%
             n_av = sum(!is.na(Ad_Valorem_SH)),
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
-ssav_nC <- kbl(sum_av_nC_pc,digits=2,booktabs=T) %>%
-  kable_styling(position = "center", latex_options = "hold_position")
-add_header_above(ssav_nC, c("Ad valorem Tariffs, switchers removed"=9),font_size = 12)
-
+ssav_nC <- kbl(sum_av_nC_pc,digits=2,booktabs=T, caption = "Reduction in Ad Valorem Tariffs by Schedule") %>%
+  kable_styling(position = "center")
 ```
 Schedule 8 (Spirits, Wines and other Beverages) has all but `r as.character(english(sum(is.na(specific[which(specific$Sched == 8),"Specific_Dillon_B"]))))` of its `r count(ad_valorem[which(ad_valorem$Sched == 8),])` items covered by a specific tariff and it sees the largest mean tariff in each round. The mean tariff cut is correspondingly largest here, with a decrease of more than `r floor((mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE) - mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE))/mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE)*100)`% in the average specific tariff from `r round(mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE),0)`% in Smoot Hawley to `r round(mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),0)`% in Dillon.
 
@@ -353,15 +343,63 @@ Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) h
 
 -   Round by round graphs for specific, interesting items
 
+```{r sp-sc-rd}
+sum_specific_bySched <- nochanges %>%   
+  group_by(Sched) %>%  
+  summarize(SH = mean(Specific_SH, na.rm=TRUE),
+            BG = mean(Specific_1946_after, na.rm=TRUE),
+            Ge = mean(Specific_Geneva, na.rm=TRUE),
+            An = mean(Specific_Annecy, na.rm=TRUE),
+            To = mean(Specific_Torquay, na.rm=TRUE),
+            GC = mean(Specific_Geneva56_C, na.rm=TRUE),
+            DB = mean(Specific_Dillon_B, na.rm=TRUE),
+            chBG = ((SH - BG)/SH)*100,
+            chGe = ((BG - Ge)/BG)*100,
+            chAn = ((Ge - An)/Ge)*100,
+            chTo = ((An - To)/An)*100,
+            chGC = ((To - GC)/To)*100,
+            chDB = ((GC - DB)/GC)*100,
+            ) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
 
-## Unexpected
+kbl(sum_specific_bySched,digits=1,booktabs=T, caption = "Mean Specific Tariffs by Schedule and Round") %>%
+  kable_styling(position = "center", latex_options = "hold_position")
+```
 
-### How important was RTAA between 1934 and 1946?
 
--   Can we test:
+```{r av-sc-rd}
+sum_av_bySched_nC <- nochanges_av %>%   
+  group_by(Sched) %>%  
+  summarize(SH = mean(Ad_Valorem_SH, na.rm=TRUE),
+            BG = mean(Ad_Valorem_1946_after, na.rm=TRUE),
+            Ge = mean(Ad_Valorem_Geneva, na.rm=TRUE),
+            An = mean(Ad_Valorem_Annecy, na.rm=TRUE),
+            To = mean(Ad_Valorem_Torquay, na.rm=TRUE),
+            GC = mean(Ad_Valorem_Geneva56_C, na.rm=TRUE),
+            DB = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
+            chBG = ((SH - BG)/SH)*100,
+            chGe = ((BG - Ge)/BG)*100,
+            chAn = ((Ge - An)/Ge)*100,
+            chTo = ((An - To)/An)*100,
+            chGC = ((To - GC)/To)*100,
+            chDB = ((GC - DB)/GC)*100,
+            ) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
 
-    -   1945, the executive branch had cut in half--the maximum allowable reduction--the rates for about 40 percent of the dutiable imports
-    
+kbl(sum_av_bySched_nC,digits=1,booktabs=T, caption = "Mean Ad Valorem by Schedule and Round") %>%
+  kable_styling(position = "center", latex_options = "hold_position")
+```
+
+
+## Notable Findings
+
+### Importance of the RTAA in the pre-GATT years
+
+Bown and Irwin (2017) present summary data from the USITC on the reduction in rates from Smoot-Hawley to just before Geneva and then to the Geneva rates. We cannot replicate this table until our trade volume and value data are complete. 
+However, columns "chBG" (for change from Smoot Hawley to "before Geneva", i.e. 1946) and "chGe" (for change from "before Geneva" to Geneva (1947) in Tables \@ref(tab:sp-sc-rd) and \@ref(tab:av-sc-rd) provide the straight item-by-item averages across specific and *ad valorem* tariffs.
+
+However the data is aggregated, it's clear that the bilateral negotiations between 1934 and 1946 made an important contribution to the statutory liberalization of this era. The headline numbers we calculate for mean tariffs in Tables \@ref(tab:sp-rd) and \@ref(tab:av-rd) are very much in line with the USITC calculations reported by Bown and Irwin (2017) of 21% pre-Geneva to post-Geneva. We find smaller figures of 20% and 13% for the mean reduction in specific and *ad-valorem* tariffs, as compared to the USITC calculation of 33%, so this is an area where we look forward to finding the effects of trade weighting the data.
+
 ### Some items see tariff increases
 
 -   Para 209, item 6 has tariff double in Geneva56A
