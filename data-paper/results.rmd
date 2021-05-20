@@ -402,11 +402,11 @@ However the data is aggregated, it's clear that the bilateral negotiations betwe
 
 ### Some items see tariff increases
 
--   Para 209, item 6 has tariff double in Geneva56A
+Although it is rare, we see 78 instances in which a tariff increases. Dillon is the round in which we observe the most tariff increases, with 39. 22 of the cases in the Dillon Round are for items that have both specific and *ad valorem* elements. Of those, 10 saw a high *ad valorem* tariff but a lower specific tariff moving from Geneva 1956 to Dillon. One saw both *ad valorem* and specific tariffs go up, and the rest kept the same specific tariff but increased the *ad valorem* tariff by up to 140% (this *ad valorem* increase from 25% to 60% was in Paragraph 1108 for wool woven fabrics). The rest appear to be straightforward increases. For instance, four items in Paragraph 371---bicycles---saw the *ad valorem* tariff increase from 15% to 22.5%. Four items in Paragraph 371 also had only specific tariffs and saw those increase by exactly 50%, e.g. from $2 per bicycle to $3 per bicycle.
 
-    -   331 item 10 increases specific tariff from 3 to 4 in Torquay
-    -   911
-    -   1005.a.3 (something to do with hemp) S-H --\> Geneva unchanged; then increase
+There were 18 increases from Smoot-Hawly to 1946, with many of them in Schedule 3 (Metals). But we also see the specific tariff rate on frozen swordfish (Paragraph 717a) increase, from 0.125 cents to 0.1865 cents per ounce. The Annecy Round saw no tariff increases.
+
+Although these increases are scattered across most of the Schedules, Glass, Metals, Agricultural Goods and Wool account for the majority of them.
 
 
 ### Switching from *ad valorem* to specific is rare
