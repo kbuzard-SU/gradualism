@@ -25,5 +25,15 @@ ggplot(data, aes(x=xValue, y=reorder(X27,-xValue))) + geom_point() +
   labs(x="Year", y="Ad Valorem Tariff (%)") +
   ggtitle("My dope plot") + theme(plot.title = element_text(hjust = 0.5))
 
+# concertina
+xValue <- data_set$Ad_Valorem_1946_after
+yValue <- AV_chg_BG
 
-  
+data <- data.frame(xValue,yValue)
+ggplot(data, aes(x=xValue, y=yValue)) + geom_point() + geom_smooth(method="lm")  
+
+xValue <- data_set$Ad_Valorem_Geneva
+yValue <- AV_chg_Ge
+
+data <- data.frame(xValue,yValue)
+ggplot(data, aes(x=xValue, y=yValue)) + geom_point() + geom_smooth(method="lm")  

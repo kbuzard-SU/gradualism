@@ -8,6 +8,8 @@ output: pdf_document
 knitr::opts_chunk$set(echo = FALSE)
 library(qwraps2)
 library(kableExtra)
+library(data.table)
+library(scales)
 ```
 
 [add roadmap for this section]
@@ -130,9 +132,7 @@ We find that from the Smoot-Hawley tariffs in 1930 to the last phase in of the D
 
 Things look a bit different for specific tariffs. The mean specific tariff binding decreases from `r round(sp_mean["Specific_SH",],0)` cents in 1930 to `r round(sp_mean["Specific_Dillon_B",],0)` cents in 1964, while the median bindings are much smaller, dropping from `r round(sp_med["Specific_SH",],2)` cents to `r round(sp_med["Specific_Dillon_B",],2)` cents. Specific tariffs are present for roughly half of the items in our data. Note that summary statistics throughout the paper for specific tariffs are *not* trade weighted; we are in the process of acquiring the trade data required to both trade weight summary statistics and compute *ad valorem* equivalents.
 
-The number of items that have both *ad valorem* and specific components to their tariff in a given round varies from 475 to 505, or a little more than 15%. Following the categorization in Teti (2000), we refer to these items as *compound*. These items are included in the previous statistics. Also included are *mixed* tariffs, that are specified as having either an *ad valorem* or specific rate, depending on which is higher. Roughly 10% of our items have some *mixed component*. And about 2% of the items are *technical* in nature, that is, being defined in non-standard units like the proportion of content that meets some criteria. We do not analyze these categories separately because, insofar as possible, we have integrated them with the basic *ad valorem* and specific types.
-
-<!-- [ADD IF TIME: FROM 'BOTH'--PROPORTIONS IN EACH SCHEDULE THAT HAVE BOTH] -->
+The number of items that have both *ad valorem* and specific components to their tariff in a given round varies from 475 to 505, or a little more than 15%.^[See Section \@ref(sched) below for more details.] Following the categorization in Teti (2000), we refer to these items as *compound*. These items are included in the previous statistics. Also included are *mixed* tariffs, that are specified as having either an *ad valorem* or specific rate, depending on which is higher. Roughly 10% of our items have some *mixed component*. And about 2% of the items are *technical* in nature, that is, being defined in non-standard units like the proportion of content that meets some criteria. We do not analyze these categories separately because, insofar as possible, we have integrated them with the basic *ad valorem* and specific types.
 
 ### Heterogeneity over time: Round-by-Round liberalization
 
@@ -185,9 +185,7 @@ kbl(adval_table,digits=2,booktabs=T,caption = "Summary Statistics of Ad Valorem 
 ```
 
 
-
-
-### Heterogeneity across products: Schedule-by-Schedule liberalization 
+### Heterogeneity across products: Schedule-by-Schedule liberalization {#sched}
 
 ```{r}
 change_BG <-
@@ -275,7 +273,7 @@ changes <- select(change_BG,-unit_ch) %>%
   full_join(select(change_DB,-unit_ch),  by = mergeCols) %>% arrange(id)
 ```
 
-These headline numbers hide variation in magnitude and speed of liberalization across types of products. The data are grouped into 15 industry groups called *schedules* in Smoot Hawley. They range in length from `r count(ad_valorem[which(ad_valorem$Sched == 6),])` items for Schedule 6 (Tobacco) to  `r count(ad_valorem[which(ad_valorem$Sched == 3),])` items for Schedule 3 (Metals).
+These headline numbers hide variation in magnitude and speed of liberalization across types of products. The data are grouped into 15 industry groups called *Schedules* in Smoot Hawley. They range in length from `r count(ad_valorem[which(ad_valorem$Sched == 6),])` items for Schedule 6 (Tobacco) to  `r count(ad_valorem[which(ad_valorem$Sched == 3),])` items for Schedule 3 (Metals).
 
 ```{r}
 para_count <- data_set %>% group_by(Sched) %>% summarize(n=n()) %>% ungroup()
@@ -293,6 +291,25 @@ add_header_above(s, c("Schedule Titles"=4),font_size = 12)
 ```
 
 Note that 98 items switch between *ad valorem* and *specific* at some point. We exclude these items from the analysis in this section because they can distort the summary statistics for small groups.
+
+Recall that about 16% of items in our sample have compound tariffs, that is, both a specific and *ad valorem* component. Table \@ref(tab:comp-sc) shows the variation across schedules in the rate of compound tariffs. Four of the smaller schedules have no compound tariffs at all, while over 60% of items in Schedul 11 (Wool) have compound tariffs. The schedule with the largest number of compound tariffs is Schedule 3 (Metals), which has 124 items with compound tariffs. 
+
+```{r comp-sc}
+both <- data_set %>% mutate(bothSH=!is.na(data_set[,"Specific_SH"])&!is.na(data_set[,"Ad_Valorem_SH"]),bothGeneva=!is.na(data_set[,"Specific_Geneva"])&!is.na(data_set[,"Ad_Valorem_Geneva"]),bothAnnecy=!is.na(data_set[,"Specific_Annecy"])&!is.na(data_set[,"Ad_Valorem_Annecy"]),bothTorquay=!is.na(data_set[,"Specific_Torquay"])&!is.na(data_set[,"Ad_Valorem_Torquay"]),bothGeneva56A=!is.na(data_set[,"Specific_Geneva56_A"])&!is.na(data_set[,"Ad_Valorem_Geneva56_A"]),bothGeneva56B=!is.na(data_set[,"Specific_Geneva56_B"])&!is.na(data_set[,"Ad_Valorem_Geneva56_B"]),bothGeneva56C=!is.na(data_set[,"Specific_Geneva56_C"])&!is.na(data_set[,"Ad_Valorem_Geneva56_C"]),bothDillonA=!is.na(data_set[,"Specific_Dillon_A"])&!is.na(data_set[,"Ad_Valorem_Dillon_A"]),bothDillonB=!is.na(data_set[,"Specific_Dillon_B"])&!is.na(data_set[,"Ad_Valorem_Dillon_B"]))
+
+Both_group_by_sched<-table(both$Sched,both$bothGeneva)
+Both_group_by_sched<-as.data.frame.matrix(Both_group_by_sched)
+
+names(Both_group_by_sched)[1] <- "Not_compound_tariff"
+names(Both_group_by_sched)[2] <- "Compound_tariff"
+
+ratio<-label_percent()(Both_group_by_sched$Compound_tariff/(Both_group_by_sched$Not_compound_tariff+Both_group_by_sched$Compound_tariff))
+Both_group_by_sched$schedule_names<-abbr
+
+Both_group_by_sched$ratio<-ratio
+Both_group_by_sched<-Both_group_by_sched[,c(3,1,2,4)]
+kbl(Both_group_by_sched,col.names = c("Schedule","Not compound", "Compound", "Proportion compound"),digits=1,align= 'lccc',booktabs=T, caption = "Proportion of Compound Tariffs by Schedule ") %>% kable_styling(position = "center")
+```
 
 ```{r sp-sc, echo=FALSE, warning=FALSE}
 changes2 <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Specific"))
@@ -328,20 +345,16 @@ sum_av_nC_pc <- nochanges_av %>%
             n_av = sum(!is.na(Ad_Valorem_SH)),
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
-ssav_nC <- kbl(sum_av_nC_pc,digits=2,booktabs=T, caption = "Reduction in Ad Valorem Tariffs by Schedule") %>%
+kbl(sum_av_nC_pc,digits=2,booktabs=T, caption = "Reduction in Ad Valorem Tariffs by Schedule") %>%
   kable_styling(position = "center")
 ```
-Schedule 8 (Spirits, Wines and other Beverages) has all but `r as.character(english(sum(is.na(specific[which(specific$Sched == 8),"Specific_Dillon_B"]))))` of its `r count(ad_valorem[which(ad_valorem$Sched == 8),])` items covered by a specific tariff and it sees the largest mean tariff in each round. The mean tariff cut is correspondingly largest here, with a decrease of more than `r floor((mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE) - mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE))/mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE)*100)`% in the average specific tariff from `r round(mean(specific[which(specific$Sched == 8),"Specific_SH"]$Specific_SH, na.rm = TRUE),0)`% in Smoot Hawley to `r round(mean(specific[which(specific$Sched == 8),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),0)`% in Dillon.
+Similarly, there is a lot of variation in the proportions of specific and *ad valorem* tariffs across schedules. Schedule 8 (Spirits) has all but `r as.character(english(sum(is.na(specific[which(specific$Sched == 8),"Specific_Dillon_B"]))))` of its `r count(ad_valorem[which(ad_valorem$Sched == 8),])` items covered by a specific tariff. Sechedul 12 (Silk), on the other hand, has no specific tariffs. All 37 lines are covered by an *ad valorem* tariff only.
 
-In contrast, the `r sum(!is.na(specific[which(specific$Sched == 5),"Specific_Dillon_B"]))` items with specific tariffs for Schedule 5 (Sugar, Molasses and Manufactures of) start at one of the lowest averages across schedules of `r round(mean(specific[which(specific$Sched == 5),"Specific_SH"]$Specific_SH, na.rm = TRUE),1)`% but decreases to only `r round(mean(specific[which(specific$Sched == 5),"Specific_Dillon_B"]$Specific_Dillon_B, na.rm = TRUE),1)`% by Dillon. The other `r as.character(english(sum(!is.na(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]))))` items have *ad valorem* tariffs and have the smallest decrease across all schedules for mean *ad valorem* tariffs: from `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_SH"]$Ad_Valorem_SH, na.rm = TRUE),1)`% to `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]$Ad_Valorem_Dillon_B, na.rm = TRUE),1)`%, which is the largest mean *ad valorem* tariff across all schedules in the Dillon round. 
+We begin with the caveat that the variation in types of units poses a particular challenge to interpretation here since units tend to be concentrated in particular schedules. That said, the largest decrease in mean specific tariffs is for Schedule 7 (Agriculture) at 70.5%, while the largest decrease in median specific tariffs is for Schedule 5 (Sugar) at 75%. In contrast, the `r as.character(english(sum(!is.na(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]))))` items in Schedule 5 that have *ad valorem* tariffs see the smallest decrease across all schedules for mean *ad valorem* tariffs: from `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_SH"]$Ad_Valorem_SH, na.rm = TRUE),1)`% to `r round(mean(ad_valorem[which(ad_valorem$Sched == 5),"Ad_Valorem_Dillon_B"]$Ad_Valorem_Dillon_B, na.rm = TRUE),1)`%. 
 
 <!-- check the facts in this next paragraph by hand--we need to be aware if this changes -->
 
-Interestingly, all but one schedule (Schedule 1 -- Chemicals, Oils and Paints) has the mean *ad valorem* tariff decrease by less than the median decrease *ad valorem* tariff, implying a reduction in tariff spikes. For specific tariffs, exactly half of the schedules show this pattern (Schedule 12 -- Silk Manufactures has no specific tariffs). 
-
--   Any obvious patterns to which items have largest/smallest cuts?
-
--   Round by round graphs for specific, interesting items
+It is notable that all schedules have the mean *ad valorem* tariff decrease by less than the median *ad valorem* tariff decreases, implying a reduction in tariff spikes. For specific tariffs, two-thirds of the schedules show this pattern, while the Schedules for Chemicals, Wood, Sugar, Rayon and Paper have larger decreases for the medians.
 
 ```{r sp-sc-rd}
 sum_specific_bySched <- nochanges %>%   
@@ -366,7 +379,6 @@ kbl(sum_specific_bySched,digits=1,booktabs=T, caption = "Mean Specific Tariffs b
   kable_styling(position = "center", latex_options = "hold_position")
 ```
 
-
 ```{r av-sc-rd}
 sum_av_bySched_nC <- nochanges_av %>%   
   group_by(Sched) %>%  
@@ -390,8 +402,73 @@ kbl(sum_av_bySched_nC,digits=1,booktabs=T, caption = "Mean Ad Valorem by Schedul
   kable_styling(position = "center", latex_options = "hold_position")
 ```
 
+Tables \@ref(tab:sp-sc-rd) and \@ref(tab:av-sc-rd) show the round-by-round changes in specific and *ad valorem* tariffs for each schedule. "BG" denotes the change from Smoot Hawley to 1946 just before the Geneva Round, "Ge" from 1946 to Geneva, etc. "GC" is the change from Torquay to the third ("C") and final phase in of Geneva 1956; similarly, "DB" is the change from Geneva "C" to Dillon "B," the second and final phase in stage for Dillon). 
+
+<!-- -   Any obvious patterns to which items have largest/smallest cuts? -->
+
+<!-- -   Round by round graphs for specific, interesting items -->
 
 ## Notable Findings
+
+<!-- ### Concertina-style liberalization -->
+
+<!-- The literature classifies patterns of liberalization into two main types: uniform radial reduction and concertina (e.g. Neary 1998). A radial reduction takes place when all tariffs are reduced by the same proportion. In contrast, under a concertina reform, the highest tariff rates are reduced more than proportionately. Hoda (2001) finds that concertina reforms have been most popular recently, and we find evidence that the U.S. tariff reductions under the early rounds of the GATT also follow this pattern. -->
+
+<!-- ```{r sp-dec} -->
+<!-- library(stats) -->
+<!-- Sp_chg_BG<-(shortnames$Sp_SH-shortnames$Sp_BG)*100/shortnames$Sp_SH -->
+<!-- Sp_chg_BG_q<-quantile(Sp_chg_BG, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- Sp_chg_Ge<-(shortnames$Sp_BG-shortnames$Sp_Ge)*100/shortnames$Sp_BG -->
+<!-- Sp_chg_Ge_q<-quantile(Sp_chg_Ge, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- Sp_chg_An<-(shortnames$Sp_Ge-shortnames$Sp_An)*100/shortnames$Sp_Ge -->
+<!-- Sp_chg_An_q<-quantile(Sp_chg_An, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- Sp_chg_To<-(shortnames$Sp_An-shortnames$Sp_To)*100/shortnames$Sp_An -->
+<!-- Sp_chg_To_q<-quantile(Sp_chg_To, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- Sp_chg_GC<-(shortnames$Sp_To-shortnames$Sp_GC)*100/shortnames$Sp_To -->
+<!-- Sp_chg_GC_q<-quantile(Sp_chg_GC, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- Sp_chg_DB<-(shortnames$Sp_GC-shortnames$Sp_DB)*100/shortnames$Sp_GC -->
+<!-- Sp_chg_DB_q<-quantile(Sp_chg_DB, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- Sp_Changes_quantile<-data.frame(cbind(Sp_chg_BG_q,Sp_chg_Ge_q,Sp_chg_An_q,Sp_chg_To_q,Sp_chg_GC_q,Sp_chg_DB_q)) -->
+<!-- names(Sp_Changes_quantile)<-c('1946','Geneva','Annecy','Torquay','Geneva 56','Dillon') -->
+<!-- rownames(Sp_Changes_quantile) <- c("10%","20%","30%","40%","50%","60%","70%","80%","90%","100%") -->
+
+<!-- kbl(Sp_Changes_quantile,digits=1,booktabs=T, caption = "Percent Change in Specific Tariff by Decile") %>% kable_styling(position = "center") -->
+<!-- ``` -->
+
+<!-- ```{r av-dec} -->
+<!-- AV_chg_BG<-(shortnames$AV_SH-shortnames$AV_BG)*100/shortnames$AV_SH -->
+<!-- AV_chg_BG_q<-quantile(AV_chg_BG, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- AV_chg_Ge<-(shortnames$AV_BG-shortnames$AV_Ge)*100/shortnames$AV_BG -->
+<!-- AV_chg_Ge_q<-quantile(AV_chg_Ge, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- AV_chg_An<-(shortnames$AV_Ge-shortnames$AV_An)*100/shortnames$AV_Ge -->
+<!-- AV_chg_An_q<-quantile(AV_chg_An, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- AV_chg_To<-(shortnames$AV_An-shortnames$AV_To)*100/shortnames$AV_An -->
+<!-- AV_chg_To_q<-quantile(AV_chg_To, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- AV_chg_GC<-(shortnames$AV_To-shortnames$AV_GC)*100/shortnames$AV_To -->
+<!-- AV_chg_GC_q<-quantile(AV_chg_GC, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- AV_chg_DB<-(shortnames$AV_GC-shortnames$AV_DB)*100/shortnames$AV_GC -->
+<!-- AV_chg_DB_q<-quantile(AV_chg_DB, probs = seq(0.1, 1, 0.1), na.rm = TRUE,) -->
+
+<!-- AV_Changes_quantile<-data.frame(cbind(AV_chg_BG_q,AV_chg_Ge_q,AV_chg_An_q,AV_chg_To_q,AV_chg_GC_q,AV_chg_DB_q))  -->
+<!-- names(AV_Changes_quantile)<-c('1946','Geneva','Annecy','Torquay','Geneva 56','Dillon') -->
+<!-- rownames(AV_Changes_quantile) <- c("10%","20%","30%","40%","50%","60%","70%","80%","90%","100%") -->
+
+<!-- kbl(AV_Changes_quantile,digits=1,booktabs=T, caption = "Percent Change in Mean Tariff by Decile") %>% kable_styling(position = "center") -->
+<!-- ``` -->
+
+<!-- Evidence: I created two tables to demonstrate the quantiles of percentage tax reduction (on product level) across every two rounds. In both ad valorem table and specific table we can see that 50% of lines are not changed, but for the highest 10%~20%, the reduction magnitude is significant, and this pattern remains across all rounds (I haven’t been able to track the highest reduction lines, but intuitively I think they should be different products, it is hard to imagine certain products keep having this much of tax reduction). This indicates that between every two round, the tax reduction is relatively centralized, or more focused on a certain range of products, instead of “uniform reduction” for all product listed. -->
+
 
 ### Importance of the RTAA in the pre-GATT years
 
@@ -424,13 +501,13 @@ Although these increases are scattered across most of the Schedules, Glass, Meta
     -   Para 32, "change of tax formula"? Also 202.a, 232.c,302.d,
 
 
-## Analysis
+<!-- ## Analysis -->
 
--   What can we say about which / why items have ad valorem vs. specific?
+<!-- -   What can we say about which / why items have ad valorem vs. specific? -->
 
-    -   Is there variation over time?
-    
-    , but we intend to analyze them separately and provide explanation for which items get *ad valorem* protection, which items get specific tariffs, and which get both. We know that the incidence of specific tariffs declines with inflation; this is an important and under-studied aspect of liberalization that we intend to explore.
+<!--     -   Is there variation over time? -->
 
--   Which products `suffer' from large tariff cuts and which products continue to receive protection?
+<!--     , but we intend to analyze them separately and provide explanation for which items get *ad valorem* protection, which items get specific tariffs, and which get both. We know that the incidence of specific tariffs declines with inflation; this is an important and under-studied aspect of liberalization that we intend to explore. -->
+
+<!-- -   Which products `suffer' from large tariff cuts and which products continue to receive protection? -->
 
