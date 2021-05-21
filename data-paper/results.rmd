@@ -12,7 +12,7 @@ library(data.table)
 library(scales)
 ```
 
-[add roadmap for this section]
+<!-- [add roadmap for this section] -->
 
 ## Summarizing U.S. tariff liberalization: 1930-1964
 
