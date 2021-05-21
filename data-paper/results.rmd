@@ -488,17 +488,11 @@ Although these increases are scattered across most of the Schedules, Glass, Meta
 
 ### Switching from *ad valorem* to specific is rare
 
--   Metallic magnesium and metallic magnesium scrap, para 375, switches from specific to ad valorem in Geneva56C; reduced from 50 to 45% in Dillon
+Given that inflation was reducing the incidence of specific tariffs (Irwin 2017) in this period, one might have expected specific tariffs to be converted into *ad valorem* tariffs to avoid the loss of protection. Another reason we might expect this conversion is simply that only 8% of U.S. tariffs were specific during the three decades staring in 1988 (Teti 2020).
 
-    -   1102b (wools nspf) go from ad valorem in every round to specific in Dillon
-    -   202.a swiches from specific in S-H to ad valorem in Geneva
-    
-    -   Specific vs. ad valorem vs. compound (both specific and ad valorem)
+However, during our period of 1930 to 1964, we saw only 98 lines make a switch between specific and *ad valorem*. Of these, 37 switched from specific to *ad valorem*, while 24 switched from *ad valorem* to specific. The rest either moved into or out of the compound category. These showed no clear pattern of moving toward or away from one type of tariff.
 
-    -   Teti (2020) reports that 8% of U.S. tariffs were specific in 1988-2017
-    -   Teti (2020) also reports: "Mixed tariffs are expressed as either a specific or an ad valorem rate, depending on which generates the most (or sometimes the least) revenue. Then there are technical tariffs that depend on certain product characteristics for example duties might be 8% for butter with fat content between 9-40%. Tariff rate quotas are made up of a low tariff rate on the initial imports (the within-quota quantity) and a very high tariff rate on imports entering above the initial amount (outside-quota quantity).
-
-    -   Para 32, "change of tax formula"? Also 202.a, 232.c,302.d,
+This means that the reduction in the prevalence of specific tariffs must come in the rounds that we have left to analyze. We expect that switching to the new tariff nomenclatures (TSUS and HTS) will play an important role in this process.
 
 
 <!-- ## Analysis -->

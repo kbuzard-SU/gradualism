@@ -67,14 +67,9 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.r", local = knitr::knit_g
 
 # Conclusion
 
-Future plans
+This is the first draft of this paper and leaves room for much more analysis to be added. Adding data on *ad valorem* equivalents of the specific tariffs will allow a more unified approach. Adding price and volume data will also allow us to study to extent to which these negotiated reductions---versus inflation---impacted overall trade barriers.
 
--   What role did the presence of specific tariffs, combined with inflation, have in reducing the total level of tariff protection?
-
-    -   Need trade volume / value / price data
-    
-    -   include our plans for TOT analysis, what data we're going to use - proof of concept using modern elasticity data would be great, even in a subset of lines
-
+The addition of these data along with breaking down the tariff changes from 1934 to 1946 to attribute to the country with whom the tariff was negotiated  will also allow us to add an analysis of the terms-of-trade theory of trade agreements.
 
 # References
 
