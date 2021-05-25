@@ -21,13 +21,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
     -   Include history from Unsolved problems in coding.docx (OneDrive)
 
-2.  Resolve "complicated" paragraphs, including 4 that still have no tariffs
+2.  **Kennedy, Tokyo, Uruguay**
 
-    -   *Matt is looking through last three rounds*
-
-3.  **Kennedy, Tokyo, Uruguay**
-
-4.  Choose other countries
+3.  Choose other countries
 
     -   Refine *Members.in.GATT.xlsx*
 
@@ -35,35 +31,31 @@ knitr::opts_chunk$set(echo = FALSE)
 
         -   Matt is adding \# of pages for each schedule
 
-5.  **Make list of accuracy checks, run them, fix typos in data**
+4.  **Make list of accuracy checks, run them, fix typos in data**
 
     -   Check for tariffs going up from round to round
 
-6.  **Figure out how to integrate "free" list**
+5.  **Figure out how to integrate "free" list**
 
     -   For which rounds do we have the free list typed up? Just Torquay Free List.xlsx on G: drive
 
-7.  Condense data cleaning code
+6.  Condense data cleaning code
 
-10. Go back to questions in *Plan.docx* when last three rounds are finished
+7. Go back to analysis that was thrown out ahead of CEA deadline
 
-11. Identify lines that switch between specific and ad valorem
+    - Look for gradualism in graphs
 
-12. Look for gradualism in graphs
+8. 10 lines in Dillon that have more than 2 years
 
-13. 10 lines in Dillon that have more than 2 years
-
-14. Think about how variation in units affects specific summary stats
+9. Think about how variation in units affects specific summary stats
 
     -   Look into trade-weighting
 
-15. TOT analysis
+10. TOT analysis
 
-16. Find implementation years (maybe get answer from Doug Irwin)
+11. Find implementation years (maybe get answer from Doug Irwin)
 
-17. Get working draft together ASAP
-
-18. Are current Column 2 tariffs in 1962 Smoot Hawley or the 1946 tariffs?
+12. Are current Column 2 tariffs in 1962 Smoot Hawley or the 1946 tariffs?
 
 ## Done
 
@@ -75,11 +67,12 @@ knitr::opts_chunk$set(echo = FALSE)
 6.  ~~Determine that TSUS tariffs were always at 5 digit, so we can just use the 5-digit tariff for all of the 7-digit subcategories~~
 7.  ~~Read and summarize "Two Centuries of Tariffs" (USITC, in G:drive folder)~~
 8.  ~~Consolidate various notes in Github / One Drive / G drive~~
-8.  ~~Read and summarize "Tariff negotiations and renegotiations under the GATT and the WTO" (hard copy at SU library)~~
-9.  ~~Read through Victor's notes for ideas~~
-10. ~~Add Schedule A tariff data from 1946 (last available before Geneva 1947)~~
-
-
+9.  ~~Read and summarize "Tariff negotiations and renegotiations under the GATT and the WTO" (hard copy at SU library)~~
+10.  ~~Read through Victor's notes for ideas~~
+11. ~~Add Schedule A tariff data from 1946 (last available before Geneva 1947)~~
+12. ~~Resolve "complicated" paragraphs, including 4 that still have no tariffs~~
+13. ~~Identify lines that switch between specific and ad valorem~~
+14. ~~Get working draft together ASAP~~
 
 # Importing and cleaning the data
 
