@@ -1,0 +1,83 @@
+---
+title: "Quantifying U.S. GATT Trade Liberalization"
+author: |
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  beamer_presentation:
+    theme: "Ilmenau"
+    slide_level: 3
+header-includes:
+  - \setbeamertemplate{navigation symbols}{}
+  - \AtBeginDocument{\title[Quantifying U.S. GATT Trade Liberalization  \hspace{2.95in}\insertframenumber/\inserttotalframenumber]{Quantifying U.S. GATT Trade Liberalization}}
+  - \AtBeginDocument{\author[Buzard (kbuzard@syr.edu), Jestrab and Xiong]{Kristy Buzard, Syracuse University, kbuzard@syr.edu\\ Ross Jestrab, Syracuse University\\ Zeyuan (Victor) Xiong, Syracuse University}}
+  - \usecolortheme{beaver}
+  - \AtBeginSection{}
+  - \AtBeginSubsection{}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Overview
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+# Background
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+# Data
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+
+# Results
+
+## Basic Facts
+
+### Item level
+
+- Graph
+
+### Liberalization from 1930 to 1964
+
+```{r, cars2, fig.cap="A scatterplot.", echo=FALSE}
+plot(cars)
+```
+
+### Round-by-Round liberalization
+
+### Industry-by-industry liberalization
+
+- Schedule titles
+- Reductions by schedule
+
+## Notable Findings
+
+### Importance of pre-GATT negotiations
+
+### Some lines see tariff increases
+
+### Very few changes between *ad valorem* and specific
+
+# Next steps
+
+## What's next?
+
+- Concordances
+  - Smoot-Hawley to TSUS
+  - TSUS to HS
+  - Smoot-Hawley to 1930's import classification system
+- Import volume and value data
+  - *Ad valorem* equivalents
+  - Trade weighting
+  - Terms-of-trade analysis
