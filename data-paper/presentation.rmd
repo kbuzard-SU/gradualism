@@ -18,6 +18,7 @@ header-includes:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+getwd
 ```
 
 ```{r, include=FALSE}
@@ -149,18 +150,6 @@ num_nego <- c(0,nr-nrow(sameSH_BG),nr-nrow(sameBG_Ge),nr-nrow(sameGe_An),nr-nrow
 plot1_data <- data.frame(year,num_nego,num_sameSH)
 ```
 
-<!-- ```{r ibi, fig.cap = "Tariff Reductions by Number of Items", echo=F, include=F} -->
-<!-- # Plot -->
-<!-- ggplot() +  -->
-<!--   geom_line(data = plot1_data, aes(x=year, y= num_sameSH), color = "blue") + -->
-<!--   annotate("text", label = "No. of items still at Smoot-Hawley level", x = 1948, y = 2700, size = 5, colour = "blue") + -->
-<!--   geom_point(data = plot1_data, aes(x=year, y= num_nego), color = "red") + -->
-<!--   annotate("text", label = "No. of items reduced since previous round", x = 1952, y = 50, size = 5, colour = "red") + -->
-<!--   labs(x="Year", y= "Number of Items") + -->
-<!--   theme(plot.title = element_text(hjust = 0.5)) + -->
-<!--   scale_x_continuous(breaks = seq(1930, 1965, by = 5)) + -->
-<!--   scale_y_continuous(breaks = seq(0, 3000, by = 500)) -->
-<!-- ``` -->
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("data-paper_files/figure-latex/ibi-1.pdf")
@@ -212,7 +201,9 @@ From the Smoot-Hawley tariffs (1930) to the Dillon Round (1964) both *ad valorem
 <!-- Task 1 -->
 
 <!-- - Level 1: get Table 1 and Table 2 onto this slide and a new one that follows -->
-- Level 2: see if there's some way to combine them into one table (I think this will be hard in terms of just fitting everything in, but worth a try if there's time). If you try it, leave the original two slides and just add a third so I can compare
+
+<!-- - Level 2: see if there's some way to combine them into one table (I think this will be hard in terms of just fitting everything in, but worth a try if there's time). If you try it, leave the original two slides and just add a third so I can compare -->
+
 
 
 ### Table 1
@@ -247,15 +238,8 @@ kbl(av_mt,digits=2,booktabs=T, caption = "Decrease in Ad Valorem Tariffs by Roun
 ```
 
 
-
-<!-- Task 1 -->
-
-<!-- - Level 1: get Table 1 and Table 2 onto this slide and a new one that follows -->
-
-<!-- - Level 2: see if there's some way to combine them into one table (I think this will be hard in terms of just fitting everything in, but worth a try if there's time). If you try it, leave the original two slides and just add a third so I can compare -->
-
 ### Table 3
-<!-- Task 2: get tables 3 and 4 onto this and an additional new slide -->
+
 
 ```{r table_3}
 sp_table = cbind(data.frame(sp_min),data.frame(sp_25p),data.frame(sp_mean),data.frame(sp_med),data.frame(sp_75p),data.frame(sp_max),data.frame(sp_count))
@@ -278,7 +262,6 @@ kbl(adval_table,digits=2,booktabs=T,caption = "Summary Statistics of Ad Valorem 
 ## Industry-by-industry liberalization
 
 ### Schedule Titles
-<!-- Task 3: get Schedule titles table onto this slide -->
 
 ```{r schedule_titles, message=F}
 para_count <- data_set %>% group_by(Sched) %>% summarize(n=n()) %>% ungroup()
@@ -390,6 +373,7 @@ changes <- select(change_BG,-unit_ch) %>%
 ```
 
 
+
 ```{r table_6, echo=FALSE, warning=FALSE, message=F}
 changes2 <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Specific"))
 nochanges <- rows_delete(specific, changes2, by = "id")
@@ -406,12 +390,16 @@ sum_specific_nC_pc <- nochanges %>%
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-kbl(sum_specific_nC_pc,digits=2,booktabs=T, caption = "Reduction in Specific Tariffs by Schedule") %>% kable_styling(position = "center", latex_options = "hold_position",font_size=5)
+tab6 <- kbl(sum_specific_nC_pc,digits=2,booktabs=T, caption = "Reduction in Specific Tariffs by Schedule") %>% kable_styling(position = "center", latex_options = "hold_position",font_size=4)
+
+# Add header above means/medians for clarity
+add_header_above(tab6, c(" " = 1, "Mean Comparisons "=3, "Median Comparisons"=3, "Observations" = 2),font_size = 4)
+
+
 ```
 
 
-### Table 7
-
+## Table 7
 
 ```{r table_7, message =F}
 changesav <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Ad_Valorem"))
@@ -428,9 +416,15 @@ sum_av_nC_pc <- nochanges_av %>%
             n_av = sum(!is.na(Ad_Valorem_SH)),
             n = n()) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
-kbl(sum_av_nC_pc,digits=2,booktabs=T, caption = "Reduction in Ad Valorem Tariffs by Schedule") %>%
-  kable_styling(position = "center",font_size=5)
+
+tab7 <- kbl(sum_av_nC_pc,digits=2,booktabs=T, caption = "Reduction in Ad Valorem Tariffs by Schedule") %>%
+  kable_styling(position = "center",font_size=4)
+
+# Add header above means/medians for clarity
+add_header_above(tab7, c(" " = 1, "Mean Comparisons "=3, "Median Comparisons"=3, "Observations" = 2),font_size = 4)
+
 ```
+
 
 
 <!-- Task 5: see if you can resize the graph on slide 5 so it fits -->
