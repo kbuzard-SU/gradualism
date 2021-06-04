@@ -25,15 +25,38 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.r", local = knitr::knit_g
 
 # Overview
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+Large-scale tariff reductions under General Agreement on Tariffs and Trade (GATT) as a result of 8 rounds of negotiations (1947-1994)
+
+  - Negotiated tariff bindings (not necessarily applied tariffs)
+
+Literature largely theoretical because we don't have good data on either applied or negotiated tariffs (Bown and Irwin 2017)
+
+  - LOTS of open research questions because the data isn't there
+  
+    - One exception: Bagwell, Staiger and Yurukoglu (2020) look at bargaining records for Torquay
+
+Today: describe the tariff schedule data, its sources, our methods for digitizing it,  preliminary findings for first five rounds
+  
 
 # Background
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+## Pre-GATT
+
+We take advantage of a large qualitative literature on historical trade policy (e.g., Irwin 2017)
+
+- contextualize and interpret the data, find new data sources
+
+\vskip.15in
+Specifically for the United States: 
+
+- 1930: Smoot-Hawley Act implements massive upward revision of U.S. tariffs
+- 1934: Backlash from Smoot-Hawley $\Rightarrow$ Reciprocal Trade Agreements Act (RTAA)
+  - President could reduce tariffs up to 50% without Congress
+  - U.S. made about two dozen trade agreements by 1946
+
+## GATT era
+
+
 
 # Data
 
@@ -41,7 +64,24 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.r", local = knitr::knit_g
 
 Note that summary statistics throughout the paper for specific tariffs are *not* trade weighted; we are in the process of acquiring the trade data required to both trade weight summary statistics and compute *ad valorem* equivalents.
 
+sources of data on the negotiated schedules and our process of acquiring,
+standardizing and digitizing key tariff schedules for the United States from 1930 to 1964
+that cover the Smoot-Hawley unilateral tariffs of 1930 through the fifth round of the GATT
+(Section 3).
 
+## What's next?
+
+- Concordances
+  - Smoot-Hawley to TSUS
+  - TSUS to HS
+  - Smoot-Hawley to 1930's import classification system
+- Add final three rounds
+- Import volume and value data
+  - *Ad valorem* equivalents
+  - Trade weighting
+  - Terms-of-trade analysis
+- Eventually, other countries' schedules
+  
 # Basic Facts
 
 ### Item level
