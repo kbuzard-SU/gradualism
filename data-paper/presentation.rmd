@@ -37,14 +37,12 @@ source("C:/Users/krist/Github/Gradualism/data_cleaning.r", local = knitr::knit_g
 
 # Data
 
-## Slide with R Output
+## Data sources
 
 Note that summary statistics throughout the paper for specific tariffs are *not* trade weighted; we are in the process of acquiring the trade data required to both trade weight summary statistics and compute *ad valorem* equivalents.
 
 
-# Results
-
-## Basic Facts
+# Basic Facts
 
 ### Item level
 
@@ -163,14 +161,33 @@ From the Smoot-Hawley tariffs (1930) to the Dillon Round (1964) both *ad valorem
   <!-- Specific tariffs are present for roughly half of the items in our data.  -->
 
 
-### Round-by-Round liberalization
+## Round-by-Round liberalization
 
-### Industry-by-industry liberalization
+### Tables 1 and 2
+(all tables refer to the numbers in data-paper.pdf; source code is in results.rmd)
 
-- Schedule titles
-- Reductions by schedule
+Task 1
 
-## Notable Findings
+- Level 1: get Table 1 and Table 2 onto this slide and a new one that follows
+- Level 2: see if there's some way to combine them into one table (I think this will be hard in terms of just fitting everything in, but worth a try if there's time). If you try it, leave the original two slides and just add a third so I can compare
+
+### Tables 3 and 4
+Task 2: get tables 3 and 4 onto this and an additional new slide
+
+
+## Industry-by-industry liberalization
+
+### Schedule titles
+Task 3: get Schedule titles table onto this slide
+
+Task 4:
+
+- Level 1: get tables 6 and 7 onto two new slides
+- Level 2: see if you can come up with a way to have clearer titles for the columns that still make sense (this may involve adding another level of header--one that goes across and labels mean vs. median; I think the add_header_above command in "schedules title" table will work)
+
+Task 5: see if you can resize the graph on slide 5 so it fits
+
+# Notable Findings
 
 ### Importance of pre-GATT negotiations
 
