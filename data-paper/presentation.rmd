@@ -8,11 +8,12 @@ output:
     slide_level: 3
 header-includes:
   - \setbeamertemplate{navigation symbols}{}
-  - \AtBeginDocument{\title[Quantifying U.S. GATT Trade Liberalization  \hspace{2.95in}\insertframenumber/\inserttotalframenumber]{Quantifying U.S. GATT Trade Liberalization}}
+  - \AtBeginDocument{\title[Quantifying U.S. GATT Trade Liberalization  \hspace{2.60in}\insertframenumber/\inserttotalframenumber]{Quantifying U.S. GATT Trade Liberalization}}
   - \AtBeginDocument{\author[Buzard (kbuzard@syr.edu), Jestrab and Xiong]{Kristy Buzard, Syracuse University, kbuzard@syr.edu\\ Ross Jestrab, Syracuse University\\ Zeyuan (Victor) Xiong, Syracuse University}}
   - \usecolortheme{beaver}
   - \AtBeginSection{}
   - \AtBeginSubsection{}
+  - \usepackage{booktabs}
 ---
 
 ```{r setup, include=FALSE}
@@ -148,17 +149,21 @@ num_nego <- c(0,nr-nrow(sameSH_BG),nr-nrow(sameBG_Ge),nr-nrow(sameGe_An),nr-nrow
 plot1_data <- data.frame(year,num_nego,num_sameSH)
 ```
 
-```{r ibi, fig.cap = "Tariff Reductions by Number of Items", echo=F}
-# Plot
-ggplot() + 
-  geom_line(data = plot1_data, aes(x=year, y= num_sameSH), color = "blue") +
-  annotate("text", label = "No. of items still at Smoot-Hawley level", x = 1948, y = 2700, size = 5, colour = "blue") +
-  geom_point(data = plot1_data, aes(x=year, y= num_nego), color = "red") +
-  annotate("text", label = "No. of items reduced since previous round", x = 1952, y = 50, size = 5, colour = "red") +
-  labs(x="Year", y= "Number of Items") +
-  theme(plot.title = element_text(hjust = 0.5)) +
-  scale_x_continuous(breaks = seq(1930, 1965, by = 5)) +
-  scale_y_continuous(breaks = seq(0, 3000, by = 500))
+<!-- ```{r ibi, fig.cap = "Tariff Reductions by Number of Items", echo=F, include=F} -->
+<!-- # Plot -->
+<!-- ggplot() +  -->
+<!--   geom_line(data = plot1_data, aes(x=year, y= num_sameSH), color = "blue") + -->
+<!--   annotate("text", label = "No. of items still at Smoot-Hawley level", x = 1948, y = 2700, size = 5, colour = "blue") + -->
+<!--   geom_point(data = plot1_data, aes(x=year, y= num_nego), color = "red") + -->
+<!--   annotate("text", label = "No. of items reduced since previous round", x = 1952, y = 50, size = 5, colour = "red") + -->
+<!--   labs(x="Year", y= "Number of Items") + -->
+<!--   theme(plot.title = element_text(hjust = 0.5)) + -->
+<!--   scale_x_continuous(breaks = seq(1930, 1965, by = 5)) + -->
+<!--   scale_y_continuous(breaks = seq(0, 3000, by = 500)) -->
+<!-- ``` -->
+
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("data-paper_files/figure-latex/ibi-1.pdf")
 ```
 
 ### Complications
@@ -203,29 +208,232 @@ From the Smoot-Hawley tariffs (1930) to the Dillon Round (1964) both *ad valorem
 
 ## Round-by-Round liberalization
 
-### Tables 1 and 2
-(all tables refer to the numbers in data-paper.pdf; source code is in results.rmd)
 
-Task 1
+<!-- Task 1 -->
 
-- Level 1: get Table 1 and Table 2 onto this slide and a new one that follows
+<!-- - Level 1: get Table 1 and Table 2 onto this slide and a new one that follows -->
 - Level 2: see if there's some way to combine them into one table (I think this will be hard in terms of just fitting everything in, but worth a try if there's time). If you try it, leave the original two slides and just add a third so I can compare
 
-### Tables 3 and 4
-Task 2: get tables 3 and 4 onto this and an additional new slide
+
+### Table 1
+
+```{r table_1}
+
+sp_mean <- specific[,6:15] %>% sapply(mean, na.rm=TRUE)
+sp_med <- specific[,6:15] %>% sapply(median, na.rm=TRUE)
+av_mean <- ad_valorem[,6:15] %>% sapply(mean, na.rm=TRUE)
+av_med <- ad_valorem[,6:15] %>% sapply(median, na.rm=TRUE)
+
+sp_mt = cbind(data.frame(sp_mean),c(0,-diff(sp_mean)/data.frame(sp_mean)[-nrow(data.frame(sp_mean)),]*100),data.frame(sp_med),c(0,-diff(sp_med)/data.frame(sp_med)[-nrow(data.frame(sp_med)),]*100))
+
+names(sp_mt)<-c('Mean','% decrease','Median','% decrease')
+rownames(sp_mt) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+kbl(sp_mt,digits=2,booktabs=T, caption = "Decrease in Specific Tariffs by Round") %>%
+  kable_styling(position = "center", latex_options = "hold_position",font_size=7)
+```
+
+
+
+### Table 2
+
+```{r table_2}
+av_mt = cbind(data.frame(av_mean),c(0,-diff(av_mean)/data.frame(av_mean)[-nrow(data.frame(av_mean)),]*100),data.frame(av_med),c(0,-diff(av_med)/data.frame(av_med)[-nrow(data.frame(av_med)),]*100))
+
+names(av_mt)<-c('Mean','% decrease','Median','% decrease')
+rownames(av_mt) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+kbl(av_mt,digits=2,booktabs=T, caption = "Decrease in Ad Valorem Tariffs by Round") %>%
+  kable_styling(position = "center", latex_options = "hold_position",font_size=7)
+
+```
+
+
+
+<!-- Task 1 -->
+
+<!-- - Level 1: get Table 1 and Table 2 onto this slide and a new one that follows -->
+
+<!-- - Level 2: see if there's some way to combine them into one table (I think this will be hard in terms of just fitting everything in, but worth a try if there's time). If you try it, leave the original two slides and just add a third so I can compare -->
+
+### Table 3
+<!-- Task 2: get tables 3 and 4 onto this and an additional new slide -->
+
+```{r table_3}
+sp_table = cbind(data.frame(sp_min),data.frame(sp_25p),data.frame(sp_mean),data.frame(sp_med),data.frame(sp_75p),data.frame(sp_max),data.frame(sp_count))
+names(sp_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
+rownames(sp_table) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+kbl(sp_table,digits=2,booktabs=T,caption = "Summary Statistics for Specific Tariffs by Round") %>%
+  kable_styling(position = "center", latex_options = "hold_position", font_size=6)
+```
+
+### Table 4
+```{r table_4}
+adval_table = cbind(data.frame(av_min),data.frame(av_25p),data.frame(av_mean),data.frame(av_med),data.frame(av_75p),data.frame(av_max),data.frame(av_count))
+names(adval_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
+rownames(adval_table) <- c("Smoot Hawley","1946", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+kbl(adval_table,digits=2,booktabs=T,caption = "Summary Statistics of Ad Valorem Tariffs by Round") %>%
+  kable_styling(position = "center", latex_options = "hold_position",font_size=6)
+```
 
 
 ## Industry-by-industry liberalization
 
-### Schedule titles
-Task 3: get Schedule titles table onto this slide
+### Schedule Titles
+<!-- Task 3: get Schedule titles table onto this slide -->
 
-Task 4:
+```{r schedule_titles, message=F}
+para_count <- data_set %>% group_by(Sched) %>% summarize(n=n()) %>% ungroup()
 
-- Level 1: get tables 6 and 7 onto two new slides
-- Level 2: see if you can come up with a way to have clearer titles for the columns that still make sense (this may involve adding another level of header--one that goes across and labels mean vs. median; I think the add_header_above command in "schedules title" table will work)
+schedule_names<-c('Chemicals, Oil, and Paints', 'Earths, Earthenware, and Glassware', 'Metals and Manufactures of', 'Wood and Manufactures of', 'Sugar, Molasses, and Manufactures of', 'Tobacco and Manufactures of', 'Agricultural Products and Provisions', 'Spirits, Wines, and other Beverages','Cotton Manufactures','Flax, Hemp, Jute, and Manufactures of','Wool and Manufactures of', 'Silk Manufactures','Manufactures of Rayon or Other Synthetic Textile', 'Papers and Books', 'Sundries')
 
-Task 5: see if you can resize the graph on slide 5 so it fits
+abbr <- c('Chemicals', 'Glass', 'Metals', 'Wood', 'Sugar', 'Tobacco', 'Ag', 'Spirits','Cotton','Flax','Wool', 'Silk','Rayon', 'Paper', 'Sundries')
+
+data_schedules<-data.frame(para_count,abbr,schedule_names)
+names(data_schedules)<-c('Schedule','Items','Abbreviation','Title')
+
+s <- kable(data_schedules, align= 'ccl',booktabs=T) %>%
+  kable_styling(full_width = F, latex_options = "hold_position", font_size = 5)
+add_header_above(s, c("Schedule Titles"=4),font_size = 9)
+```
+
+
+
+<!-- Task 4: -->
+<!-- - Level 1: get tables 6 and 7 onto two new slides -->
+<!-- - Level 2: see if you can come up with a way to have clearer titles for the columns that still make sense (this may involve adding another level of header--one that goes across and labels mean vs. median; I think the add_header_above command in "schedules title" table will work) -->
+
+### Table 6
+
+```{r, include=F}
+change_BG <-
+  data_set %>%
+  filter(
+    is.na(Specific_SH) != is.na(Specific_1946_after) | 
+      is.na(Ad_Valorem_SH) != is.na(Ad_Valorem_1946_after) | Units_SH != Units_1946_after 
+  ) %>%
+  mutate(BG = 1,unit_ch = ifelse(Units_SH != Units_1946_after, 1, 0))
+         
+change_G <-
+  data_set %>%
+  filter(
+    is.na(Specific_1946_after) != is.na(Specific_Geneva) | 
+      is.na(Ad_Valorem_1946_after) != is.na(Ad_Valorem_Geneva) | Units_1946_after != Units_Geneva 
+  ) %>%
+  mutate(G = 1,unit_ch = ifelse(Units_1946_after != Units_Geneva, 1, 0))
+         
+change_A <-
+  data_set %>%
+  filter(
+    is.na(Specific_Annecy) != is.na(Specific_Geneva) | 
+      is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Geneva) | Units_Annecy != Units_Geneva
+  ) %>%
+  mutate(A = 1,unit_ch = ifelse(Units_Annecy != Units_Geneva, 1, 0))
+
+change_T <-
+  data_set %>%
+  filter(
+    is.na(Specific_Annecy) != is.na(Specific_Torquay) | 
+      is.na(Ad_Valorem_Annecy) != is.na(Ad_Valorem_Torquay) | Units_Annecy != Units_Torquay
+  ) %>%
+  mutate(T = 1,unit_ch = ifelse(Units_Annecy != Units_Torquay, 1, 0))
+
+change_GA <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_A) != is.na(Specific_Torquay) | 
+      is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Torquay) | Units_Geneva56_A != Units_Torquay
+  ) %>%
+  mutate(GA = 1,unit_ch = ifelse(Units_Torquay != Units_Geneva56_A, 1, 0))
+
+change_GB <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_A) != is.na(Specific_Geneva56_B) | 
+      is.na(Ad_Valorem_Geneva56_A) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_A != Units_Geneva56_B
+  ) %>%
+  mutate(GB = 1,unit_ch = ifelse(Units_Geneva56_A != Units_Geneva56_B, 1, 0))
+
+change_GC <-
+  data_set %>%
+  filter(
+    is.na(Specific_Geneva56_C) != is.na(Specific_Geneva56_B) | 
+      is.na(Ad_Valorem_Geneva56_C) != is.na(Ad_Valorem_Geneva56_B) | Units_Geneva56_C != Units_Geneva56_B
+  ) %>%
+  mutate(GC = 1,unit_ch = ifelse(Units_Geneva56_B != Units_Geneva56_C, 1, 0))
+
+change_DA <-
+  data_set %>%
+  filter(
+    is.na(Specific_Dillon_A) != is.na(Specific_Geneva56_C) | 
+      is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Geneva56_C) | Units_Dillon_A != Units_Geneva56_C
+  ) %>%
+  mutate(DA = 1,unit_ch = ifelse(Units_Geneva56_C != Units_Dillon_A, 1, 0))
+
+change_DB <-
+  data_set %>%
+  filter(
+    is.na(Specific_Dillon_A) != is.na(Specific_Dillon_B) | 
+      is.na(Ad_Valorem_Dillon_A) != is.na(Ad_Valorem_Dillon_B) | Units_Dillon_A != Units_Dillon_B
+  ) %>%
+  mutate(DB = 1,unit_ch = ifelse(Units_Dillon_B != Units_Dillon_B, 1, 0))
+
+mergeCols <- colnames(data_set)
+mC <- mergeCols[mergeCols != "unit_ch"]
+changes <- select(change_BG,-unit_ch) %>% 
+  full_join(select(change_G,-unit_ch),  by = mergeCols)%>%
+  full_join(select(change_A,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_T,-unit_ch),  by = mergeCols) %>% 
+  full_join(select(change_GA,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_GB,-unit_ch),  by = mergeCols) %>% 
+  full_join(select(change_GC,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_DA,-unit_ch),  by = mergeCols) %>%
+  full_join(select(change_DB,-unit_ch),  by = mergeCols) %>% arrange(id)
+```
+
+
+```{r table_6, echo=FALSE, warning=FALSE, message=F}
+changes2 <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Specific"))
+nochanges <- rows_delete(specific, changes2, by = "id")
+
+sum_specific_nC_pc <- nochanges %>%
+  group_by(Sched) %>%
+  summarize(SH_mean = mean(Specific_SH, na.rm=TRUE),
+            DB_mean = mean(Specific_Dillon_B, na.rm=TRUE),
+            mean_chg = ((SH_mean - DB_mean)/SH_mean)*100,
+            SH_med = median(Specific_SH, na.rm=TRUE),
+            DB_med = median(Specific_Dillon_B, na.rm=TRUE),
+            med_chg = ((SH_med - DB_med)/SH_med)*100,
+            n_specific = sum(!is.na(Specific_SH)),
+            n = n()) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+
+kbl(sum_specific_nC_pc,digits=2,booktabs=T, caption = "Reduction in Specific Tariffs by Schedule") %>% kable_styling(position = "center", latex_options = "hold_position",font_size=5)
+```
+
+
+### Table 7
+
+
+```{r table_7, message =F}
+changesav <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Ad_Valorem"))
+nochanges_av <- rows_delete(ad_valorem, changesav, by = "id")
+
+sum_av_nC_pc <- nochanges_av %>%
+  group_by(Sched) %>%
+  summarize(SH_mean = mean(Ad_Valorem_SH, na.rm=TRUE),
+            DB_mean = mean(Ad_Valorem_Dillon_B, na.rm=TRUE),
+            mean_chg = ((SH_mean - DB_mean)/SH_mean)*100,
+            SH_med = median(Ad_Valorem_SH, na.rm=TRUE),
+            DB_med = median(Ad_Valorem_Dillon_B, na.rm=TRUE),
+            med_chg = ((SH_med - DB_med)/SH_med)*100,
+            n_av = sum(!is.na(Ad_Valorem_SH)),
+            n = n()) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+kbl(sum_av_nC_pc,digits=2,booktabs=T, caption = "Reduction in Ad Valorem Tariffs by Schedule") %>%
+  kable_styling(position = "center",font_size=5)
+```
+
+
+<!-- Task 5: see if you can resize the graph on slide 5 so it fits -->
 
 # Notable Findings
 
