@@ -11,7 +11,7 @@ header-includes:
   - \AtBeginDocument{\setbeamertemplate{itemize subitem}[triangle]}
   - \AtBeginDocument{\setbeamercolor{item}{fg=black}}
   - \setbeamertemplate{navigation symbols}{}
-  - \AtBeginDocument{\title[Quantifying U.S. GATT Trade Liberalization  \hspace{2.60in}\insertframenumber/\inserttotalframenumber]{Quantifying U.S. GATT Trade Liberalization}}
+  - \AtBeginDocument{\title[Quantifying U.S. GATT Trade Liberalization  \hspace{2.90in}\insertframenumber/\inserttotalframenumber]{Quantifying U.S. GATT Trade Liberalization}}
   - \AtBeginDocument{\author[Buzard (kbuzard@syr.edu), Jestrab and Xiong]{Kristy Buzard, Syracuse University, kbuzard@syr.edu\\ Ross Jestrab, Syracuse University\\ Zeyuan (Victor) Xiong, Syracuse University}}
   - \usecolortheme{beaver}
   - \AtBeginSection{}
@@ -61,11 +61,11 @@ For the United States:
 
 - 1934: Backlash from Smoot-Hawley $\Rightarrow$ Reciprocal Trade Agreements Act (RTAA)
 
-  - President could reduce tariffs up to 50% without Congress
+  - FDR could reduce tariffs up to 50% without Congress
 
   - U.S. made about two dozen trade agreements by 1946
 
-- 1945: Truman granted authority for 50% reductions from 1945 rates
+- 1945: Truman could reduce tariffs up to 50% from 1945 rates
 
 
 
@@ -81,26 +81,27 @@ For the United States:
 
 1962, **Dillon**: 20% reduction allowed, 2 phases
 
-  - **Kennedy** begins, 50% reductions authorized
+  <!-- - **Kennedy** begins, 50% reductions authorized -->
 
 1963: New nomenclature (TSUS) takes effect
 
+1988: HS replaces TSUS
 
-### GATT era
+<!-- ### GATT era -->
 
-1967, **Kennedy**: first reductions by formula, 5 phases
+<!-- 1967, **Kennedy**: first reductions by formula, 5 phases -->
 
-\vskip.075in
-1973: **Tokyo** begins, no negotiating authority for Nixon
+<!-- \vskip.075in -->
+<!-- 1973: **Tokyo** begins, no negotiating authority for Nixon -->
 
-  - 1974: granted 60% reductions, Fast Track (now TPA)
-  - 1979: **Tokyo** concluded, reductions again by formula
+<!--   - 1974: granted 60% reductions, Fast Track (now TPA) -->
+<!--   - 1979: **Tokyo** concluded, reductions again by formula -->
 
-\vskip.075in
-1986: **Uruguay** starts, no negotiating authority for Reagan
+<!-- \vskip.075in -->
+<!-- 1986: **Uruguay** starts, no negotiating authority for Reagan -->
 
-  - 1988: HS replaces TSUS, Reagan gets authority for 50% reductions
-  - 1993: **Uruguay** concluded
+<!--   - 1988: HS replaces TSUS, Reagan gets authority for 50% reductions -->
+<!--   - 1993: **Uruguay** concluded -->
 
 
 # Data
@@ -108,9 +109,9 @@ For the United States:
 
 ### Data sources
 
-- GATT schedules available in PDF format in the United National Treaty Collection (UNTC)
+GATT schedules available in PDF format in the United Nations Treaty Collection (UNTC)
 
-- Tariff Act of 1930 (Smoot Hawley) from Congressional records
+- \color{gray}Tariff Act of 1930 (Smoot Hawley) from Congressional records
 
 - *United States Import Duties, 1946*, USITC via HathiTrust Digital Library
 
@@ -125,12 +126,14 @@ To date, we've digitized and standardized the tariff schedules for the United St
 
 - We expand the Smoot-Hawley nomenclature with new 'items' as sub-divisions are added through time
 
-- About 15% of items are "compound" (Teti 2020), i.e. have both *ad valorem* and specific components 
+- We integrate "compound" (15%), "mixed" (10%), "technical" (2%) as one of the main categories (Teti 2020)
+
+  - "compound": both *ad valorem* and specific components 
 <!-- 475 to 505 -->
 
-- Roughly 10% of items are "mixed", i.e. have either an *ad valorem* or specific rate, depending on which is higher
+  - "mixed": either *ad valorem* or specific, whichever is higher
 
-- About 2% of the items are "technical", e.g. defined on proportion of content that meets some criteria
+  - "technical": e.g., proportion of content that meets a criterion
 
 <!-- We do not analyze these categories separately because, insofar as possible, we have integrated them with the basic *ad valorem* and specific types -->
 
@@ -139,12 +142,12 @@ All are included in the statistics below for specific and *ad valorem*
 
 ### Still to be done
 
+- Add final three GATT rounds
+  - Integrate "Free Lists" (Schedule 16, ~200 items by Torquay)
 - Concordances
   - Smoot-Hawley to TSUS
   - TSUS to HS
   - Smoot-Hawley to 1930's import classification system
-- Add final three GATT rounds
-  - Integrate "Free Lists" (Schedule 16, ~200 items by Torquay)
 - Import volume and value data
   - *Ad valorem* equivalents
   - Trade weighting
@@ -241,6 +244,7 @@ plot1_data <- data.frame(year,num_nego,num_sameSH)
 knitr::include_graphics("data-paper_files/figure-latex/ibi-1.pdf")
 ```
 
+\pause
 Surprise! 78 tariff increases. Scattered across industries. 
 
 
@@ -276,14 +280,15 @@ From the Smoot-Hawley tariffs (1930) to the Dillon Round (1964) both *ad valorem
   - medians are much smaller, dropping from `r round(sp_med["Specific_SH",],2)`¢ to `r round(sp_med["Specific_Dillon_B",],2)`¢
   <!-- Specific tariffs are present for roughly half of the items in our data.  -->
 
-Perhaps surprising: contribution of bilateral negotiations ($\Rightarrow$ MFN) before 1946 was about half of total from 1930 to Geneva
+\pause
+Perhaps surprising: contribution of bilateral negotiations ($\Rightarrow$ MFN) before 1946 was about one-third of total from 1930 to Geneva
 
 
 
 # By Round
 ## By Round
 
-### Decrease in Specific Tariffs by Round
+### Reduction in Specific Tariffs by Round
 
 ```{r table_1}
 sp_mean <- specific[,6:15] %>% sapply(mean, na.rm=TRUE)
@@ -301,7 +306,7 @@ kbl(sp_mt,digits=1,booktabs=T) %>%
 ```
 
 
-### Decrease in Ad Valorem Tariffs by Round
+### Reduction in Ad Valorem Tariffs by Round
 ```{r table_2}
 av_mt = cbind(data.frame(av_mean),c(0,-diff(av_mean)/data.frame(av_mean)[-nrow(data.frame(av_mean)),]*100),data.frame(av_med),c(0,-diff(av_med)/data.frame(av_med)[-nrow(data.frame(av_med)),]*100))
 
@@ -313,35 +318,37 @@ kbl(av_mt,digits=1,booktabs=T) %>%
 ```
 
 
-### Table 3
+### Summary Statistics: Ad Valorem Tariffs
+```{r table_4}
+adval_table = cbind(data.frame(av_min),data.frame(av_25p),data.frame(av_mean),data.frame(av_med),data.frame(av_75p),data.frame(av_max),data.frame(av_count))
+names(adval_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
+rownames(adval_table) <- c("Smoot Hawley","1946", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
+kbl(adval_table,digits=1,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position",font_size=7)
+```
+
+
+### Summary Statistics: Specific Tariffs
 ```{r table_3}
 sp_table = cbind(data.frame(sp_min),data.frame(sp_25p),data.frame(sp_mean),data.frame(sp_med),data.frame(sp_75p),data.frame(sp_max),data.frame(sp_count))
 names(sp_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
 rownames(sp_table) <- c("Smoot Hawley", "1946","Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
 
-kbl(sp_table,digits=2,booktabs=T,caption = "Summary Statistics for Specific Tariffs by Round") %>%
-  kable_styling(position = "center", latex_options = "hold_position", font_size=6)
+kbl(sp_table,digits=1,booktabs=T) %>%
+  kable_styling(position = "center", latex_options = "hold_position", font_size=7)
 ```
 
-The count of specific tariffs per round is stable.
+The count of specific tariffs per round is stable
+\vskip-.05in
 
--  Only 98 lines transition type at any point. 37 specific $\Rightarrow$ *ad valorem*, 24 *ad valorem* $\Rightarrow$ specific
-
-
-### Table 4
-```{r table_4}
-adval_table = cbind(data.frame(av_min),data.frame(av_25p),data.frame(av_mean),data.frame(av_med),data.frame(av_75p),data.frame(av_max),data.frame(av_count))
-names(adval_table)<-c('Min','1st Quartile','Mean','Median','3rd Quartile','Max','N')
-rownames(adval_table) <- c("Smoot Hawley","1946", "Geneva", "Annecy","Torquay","GenevaA","GenevaB","GenevaC","DillonA","DillonB")
-kbl(adval_table,digits=2,booktabs=T,caption = "Summary Statistics of Ad Valorem Tariffs by Round") %>%
-  kable_styling(position = "center", latex_options = "hold_position",font_size=6)
-```
+-  Only 98 lines transition type at any point
+  - 37 specific $\Rightarrow$ *ad valorem*, 24 *ad valorem* $\Rightarrow$ specific
 
 
-# By Industry
-## By Industry
+# By Schedule
+## By Schedule (Industry)
 
-### Schedule Titles
+### Schedules
 ```{r schedule_titles, message=F}
 para_count <- data_set %>% group_by(Sched) %>% summarize(n=n()) %>% ungroup()
 
@@ -352,14 +359,14 @@ abbr <- c('Chemicals', 'Glass', 'Metals', 'Wood', 'Sugar', 'Tobacco', 'Ag', 'Spi
 data_schedules<-data.frame(para_count,abbr,schedule_names)
 names(data_schedules)<-c('Schedule','Items','Abbreviation','Title')
 
-s <- kable(data_schedules, align= 'ccl',booktabs=T) %>%
-  kable_styling(full_width = F, latex_options = "hold_position", font_size = 5)
-add_header_above(s, c("Schedule Titles"=4),font_size = 9)
+kable(data_schedules, align= 'ccl',booktabs=T) %>%
+  kable_styling(full_width = F, latex_options = "hold_position", font_size = 7)
+# add_header_above(s, c("Schedule Titles"=4),font_size = 11)
 
 ```
 
 
-### Table 6
+### Reduction in *Ad Valorem* Tariffs by Schedule
 ```{r, include=F}
 
 change_BG <-
@@ -448,31 +455,6 @@ changes <- select(change_BG,-unit_ch) %>%
 ```
 
 
-```{r table_6, echo=FALSE, warning=FALSE, message=F}
-
-changes2 <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Specific"))
-nochanges <- rows_delete(specific, changes2, by = "id")
-
-sum_specific_nC_pc <- nochanges %>%
-  group_by(Sched) %>%
-  summarize(SH_mean = mean(Specific_SH, na.rm=TRUE),
-            DB_mean = mean(Specific_Dillon_B, na.rm=TRUE),
-            mean_chg = ((SH_mean - DB_mean)/SH_mean)*100,
-            SH_med = median(Specific_SH, na.rm=TRUE),
-            DB_med = median(Specific_Dillon_B, na.rm=TRUE),
-            med_chg = ((SH_med - DB_med)/SH_med)*100,
-            n_specific = sum(!is.na(Specific_SH)),
-            n = n()) %>%
-  ungroup() # ungrouping variable is a good habit to prevent errors
-
-tab6 <- kbl(sum_specific_nC_pc,digits=2,booktabs=T, caption = "Reduction in Specific Tariffs by Schedule") %>% kable_styling(position = "center", latex_options = "hold_position",font_size=4)
-
-# Add header above means/medians for clarity
-add_header_above(tab6, c(" " = 1, "Mean Comparisons "=3, "Median Comparisons"=3, "Observations" = 2),font_size = 4)
-```
-
-
-### Table 7
 ```{r table_7, message =F}
 changesav <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Ad_Valorem"))
 nochanges_av <- rows_delete(ad_valorem, changesav, by = "id")
@@ -487,15 +469,46 @@ sum_av_nC_pc <- nochanges_av %>%
             med_chg = ((SH_med - DB_med)/SH_med)*100,
             n_av = sum(!is.na(Ad_Valorem_SH)),
             n = n()) %>%
+    mutate(abbr = abbr) %>% relocate(abbr, .after = Sched) %>%
   ungroup() # ungrouping variable is a good habit to prevent errors
 
-tab7 <- kbl(sum_av_nC_pc,digits=2,booktabs=T, caption = "Reduction in Ad Valorem Tariffs by Schedule") %>%
-  kable_styling(position = "center",font_size=4)
+names(sum_av_nC_pc)<-c('Sched','Abbr','SH','Dillon','Decrease','SH','Dillon','Decrease','Ad Valorem','Total')
+
+tab7 <- kbl(sum_av_nC_pc,digits=1,booktabs=T) %>%
+  kable_styling(position = "center",font_size=6)
 
 # Add header above means/medians for clarity
-add_header_above(tab7, c(" " = 1, "Mean Comparisons "=3, "Median Comparisons"=3, "Observations" = 2),font_size = 4)
+add_header_above(tab7, c(" " = 2, "Mean Comparisons "=3, "Median Comparisons"=3, "No. of Items" = 2),font_size = 6)
 ```
 
+
+### Reduction in Specific Tariffs by Schedule
+
+```{r table_6, echo=FALSE, warning=FALSE, message=F}
+
+changes2 <- changes %>% select(id,Sched,Paragraph,Product,Interval,starts_with("Specific"))
+nochanges <- rows_delete(specific, changes2, by = "id")
+
+sum_specific_nC_pc <- nochanges %>%
+  group_by(Sched) %>%
+  summarize(SH = mean(Specific_SH, na.rm=TRUE),
+            Dillon = mean(Specific_Dillon_B, na.rm=TRUE),
+            Decrease = ((SH - Dillon)/SH)*100,
+            SH_med = median(Specific_SH, na.rm=TRUE),
+            DB_med = median(Specific_Dillon_B, na.rm=TRUE),
+            med_chg = ((SH_med - DB_med)/SH_med)*100,
+            n_specific = sum(!is.na(Specific_SH)),
+            n = n()) %>%
+   mutate(abbr = abbr) %>% relocate(abbr, .after = Sched) %>%
+  ungroup() # ungrouping variable is a good habit to prevent errors
+
+names(sum_specific_nC_pc)<-c('Sched','Abbr','SH','Dillon','Decrease','SH','Dillon','Decrease','Specific','Total')
+
+tab6 <- kbl(sum_specific_nC_pc,digits=1,booktabs=T) %>% kable_styling(position = "center", latex_options = "hold_position",font_size=6)
+
+# Add header above means/medians for clarity
+add_header_above(tab6, c(" " = 2, "Mean Comparisons "=3, "Median Comparisons"=3, "No. of Items" = 2),font_size = 6)
+```
 
 # Next steps
 
