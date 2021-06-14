@@ -1,6 +1,20 @@
-#This is the test code for cleaning the excel data
+#**********************************************************************************************
+# Created by: Zeyuan (Victor) Xiong                                     
+# Created on: Feb 8, 2021                                     
+# Last edited: June 14, 2021 (KB)
 
-rm(list = ls())# clear all
+# This code cleans the Smoot-Hawley to Dillon data that was entered in Excel for analysis
+# The excel file resides at OneDrive - Syracuse University\Research\Gradualism\Data paper and is
+# named Schedules_1-15_units_changed_HS - corrected.xlsx. Save it as a csv with "UTF-8" formatting
+# (this avoids unnecessary garbling in the transformation to csv). The read.csv options are set
+# to make sure that empty cells are set to NA so that the fill function will work. 
+# Before running, change line 17 to reflect the location where you saved the .csv (it should NOT
+# be on a public repo).
+
+# Note: File originally created as data_cleaning.rmd, converted to *.r on Feb 25, 2021
+#**********************************************************************************************
+
+loc = file.path("C:/Users/krist/Downloads/test_1.csv")
 
 library(tidyverse)
 library(foreign)
@@ -9,18 +23,14 @@ library(readr)
 library(tidyselect)
 library(kableExtra)
 
-# setwd("C:/Users/victo/OneDrive/桌面/code for gradualism")#Set working directory
-
-# file is saved as csv "UTF-8" and thus needs encoding to avoid garbled
-# It appears that during the transformation to CSV file, some cells contain "space" or invisible dots which could be easily taken as empty, and they are not. Also since the "fill" function is applicable iff the cases are NA but not empty. Replace them all by NA.
-
 # Select the desired columns from the csv by names
-data_set <- read.csv(file='C:/Users/krist/Downloads/test_1.csv', encoding="UTF-8",na.string=c(""," ","" ,"" ,"NA","\u00A0"))[,c('X.U.FEFF.Schedule','Paragraph','Description','Specific_SH','Units_SH','Ad_Valorem_SH',
-                                                                                                                                'Specific_1946_after','Units_1946_after','Ad_Valorem_1946_after',
-                                                                                                                                'Specific_Geneva','Units_Geneva','Ad_Valorem_Geneva','Specific_Annecy','Units_Annecy','Ad_Valorem_Annecy','Specific_Torquay','Units_Torquay','Ad_Valorem_Torquay',
-                                                                                                                                'Specific_Geneva56_A','Units_Geneva56_A','Ad_Valorem_Geneva56_A','Specific_Geneva56_B','Units_Geneva56_B','Ad_Valorem_Geneva56_B',
-                                                                                                                                'Specific_Geneva56_C','Units_Geneva56_C','Ad_Valorem_Geneva56_C','Specific_Dillon_A','Units_Dillon_A','Ad_Valorem_Dillon_A',
-                                                                                                                                'Specific_Dillon_B','Units_Dillon_B','Ad_Valorem_Dillon_B','Interval')]
+data_set <- read.csv(file=loc, encoding="UTF-8",
+                     na.string=c(""," ","" ,"" ,"NA","\u00A0"))[,c('X.U.FEFF.Schedule','Paragraph','Description','Specific_SH','Units_SH','Ad_Valorem_SH',
+                                                                   'Specific_1946_after','Units_1946_after','Ad_Valorem_1946_after',
+                                                                   'Specific_Geneva','Units_Geneva','Ad_Valorem_Geneva','Specific_Annecy','Units_Annecy','Ad_Valorem_Annecy','Specific_Torquay','Units_Torquay','Ad_Valorem_Torquay',
+                                                                   'Specific_Geneva56_A','Units_Geneva56_A','Ad_Valorem_Geneva56_A','Specific_Geneva56_B','Units_Geneva56_B','Ad_Valorem_Geneva56_B',
+                                                                   'Specific_Geneva56_C','Units_Geneva56_C','Ad_Valorem_Geneva56_C','Specific_Dillon_A','Units_Dillon_A','Ad_Valorem_Dillon_A',
+                                                                   'Specific_Dillon_B','Units_Dillon_B','Ad_Valorem_Dillon_B','Interval')]
 
 
 # Fill the paragraph and schedule numbers in
