@@ -1,0 +1,15 @@
+---
+title: "August 2021 NSF Bulleted Outline"
+author: "Kristy Buzard"
+date: 'last edited `r Sys.Date()` '
+output: pdf_document
+fontsize: 12pt
+linestretch: 1.25
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+library(english)
+```
+
+Bulleted outline goes here
