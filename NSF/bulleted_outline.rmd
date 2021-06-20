@@ -1,10 +1,10 @@
 ---
 title: "August 2021 NSF Bulleted Outline"
 author: "Kristy Buzard"
-date: 'last edited `r Sys.Date()` '
+date: 'Last edited: `r Sys.Date()`'
 output: pdf_document
-fontsize: 12pt
-linestretch: 1.25
+fontsize: 11pt
+linestretch: 1.00
 ---
 
 ```{r setup, include=FALSE}
@@ -12,4 +12,107 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 library(english)
 ```
 
-Bulleted outline goes here
+# Introductory Paragraph 
+
+## Opening Sentence
+The purpose of this sentence is to immediately capture the attention of the reviewers and highlight the program-relevant, fundamentally important area that your application will address. It should be arresting and, as such, immediately command the re-viewer’s attention. Use words that reflect the subject of the solicitation to which you are re-sponding.
+
+- Write your bullet here. When it meets the criteria set out above, delete the preceding Work-book text.
+
+## Current Knowledge.
+Your application will most likely be reviewed by a combination of exter-nal reviewers and by those on a panel. Not everyone at the review panel table will be an ex-pert on the subject that you are proposing. Accordingly, the purpose of this component is to inform reviewers with respect to what is already known in the area of your project, thereby facilitating their ability to grasp the importance of the research you will propose. In essence, you are setting up presentation of the gap in knowledge/unmet need that will drive your appli-cation. The progression of bullets should lead the reviewer from the oldest known facts that are relevant to what is currently the edge of the field. Be brief; details will be presented later, in the Background section. What you want is a maximum of 3 to 5 sentences.
+
+-  Write your bullet here and delete preceding Workbook text.
+
+## Gap in Knowledge/Lack of Something.
+The specific gap in knowledge or lack of something is the driver of your application and defines the explicit focus for your proposal. The bullet must be simple, direct and must relate to the preceding, current knowledge component as the next step needed to advance the field vertically. As you will see, it is a very important bullet because all of the logic downstream will evolve from it. 
+
+-  Write a bullet here that describes the gap in knowledge or lack of something that will drive your proposal.
+
+-  Delete preceding Workbook text.
+
+
+## Statement of Need and Potential Consequences of Not Meeting that Need.
+Once you have defined the gap or lack, the next step is to frame how this creates an urgent or critical need. You do that by, first, writing a statement of need. What, explicitly, is needed? Most of the time it will be to fill the gap in knowledge or provide the lack of something that you have just described.
+
+- Write a bullet here that summarizes the urgent or critical need that will drive your application and delete the preceding Workbook text.
+
+Next, you must support your assertion by indicating what the consequence(s) of failing to meet the need would be. The most important consequence should be blockage of vertical ad-vancement in an area that is of relevance to NSF. What specific NSF-relevant problem will be exacerbated, created, or allowed to persist if that critical need is unmet? What important high-level NSF goal or objective will likely be delayed, impeded, or somehow obstructed if we fail to address this need?
+
+- Now, write your bullet that outlines the potential consequences of not meeting the need and then delete preceding Workbook text.
+
+# “What, Why, Who” Paragraph
+
+## Long-Term Goal
+The purpose of this statement is to define for reviewers the continuum of re- search that you will be pursuing over multiple periods of grant support into the future. Fill-ing the gap/meeting the need delineated in the first paragraph must be seen by reviewers as the next logical step along the continuum that is projected by your long-term goal statement.
+
+-  Write your bullet here and then delete preceding Workbook text.
+
+## Overall Objective for this Application.
+The purpose of this component is to define what will be accomplished by the research proposed in this application. The objective must link back to the gap in the knowledge/need that you delineated earlier, because the objective for any application must be to fill the gap/meet the need that is offered there. As noted in the pre-ceding paragraph, the objective must also link back to the long-term goal as the next logical step along the continuum of research that you are pursuing.
+
+-  Write your bullet here and then delete preceding Workbook text.
+
+
+## Central Hypothesis and How Formulated
+The purpose of the central hypothesis is to focus the research that is proposed. It must logically flow from the overall objective, because the central hypothesis is what must be tested to attain the overall objective; that linkage must ex-ist between them. To put it in a different context, your central hypothesis must be your "best bet," out of all alternatives, as to what explains the phenomenon you will be investigating.
+
+A secondary purpose of the central hypothesis is to set up presentation of your specific aims. To do so, deliberately craft the bullet for the central hypothesis to have readily identifiable parts,  each  of which will later set up an aim to test the related part.
+
+The "how-formulated" bullet(s) has(have) the purpose of informing reviewers that you have preliminary data that supports the formulation of your central hypothesis. At the standard grant level, you must have sufficient preliminary/prior data to rule out alternative explanations, i.e., to provide support for your choice of a hypothesis. You don't need detail here. All you want is a statement that you have such data and a hint of how it is related to and/or underscores the hypothesis. If the work of others also contributed, acknowledge that fact with a separate bullet and reference the relevant publication(s).
+
+-  Write your bullet for the central hypothesis here.
+
+-  Write one or more bullets here, starting with preliminary/prior data that support the central hypothesis.
+-  Delete preceding Workbook text.
+
+
+## Rationale.
+The purpose of this component is to convey why you want to do the research. In most cases, it will be because you are seeking new knowledge that will allow you to move the field vertically, something that can't be done now. The rationale must link back to the framing of the problem at the end of the first paragraph. There, you stated that the need is a problem because it is what prevents vertical advancement of the field. It has a “negative” spin. Here, your bullet needs to convey that, once the project has been completed, you will be able to take the vertical step that you can't take now. That is why you want to do the research. The rationale statement has a “positive” spin--a sentence that essentially says, “The rationale for the proposed research is that once X is identified, Y can happen,” where Y is something of interest or importance to your targeted agency or program.  
+
+-  Write your bullet here and then delete preceding Workbook text.
+
+## Well Prepared
+The purpose of this component is to tell reviewers why you and your col-leagues (if any) have a competitive advantage over equally qualified investigators elsewhere, i.e., what distinguishes you from them. In other words, the bullets that you write here should summarize why you and members of your team are the best candidates to do the work. These should be summative statements about, for example, the investigators’ combined or interdisci-plinary expertise in X and Y; the investigators’ long-standing collaborative history and/or part-nerships with stakeholders/producers; your access to equipment, resources, or samples; and/or your abundant preliminary or prior data. 
+
+-  Write your bullet(s) here and then delete preceding Workbook text.
+
+# Specific Aims “Paragraph” 
+
+Specific Aims. The purpose of the specific aims is either to test the parts of your central hypothesis or, if you are writing a purely need-driven application, to lay out the tasks that will be undertaken in order to meet the need. With respect to linkage, your aims must grow out of, and be completely concordant with, either the parts of your central hypothesis or, if yours is a need-driven proposal, parts of the overall objective.
+
+If you have offered a central hypothesis earlier, a secondary purpose of the aims is to provide research focus. That is accomplished by including a working hypothesis under each aim. 
+
+-  Write a bullet here for your first aim.
+
+   -  If you are proposing hypothesis-driven research, write a bullet here that summarizes the working hypothesis for the first aim. If you are proposing research that is purely need driv-en, write a bullet that summarizes the main approaches/methods that will be employed to complete the stated task.
+
+-  Continue by writing the two bullets described, above, for each of your aims.
+
+-  Delete preceding Workbook text.
+
+# “Payoff” Paragraph
+
+## Creativity, Originality and/or Transformative Potential
+The purpose of this component is to call attention to why/how the proposed research differs from what is being done else-where, conceptually or methodologically. Be sure that any claim of “transformative potential” that you make is not overreaching on your part.
+
+-  Write your bullet(s) here and then delete preceding Workbook text.
+
+
+## Expected Outcomes.
+The purpose of Expected Outcomes is to tell reviewers what each of your aims is expected to produce and how those products collectively attain the overall ob-jective of the grant application.
+
+-  Write a bullet here for the expected outcome of each aim.
+
+-  Write a bullet that tells reviewers that the expected outcomes collectively attain your overall objective for the project.
+
+-  Delete the preceding Workbook text.
+
+
+## Generality Regarding Positive Impact.
+The purpose of this final bullet is to point out gen-erally that the expected outcomes will positively impact your field. Collectively, by attaining the overall objective of the application they will advance the field vertically. Write the bullet at a general level. Make sure that it creates a seamless segue into the next, Expected Signifi-cance section.
+
+-  Write your bullet here and then delete the preceding Workbook text.
+
+
+As a suggestion, once you have completed the outline, leave it alone for a day or so. Our experience is that, if you do so, invariably you will be able to improve it. When you have reached the point of diminishing returns, show it to Co-PIs who are on the application with you. Consider having students/postdocs who will be involved in the project take a shot at it. That kind of collective effort will pay big dividends because, if the outline has been optimized, expanding its bullets into sentences will create a compelling first draft of your Overview & Objectives section that will need little refinement. 
