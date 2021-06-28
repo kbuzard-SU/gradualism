@@ -51,7 +51,7 @@ Next, you must support your assertion by indicating what the consequence(s) of f
 
 # “What, Why, Who” Paragraph
 
-## Long-Term Goal
+## Long-Term Goal (DONE)
 
 -  Determine the causes and effects of trade liberalization under the GATT
 
@@ -87,23 +87,23 @@ The purpose of this component is to tell reviewers why you and your colleagues (
 
 # Specific Aims “Paragraph” (MOST IMPORTANT)
 
-Specific Aims. The purpose of the specific aims is either to test the parts of your central hypothesis or, if you are writing a purely need-driven application, to lay out the tasks that will be undertaken in order to meet the need. With respect to linkage, your aims must grow out of, and be completely concordant with, either the parts of your central hypothesis or, if yours is a need-driven proposal, parts of the overall objective.
+The purpose of the specific aims is to test the parts of your central hypothesis. Your aims must grow out of, and be completely concordant with, the parts of your central hypothesis.
 
-If you have offered a central hypothesis earlier, a secondary purpose of the aims is to provide research focus. That is accomplished by including a working hypothesis under each aim. 
+A secondary purpose of the aims is to provide research focus. That is accomplished by including a working hypothesis under each aim. 
 
--  Write a bullet here for your first aim.
+- Should we list creating the data as a separate aim?
 
-   - Create (political) theory for why liberalization was gradual; make recommendations for cooperation in other policy areas
-   
-   - Mechanisms underlying trade agreements: TOT motive, what's underneath the TOT motive? domestic commitment motive? tariff revenue? business cycle?
-   
-   - how to relate historical data to modern analyses? Instrumental variable?
+  - If you are proposing research that is purely need driven, write a bullet that summarizes the main approaches/methods that will be employed to complete the stated task.
 
--  If you are proposing hypothesis-driven research, write a bullet here that summarizes the working hypothesis for the first aim. If you are proposing research that is purely need driven, write a bullet that summarizes the main approaches/methods that will be employed to complete the stated task.
+- Create (political) theory for why liberalization was gradual; make recommendations for cooperation in other policy areas
 
--  Continue by writing the two bullets described, above, for each of your aims.
+  - Write a bullet here that summarizes the working hypothesis for this aim. 
 
--  Delete preceding Workbook text.
+- Mechanisms underlying trade agreements: TOT motive, what's underneath the TOT motive? domestic commitment motive? tariff revenue? business cycle?
+  - Write a bullet here that summarizes the working hypothesis for this aim. 
+- how to relate historical data to modern analyses? Instrumental variable?
+  - Write a bullet here that summarizes the working hypothesis for this aim. 
+
 
 # “Payoff” Paragraph
 
