@@ -1,0 +1,160 @@
+---
+title: "GATT: Summer 2021"
+author: "Kristy Buzard"
+date: 'Last Edited: `r Sys.Date()` '
+output: 
+  pdf_document:
+    toc: true
+    toc_depth: 3
+linkcolor: blue
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Big picture
+### Project vision
+To understand what happened during the GATT liberalization episode, why, and what the effects were. That is, to
+
+- understand what drove the gradual process of liberalization through the GATT and use this understanding to make recommendations for cooperation in other policy areas
+  - dig into mechanisms underlying trade agreements
+	- how much is TOT motive? what's underneath the TOT motive?
+		- can we look at domestic commitment motive? tariff revenue? business cycle influences?
+- provide data to other researchers so many questions can be answered
+  - effect of tariff changes on import growth
+  - bilaterals, stumbling block vs. building block
+  - effect of US tariffs on tariffs set by other countries (e.g. trade wars, esp. 1930s)
+  - cross-country heterogeneity
+  - how to relate historical data to modern analyses? Instrumental variable?
+  - sectoral analysis / technological change; which lines are *actually* new?
+  - add NTBs, other trade barriers (Marc Muendler)
+  - could be integrated with other datasets
+  - labor market implications
+  - policy-based research in macro
+
+### Project objectives
+
+- finish US data up to 1990s
+- transform analysis of current paper with AVEs
+- TOT analysis
+- NSF proposal / development of future research agenda 
+
+### Plan
+
+Start with obvious deliverables, then refine as we develop the research agenda
+
+- Language conventions we will use on this project:
+  - project: the whole thing, which will last several years
+    - the project scope encompasses the research agenda related to historical GATT data
+  - deliverable: a sub-project that will help to complete the whole
+  - tasks: individual things that need to be done to complete a deliverable, or sometimes a one-off that is not related to a specific deliverable
+
+## Personnel
+
+During Summer 2021, personnel on the project were (Github usernames and email addresses in parentheses)
+
+- Co-authors Kristy Buzard (kbuzard/kbuzard@syr.edu), Ross Jestrab (rjestrab/rcjestra@syr.edu), Zeyuan (Victor) Xiong (Zeyuan-Xiong/zxiong07@syr.edu)
+- Master's RA Matt Gonzalez (MatthewRGonzalez/mrgonzal@syr.edu)
+- SOURCE-funded Undergraduate RAs Dylan Eldred (eldreddyl/deldred@syr.edu), Kelly Jia (Kellyyyjia/zjia03@syr.edu), Kirsten Riley (Kirs10-Riley/kriley03@syr.edu)
+
+## Organizational details
+
+- General expectations are outlined [here](https://github.com/kbuzard-SU/GATT-RAs/discussions/32)
+- Expected work processes are outlined [here](https://github.com/kbuzard-SU/GATT-RAs/discussions/30)
+  - Undergraduate RAs update a daily log on the GATT-RAs repo
+- Documentation for deliverables / tasks is outlined in GATT-RAs [Discussion 51](https://github.com/kbuzard-SU/GATT-RAs/discussions/51)
+- We compile technical explainers as we learn and keep a list of them [here](https://github.com/kbuzard-SU/GATT-RAs/blob/main/technical-explainers.md)
+- Deliverables are organized into Github repos, each with its own project board
+  - Repo structure is [here](https://jamboard.google.com/d/1SU9dUoIznipTOw41XfPzO2EnNEtRoHROnu4FATCX25o/viewer?f=1)
+  - A project board for tasks that don't belong to a deliverable is [here](https://github.com/orgs/kbuzard-SU/projects/1)
+  - Data entry files in Excel are located in *OneDrive - Syracuse University/Research/Gradualism/Data paper*
+  - We also have a G:drive folder for use with large files on a Syracuse University virtual machine
+- We met as a full team weekly on Mondays. Minutes for each meeting are contained in separate discussions in the GATT-RAs repo: [June 7](https://github.com/kbuzard-SU/GATT-RAs/discussions/13), [June 14](https://github.com/kbuzard-SU/GATT-RAs/discussions/35), [June 21](https://github.com/kbuzard-SU/GATT-RAs/discussions/40), [June 28](https://github.com/kbuzard-SU/GATT-RAs/discussions/42), [July 5](https://github.com/kbuzard-SU/GATT-RAs/discussions/47), [July 12](https://github.com/kbuzard-SU/GATT-RAs/discussions/53)
+
+## Deliverables (team leads) [members]
+
+- Plan NSF submission (Kristy)
+  - We organized and prioritized ideas for inclusion in the grant on [this](https://jamboard.google.com/d/1SU9dUoIznipTOw41XfPzO2EnNEtRoHROnu4FATCX25o/viewer?f=0) Jamboard (ones we decided not to prioritize are on page 3)
+  - We then began to develop a bulleted outline for an NSF proposal in [bulleted_outline.rmd](https://github.com/kbuzard-SU/gradualism/blob/main/NSF/bulleted_outline.pdf) in the Gradualism repo.
+  - Kirsten is working on a literature review on empirical studies of trade using data from 1930-1988 (before HS codes). It is called [lit review.rmd](https://github.com/kbuzard-SU/gradualism/blob/main/lit%20review.Rmd) and is on the gradualism repo
+  - Victor and Kristy created graphs of the 408 ad valorem lines that were easy/good matches between the Smoot Hawley and TSUS data using the "dirty-mapping.r" script in the SmootHawley repo
+    - Kirsten is looking for patterns in the resulting graphs
+  - Kristy met with Jill Ferguson (Maxwell Research Development) on June 29 for advice about how to package the grant proposal
+    - Kristy then developed a 1-pager and sent it to the three NSF Program Directors on July 7. Waiting for feedback after follow-up email on July 16.
+
+- TSUSA to HS concordance & Kennedy/Tokyo/Uruguay data (Matt) [Kelly]
+
+- Finalize Smoot-Hawley data (Victor) [Matt]
+	- Add year and country to 1946 data (Victor,Kristy) [Kirsten]
+	  - Kirsten is looking for the 1934-1946 trade agreement documents, see [Issue 14](https://github.com/kbuzard-SU/TOT/issues/14) in TOT repo
+
+- Terms of trade analysis (Ross) [---]
+  - Import data (Ross)
+    - Ross is working on a proof-of-concept graph following Bagwell and Staiger 2011 in [Discussion 10](https://github.com/kbuzard-SU/TOT/discussions/10) in the TOT repo
+  - Smoot-Hawley to 1930's import classification concordance (Victor) [Dylan, Kirsten]
+
+## Other tasks
+
+### Relate historical data to modern analysis
+We want to be able to argue that this historical data will help with modern analysis
+
+- Ross is going to run some proof-of-concept to see how well the early tariffs predict zeros in modern data, as that would be a good instrument in selection models
+- Victor was looking into the AEJ
+- Ross looked through the Statistical Abstract of the US, specifically at labor/capital mobility, but nothing has stood out so far
+   - Ross suggested we may be able to take the US level data and relate it to outcomes like education and mortality
+      - he noted some issues with trying to verify this data in the context of the Great Depression and WWII
+      - We may try to view data at the regional or even state level if it is available 
+
+
+### OCR software
+We began exploring OCR (optical character recognition) software Week 1. We settled on OmniPage and had to wait for ICT to get approval. OmniPage was installed on a virtual machine and in the Maxwell computer lab the week of July 5. Details [here](https://github.com/kbuzard-SU/GATT-RAs/discussions/50).
+
+- Dylan and Kelly did some work on the labs project with Antonio Ramos Rivera in exchange for Antonio teaching them the Python workflow for digitizing data.
+  - Kelly is responsible for documenting that workflow, including how to use the R package *reticulate*
+  
+### Data sources table
+Kirsten is improving the formatting of the data sources table from our paper using the R package *kableExtra*
+
+
+### Effective dates for each round
+Kirsten found the effective dates for each round in the U.S. in Federal Register documents [here](https://github.com/kbuzard-SU/TOT/issues/13)
+
+### Investigate round-by-round liberalization patterns
+Kristy and Victor decided that this is too hard to be worth prioritizing right now
+  
+### Future presentations
+The paper was accepted for the SEAs--the weekend before Thanksgiving. We need to plan what our goals are for that presentation
+
+## Collaborations and feedback
+
+### David Jacks
+Kristy met with David Jacks on June 22. He emailed about his project about growth on 6/8/2021 from dsjacks@gmail.com to my syr.edu account. We want to follow up, but first want to know about
+
+- AVEs for Smoot-Hawley era
+	- Import data
+- How close are we to having everything cleaned for 1930-1962
+- Concordances
+
+### Dave Richardson
+Dave read the CEA draft and sent feedback:
+
+  - Good: he believes gathering this data is possible
+  - Needs work: Convincing others that we can learn something interesting from this data, tie into the proof of concept 
+  - "It seems to me that there are some mini-topics on which you could work to publish quickly, though not in everyone's "best" journals, and maybe not even in mildly peer-reviewed places.
+    - This draft itself; can you publish it as a tantalizing demonstration of future deliverables?(AEJ Applied or good second-tier trade journals)
+    - Trends in and relationships between bindings and applied tariffs (brief mention on p. 2).
+    - Your several concordance exercises, e.g., pp. 10-11, but especially the (somewhat implicit) one that concords Smoot-Hawley industrial groups to products (p. 3 and elsewhere).
+      - Out of that might come several interesting research questions that would never occur to you without doing the "merely technical" concordance.
+  - Need to work harder on persuading me that this draft's specific-vs.-ad valorem trends and insights are important rather than just casually interesting
+    - and even harder on a comprehensive approach to the elusive volume-value challenges (p. 11)."
+
+
+### Tricia Mueller, USITC
+Ross's new colleague at ITC is a former student of Bob Staiger's who worked on the Bagwell, Staiger and Yurukoglu NSF grant on the bargaining records. She is looking into whether she can provide us with the import data that was digitized under that grant.
+
+- In the spring, she put us in contact with various people at ITC who could help with our data searches
+
+### Roy Santana, WTO
+Bog Staiger also put Kristy in contact with Mr. Santana, who has been very helpful in explaining what data they have at the WTO
