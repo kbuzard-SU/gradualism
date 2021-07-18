@@ -14,6 +14,10 @@ fontsize: 12pt
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## README
+
+Below is a summary of the work on the (Quantifying) GATT Trade Liberalization project during Summer 2021. The starting point can be taken to be the [draft paper](https://github.com/kbuzard-SU/SmootHawley/blob/main/data-paper/data-paper.pdf) that Kristy presented at the (online) Canadian Economic Association meetings during the first week of June.
+
 ## Big picture
 ### Project vision
 To understand what happened during the GATT liberalization episode, why, and what the effects were. That is, to
@@ -63,7 +67,7 @@ During Summer 2021, personnel on the project were (Github usernames and email ad
 
 - General expectations are outlined [here](https://github.com/kbuzard-SU/GATT-RAs/discussions/32)
 - Expected work processes are outlined [here](https://github.com/kbuzard-SU/GATT-RAs/discussions/30)
-  - Undergraduate RAs update a daily log on the GATT-RAs repo
+  - Undergraduate RAs update a daily log on the GATT-RAs repo; they are .rmd files named with each RA's first name
 - Documentation for deliverables / tasks is outlined in GATT-RAs [Discussion 51](https://github.com/kbuzard-SU/GATT-RAs/discussions/51)
 - We compile technical explainers as we learn and keep a list of them [here](https://github.com/kbuzard-SU/GATT-RAs/blob/main/technical-explainers.md)
 - Deliverables are organized into Github repos, each with its own project board
